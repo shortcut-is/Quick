@@ -1,16 +1,11 @@
 {
   "name": "Textarea",
   "figmaName": "Input Area",
-  "figmaNodeId": "194:1034",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5668",
-    "name": "Input Area"
-  },
+  "section": "Input Area",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Textarea",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -51,7 +46,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Show Hint#194:0"
+            "visible": "Show Hint"
           },
           "children": [
             {
@@ -80,7 +75,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Show Hint#194:0",
+      "propertyName": "Show Hint",
       "codePropName": "hasHint",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -90,7 +85,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Filled\" | \"Disabled\" | \"Error\"",

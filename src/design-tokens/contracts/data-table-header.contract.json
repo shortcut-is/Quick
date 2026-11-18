@@ -1,16 +1,11 @@
 {
   "name": "DataTableHeader",
   "figmaName": "Data table  - Header",
-  "figmaNodeId": "476:3937",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5663",
-    "name": "Data Table"
-  },
+  "section": "Data Table",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableHeader",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Density=Compact",
@@ -45,7 +40,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Select",
           "refs": {
-            "visible": "Selectable#478:3"
+            "visible": "Selectable"
           }
         },
         {
@@ -54,7 +49,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 1#476:24"
+            "visible": "Cell 1"
           }
         },
         {
@@ -63,7 +58,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 2#476:27"
+            "visible": "Cell 2"
           }
         },
         {
@@ -72,7 +67,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 3#476:30"
+            "visible": "Cell 3"
           }
         },
         {
@@ -81,7 +76,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 4#476:33"
+            "visible": "Cell 4"
           }
         },
         {
@@ -90,7 +85,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 5#476:36"
+            "visible": "Cell 5"
           }
         },
         {
@@ -99,7 +94,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 6#476:39"
+            "visible": "Cell 6"
           }
         },
         {
@@ -108,7 +103,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 7#476:42"
+            "visible": "Cell 7"
           }
         },
         {
@@ -117,7 +112,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Header Cell",
           "refs": {
-            "visible": "Cell 8#476:45"
+            "visible": "Cell 8"
           }
         },
         {
@@ -126,7 +121,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Actions",
           "refs": {
-            "visible": "Actions#478:0"
+            "visible": "Actions"
           }
         }
       ]
@@ -148,7 +143,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Cell 1#476:24",
+      "propertyName": "Cell 1",
       "codePropName": "showCell1",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -158,7 +153,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 2#476:27",
+      "propertyName": "Cell 2",
       "codePropName": "showCell2",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -168,7 +163,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 3#476:30",
+      "propertyName": "Cell 3",
       "codePropName": "showCell3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -178,7 +173,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 4#476:33",
+      "propertyName": "Cell 4",
       "codePropName": "showCell4",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -188,7 +183,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 5#476:36",
+      "propertyName": "Cell 5",
       "codePropName": "showCell5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -198,7 +193,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 6#476:39",
+      "propertyName": "Cell 6",
       "codePropName": "showCell6",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -208,7 +203,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 7#476:42",
+      "propertyName": "Cell 7",
       "codePropName": "showCell7",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -218,7 +213,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Cell 8#476:45",
+      "propertyName": "Cell 8",
       "codePropName": "showCell8",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -228,7 +223,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Actions#478:0",
+      "propertyName": "Actions",
       "codePropName": "hasActions",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -238,7 +233,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selectable#478:3",
+      "propertyName": "Selectable",
       "codePropName": "isSelectable",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -248,7 +243,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Density",
+      "propertyName": "Density",
       "codePropName": "density",
       "type": "VARIANT",
       "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
@@ -290,7 +285,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "580:12541",
       "figmaName": "_Data table Header Cell",
       "nodeType": "COMPONENT_SET",
       "variantCount": 2,
@@ -306,7 +300,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Sort#580:32",
+          "propertyName": "Sort",
           "codePropName": "hasSortDirection",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -316,7 +310,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",

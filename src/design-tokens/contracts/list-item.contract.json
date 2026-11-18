@@ -1,16 +1,11 @@
 {
   "name": "ListItem",
   "figmaName": "List Item",
-  "figmaNodeId": "95:340",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5671",
-    "name": "List Item"
-  },
+  "section": "List Item",
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/ListItem",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "List Item",
@@ -39,7 +34,7 @@
           "type": "INSTANCE",
           "instanceOf": "Avatar",
           "refs": {
-            "visible": "👁️ Avatar#95:4"
+            "visible": "👁️ Avatar"
           }
         },
         {
@@ -71,7 +66,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Avatar#95:4",
+      "propertyName": "👁️ Avatar",
       "codePropName": "hasAvatar",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -81,7 +76,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Chevron#95:5",
+      "propertyName": "👁️ Chevron",
       "codePropName": "hasChevron",
       "type": "BOOLEAN",
       "tsType": "boolean",

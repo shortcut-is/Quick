@@ -1,16 +1,11 @@
 {
   "name": "SwitchStandalone",
   "figmaName": "Switch Standalone",
-  "figmaNodeId": "79:1328",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5681",
-    "name": "Switch"
-  },
+  "section": "Switch",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/SwitchStandalone",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Size=Small",
@@ -67,7 +62,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Enabled\" | \"Disabled\"",
@@ -78,7 +73,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selected",
+      "propertyName": "Selected",
       "codePropName": "selected",
       "type": "VARIANT",
       "tsType": "\"Off\" | \"On\"",
@@ -89,7 +84,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"Small\" | \"Large\"",

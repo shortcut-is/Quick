@@ -1,16 +1,11 @@
 {
   "name": "BottomNavigation",
   "figmaName": "Bottom Navigation",
-  "figmaNodeId": "2619:4479",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2619:4309",
-    "name": "Navigation Bars"
-  },
+  "section": "Navigation Bars",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/BottomNavigation",
-  "figmaDescription": "Import: @/components/ui/BottomNavigation\nCategory: Navigation\n\nMobile thumb-zone navigation bar (390x68px) composed of exposed _Bottom Nav Item instances (State = Default | Hover | Active) and optional centered Primary Icon MD CTA button.\n\nProps / Variants:\n- Items: \"4 Tabs\" | \"5 Tabs",
+  "description": "Import: @/components/ui/BottomNavigation\nCategory: Navigation\n\nMobile thumb-zone navigation bar (390x68px) composed of exposed _Bottom Nav Item instances (State = Default | Hover | Active) and optional centered Primary Icon MD CTA button.\n\nProps / Variants:\n- Items: \"4 Tabs\" | \"5 Tabs",
   "anatomy": {
     "root": {
       "name": "Items=4 Tabs",
@@ -86,7 +81,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Items",
+      "propertyName": "Items",
       "codePropName": "itemsLayout",
       "type": "VARIANT",
       "tsType": "\"4 Tabs\" | \"5 Tabs (CTA)\"",
@@ -148,7 +143,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "2624:4500",
       "figmaName": "_Bottom Nav Item",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -165,7 +159,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "✏️ Label#2624:0",
+          "propertyName": "✏️ Label",
           "codePropName": "label",
           "type": "TEXT",
           "tsType": "string",
@@ -175,17 +169,17 @@
           ]
         },
         {
-          "figmaPropertyName": "↪️ Icon#2624:4",
+          "propertyName": "↪️ Icon",
           "codePropName": "icon",
           "type": "INSTANCE_SWAP",
           "tsType": "React.ReactNode",
-          "defaultValue": "447:3559",
+          "defaultValue": "Icon/Line / Dashboard",
           "boundLayers": [
             "TabIcon"
           ]
         },
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Hover\" | \"Active\"",

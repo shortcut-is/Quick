@@ -1,16 +1,11 @@
 {
   "name": "Stepper",
   "figmaName": "Stepper",
-  "figmaNodeId": "223:3697",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5680",
-    "name": "Stepper"
-  },
+  "section": "Stepper",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Stepper",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Direction=↓ Vertical",
@@ -81,7 +76,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 3#223:17"
+            "visible": "Step 3"
           },
           "children": [
             {
@@ -95,7 +90,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 3#223:17"
+            "visible": "Step 3"
           },
           "children": [
             {
@@ -116,7 +111,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 4#223:18"
+            "visible": "Step 4"
           },
           "children": [
             {
@@ -130,7 +125,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 4#223:18"
+            "visible": "Step 4"
           },
           "children": [
             {
@@ -151,7 +146,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 5#223:19"
+            "visible": "Step 5"
           },
           "children": [
             {
@@ -165,7 +160,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Step 5#223:19"
+            "visible": "Step 5"
           },
           "children": [
             {
@@ -199,7 +194,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Step 3#223:17",
+      "propertyName": "Step 3",
       "codePropName": "hasStep3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -210,7 +205,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Step 4#223:18",
+      "propertyName": "Step 4",
       "codePropName": "hasStep4",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -221,7 +216,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Step 5#223:19",
+      "propertyName": "Step 5",
       "codePropName": "hasStep5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -232,7 +227,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Direction",
+      "propertyName": "Direction",
       "codePropName": "orientation",
       "type": "VARIANT",
       "tsType": "\"\\u2193 Vertical\" | \"\\u2192 Horizontal\"",
@@ -275,7 +270,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "220:1730",
       "figmaName": "_Steper Icon",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -292,7 +286,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"\\u231b\\ufe0f Default\" | \"\\ud83d\\udc40 Active\" | \"\\u2705 Done\"",

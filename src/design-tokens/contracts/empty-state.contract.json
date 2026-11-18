@@ -1,16 +1,11 @@
 {
   "name": "EmptyState",
   "figmaName": "Empty State",
-  "figmaNodeId": "2607:3630",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2607:3488",
-    "name": "Empty State"
-  },
+  "section": "Empty State",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/EmptyState",
-  "figmaDescription": "Import: @/components/ui/EmptyState\nProps Mapping (Figma -> React):\n- Use (Default | Search | Error) -> variant: default | search | error\n- Size (SM | MD) -> size: sm (320px) | md (420px)\n- Icon / Actions / Secondary Action -> showIcon, showActions, showSecondaryAction\n- Title / Descripti",
+  "description": "Import: @/components/ui/EmptyState\nProps Mapping (Figma -> React):\n- Use (Default | Search | Error) -> variant: default | search | error\n- Size (SM | MD) -> size: sm (320px) | md (420px)\n- Icon / Actions / Secondary Action -> showIcon, showActions, showSecondaryAction\n- Title / Descripti",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -44,7 +39,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Icon#2607:0"
+            "visible": "👁️ Icon"
           },
           "children": [
             {
@@ -63,14 +58,14 @@
               "name": "Title",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Title#2607:21"
+                "characters": "✏️ Title"
               }
             },
             {
               "name": "Description",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Description#2607:28"
+                "characters": "✏️ Description"
               }
             }
           ]
@@ -80,7 +75,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Actions#2607:7"
+            "visible": "👁️ Actions"
           },
           "children": [
             {
@@ -89,7 +84,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "👁️ Secondary Action#2607:14"
+                "visible": "👁️ Secondary Action"
               }
             },
             {
@@ -127,7 +122,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Icon#2607:0",
+      "propertyName": "👁️ Icon",
       "codePropName": "hasIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -137,7 +132,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Actions#2607:7",
+      "propertyName": "👁️ Actions",
       "codePropName": "hasActions",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -147,7 +142,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Secondary Action#2607:14",
+      "propertyName": "👁️ Secondary Action",
       "codePropName": "hasSecondaryAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -157,7 +152,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2607:21",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
@@ -167,7 +162,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Description#2607:28",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
@@ -177,7 +172,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Search\" | \"Error\"",
@@ -189,7 +184,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\"",

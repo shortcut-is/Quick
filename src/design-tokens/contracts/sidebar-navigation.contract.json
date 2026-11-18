@@ -1,16 +1,11 @@
 {
   "name": "SidebarNavigation",
   "figmaName": "Sidebar Navigation",
-  "figmaNodeId": "2618:4293",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2618:4093",
-    "name": "Sidebar Navigation"
-  },
+  "section": "Sidebar Navigation",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/SidebarNavigation",
-  "figmaDescription": "Import: @/components/ui/SidebarNavigation\nCategory: Navigation\n\nApplication sidebar supporting Expanded (248px) and Collapsed icon-rail (72px) modes, composed from _Sidebar Item, Badge, Separator, Switch Standalone, Avatar, and Button.\n\nProps / Variants:\n- Mode: \"Expanded\" | \"Collapse",
+  "description": "Import: @/components/ui/SidebarNavigation\nCategory: Navigation\n\nApplication sidebar supporting Expanded (248px) and Collapsed icon-rail (72px) modes, composed from _Sidebar Item, Badge, Separator, Switch Standalone, Avatar, and Button.\n\nProps / Variants:\n- Mode: \"Expanded\" | \"Collapse",
   "anatomy": {
     "root": {
       "name": "Mode=Expanded",
@@ -69,7 +64,7 @@
               "type": "FRAME",
               "layout": "VERTICAL",
               "refs": {
-                "visible": "👁️ Workspace Group#2618:23"
+                "visible": "👁️ Workspace Group"
               }
             }
           ]
@@ -84,7 +79,7 @@
               "type": "FRAME",
               "layout": "HORIZONTAL",
               "refs": {
-                "visible": "👁️ Mode Switch#2618:20"
+                "visible": "👁️ Mode Switch"
               }
             },
             {
@@ -117,7 +112,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Mode Switch#2618:20",
+      "propertyName": "👁️ Mode Switch",
       "codePropName": "hasModeSwitch",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -127,7 +122,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Workspace Group#2618:23",
+      "propertyName": "👁️ Workspace Group",
       "codePropName": "hasWorkspaceGroup",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -137,14 +132,14 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Brand#2618:26",
+      "propertyName": "✏️ Brand",
       "codePropName": "brandName",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Quick"
     },
     {
-      "figmaPropertyName": "Mode",
+      "propertyName": "Mode",
       "codePropName": "mode",
       "type": "VARIANT",
       "tsType": "\"Expanded\" | \"Collapsed\"",
@@ -214,7 +209,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "2618:4130",
       "figmaName": "_Sidebar Item",
       "nodeType": "COMPONENT_SET",
       "variantCount": 6,
@@ -239,7 +233,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "👁️ Badge#2618:0",
+          "propertyName": "👁️ Badge",
           "codePropName": "hasBadge",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -249,7 +243,7 @@
           ]
         },
         {
-          "figmaPropertyName": "👁️ Chevron#2618:5",
+          "propertyName": "👁️ Chevron",
           "codePropName": "hasChevron",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -259,7 +253,7 @@
           ]
         },
         {
-          "figmaPropertyName": "✏️ Label#2618:10",
+          "propertyName": "✏️ Label",
           "codePropName": "label",
           "type": "TEXT",
           "tsType": "string",
@@ -269,17 +263,17 @@
           ]
         },
         {
-          "figmaPropertyName": "↪️ Icon#2618:15",
+          "propertyName": "↪️ Icon",
           "codePropName": "icon",
           "type": "INSTANCE_SWAP",
           "tsType": "React.ReactNode",
-          "defaultValue": "447:3559",
+          "defaultValue": "Icon/Line / Dashboard",
           "boundLayers": [
             "ItemIcon"
           ]
         },
         {
-          "figmaPropertyName": "Mode",
+          "propertyName": "Mode",
           "codePropName": "mode",
           "type": "VARIANT",
           "tsType": "\"Expanded\" | \"Collapsed\"",
@@ -290,7 +284,7 @@
           ]
         },
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Hover\" | \"Active\"",

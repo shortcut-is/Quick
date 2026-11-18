@@ -1,16 +1,11 @@
 {
   "name": "Tabs",
   "figmaName": "Tab",
-  "figmaNodeId": "120:426",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5682",
-    "name": "Tab"
-  },
+  "section": "Tab",
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Tabs",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Tab",
@@ -35,7 +30,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 1#344:0"
+            "visible": "Show Item 1"
           }
         },
         {
@@ -44,7 +39,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 2#344:1"
+            "visible": "Show Item 2"
           }
         },
         {
@@ -53,7 +48,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 3#344:2"
+            "visible": "Show Item 3"
           }
         },
         {
@@ -62,7 +57,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 4#344:3"
+            "visible": "Show Item 4"
           }
         },
         {
@@ -71,7 +66,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 5#344:4"
+            "visible": "Show Item 5"
           }
         },
         {
@@ -80,7 +75,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 6#344:5"
+            "visible": "Show Item 6"
           }
         },
         {
@@ -89,7 +84,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 7#344:6"
+            "visible": "Show Item 7"
           }
         },
         {
@@ -98,7 +93,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 8#344:7"
+            "visible": "Show Item 8"
           }
         },
         {
@@ -107,7 +102,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 9#344:8"
+            "visible": "Show Item 9"
           }
         },
         {
@@ -116,7 +111,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Tab Item",
           "refs": {
-            "visible": "Show Item 10#344:9"
+            "visible": "Show Item 10"
           }
         }
       ]
@@ -128,7 +123,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Show Item 1#344:0",
+      "propertyName": "Show Item 1",
       "codePropName": "showItem1",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -138,7 +133,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 2#344:1",
+      "propertyName": "Show Item 2",
       "codePropName": "showItem2",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -148,7 +143,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 3#344:2",
+      "propertyName": "Show Item 3",
       "codePropName": "showItem3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -158,7 +153,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 4#344:3",
+      "propertyName": "Show Item 4",
       "codePropName": "showItem4",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -168,7 +163,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 5#344:4",
+      "propertyName": "Show Item 5",
       "codePropName": "showItem5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -178,7 +173,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 6#344:5",
+      "propertyName": "Show Item 6",
       "codePropName": "showItem6",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -188,7 +183,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 7#344:6",
+      "propertyName": "Show Item 7",
       "codePropName": "showItem7",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -198,7 +193,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 8#344:7",
+      "propertyName": "Show Item 8",
       "codePropName": "showItem8",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -208,7 +203,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 9#344:8",
+      "propertyName": "Show Item 9",
       "codePropName": "showItem9",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -218,7 +213,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Item 10#344:9",
+      "propertyName": "Show Item 10",
       "codePropName": "showItem10",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -258,7 +253,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "120:411",
       "figmaName": "_Tab Item",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -275,14 +269,14 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "✏️ Item#2104:19",
+          "propertyName": "✏️ Item",
           "codePropName": "label",
           "type": "TEXT",
           "tsType": "string",
           "defaultValue": "[Item]"
         },
         {
-          "figmaPropertyName": "✏️ Current Item#2104:22",
+          "propertyName": "✏️ Current Item",
           "codePropName": "currentLabel",
           "type": "TEXT",
           "tsType": "string",
@@ -292,7 +286,7 @@
           ]
         },
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Selected\" | \"Disabled\"",

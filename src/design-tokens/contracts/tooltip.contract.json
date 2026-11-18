@@ -1,16 +1,11 @@
 {
   "name": "Tooltip",
   "figmaName": "Tooltip title",
-  "figmaNodeId": "79:525",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5686",
-    "name": "Tooltip"
-  },
+  "section": "Tooltip",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Tooltip",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Tail=↖ Top Left, Type=Default",
@@ -77,7 +72,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Tail",
+      "propertyName": "Tail",
       "codePropName": "tailPlacement",
       "type": "VARIANT",
       "tsType": "\"\\u2190 Left\" | \"\\u2191 Top\" | \"\\u2192 Right\" | \"\\u2193 Bottom\" | \"\\u2196 Top Left\" | \"\\u2197 Top Right\" | \"\\u2198 Bottom Right\" | \"\\u2199 Bottom Left\"",
@@ -94,7 +89,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Type",
+      "propertyName": "Type",
       "codePropName": "type",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Block\"",
@@ -137,7 +132,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "73:56",
       "figmaName": "_Tooltip - Tail",
       "nodeType": "COMPONENT",
       "variantCount": 1,

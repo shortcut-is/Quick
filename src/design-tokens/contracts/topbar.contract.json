@@ -1,16 +1,11 @@
 {
   "name": "Topbar",
   "figmaName": "Topbar",
-  "figmaNodeId": "2619:4440",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2619:4309",
-    "name": "Navigation Bars"
-  },
+  "section": "Navigation Bars",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Topbar",
-  "figmaDescription": "Import: @/components/ui/Topbar\nCategory: Navigation\n\nTop application bar covering Desktop (with Breadcrumb + Cmd+K Search + Notification + Avatar, or Primary Tabs + CTA actions) and Mobile App Bar (390px).\n\nProps / Variants:\n- Use: \"DesktopBreadcrumb\" | \"DesktopTabs\" | \"Mobi",
+  "description": "Import: @/components/ui/Topbar\nCategory: Navigation\n\nTop application bar covering Desktop (with Breadcrumb + Cmd+K Search + Notification + Avatar, or Primary Tabs + CTA actions) and Mobile App Bar (390px).\n\nProps / Variants:\n- Use: \"DesktopBreadcrumb\" | \"DesktopTabs\" | \"Mobi",
   "anatomy": {
     "root": {
       "name": "Use=DesktopBreadcrumb",
@@ -83,7 +78,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "👁️ Notifications#2619:4"
+                "visible": "👁️ Notifications"
               }
             },
             {
@@ -91,7 +86,7 @@
               "type": "INSTANCE",
               "instanceOf": "Avatar",
               "refs": {
-                "visible": "👁️ Avatar#2619:0"
+                "visible": "👁️ Avatar"
               }
             }
           ]
@@ -115,7 +110,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Avatar#2619:0",
+      "propertyName": "👁️ Avatar",
       "codePropName": "hasAvatar",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -125,7 +120,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Notifications#2619:4",
+      "propertyName": "👁️ Notifications",
       "codePropName": "hasNotifications",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -135,7 +130,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"DesktopBreadcrumb\" | \"DesktopTabs\" | \"MobileAppBar\"",
@@ -213,14 +208,13 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "331:1878",
       "figmaName": "Breadcrumb",
       "nodeType": "COMPONENT",
       "variantCount": 1,
       "variants": {},
       "properties": [
         {
-          "figmaPropertyName": "Level 1#626:0",
+          "propertyName": "Level 1",
           "codePropName": "showLevel1",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -230,7 +224,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 2#626:1",
+          "propertyName": "Level 2",
           "codePropName": "showLevel2",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -240,7 +234,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 3#626:2",
+          "propertyName": "Level 3",
           "codePropName": "showLevel3",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -250,7 +244,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 4#626:3",
+          "propertyName": "Level 4",
           "codePropName": "showLevel4",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -260,7 +254,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 5#626:4",
+          "propertyName": "Level 5",
           "codePropName": "showLevel5",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -270,7 +264,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 6#626:5",
+          "propertyName": "Level 6",
           "codePropName": "showLevel6",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -280,7 +274,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Level 7#626:6",
+          "propertyName": "Level 7",
           "codePropName": "showLevel7",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -297,14 +291,13 @@
       "importPath": "@/components/ui/Breadcrumb"
     },
     {
-      "figmaNodeId": "120:426",
       "figmaName": "Tab",
       "nodeType": "COMPONENT",
       "variantCount": 1,
       "variants": {},
       "properties": [
         {
-          "figmaPropertyName": "Show Item 1#344:0",
+          "propertyName": "Show Item 1",
           "codePropName": "showItem1",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -314,7 +307,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 2#344:1",
+          "propertyName": "Show Item 2",
           "codePropName": "showItem2",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -324,7 +317,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 3#344:2",
+          "propertyName": "Show Item 3",
           "codePropName": "showItem3",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -334,7 +327,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 4#344:3",
+          "propertyName": "Show Item 4",
           "codePropName": "showItem4",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -344,7 +337,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 5#344:4",
+          "propertyName": "Show Item 5",
           "codePropName": "showItem5",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -354,7 +347,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 6#344:5",
+          "propertyName": "Show Item 6",
           "codePropName": "showItem6",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -364,7 +357,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 7#344:6",
+          "propertyName": "Show Item 7",
           "codePropName": "showItem7",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -374,7 +367,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 8#344:7",
+          "propertyName": "Show Item 8",
           "codePropName": "showItem8",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -384,7 +377,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 9#344:8",
+          "propertyName": "Show Item 9",
           "codePropName": "showItem9",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -394,7 +387,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Item 10#344:9",
+          "propertyName": "Show Item 10",
           "codePropName": "showItem10",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -416,7 +409,6 @@
       "importPath": "@/components/ui/Tabs"
     },
     {
-      "figmaNodeId": "2605:3459",
       "figmaName": "Kbd",
       "nodeType": "COMPONENT_SET",
       "variantCount": 6,
@@ -441,7 +433,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "👁️ Modifier#2605:0",
+          "propertyName": "👁️ Modifier",
           "codePropName": "hasModifier",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -451,7 +443,7 @@
           ]
         },
         {
-          "figmaPropertyName": "✏️ Modifier#2605:7",
+          "propertyName": "✏️ Modifier",
           "codePropName": "modifierKey",
           "type": "TEXT",
           "tsType": "string",
@@ -461,7 +453,7 @@
           ]
         },
         {
-          "figmaPropertyName": "✏️ Key#2605:14",
+          "propertyName": "✏️ Key",
           "codePropName": "keyLabel",
           "type": "TEXT",
           "tsType": "string",
@@ -471,7 +463,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Use",
+          "propertyName": "Use",
           "codePropName": "variant",
           "type": "VARIANT",
           "tsType": "\"Subtle\" | \"Outline\" | \"Solid\"",
@@ -483,7 +475,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"SM\" | \"MD\"",

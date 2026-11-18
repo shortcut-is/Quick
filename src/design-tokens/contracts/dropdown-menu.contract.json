@@ -1,16 +1,11 @@
 {
   "name": "DropdownMenu",
   "figmaName": "Dropdown Menu",
-  "figmaNodeId": "2596:3739",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5666",
-    "name": "Dropdown Menu"
-  },
+  "section": "Dropdown Menu",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/DropdownMenu",
-  "figmaDescription": "Import: @/components/ui/DropdownMenu (built on @radix-ui/react-dropdown-menu)\nProps Mapping (Figma -> React):\n- Use (Actions | Grouped | Context) -> composed menu structure using DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator\n- Subcomponents: menu item (415:3743), menu title (417:3",
+  "description": "Import: @/components/ui/DropdownMenu (built on @radix-ui/react-dropdown-menu)\nProps Mapping (Figma -> React):\n- Use (Actions | Grouped | Context) -> composed menu structure using DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator\n- Subcomponents: menu item, menu title",
   "anatomy": {
     "root": {
       "name": "Use=Actions",
@@ -97,7 +92,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Actions\" | \"Grouped\" | \"Context\"",
@@ -165,7 +160,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "415:3743",
       "figmaName": "menu item",
       "nodeType": "COMPONENT_SET",
       "variantCount": 5,
@@ -184,17 +178,17 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Icon#422:13",
+          "propertyName": "Icon",
           "codePropName": "icon",
           "type": "INSTANCE_SWAP",
           "tsType": "React.ReactNode",
-          "defaultValue": "145:1174",
+          "defaultValue": "Icon/Line / Command",
           "boundLayers": [
             "Icon"
           ]
         },
         {
-          "figmaPropertyName": "Left Icon#441:17",
+          "propertyName": "Left Icon",
           "codePropName": "hasLeftIcon",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -204,17 +198,17 @@
           ]
         },
         {
-          "figmaPropertyName": "Secondary Icon#441:21",
+          "propertyName": "Secondary Icon",
           "codePropName": "hasSecondaryIcon",
           "type": "INSTANCE_SWAP",
           "tsType": "React.ReactNode",
-          "defaultValue": "145:1423",
+          "defaultValue": "Icon/Line / Command",
           "boundLayers": [
             "ChevronRightIcon"
           ]
         },
         {
-          "figmaPropertyName": "Right Icon#441:25",
+          "propertyName": "Right Icon",
           "codePropName": "hasRightIcon",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -224,7 +218,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Label#441:33",
+          "propertyName": "Label",
           "codePropName": "label",
           "type": "TEXT",
           "tsType": "string",
@@ -234,7 +228,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Shortcut#448:0",
+          "propertyName": "Shortcut",
           "codePropName": "shortcut",
           "type": "TEXT",
           "tsType": "string",
@@ -244,7 +238,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Show Shortcut#448:4",
+          "propertyName": "Show Shortcut",
           "codePropName": "hasShortcut",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -254,7 +248,7 @@
           ]
         },
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Disabled\" | \"Active\" | \"Hover\" | \"Destructive\"",
@@ -289,7 +283,6 @@
       "importPath": "@/components/ui/DropdownMenuItem"
     },
     {
-      "figmaNodeId": "417:3912",
       "figmaName": "menu title",
       "nodeType": "COMPONENT_SET",
       "variantCount": 2,
@@ -305,7 +298,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Type",
+          "propertyName": "Type",
           "codePropName": "type",
           "type": "VARIANT",
           "tsType": "\"Title\" | \"Title (padding L)\"",

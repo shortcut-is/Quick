@@ -1,16 +1,11 @@
 {
   "name": "RadioButton",
   "figmaName": "Radio Button",
-  "figmaNodeId": "291:1327",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5675",
-    "name": "Radio Button"
-  },
+  "section": "Radio Button",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioButton",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Description=Off",
@@ -87,7 +82,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Enabled\" | \"Disabled\"",
@@ -98,7 +93,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selected",
+      "propertyName": "Selected",
       "codePropName": "selected",
       "type": "VARIANT",
       "tsType": "\"Off\" | \"On\"",
@@ -109,7 +104,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Description",
+      "propertyName": "Description",
       "codePropName": "hasDescription",
       "type": "VARIANT",
       "tsType": "\"Off\" | \"On\"",
@@ -154,7 +149,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "69:92",
       "figmaName": "Radio",
       "nodeType": "COMPONENT_SET",
       "variantCount": 4,
@@ -178,7 +172,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Disabled\"",
@@ -189,7 +183,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selected",
+          "propertyName": "Selected",
           "codePropName": "selected",
           "type": "VARIANT",
           "tsType": "\"Off\" | \"On\"",

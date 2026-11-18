@@ -1,16 +1,11 @@
 {
   "name": "ProgressBar",
   "figmaName": "Progress Bar",
-  "figmaNodeId": "2583:3503",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5674",
-    "name": "Progress Bar"
-  },
+  "section": "Progress Bar",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/ProgressBar",
-  "figmaDescription": "Import: `@/components/ui/ProgressBar` (built on `@radix-ui/react-progress`)\nProps Mapping (Figma -> React):\n- Use (`Default | Success | Warning | Danger`) -> `variant?: 'default' | 'success' | 'warning' | 'danger'`\n- Progress (`25% | 75% | 100%`) -> `value: n",
+  "description": "Import: `@/components/ui/ProgressBar` (built on `@radix-ui/react-progress`)\nProps Mapping (Figma -> React):\n- Use (`Default | Success | Warning | Danger`) -> `variant?: 'default' | 'success' | 'warning' | 'danger'`\n- Progress (`25% | 75% | 100%`) -> `value: n",
   "anatomy": {
     "root": {
       "name": "Use=Default, Progress=25%, Size=SM",
@@ -28,21 +23,21 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Header#2583:0"
+            "visible": "👁️ Header"
           },
           "children": [
             {
               "name": "Label",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Label#2583:75"
+                "characters": "✏️ Label"
               }
             },
             {
               "name": "Value",
               "type": "TEXT",
               "refs": {
-                "visible": "👁️ Value#2583:25"
+                "visible": "👁️ Value"
               }
             }
           ]
@@ -61,8 +56,8 @@
           "name": "Caption",
           "type": "TEXT",
           "refs": {
-            "visible": "👁️ Caption#2583:50",
-            "characters": "✏️ Caption#2583:100"
+            "visible": "👁️ Caption",
+            "characters": "✏️ Caption"
           }
         }
       ]
@@ -102,7 +97,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Header#2583:0",
+      "propertyName": "👁️ Header",
       "codePropName": "hasHeader",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -112,7 +107,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Value#2583:25",
+      "propertyName": "👁️ Value",
       "codePropName": "hasValue",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -122,7 +117,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Caption#2583:50",
+      "propertyName": "👁️ Caption",
       "codePropName": "hasCaption",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -132,7 +127,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Label#2583:75",
+      "propertyName": "✏️ Label",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
@@ -142,7 +137,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Caption#2583:100",
+      "propertyName": "✏️ Caption",
       "codePropName": "caption",
       "type": "TEXT",
       "tsType": "string",
@@ -152,7 +147,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Success\" | \"Warning\" | \"Danger\"",
@@ -165,7 +160,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Progress",
+      "propertyName": "Progress",
       "codePropName": "progress",
       "type": "VARIANT",
       "tsType": "\"75%\" | \"25%\" | \"100%\"",
@@ -177,7 +172,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"LG\" | \"SM\"",

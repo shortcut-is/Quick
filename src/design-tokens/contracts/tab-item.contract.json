@@ -1,16 +1,11 @@
 {
   "name": "TabItem",
   "figmaName": "_Tab Item",
-  "figmaNodeId": "120:411",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5682",
-    "name": "Tab"
-  },
+  "section": "Tab",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/TabItem",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -32,7 +27,7 @@
               "name": "Label",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Current Item#2104:22"
+                "characters": "✏️ Current Item"
               }
             }
           ]
@@ -56,14 +51,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "✏️ Item#2104:19",
+      "propertyName": "✏️ Item",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "[Item]"
     },
     {
-      "figmaPropertyName": "✏️ Current Item#2104:22",
+      "propertyName": "✏️ Current Item",
       "codePropName": "currentLabel",
       "type": "TEXT",
       "tsType": "string",
@@ -73,7 +68,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Selected\" | \"Disabled\"",

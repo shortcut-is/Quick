@@ -1,16 +1,11 @@
 {
   "name": "Avatar",
   "figmaName": "Avatar",
-  "figmaNodeId": "79:1653",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5656",
-    "name": "Avatar"
-  },
+  "section": "Avatar",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Avatar",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Type=image, Size=24",
@@ -49,7 +44,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Type",
+      "propertyName": "Type",
       "codePropName": "type",
       "type": "VARIANT",
       "tsType": "\"image\" | \"initials\" | \"Letter\"",
@@ -61,7 +56,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"40\" | \"32\" | \"24\"",

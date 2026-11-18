@@ -1,16 +1,11 @@
 {
   "name": "Slider",
   "figmaName": "Slider",
-  "figmaNodeId": "79:1072",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5679",
-    "name": "Slider"
-  },
+  "section": "Slider",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Slider",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Progress=0 %",
@@ -33,7 +28,7 @@
           "name": "Dot",
           "type": "FRAME",
           "refs": {
-            "visible": "Show Knob#79:8"
+            "visible": "Show Knob"
           },
           "children": [
             {
@@ -66,14 +61,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "%% - Add \"X\" for free control#79:1",
+      "propertyName": "%% - Add \"X\" for free control",
       "codePropName": "freeProgressHackDeprecated",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "XXXXXXXXXXXXXXXXXXX"
     },
     {
-      "figmaPropertyName": "Show Knob#79:8",
+      "propertyName": "Show Knob",
       "codePropName": "hasKnob",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -83,7 +78,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Progress",
+      "propertyName": "Progress",
       "codePropName": "progress",
       "type": "VARIANT",
       "tsType": "\"0 %\" | \"25 %\" | \"50 %\" | \"75 %\" | \"100 %\" | \"Free\"",
@@ -125,14 +120,13 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "79:948",
       "figmaName": "_Slider - Knob",
       "nodeType": "COMPONENT",
       "variantCount": 1,
       "variants": {},
       "properties": [
         {
-          "figmaPropertyName": "Show Tooltip#79:0",
+          "propertyName": "Show Tooltip",
           "codePropName": "hasTooltip",
           "type": "BOOLEAN",
           "tsType": "boolean",

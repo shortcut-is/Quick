@@ -1,16 +1,11 @@
 {
   "name": "DataTableCell",
   "figmaName": "_Data table Cell",
-  "figmaNodeId": "476:3657",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5663",
-    "name": "Data Table"
-  },
+  "section": "Data Table",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableCell",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=← Fill →",
@@ -53,7 +48,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Disabled\" | \"Enabled\"",
@@ -64,7 +59,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",

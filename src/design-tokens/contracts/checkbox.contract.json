@@ -1,16 +1,11 @@
 {
   "name": "Checkbox",
   "figmaName": "Checkbox",
-  "figmaNodeId": "288:1265",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5662",
-    "name": "Checkbox"
-  },
+  "section": "Checkbox",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Checkbox",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Selection=Unchecked, State=Enabled, Description=No",
@@ -81,7 +76,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Selection",
+      "propertyName": "Selection",
       "codePropName": "checked",
       "type": "VARIANT",
       "tsType": "\"Indeterminate\" | \"Unchecked\" | \"Checked\"",
@@ -93,7 +88,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Enabled\" | \"Disabled\"",
@@ -104,7 +99,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Description",
+      "propertyName": "Description",
       "codePropName": "hasDescription",
       "type": "VARIANT",
       "tsType": "\"No\" | \"Yes\"",
@@ -149,7 +144,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "69:36",
       "figmaName": "Checkbox Standalone",
       "nodeType": "COMPONENT_SET",
       "variantCount": 6,
@@ -174,7 +168,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\" | \"Disabled\"",
@@ -185,7 +179,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selection",
+          "propertyName": "Selection",
           "codePropName": "checked",
           "type": "VARIANT",
           "tsType": "\"Unchecked\" | \"Checked\" | \"Indeterminate\"",

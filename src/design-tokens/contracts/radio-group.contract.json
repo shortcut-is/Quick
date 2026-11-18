@@ -1,16 +1,11 @@
 {
   "name": "RadioGroup",
   "figmaName": "Radio Group",
-  "figmaNodeId": "292:1344",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5675",
-    "name": "Radio Button"
-  },
+  "section": "Radio Button",
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioGroup",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Radio Group",
@@ -124,7 +119,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "291:1327",
       "figmaName": "Radio Button",
       "nodeType": "COMPONENT_SET",
       "variantCount": 8,
@@ -156,7 +150,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\" | \"Disabled\"",
@@ -167,7 +161,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selected",
+          "propertyName": "Selected",
           "codePropName": "selected",
           "type": "VARIANT",
           "tsType": "\"Off\" | \"On\"",
@@ -178,7 +172,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Description",
+          "propertyName": "Description",
           "codePropName": "hasDescription",
           "type": "VARIANT",
           "tsType": "\"Off\" | \"On\"",

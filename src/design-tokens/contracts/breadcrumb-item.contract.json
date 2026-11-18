@@ -1,16 +1,11 @@
 {
   "name": "BreadcrumbItem",
   "figmaName": "Breadcrumb Items",
-  "figmaNodeId": "79:286",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5658",
-    "name": "Breadcrumb"
-  },
+  "section": "Breadcrumb",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BreadcrumbItem",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -63,7 +58,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Overflow\" | \"Current\"",

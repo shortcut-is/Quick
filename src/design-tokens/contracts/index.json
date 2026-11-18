@@ -1,15 +1,13 @@
 {
   "designSystem": "⚡ Quick - v1.2",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaPageId": "0:1",
   "sectionsCount": 40,
-  "publishedFigmaNodesCount": 72,
+  "componentsCount": 72,
   "contractFilesCount": 60,
   "contracts": [
     {
       "name": "Accordion",
       "figmaName": "Accordion",
-      "figmaNodeId": "105:345",
+      "section": "Accordion",
       "importPath": "@/components/ui/Accordion",
       "category": "Disclosure",
       "contractFile": "accordion.contract.json",
@@ -18,7 +16,7 @@
     {
       "name": "Alert",
       "figmaName": "Alert",
-      "figmaNodeId": "2594:3473",
+      "section": "Alerts",
       "importPath": "@/components/ui/Alert",
       "category": "Feedback",
       "contractFile": "alert.contract.json",
@@ -27,7 +25,7 @@
     {
       "name": "AvatarGroup",
       "figmaName": "Avatar Group",
-      "figmaNodeId": "2606:3514",
+      "section": "Avatar Group",
       "importPath": "@/components/ui/AvatarGroup",
       "category": "Data Display",
       "contractFile": "avatar-group.contract.json",
@@ -36,7 +34,7 @@
     {
       "name": "Avatar",
       "figmaName": "Avatar",
-      "figmaNodeId": "79:1653",
+      "section": "Avatar",
       "importPath": "@/components/ui/Avatar",
       "category": "Data Display",
       "contractFile": "avatar.contract.json",
@@ -45,7 +43,7 @@
     {
       "name": "Badge",
       "figmaName": "Badge",
-      "figmaNodeId": "203:979",
+      "section": "Badges",
       "importPath": "@/components/ui/Badge",
       "category": "Data Display",
       "contractFile": "badge.contract.json",
@@ -54,7 +52,7 @@
     {
       "name": "BottomNavItem",
       "figmaName": "_Bottom Nav Item",
-      "figmaNodeId": "2624:4500",
+      "section": "Navigation Bars",
       "importPath": "@/components/ui/BottomNavItem",
       "category": "Navigation (Subcomponent)",
       "contractFile": "bottom-nav-item.contract.json",
@@ -63,7 +61,7 @@
     {
       "name": "BottomNavigation",
       "figmaName": "Bottom Navigation",
-      "figmaNodeId": "2619:4479",
+      "section": "Navigation Bars",
       "importPath": "@/components/ui/BottomNavigation",
       "category": "Navigation",
       "contractFile": "bottom-navigation.contract.json",
@@ -72,7 +70,7 @@
     {
       "name": "BreadcrumbItem",
       "figmaName": "Breadcrumb Items",
-      "figmaNodeId": "79:286",
+      "section": "Breadcrumb",
       "importPath": "@/components/ui/BreadcrumbItem",
       "category": "Navigation (Subcomponent)",
       "contractFile": "breadcrumb-item.contract.json",
@@ -81,7 +79,7 @@
     {
       "name": "Breadcrumb",
       "figmaName": "Breadcrumb",
-      "figmaNodeId": "331:1878",
+      "section": "Breadcrumb",
       "importPath": "@/components/ui/Breadcrumb",
       "category": "Navigation",
       "contractFile": "breadcrumb.contract.json",
@@ -90,7 +88,7 @@
     {
       "name": "Button",
       "figmaName": "Button",
-      "figmaNodeId": "67:19",
+      "section": "Button",
       "importPath": "@/components/ui/Button",
       "category": "Actions",
       "contractFile": "button.contract.json",
@@ -99,7 +97,7 @@
     {
       "name": "Calendar",
       "figmaName": "Calendar",
-      "figmaNodeId": "473:3594",
+      "section": "Calendar",
       "importPath": "@/components/ui/Calendar",
       "category": "Inputs & Date",
       "contractFile": "calendar.contract.json",
@@ -108,7 +106,7 @@
     {
       "name": "Card",
       "figmaName": "Card",
-      "figmaNodeId": "2568:3189",
+      "section": "Card",
       "importPath": "@/components/ui/Card",
       "category": "Surfaces",
       "contractFile": "card.contract.json",
@@ -117,7 +115,7 @@
     {
       "name": "CheckboxGroup",
       "figmaName": "Checkbox Group",
-      "figmaNodeId": "288:1385",
+      "section": "Checkbox",
       "importPath": "@/components/ui/CheckboxGroup",
       "category": "Inputs",
       "contractFile": "checkbox-group.contract.json",
@@ -126,7 +124,7 @@
     {
       "name": "CheckboxStandalone",
       "figmaName": "Checkbox Standalone",
-      "figmaNodeId": "69:36",
+      "section": "Checkbox",
       "importPath": "@/components/ui/CheckboxStandalone",
       "category": "Inputs (Primitive)",
       "contractFile": "checkbox-standalone.contract.json",
@@ -135,7 +133,7 @@
     {
       "name": "Checkbox",
       "figmaName": "Checkbox",
-      "figmaNodeId": "288:1265",
+      "section": "Checkbox",
       "importPath": "@/components/ui/Checkbox",
       "category": "Inputs",
       "contractFile": "checkbox.contract.json",
@@ -144,7 +142,7 @@
     {
       "name": "DataTableCell",
       "figmaName": "_Data table Cell",
-      "figmaNodeId": "476:3657",
+      "section": "Data Table",
       "importPath": "@/components/ui/DataTableCell",
       "category": "Data Display (Subcomponent)",
       "contractFile": "data-table-cell.contract.json",
@@ -153,7 +151,7 @@
     {
       "name": "DataTableFooter",
       "figmaName": "Data table  - Footer",
-      "figmaNodeId": "478:6008",
+      "section": "Data Table",
       "importPath": "@/components/ui/DataTableFooter",
       "category": "Data Display (Subcomponent)",
       "contractFile": "data-table-footer.contract.json",
@@ -162,7 +160,7 @@
     {
       "name": "DataTableHeader",
       "figmaName": "Data table  - Header",
-      "figmaNodeId": "476:3937",
+      "section": "Data Table",
       "importPath": "@/components/ui/DataTableHeader",
       "category": "Data Display (Subcomponent)",
       "contractFile": "data-table-header.contract.json",
@@ -171,7 +169,7 @@
     {
       "name": "DataTableRow",
       "figmaName": "Data table  - Row",
-      "figmaNodeId": "476:3823",
+      "section": "Data Table",
       "importPath": "@/components/ui/DataTableRow",
       "category": "Data Display (Subcomponent)",
       "contractFile": "data-table-row.contract.json",
@@ -180,7 +178,7 @@
     {
       "name": "DataTable",
       "figmaName": "Data Table",
-      "figmaNodeId": "2154:5663",
+      "section": "Data Table",
       "importPath": "@/components/ui/DataTable",
       "category": "Data Display",
       "contractFile": "data-table.contract.json",
@@ -189,7 +187,7 @@
     {
       "name": "DatePicker",
       "figmaName": "Date Picker",
-      "figmaNodeId": "471:9314",
+      "section": "Date Picker",
       "importPath": "@/components/ui/DatePicker",
       "category": "Inputs & Date",
       "contractFile": "date-picker.contract.json",
@@ -198,7 +196,7 @@
     {
       "name": "Dialog",
       "figmaName": "Dialog",
-      "figmaNodeId": "2595:3688",
+      "section": "Dialog",
       "importPath": "@/components/ui/Dialog",
       "category": "Overlay",
       "contractFile": "dialog.contract.json",
@@ -207,7 +205,7 @@
     {
       "name": "DropdownMenuItem",
       "figmaName": "menu item",
-      "figmaNodeId": "415:3743",
+      "section": "Dropdown Menu",
       "importPath": "@/components/ui/DropdownMenuItem",
       "category": "Overlay & Navigation (Subcomponent)",
       "contractFile": "dropdown-menu-item.contract.json",
@@ -216,7 +214,7 @@
     {
       "name": "DropdownMenuLabel",
       "figmaName": "menu title",
-      "figmaNodeId": "417:3912",
+      "section": "Dropdown Menu",
       "importPath": "@/components/ui/DropdownMenuLabel",
       "category": "Overlay & Navigation (Subcomponent)",
       "contractFile": "dropdown-menu-title.contract.json",
@@ -225,7 +223,7 @@
     {
       "name": "DropdownMenu",
       "figmaName": "Dropdown Menu",
-      "figmaNodeId": "2596:3739",
+      "section": "Dropdown Menu",
       "importPath": "@/components/ui/DropdownMenu",
       "category": "Overlay & Navigation",
       "contractFile": "dropdown-menu.contract.json",
@@ -234,7 +232,7 @@
     {
       "name": "EmptyState",
       "figmaName": "Empty State",
-      "figmaNodeId": "2607:3630",
+      "section": "Empty State",
       "importPath": "@/components/ui/EmptyState",
       "category": "Feedback",
       "contractFile": "empty-state.contract.json",
@@ -243,7 +241,7 @@
     {
       "name": "FileUpload",
       "figmaName": "File Upload",
-      "figmaNodeId": "473:3902",
+      "section": "File Upload",
       "importPath": "@/components/ui/FileUpload",
       "category": "Inputs",
       "contractFile": "file-upload.contract.json",
@@ -252,7 +250,7 @@
     {
       "name": "Textarea",
       "figmaName": "Input Area",
-      "figmaNodeId": "194:1034",
+      "section": "Input Area",
       "importPath": "@/components/ui/Textarea",
       "category": "Inputs",
       "contractFile": "input-area.contract.json",
@@ -261,7 +259,7 @@
     {
       "name": "InputSelect",
       "figmaName": "Input Select",
-      "figmaNodeId": "88:355",
+      "section": "Input Select",
       "importPath": "@/components/ui/InputSelect",
       "category": "Inputs",
       "contractFile": "input-select.contract.json",
@@ -270,7 +268,7 @@
     {
       "name": "InputText",
       "figmaName": "Input Text",
-      "figmaNodeId": "84:3866",
+      "section": "Input Text",
       "importPath": "@/components/ui/InputText",
       "category": "Inputs",
       "contractFile": "input-text.contract.json",
@@ -279,7 +277,7 @@
     {
       "name": "Kbd",
       "figmaName": "Kbd",
-      "figmaNodeId": "2605:3459",
+      "section": "Kbd",
       "importPath": "@/components/ui/Kbd",
       "category": "Data Display",
       "contractFile": "kbd.contract.json",
@@ -288,7 +286,7 @@
     {
       "name": "ListItem",
       "figmaName": "List Item",
-      "figmaNodeId": "95:340",
+      "section": "List Item",
       "importPath": "@/components/ui/ListItem",
       "category": "Data Display",
       "contractFile": "list-item.contract.json",
@@ -297,7 +295,7 @@
     {
       "name": "Notification",
       "figmaName": "Notification",
-      "figmaNodeId": "545:5052",
+      "section": "Notification",
       "importPath": "@/components/ui/Notification",
       "category": "Feedback",
       "contractFile": "notification.contract.json",
@@ -306,7 +304,7 @@
     {
       "name": "Overlay",
       "figmaName": "OVERLAY",
-      "figmaNodeId": "351:2136",
+      "section": "Dialog",
       "importPath": "@/components/ui/Overlay",
       "category": "Overlay (Primitive)",
       "contractFile": "overlay.contract.json",
@@ -315,7 +313,7 @@
     {
       "name": "Pagination",
       "figmaName": "Pagination",
-      "figmaNodeId": "106:384",
+      "section": "Pagination",
       "importPath": "@/components/ui/Pagination",
       "category": "Navigation",
       "contractFile": "pagination.contract.json",
@@ -324,7 +322,7 @@
     {
       "name": "Popover",
       "figmaName": "Popover",
-      "figmaNodeId": "2617:3999",
+      "section": "Popover",
       "importPath": "@/components/ui/Popover",
       "category": "Overlay & Controls",
       "contractFile": "popover.contract.json",
@@ -333,7 +331,7 @@
     {
       "name": "ProgressBar",
       "figmaName": "Progress Bar",
-      "figmaNodeId": "2583:3503",
+      "section": "Progress Bar",
       "importPath": "@/components/ui/ProgressBar",
       "category": "Feedback",
       "contractFile": "progress-bar.contract.json",
@@ -342,7 +340,7 @@
     {
       "name": "RadioButton",
       "figmaName": "Radio Button",
-      "figmaNodeId": "291:1327",
+      "section": "Radio Button",
       "importPath": "@/components/ui/RadioButton",
       "category": "Inputs",
       "contractFile": "radio-button.contract.json",
@@ -351,7 +349,7 @@
     {
       "name": "RadioGroup",
       "figmaName": "Radio Group",
-      "figmaNodeId": "292:1344",
+      "section": "Radio Button",
       "importPath": "@/components/ui/RadioGroup",
       "category": "Inputs",
       "contractFile": "radio-group.contract.json",
@@ -360,7 +358,7 @@
     {
       "name": "Radio",
       "figmaName": "Radio",
-      "figmaNodeId": "69:92",
+      "section": "Radio Button",
       "importPath": "@/components/ui/Radio",
       "category": "Inputs (Primitive)",
       "contractFile": "radio.contract.json",
@@ -369,7 +367,7 @@
     {
       "name": "SegmentControl",
       "figmaName": "Segment",
-      "figmaNodeId": "88:670",
+      "section": "Segment Control",
       "importPath": "@/components/ui/SegmentControl",
       "category": "Navigation & Inputs",
       "contractFile": "segment-control.contract.json",
@@ -378,7 +376,7 @@
     {
       "name": "Separator",
       "figmaName": "SEPARATOR",
-      "figmaNodeId": "536:6183",
+      "section": "Separator",
       "importPath": "@/components/ui/Separator",
       "category": "Layout Primitive",
       "contractFile": "separator.contract.json",
@@ -387,7 +385,7 @@
     {
       "name": "Sheet",
       "figmaName": "Sheet",
-      "figmaNodeId": "2616:3862",
+      "section": "Sheet",
       "importPath": "@/components/ui/Sheet",
       "category": "Overlay & Navigation",
       "contractFile": "sheet.contract.json",
@@ -396,7 +394,7 @@
     {
       "name": "SidebarItem",
       "figmaName": "_Sidebar Item",
-      "figmaNodeId": "2618:4130",
+      "section": "Sidebar Navigation",
       "importPath": "@/components/ui/SidebarItem",
       "category": "Navigation (Subcomponent)",
       "contractFile": "sidebar-item.contract.json",
@@ -405,7 +403,7 @@
     {
       "name": "SidebarNavigation",
       "figmaName": "Sidebar Navigation",
-      "figmaNodeId": "2618:4293",
+      "section": "Sidebar Navigation",
       "importPath": "@/components/ui/SidebarNavigation",
       "category": "Navigation",
       "contractFile": "sidebar-navigation.contract.json",
@@ -414,7 +412,7 @@
     {
       "name": "Skeleton",
       "figmaName": "Skeleton",
-      "figmaNodeId": "2604:3455",
+      "section": "Skeleton & Spinner",
       "importPath": "@/components/ui/Skeleton",
       "category": "Feedback",
       "contractFile": "skeleton.contract.json",
@@ -423,7 +421,7 @@
     {
       "name": "Slider",
       "figmaName": "Slider",
-      "figmaNodeId": "79:1072",
+      "section": "Slider",
       "importPath": "@/components/ui/Slider",
       "category": "Inputs",
       "contractFile": "slider.contract.json",
@@ -432,7 +430,7 @@
     {
       "name": "SlotContent",
       "figmaName": "Slot: Content",
-      "figmaNodeId": "2366:6163",
+      "section": "Card",
       "importPath": "@/components/ui/SlotContent",
       "category": "Primitives",
       "contractFile": "slot-content.contract.json",
@@ -441,7 +439,7 @@
     {
       "name": "Spinner",
       "figmaName": "Spinner",
-      "figmaNodeId": "2604:3430",
+      "section": "Skeleton & Spinner",
       "importPath": "@/components/ui/Spinner",
       "category": "Feedback",
       "contractFile": "spinner.contract.json",
@@ -450,7 +448,7 @@
     {
       "name": "Stepper",
       "figmaName": "Stepper",
-      "figmaNodeId": "223:3697",
+      "section": "Stepper",
       "importPath": "@/components/ui/Stepper",
       "category": "Navigation",
       "contractFile": "stepper.contract.json",
@@ -459,7 +457,7 @@
     {
       "name": "SwitchStandalone",
       "figmaName": "Switch Standalone",
-      "figmaNodeId": "79:1328",
+      "section": "Switch",
       "importPath": "@/components/ui/SwitchStandalone",
       "category": "Inputs (Primitive)",
       "contractFile": "switch-standalone.contract.json",
@@ -468,7 +466,7 @@
     {
       "name": "Switch",
       "figmaName": "Switch",
-      "figmaNodeId": "309:1604",
+      "section": "Switch",
       "importPath": "@/components/ui/Switch",
       "category": "Inputs",
       "contractFile": "switch.contract.json",
@@ -477,7 +475,7 @@
     {
       "name": "TabItem",
       "figmaName": "_Tab Item",
-      "figmaNodeId": "120:411",
+      "section": "Tab",
       "importPath": "@/components/ui/TabItem",
       "category": "Navigation (Subcomponent)",
       "contractFile": "tab-item.contract.json",
@@ -486,7 +484,7 @@
     {
       "name": "Tabs",
       "figmaName": "Tab",
-      "figmaNodeId": "120:426",
+      "section": "Tab",
       "importPath": "@/components/ui/Tabs",
       "category": "Navigation",
       "contractFile": "tab.contract.json",
@@ -495,7 +493,7 @@
     {
       "name": "TagGroup",
       "figmaName": "Tag Group",
-      "figmaNodeId": "331:1784",
+      "section": "Tag",
       "importPath": "@/components/ui/TagGroup",
       "category": "Data Display",
       "contractFile": "tag-group.contract.json",
@@ -504,7 +502,7 @@
     {
       "name": "Tag",
       "figmaName": "Tag",
-      "figmaNodeId": "79:216",
+      "section": "Tag",
       "importPath": "@/components/ui/Tag",
       "category": "Data Display",
       "contractFile": "tag.contract.json",
@@ -513,7 +511,7 @@
     {
       "name": "TimePicker",
       "figmaName": "Time Picker",
-      "figmaNodeId": "471:9247",
+      "section": "Time Pickers",
       "importPath": "@/components/ui/TimePicker",
       "category": "Inputs & Date",
       "contractFile": "time-picker.contract.json",
@@ -522,7 +520,7 @@
     {
       "name": "Toast",
       "figmaName": "Toast",
-      "figmaNodeId": "2594:3668",
+      "section": "Toast",
       "importPath": "@/components/ui/Toast",
       "category": "Feedback",
       "contractFile": "toast.contract.json",
@@ -531,7 +529,7 @@
     {
       "name": "Tooltip",
       "figmaName": "Tooltip title",
-      "figmaNodeId": "79:525",
+      "section": "Tooltip",
       "importPath": "@/components/ui/Tooltip",
       "category": "Overlay",
       "contractFile": "tooltip.contract.json",
@@ -540,85 +538,11 @@
     {
       "name": "Topbar",
       "figmaName": "Topbar",
-      "figmaNodeId": "2619:4440",
+      "section": "Navigation Bars",
       "importPath": "@/components/ui/Topbar",
       "category": "Navigation",
       "contractFile": "topbar.contract.json",
       "totalVariants": 3
     }
-  ],
-  "figmaNodeCoverage": {
-    "105:345": "accordion.contract.json",
-    "2594:3473": "alert.contract.json",
-    "79:1653": "avatar.contract.json",
-    "203:979": "badge.contract.json",
-    "331:1878": "breadcrumb.contract.json",
-    "79:286": "breadcrumb-item.contract.json",
-    "67:19": "button.contract.json",
-    "473:3594": "calendar.contract.json",
-    "472:9363": "calendar.contract.json#subcomponents",
-    "472:9466": "calendar.contract.json#subcomponents",
-    "472:9596": "calendar.contract.json#subcomponents",
-    "2568:3189": "card.contract.json",
-    "2366:6163": "slot-content.contract.json",
-    "288:1265": "checkbox.contract.json",
-    "69:36": "checkbox-standalone.contract.json",
-    "288:1385": "checkbox-group.contract.json",
-    "476:3937": "data-table-header.contract.json",
-    "580:12541": "data-table-header.contract.json#subcomponents",
-    "476:3823": "data-table-row.contract.json",
-    "476:3657": "data-table-cell.contract.json",
-    "476:3684": "data-table-row.contract.json#subcomponents",
-    "478:4244": "data-table-row.contract.json#subcomponents",
-    "478:6008": "data-table-footer.contract.json",
-    "471:9314": "date-picker.contract.json",
-    "2595:3688": "dialog.contract.json",
-    "351:2136": "overlay.contract.json",
-    "2596:3739": "dropdown-menu.contract.json",
-    "415:3743": "dropdown-menu-item.contract.json",
-    "417:3912": "dropdown-menu-title.contract.json",
-    "473:3902": "file-upload.contract.json",
-    "194:1034": "input-area.contract.json",
-    "84:3866": "input-text.contract.json",
-    "88:355": "input-select.contract.json",
-    "95:340": "list-item.contract.json",
-    "545:5052": "notification.contract.json",
-    "106:384": "pagination.contract.json",
-    "106:348": "pagination.contract.json#subcomponents",
-    "106:589": "pagination.contract.json#subcomponents",
-    "2583:3503": "progress-bar.contract.json",
-    "291:1327": "radio-button.contract.json",
-    "69:92": "radio.contract.json",
-    "292:1344": "radio-group.contract.json",
-    "88:670": "segment-control.contract.json",
-    "88:665": "segment-control.contract.json#subcomponents",
-    "536:6183": "separator.contract.json",
-    "79:1072": "slider.contract.json",
-    "79:948": "slider.contract.json#subcomponents",
-    "223:3697": "stepper.contract.json",
-    "220:1730": "stepper.contract.json#subcomponents",
-    "309:1604": "switch.contract.json",
-    "79:1328": "switch-standalone.contract.json",
-    "120:426": "tab.contract.json",
-    "120:411": "tab-item.contract.json",
-    "79:216": "tag.contract.json",
-    "331:1784": "tag-group.contract.json",
-    "471:9247": "time-picker.contract.json",
-    "471:9039": "time-picker.contract.json#subcomponents",
-    "2594:3668": "toast.contract.json",
-    "79:525": "tooltip.contract.json",
-    "73:56": "tooltip.contract.json#subcomponents",
-    "2604:3430": "spinner.contract.json",
-    "2604:3455": "skeleton.contract.json",
-    "2605:3459": "kbd.contract.json",
-    "2606:3514": "avatar-group.contract.json",
-    "2607:3630": "empty-state.contract.json",
-    "2616:3862": "sheet.contract.json",
-    "2617:3999": "popover.contract.json",
-    "2618:4293": "sidebar-navigation.contract.json",
-    "2618:4130": "sidebar-item.contract.json",
-    "2619:4440": "topbar.contract.json",
-    "2619:4479": "bottom-navigation.contract.json",
-    "2624:4500": "bottom-nav-item.contract.json"
-  }
+  ]
 }

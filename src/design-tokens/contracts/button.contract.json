@@ -1,16 +1,11 @@
 {
   "name": "Button",
   "figmaName": "Button",
-  "figmaNodeId": "67:19",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5659",
-    "name": "Button"
-  },
+  "section": "Button",
   "nodeType": "COMPONENT_SET",
   "category": "Actions",
   "importPath": "@/components/ui/Button",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Content=Label, Variant=Primary, Size=LG, State=Default",
@@ -39,15 +34,15 @@
               "type": "INSTANCE",
               "instanceOf": "Icon/Line / Command",
               "refs": {
-                "visible": "👁️ Icon Left#93:0",
-                "mainComponent": "↪️ Swap Icon Left#173:0"
+                "visible": "👁️ Icon Left",
+                "mainComponent": "↪️ Swap Icon Left"
               }
             },
             {
               "name": "Primary",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Text#162:0"
+                "characters": "✏️ Text"
               }
             },
             {
@@ -55,8 +50,8 @@
               "type": "INSTANCE",
               "instanceOf": "Icon/Line / Command",
               "refs": {
-                "visible": "👁️ Icon Right#580:6",
-                "mainComponent": "↪️ Swap Icon Right#580:19"
+                "visible": "👁️ Icon Right",
+                "mainComponent": "↪️ Swap Icon Right"
               }
             }
           ]
@@ -109,7 +104,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Icon Left#93:0",
+      "propertyName": "👁️ Icon Left",
       "codePropName": "hasLeftIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -119,7 +114,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Text#162:0",
+      "propertyName": "✏️ Text",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
@@ -129,17 +124,17 @@
       ]
     },
     {
-      "figmaPropertyName": "↪️ Swap Icon Left#173:0",
+      "propertyName": "↪️ Swap Icon Left",
       "codePropName": "leftIcon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "145:1174",
+      "defaultValue": "Icon/Line / Command",
       "boundLayers": [
         "Icon/Line / Command"
       ]
     },
     {
-      "figmaPropertyName": "👁️ Icon Right#580:6",
+      "propertyName": "👁️ Icon Right",
       "codePropName": "hasRightIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -149,24 +144,24 @@
       ]
     },
     {
-      "figmaPropertyName": "↪️ Swap Icon Right#580:19",
+      "propertyName": "↪️ Swap Icon Right",
       "codePropName": "rightIcon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "145:1174",
+      "defaultValue": "Icon/Line / Command",
       "boundLayers": [
         "Icon/Line / Command"
       ]
     },
     {
-      "figmaPropertyName": "Swap Icon#620:0",
+      "propertyName": "Swap Icon",
       "codePropName": "icon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "145:1174"
+      "defaultValue": "Icon/Line / Command"
     },
     {
-      "figmaPropertyName": "Content",
+      "propertyName": "Content",
       "codePropName": "contentMode",
       "type": "VARIANT",
       "tsType": "\"Icon\" | \"Label\"",
@@ -177,7 +172,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Variant",
+      "propertyName": "Variant",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Primary\" | \"Ghost\" | \"Destructive\" | \"Outline\"",
@@ -190,7 +185,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"LG\" | \"MD\" | \"SM\" | \"XS\"",
@@ -203,7 +198,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Disabled\" | \"Hover\" | \"Focus\"",

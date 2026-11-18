@@ -1,16 +1,11 @@
 {
   "name": "BottomNavItem",
   "figmaName": "_Bottom Nav Item",
-  "figmaNodeId": "2624:4500",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2619:4309",
-    "name": "Navigation Bars"
-  },
+  "section": "Navigation Bars",
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BottomNavItem",
-  "figmaDescription": "Import: @/components/ui/BottomNavItem\nCategory: Navigation (Subcomponent)\n\nMobile bottom navigation item supporting Default (muted), Hover (Surfaces/Muted pill), and Active (Surfaces/Muted + Surfaces/Border 1px stroke) states.\n\nProps / Variants:\n- State: \"Default\" | \"Hover\" | &qu",
+  "description": "Import: @/components/ui/BottomNavItem\nCategory: Navigation (Subcomponent)\n\nMobile bottom navigation item supporting Default (muted), Hover (Surfaces/Muted pill), and Active (Surfaces/Muted + Surfaces/Border 1px stroke) states.\n\nProps / Variants:\n- State: \"Default\" | \"Hover\" | &qu",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -34,14 +29,14 @@
           "type": "INSTANCE",
           "instanceOf": "Icon/Line / Dashboard",
           "refs": {
-            "mainComponent": "↪️ Icon#2624:4"
+            "mainComponent": "↪️ Icon"
           }
         },
         {
           "name": "TabLabel",
           "type": "TEXT",
           "refs": {
-            "characters": "✏️ Label#2624:0"
+            "characters": "✏️ Label"
           }
         }
       ]
@@ -63,7 +58,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "✏️ Label#2624:0",
+      "propertyName": "✏️ Label",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
@@ -73,17 +68,17 @@
       ]
     },
     {
-      "figmaPropertyName": "↪️ Icon#2624:4",
+      "propertyName": "↪️ Icon",
       "codePropName": "icon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "447:3559",
+      "defaultValue": "Icon/Line / Dashboard",
       "boundLayers": [
         "TabIcon"
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Hover\" | \"Active\"",

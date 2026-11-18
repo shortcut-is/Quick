@@ -1,16 +1,11 @@
 {
   "name": "TimePicker",
   "figmaName": "Time Picker",
-  "figmaNodeId": "471:9247",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5684",
-    "name": "Time Pickers"
-  },
+  "section": "Time Pickers",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/TimePicker",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -73,7 +68,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Filled\"",
@@ -114,7 +109,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "471:9039",
       "figmaName": "_TimePicker Elements",
       "nodeType": "COMPONENT_SET",
       "variantCount": 2,
@@ -130,7 +124,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Filled\"",
@@ -167,6 +161,6 @@
   },
   "behaviorRules": [
     "Permitir selección de hora y minutos con teclado, soporte 12h/24h y validación de rangos.",
-    "Reutiliza segmentos interactivos de `_TimePicker Elements` (`471:9039`)."
+    "Reutiliza segmentos interactivos de `_TimePicker Elements`."
   ]
 }

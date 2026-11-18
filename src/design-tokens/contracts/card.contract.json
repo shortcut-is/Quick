@@ -1,16 +1,11 @@
 {
   "name": "Card",
   "figmaName": "Card",
-  "figmaNodeId": "2568:3189",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5661",
-    "name": "Card"
-  },
+  "section": "Card",
   "nodeType": "COMPONENT_SET",
   "category": "Surfaces",
   "importPath": "@/components/ui/Card",
-  "figmaDescription": "Import: `@/components/ui/Card` (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`)\nProps Mapping (Figma -> React):\n- Use (`Default | Media | Stat | Profile | Form | Settings | List | Pricing`) -> `variant` / composed pattern\n- Size (`SM | MD | LG`) -> `size?:",
+  "description": "Import: `@/components/ui/Card` (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`)\nProps Mapping (Figma -> React):\n- Use (`Default | Media | Stat | Profile | Form | Settings | List | Pricing`) -> `variant` / composed pattern\n- Size (`SM | MD | LG`) -> `size?:",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -53,7 +48,7 @@
               "name": "Description",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Description#2568:13"
+                "characters": "✏️ Description"
               }
             }
           ]
@@ -69,7 +64,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Footer#2568:117"
+            "visible": "👁️ Footer"
           },
           "children": [
             {
@@ -78,7 +73,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "👁️ Secondary Action#2568:130"
+                "visible": "👁️ Secondary Action"
               }
             },
             {
@@ -122,14 +117,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "✏️ Title#2568:0",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Card Title"
     },
     {
-      "figmaPropertyName": "✏️ Description#2568:13",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
@@ -139,56 +134,56 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Metric Label#2568:26",
+      "propertyName": "✏️ Metric Label",
       "codePropName": "metricLabel",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Total Revenue"
     },
     {
-      "figmaPropertyName": "✏️ Metric Value#2568:39",
+      "propertyName": "✏️ Metric Value",
       "codePropName": "metricValue",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "$48,290"
     },
     {
-      "figmaPropertyName": "✏️ Metric Caption#2568:52",
+      "propertyName": "✏️ Metric Caption",
       "codePropName": "metricCaption",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Compared to $42,900 last month"
     },
     {
-      "figmaPropertyName": "✏️ Name#2568:65",
+      "propertyName": "✏️ Name",
       "codePropName": "name",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Alex Morgan"
     },
     {
-      "figmaPropertyName": "✏️ Role#2568:78",
+      "propertyName": "✏️ Role",
       "codePropName": "role",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Product Designer"
     },
     {
-      "figmaPropertyName": "✏️ Bio#2568:91",
+      "propertyName": "✏️ Bio",
       "codePropName": "bio",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Designing scalable UI systems and multi-platform experiences."
     },
     {
-      "figmaPropertyName": "👁️ Badge#2568:104",
+      "propertyName": "👁️ Badge",
       "codePropName": "hasBadge",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true
     },
     {
-      "figmaPropertyName": "👁️ Footer#2568:117",
+      "propertyName": "👁️ Footer",
       "codePropName": "hasFooter",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -198,7 +193,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Secondary Action#2568:130",
+      "propertyName": "👁️ Secondary Action",
       "codePropName": "hasSecondaryAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -208,7 +203,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Media\" | \"Stat\" | \"Profile\" | \"Form\" | \"Settings\" | \"List\" | \"Pricing\"",
@@ -225,7 +220,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\" | \"LG\"",
@@ -301,7 +296,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "2366:6163",
       "figmaName": "Slot: Content",
       "nodeType": "COMPONENT",
       "variantCount": 1,

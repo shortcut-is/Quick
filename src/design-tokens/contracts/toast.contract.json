@@ -1,16 +1,11 @@
 {
   "name": "Toast",
   "figmaName": "Toast",
-  "figmaNodeId": "2594:3668",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5685",
-    "name": "Toast"
-  },
+  "section": "Toast",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Toast",
-  "figmaDescription": "Import: @/components/ui/Toast (built on @radix-ui/react-toast or sonner)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: default | success | warning | danger\n- Icon / Description / Action / Close -> showIcon, showDescription, showAction, dismissible\n",
+  "description": "Import: @/components/ui/Toast (built on @radix-ui/react-toast or sonner)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: default | success | warning | danger\n- Icon / Description / Action / Close -> showIcon, showDescription, showAction, dismissible\n",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",
@@ -44,7 +39,7 @@
           "type": "INSTANCE",
           "instanceOf": "Icon/Line / Info",
           "refs": {
-            "visible": "👁️ Icon#2594:25"
+            "visible": "👁️ Icon"
           }
         },
         {
@@ -56,15 +51,15 @@
               "name": "Title",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Title#2594:45"
+                "characters": "✏️ Title"
               }
             },
             {
               "name": "Description",
               "type": "TEXT",
               "refs": {
-                "visible": "👁️ Description#2594:30",
-                "characters": "✏️ Description#2594:50"
+                "visible": "👁️ Description",
+                "characters": "✏️ Description"
               }
             }
           ]
@@ -75,7 +70,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Button",
           "refs": {
-            "visible": "👁️ Action#2594:35"
+            "visible": "👁️ Action"
           }
         },
         {
@@ -84,7 +79,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Button",
           "refs": {
-            "visible": "👁️ Close#2594:40"
+            "visible": "👁️ Close"
           }
         }
       ]
@@ -107,7 +102,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Icon#2594:25",
+      "propertyName": "👁️ Icon",
       "codePropName": "hasIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -117,7 +112,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Description#2594:30",
+      "propertyName": "👁️ Description",
       "codePropName": "hasDescription",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -127,7 +122,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Action#2594:35",
+      "propertyName": "👁️ Action",
       "codePropName": "hasAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -137,7 +132,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Close#2594:40",
+      "propertyName": "👁️ Close",
       "codePropName": "hasCloseButton",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -147,7 +142,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2594:45",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
@@ -157,7 +152,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Description#2594:50",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
@@ -167,7 +162,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",

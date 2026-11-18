@@ -1,16 +1,11 @@
 {
   "name": "Notification",
   "figmaName": "Notification",
-  "figmaNodeId": "545:5052",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5672",
-    "name": "Notification"
-  },
+  "section": "Notification",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Notification",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Type=Neutral",
@@ -55,7 +50,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "Action#545:0"
+                "visible": "Action"
               }
             }
           ]
@@ -66,7 +61,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Button",
           "refs": {
-            "visible": "Dismissible#550:0"
+            "visible": "Dismissible"
           }
         }
       ]
@@ -89,7 +84,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Action#545:0",
+      "propertyName": "Action",
       "codePropName": "hasAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -99,7 +94,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Dismissible#550:0",
+      "propertyName": "Dismissible",
       "codePropName": "isDismissible",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -109,7 +104,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Type",
+      "propertyName": "Type",
       "codePropName": "type",
       "type": "VARIANT",
       "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",

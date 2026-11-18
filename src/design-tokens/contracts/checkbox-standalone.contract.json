@@ -1,16 +1,11 @@
 {
   "name": "CheckboxStandalone",
   "figmaName": "Checkbox Standalone",
-  "figmaNodeId": "69:36",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5662",
-    "name": "Checkbox"
-  },
+  "section": "Checkbox",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/CheckboxStandalone",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selection=Unchecked",
@@ -49,7 +44,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Enabled\" | \"Disabled\"",
@@ -60,7 +55,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selection",
+      "propertyName": "Selection",
       "codePropName": "checked",
       "type": "VARIANT",
       "tsType": "\"Unchecked\" | \"Checked\" | \"Indeterminate\"",

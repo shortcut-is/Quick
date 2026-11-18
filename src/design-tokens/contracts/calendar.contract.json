@@ -1,16 +1,11 @@
 {
   "name": "Calendar",
   "figmaName": "Calendar",
-  "figmaNodeId": "473:3594",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5660",
-    "name": "Calendar"
-  },
+  "section": "Calendar",
   "nodeType": "COMPONENT",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/Calendar",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Calendar",
@@ -417,7 +412,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "472:9363",
       "figmaName": "_Calendar Days",
       "nodeType": "COMPONENT_SET",
       "variantCount": 5,
@@ -436,7 +430,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Anchor\" | \"Past Next Day\" | \"Disabled\" | \"Selected\"",
@@ -470,7 +464,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "472:9466",
       "figmaName": "_Calendar Days Label",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -486,7 +479,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "472:9596",
       "figmaName": "_Calendar Month-Year",
       "nodeType": "COMPONENT",
       "variantCount": 1,

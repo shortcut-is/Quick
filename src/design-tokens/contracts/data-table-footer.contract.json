@@ -1,16 +1,11 @@
 {
   "name": "DataTableFooter",
   "figmaName": "Data table  - Footer",
-  "figmaNodeId": "478:6008",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5663",
-    "name": "Data Table"
-  },
+  "section": "Data Table",
   "nodeType": "COMPONENT",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableFooter",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Data table  - Footer",

@@ -1,16 +1,11 @@
 {
   "name": "Breadcrumb",
   "figmaName": "Breadcrumb",
-  "figmaNodeId": "331:1878",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5658",
-    "name": "Breadcrumb"
-  },
+  "section": "Breadcrumb",
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Breadcrumb",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Breadcrumb",
@@ -65,7 +60,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 1#626:0"
+            "visible": "Level 1"
           }
         },
         {
@@ -74,7 +69,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 2#626:1"
+            "visible": "Level 2"
           }
         },
         {
@@ -83,7 +78,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 3#626:2"
+            "visible": "Level 3"
           }
         },
         {
@@ -92,7 +87,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 4#626:3"
+            "visible": "Level 4"
           }
         },
         {
@@ -101,7 +96,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 5#626:4"
+            "visible": "Level 5"
           }
         },
         {
@@ -110,7 +105,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 6#626:5"
+            "visible": "Level 6"
           }
         },
         {
@@ -119,7 +114,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "Breadcrumb Items",
           "refs": {
-            "visible": "Level 7#626:6"
+            "visible": "Level 7"
           }
         }
       ]
@@ -131,7 +126,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Level 1#626:0",
+      "propertyName": "Level 1",
       "codePropName": "showLevel1",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -141,7 +136,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 2#626:1",
+      "propertyName": "Level 2",
       "codePropName": "showLevel2",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -151,7 +146,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 3#626:2",
+      "propertyName": "Level 3",
       "codePropName": "showLevel3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -161,7 +156,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 4#626:3",
+      "propertyName": "Level 4",
       "codePropName": "showLevel4",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -171,7 +166,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 5#626:4",
+      "propertyName": "Level 5",
       "codePropName": "showLevel5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -181,7 +176,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 6#626:5",
+      "propertyName": "Level 6",
       "codePropName": "showLevel6",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -191,7 +186,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Level 7#626:6",
+      "propertyName": "Level 7",
       "codePropName": "showLevel7",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -222,7 +217,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "79:286",
       "figmaName": "Breadcrumb Items",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -239,7 +233,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Overflow\" | \"Current\"",

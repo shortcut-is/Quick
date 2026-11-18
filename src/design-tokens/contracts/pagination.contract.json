@@ -1,16 +1,11 @@
 {
   "name": "Pagination",
   "figmaName": "Pagination",
-  "figmaNodeId": "106:384",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5673",
-    "name": "Pagination"
-  },
+  "section": "Pagination",
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Pagination",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Pagination",
@@ -40,7 +35,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Pagination - Nav ",
           "refs": {
-            "visible": "Show Previous#106:0"
+            "visible": "Show Previous"
           }
         },
         {
@@ -54,7 +49,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 1#106:2"
+                "visible": "Item 1"
               }
             },
             {
@@ -63,7 +58,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 2#106:3"
+                "visible": "Item 2"
               }
             },
             {
@@ -72,7 +67,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 3#106:4"
+                "visible": "Item 3"
               }
             },
             {
@@ -81,7 +76,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "More#106:5"
+                "visible": "More"
               }
             },
             {
@@ -90,7 +85,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 5#106:6"
+                "visible": "Item 5"
               }
             },
             {
@@ -99,7 +94,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 6#106:7"
+                "visible": "Item 6"
               }
             },
             {
@@ -108,7 +103,7 @@
               "layout": "VERTICAL",
               "instanceOf": "_Pagination - Items",
               "refs": {
-                "visible": "Item 7#106:8"
+                "visible": "Item 7"
               }
             }
           ]
@@ -119,7 +114,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Pagination - Nav ",
           "refs": {
-            "visible": "Show Next#106:1"
+            "visible": "Show Next"
           }
         }
       ]
@@ -131,7 +126,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Show Previous#106:0",
+      "propertyName": "Show Previous",
       "codePropName": "hasPrevious",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -141,7 +136,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Show Next#106:1",
+      "propertyName": "Show Next",
       "codePropName": "hasNext",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -151,7 +146,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 1#106:2",
+      "propertyName": "Item 1",
       "codePropName": "showItem1",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -161,7 +156,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 2#106:3",
+      "propertyName": "Item 2",
       "codePropName": "showItem2",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -171,7 +166,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 3#106:4",
+      "propertyName": "Item 3",
       "codePropName": "showItem3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -181,7 +176,7 @@
       ]
     },
     {
-      "figmaPropertyName": "More#106:5",
+      "propertyName": "More",
       "codePropName": "hasEllipsis",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -191,7 +186,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 5#106:6",
+      "propertyName": "Item 5",
       "codePropName": "showItem5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -201,7 +196,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 6#106:7",
+      "propertyName": "Item 6",
       "codePropName": "showItem6",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -211,7 +206,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Item 7#106:8",
+      "propertyName": "Item 7",
       "codePropName": "showItem7",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -251,7 +246,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "106:348",
       "figmaName": "_Pagination - Items",
       "nodeType": "COMPONENT_SET",
       "variantCount": 4,
@@ -269,7 +263,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Item",
+          "propertyName": "Item",
           "codePropName": "item",
           "type": "VARIANT",
           "tsType": "\"Default\" | \"Current\" | \"More\" | \"Hover\"",
@@ -297,7 +291,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "106:589",
       "figmaName": "_Pagination - Nav ",
       "nodeType": "COMPONENT_SET",
       "variantCount": 2,
@@ -320,7 +313,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\"",
@@ -330,7 +323,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Type",
+          "propertyName": "Type",
           "codePropName": "type",
           "type": "VARIANT",
           "tsType": "\"Next\" | \"Previous\"",

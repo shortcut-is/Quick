@@ -53,10 +53,10 @@ Ningún componente nuevo depende de colores hexadecimales crudos ni espaciados s
 El repositorio incluye **60 contratos individuales** (`[componente].contract.json`) junto con el manifiesto maestro [`src/design-tokens/contracts/index.json`](src/design-tokens/contracts/index.json), cubriendo los **72 nodos publicados** en las **40 secciones** de `⚡️ Components` (`0:1`).
 
 Cada archivo `.contract.json` funciona como especificación fuente para generación de código, pruebas o validación:
-- **`name` / `figmaName` / `figmaNodeId` / `figmaSection`:** Identidad exacta del componente en Figma y su nodo fuente.
+- **`name` / `figmaName` / `section` / `category`:** Identidad del componente en código y su sección dentro del sistema (los IDs de nodo de Figma se mantienen desacoplados en `design-system-state.json` y `.agents/rules/quick-figma-context.md`).
 - **`importPath`:** Ruta estándar en código (`@/components/ui/...`).
 - **`anatomy`:** Nodo raíz, lista de `slots` e instancias internas, y árbol real de capas (`layers`).
-- **`variants` & `properties`:** Ejes de variantes y tabla 1:1 entre `figmaPropertyName` (incluyendo su `#id`), `codePropName` (`camelCase`), `type`, `tsType`, `defaultValue` y `boundLayers`.
+- **`variants` & `properties`:** Ejes de variantes y tabla 1:1 entre `propertyName` (nombre limpio en Figma), `codePropName` (`camelCase`), `type`, `tsType`, `defaultValue` y `boundLayers`.
 - **`tokens`:** Variables semánticas directas (`directVariables`), heredadas de subcomponentes (`inheritedFromSubcomponents`), `textStyles` y `effectStyles`.
 - **`subcomponents`, `usageGuidelines` y `behaviorRules`:** Subcomponentes internos relacionados, criterios explícitos de cuándo usar y cuándo no usar cada componente (`whenToUse` / `whenNotToUse` con alternativas dentro del sistema) y reglas de accesibilidad (ARIA, gestión de foco, teclado), estados y comportamiento responsivo.
 

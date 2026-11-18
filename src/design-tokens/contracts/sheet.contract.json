@@ -1,16 +1,11 @@
 {
   "name": "Sheet",
   "figmaName": "Sheet",
-  "figmaNodeId": "2616:3862",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2616:3584",
-    "name": "Sheet"
-  },
+  "section": "Sheet",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/Sheet",
-  "figmaDescription": "Import: @/components/ui/Sheet\nCategory: Overlay & Navigation\n\nSide Sheet (Web, Position=Right (Web)) and Bottom Sheet (Mobile, Position=Bottom (Mobile)) built with Quick v1.2 tokens and primitives (Button, Input Text, Input Select, Switch Standalone, Slot: Content, Separator).\n\nProps / Variants:",
+  "description": "Import: @/components/ui/Sheet\nCategory: Overlay & Navigation\n\nSide Sheet (Web, Position=Right (Web)) and Bottom Sheet (Mobile, Position=Bottom (Mobile)) built with Quick v1.2 tokens and primitives (Button, Input Text, Input Select, Switch Standalone, Slot: Content, Separator).\n\nProps / Variants:",
   "anatomy": {
     "root": {
       "name": "Position=Right (Web), Use=Default",
@@ -63,8 +58,8 @@
               "name": "Description",
               "type": "TEXT",
               "refs": {
-                "visible": "👁️ Description#2616:7",
-                "characters": "✏️ Description#2616:28"
+                "visible": "👁️ Description",
+                "characters": "✏️ Description"
               }
             }
           ]
@@ -97,7 +92,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Footer#2616:14"
+            "visible": "👁️ Footer"
           },
           "children": [
             {
@@ -141,14 +136,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Close#2616:0",
+      "propertyName": "👁️ Close",
       "codePropName": "hasCloseButton",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true
     },
     {
-      "figmaPropertyName": "👁️ Description#2616:7",
+      "propertyName": "👁️ Description",
       "codePropName": "hasDescription",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -158,7 +153,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Footer#2616:14",
+      "propertyName": "👁️ Footer",
       "codePropName": "hasFooter",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -168,14 +163,14 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2616:21",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Edit Workspace"
     },
     {
-      "figmaPropertyName": "✏️ Description#2616:28",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
@@ -185,7 +180,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Position",
+      "propertyName": "Position",
       "codePropName": "position",
       "type": "VARIANT",
       "tsType": "\"Right (Web)\" | \"Bottom (Mobile)\"",
@@ -196,7 +191,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Form\" | \"Filter\"",
@@ -274,7 +269,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "351:2136",
       "figmaName": "OVERLAY",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -289,7 +283,6 @@
       "importPath": "@/components/ui/Overlay"
     },
     {
-      "figmaNodeId": "2366:6163",
       "figmaName": "Slot: Content",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -322,7 +315,7 @@
     ]
   },
   "behaviorRules": [
-    "Emparejar siempre con `OVERLAY` (`351:2136`), atrapar foco dentro del panel mientras esté abierto y cerrar con `Escape`.",
+    "Emparejar siempre con `OVERLAY`, atrapar foco dentro del panel mientras esté abierto y cerrar con `Escape`.",
     "Usar `Position=Right (Web)` (`360px`) en escritorio para inspectores, formularios o filtros; usar `Position=Bottom (Mobile)` con `DragHandle` y botones `MD` a ancho completo en touch.",
     "En `SheetFooter`, respetar la jerarquía de 1 botón secundario (`Outline` para `Cancel`/`Reset`) + 1 botón principal (`Primary` para confirmar/aplicar); nunca colocar dos botones `Primary` juntos."
   ]

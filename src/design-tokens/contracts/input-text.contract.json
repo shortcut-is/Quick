@@ -1,16 +1,11 @@
 {
   "name": "InputText",
   "figmaName": "Input Text",
-  "figmaNodeId": "84:3866",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5669",
-    "name": "Input Text"
-  },
+  "section": "Input Text",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/InputText",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -44,8 +39,8 @@
               "type": "INSTANCE",
               "instanceOf": "Icon/Line / Command",
               "refs": {
-                "visible": "👁️ Icon#2009:10",
-                "mainComponent": "Swap Icon#163:4"
+                "visible": "👁️ Icon",
+                "mainComponent": "Swap Icon"
               }
             }
           ]
@@ -55,14 +50,14 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Hint#2009:8"
+            "visible": "👁️ Hint"
           },
           "children": [
             {
               "name": "Hint",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Hint#2009:11"
+                "characters": "✏️ Hint"
               }
             }
           ]
@@ -90,24 +85,24 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Swap Icon#163:4",
+      "propertyName": "Swap Icon",
       "codePropName": "icon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "145:1174",
+      "defaultValue": "Icon/Line / Command",
       "boundLayers": [
         "Command"
       ]
     },
     {
-      "figmaPropertyName": "✏️ Label#2009:7",
+      "propertyName": "✏️ Label",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "[Label]"
     },
     {
-      "figmaPropertyName": "👁️ Hint#2009:8",
+      "propertyName": "👁️ Hint",
       "codePropName": "hasHint",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -117,14 +112,14 @@
       ]
     },
     {
-      "figmaPropertyName": "Content#2009:9",
+      "propertyName": "Content",
       "codePropName": "placeholder",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "[Content]"
     },
     {
-      "figmaPropertyName": "👁️ Icon#2009:10",
+      "propertyName": "👁️ Icon",
       "codePropName": "hasIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -134,7 +129,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Hint#2009:11",
+      "propertyName": "✏️ Hint",
       "codePropName": "hint",
       "type": "TEXT",
       "tsType": "string",
@@ -144,7 +139,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Filled\" | \"Success\" | \"Error\" | \"Disabled\" | \"Hover\" | \"Focus\"",

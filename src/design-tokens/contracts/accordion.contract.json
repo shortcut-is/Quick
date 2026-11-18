@@ -1,16 +1,11 @@
 {
   "name": "Accordion",
   "figmaName": "Accordion",
-  "figmaNodeId": "105:345",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5653",
-    "name": "Accordion"
-  },
+  "section": "Accordion",
   "nodeType": "COMPONENT_SET",
   "category": "Disclosure",
   "importPath": "@/components/ui/Accordion",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Open",
@@ -74,7 +69,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Open\" | \"Closed\"",

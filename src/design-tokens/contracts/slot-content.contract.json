@@ -1,16 +1,11 @@
 {
   "name": "SlotContent",
   "figmaName": "Slot: Content",
-  "figmaNodeId": "2366:6163",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5661",
-    "name": "Card"
-  },
+  "section": "Card",
   "nodeType": "COMPONENT",
   "category": "Primitives",
   "importPath": "@/components/ui/SlotContent",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Slot: Content",

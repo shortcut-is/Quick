@@ -1,16 +1,11 @@
 {
   "name": "Dialog",
   "figmaName": "Dialog",
-  "figmaNodeId": "2595:3688",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5665",
-    "name": "Dialog"
-  },
+  "section": "Dialog",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Dialog",
-  "figmaDescription": "Import: @/components/ui/Dialog (built on @radix-ui/react-dialog; use AlertDialog for Use=Destructive)\nProps Mapping (Figma -> React):\n- Use (Default | Destructive | Form) -> dialog composition pattern\n- Size (SM | MD) -> maxWidth 380px / 460px\n- Close / Description / Footer / Secondary Acti",
+  "description": "Import: @/components/ui/Dialog (built on @radix-ui/react-dialog; use AlertDialog for Use=Destructive)\nProps Mapping (Figma -> React):\n- Use (Default | Destructive | Form) -> dialog composition pattern\n- Size (SM | MD) -> maxWidth 380px / 460px\n- Close / Description / Footer / Secondary Acti",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -53,8 +48,8 @@
               "name": "Description",
               "type": "TEXT",
               "refs": {
-                "visible": "👁️ Description#2595:7",
-                "characters": "✏️ Description#2595:35"
+                "visible": "👁️ Description",
+                "characters": "✏️ Description"
               }
             }
           ]
@@ -70,7 +65,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Footer#2595:14"
+            "visible": "👁️ Footer"
           },
           "children": [
             {
@@ -79,7 +74,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "👁️ Secondary Action#2595:21"
+                "visible": "👁️ Secondary Action"
               }
             },
             {
@@ -117,14 +112,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Close#2595:0",
+      "propertyName": "👁️ Close",
       "codePropName": "hasCloseButton",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true
     },
     {
-      "figmaPropertyName": "👁️ Description#2595:7",
+      "propertyName": "👁️ Description",
       "codePropName": "hasDescription",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -134,7 +129,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Footer#2595:14",
+      "propertyName": "👁️ Footer",
       "codePropName": "hasFooter",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -144,7 +139,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Secondary Action#2595:21",
+      "propertyName": "👁️ Secondary Action",
       "codePropName": "hasSecondaryAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -154,14 +149,14 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2595:28",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "Dialog Title"
     },
     {
-      "figmaPropertyName": "✏️ Description#2595:35",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
@@ -171,7 +166,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Destructive\" | \"Form\"",
@@ -183,7 +178,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\"",
@@ -261,7 +256,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "351:2136",
       "figmaName": "OVERLAY",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -291,7 +285,7 @@
   "behaviorRules": [
     "Implementar con `@radix-ui/react-dialog` (o `@radix-ui/react-alert-dialog` cuando `Use=Destructive`).",
     "Atrapar el foco dentro del modal mientras esté abierto, cerrar con `Escape` y devolver el foco al trigger al cerrar.",
-    "Combinar siempre con `OVERLAY` (`351:2136`); usar `Size=SM` (`380px`) para confirmaciones breves y `Size=MD` (`460px`) para formularios.",
+    "Combinar siempre con `OVERLAY`; usar `Size=SM` (`380px`) para confirmaciones breves y `Size=MD` (`460px`) para formularios.",
     "Jerarquía obligatoria de acciones en `DialogFooter`: nunca usar dos botones `Primary` juntos; combinar siempre 1 botón secundario (`Outline` o `Ghost` para `Cancel`) + 1 botón de confirmación (`Primary` en `Default`/`Form`, o `Destructive` en `Use=Destructive`)."
   ]
 }

@@ -1,16 +1,11 @@
 {
   "name": "Spinner",
   "figmaName": "Spinner",
-  "figmaNodeId": "2604:3430",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2604:3401",
-    "name": "Skeleton & Spinner"
-  },
+  "section": "Skeleton & Spinner",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Spinner",
-  "figmaDescription": "Import: @/components/ui/Spinner\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (16px / 20px / 24px icon)\n- Use (Default | Muted) -> variant: default | muted\n- Label (Boolean) / Label (Text) -> label?: string (renders sr-only accessible text when hidden)\nToken",
+  "description": "Import: @/components/ui/Spinner\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (16px / 20px / 24px icon)\n- Use (Default | Muted) -> variant: default | muted\n- Label (Boolean) / Label (Text) -> label?: string (renders sr-only accessible text when hidden)\nToken",
   "anatomy": {
     "root": {
       "name": "Size=SM, Use=Default",
@@ -38,8 +33,8 @@
           "name": "Label",
           "type": "TEXT",
           "refs": {
-            "visible": "👁️ Label#2604:0",
-            "characters": "✏️ Label#2604:7"
+            "visible": "👁️ Label",
+            "characters": "✏️ Label"
           }
         }
       ]
@@ -69,7 +64,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Label#2604:0",
+      "propertyName": "👁️ Label",
       "codePropName": "hasLabel",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -79,7 +74,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Label#2604:7",
+      "propertyName": "✏️ Label",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
@@ -89,7 +84,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\" | \"LG\"",
@@ -101,7 +96,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Muted\"",

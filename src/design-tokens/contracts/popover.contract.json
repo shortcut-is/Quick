@@ -1,16 +1,11 @@
 {
   "name": "Popover",
   "figmaName": "Popover",
-  "figmaNodeId": "2617:3999",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2617:3792",
-    "name": "Popover"
-  },
+  "section": "Popover",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Controls",
   "importPath": "@/components/ui/Popover",
-  "figmaDescription": "Import: @/components/ui/Popover\nCategory: Overlay & Controls\n\nFloating non-modal popover anchored to a trigger control for quick controls, multi-field filters, interactive Date Calendar picker (Calendar 473:3594), or User Profile preview.\n\nProps / Variants:\n- Use: \"Default\" | \"Fil",
+  "description": "Import: @/components/ui/Popover\nCategory: Overlay & Controls\n\nFloating non-modal popover anchored to a trigger control for quick controls, multi-field filters, interactive Date Calendar picker (Calendar), or User Profile preview.\n\nProps / Variants:\n- Use: \"Default\" | \"Fil",
   "anatomy": {
     "root": {
       "name": "Use=Default",
@@ -44,14 +39,14 @@
           "type": "FRAME",
           "layout": "VERTICAL",
           "refs": {
-            "visible": "👁️ Header#2617:0"
+            "visible": "👁️ Header"
           },
           "children": [
             {
               "name": "Title",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Title#2617:10"
+                "characters": "✏️ Title"
               }
             },
             {
@@ -71,7 +66,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Footer#2617:5"
+            "visible": "👁️ Footer"
           },
           "children": [
             {
@@ -108,7 +103,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Header#2617:0",
+      "propertyName": "👁️ Header",
       "codePropName": "hasHeader",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -118,7 +113,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Footer#2617:5",
+      "propertyName": "👁️ Footer",
       "codePropName": "hasFooter",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -128,7 +123,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2617:10",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
@@ -138,7 +133,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Filter\" | \"DateCalendar\" | \"ProfilePreview\"",
@@ -216,7 +211,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "2366:6163",
       "figmaName": "Slot: Content",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -238,7 +232,6 @@
       "importPath": "@/components/ui/SlotContent"
     },
     {
-      "figmaNodeId": "473:3594",
       "figmaName": "Calendar",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -277,7 +270,7 @@
   },
   "behaviorRules": [
     "Anclar al disparador mediante posicionamiento flotante y cerrar al presionar `Escape` o hacer clic fuera.",
-    "Preferir `Use=DateCalendar` junto con `Calendar` (`473:3594`) para selectores de fecha contextuales.",
+    "Preferir `Use=DateCalendar` junto con `Calendar` para selectores de fecha contextuales.",
     "En `PopoverFooter`, combinar siempre 1 botón secundario (`Outline XS`) con 1 botón principal (`Primary XS`), nunca dos botones `Primary` simultáneos."
   ]
 }

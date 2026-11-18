@@ -1,16 +1,11 @@
 {
   "name": "Alert",
   "figmaName": "Alert",
-  "figmaNodeId": "2594:3473",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5654",
-    "name": "Alerts"
-  },
+  "section": "Alerts",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Alert",
-  "figmaDescription": "Import: @/components/ui/Alert (built on @radix-ui/react-alert-dialog for Danger/confirmation or inline role=alert)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: neutral | success | warning | danger\n- Icon -> showIcon: boolean\n- Actions -> showAc",
+  "description": "Import: @/components/ui/Alert (built on @radix-ui/react-alert-dialog for Danger/confirmation or inline role=alert)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: neutral | success | warning | danger\n- Icon -> showIcon: boolean\n- Actions -> showAc",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",
@@ -44,7 +39,7 @@
               "type": "FRAME",
               "layout": "HORIZONTAL",
               "refs": {
-                "visible": "👁️ Icon#2594:0"
+                "visible": "👁️ Icon"
               }
             },
             {
@@ -59,7 +54,7 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Actions#2594:5"
+            "visible": "👁️ Actions"
           },
           "children": [
             {
@@ -68,7 +63,7 @@
               "layout": "HORIZONTAL",
               "instanceOf": "Button",
               "refs": {
-                "visible": "👁️ Secondary Action#2594:10"
+                "visible": "👁️ Secondary Action"
               }
             },
             {
@@ -99,7 +94,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Icon#2594:0",
+      "propertyName": "👁️ Icon",
       "codePropName": "hasIcon",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -109,7 +104,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Actions#2594:5",
+      "propertyName": "👁️ Actions",
       "codePropName": "hasActions",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -119,7 +114,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Secondary Action#2594:10",
+      "propertyName": "👁️ Secondary Action",
       "codePropName": "hasSecondaryAction",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -129,21 +124,21 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Title#2594:15",
+      "propertyName": "✏️ Title",
       "codePropName": "title",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "System update available"
     },
     {
-      "figmaPropertyName": "✏️ Description#2594:20",
+      "propertyName": "✏️ Description",
       "codePropName": "description",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "A new version of the design token library is ready to sync."
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",

@@ -1,16 +1,11 @@
 {
   "name": "Overlay",
   "figmaName": "OVERLAY",
-  "figmaNodeId": "351:2136",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5665",
-    "name": "Dialog"
-  },
+  "section": "Dialog",
   "nodeType": "COMPONENT",
   "category": "Overlay (Primitive)",
   "importPath": "@/components/ui/Overlay",
-  "figmaDescription": "Import: @/components/ui/Dialog (DialogOverlay). Full-viewport backdrop bound to Surfaces/Overlay token.",
+  "description": "Import: @/components/ui/Dialog (DialogOverlay). Full-viewport backdrop bound to Surfaces/Overlay token.",
   "anatomy": {
     "root": {
       "name": "OVERLAY",

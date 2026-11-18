@@ -1,16 +1,11 @@
 {
   "name": "DropdownMenuLabel",
   "figmaName": "menu title",
-  "figmaNodeId": "417:3912",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5666",
-    "name": "Dropdown Menu"
-  },
+  "section": "Dropdown Menu",
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation (Subcomponent)",
   "importPath": "@/components/ui/DropdownMenuLabel",
-  "figmaDescription": "Import: @/components/ui/DropdownMenu (DropdownMenuLabel). Type=Title (default) or inset padding.",
+  "description": "Import: @/components/ui/DropdownMenu (DropdownMenuLabel). Type=Title (default) or inset padding.",
   "anatomy": {
     "root": {
       "name": "Type=Title",
@@ -45,7 +40,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Type",
+      "propertyName": "Type",
       "codePropName": "type",
       "type": "VARIANT",
       "tsType": "\"Title\" | \"Title (padding L)\"",

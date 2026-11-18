@@ -1,16 +1,11 @@
 {
   "name": "DatePicker",
   "figmaName": "Date Picker",
-  "figmaNodeId": "471:9314",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5664",
-    "name": "Date Picker"
-  },
+  "section": "Date Picker",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/DatePicker",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -53,7 +48,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Filled\"",
@@ -102,7 +97,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "473:3594",
       "figmaName": "Calendar",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -139,7 +133,7 @@
     ]
   },
   "behaviorRules": [
-    "Componer un campo de entrada (`Input Text`) como disparador de un `Popover` que contiene `Calendar` (`473:3594`).",
+    "Componer un campo de entrada (`Input Text`) como disparador de un `Popover` que contiene `Calendar`.",
     "Permitir tanto selección mediante calendario desplegable como entrada o borrado accesible por teclado.",
     "En Mobile, considerar presentar el `Calendar` dentro de `Sheet` (`Position=Bottom (Mobile)`)."
   ]

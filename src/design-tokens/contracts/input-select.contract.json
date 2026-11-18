@@ -1,16 +1,11 @@
 {
   "name": "InputSelect",
   "figmaName": "Input Select",
-  "figmaNodeId": "88:355",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5670",
-    "name": "Input Select"
-  },
+  "section": "Input Select",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/InputSelect",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -40,14 +35,14 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "Hint#2009:8"
+            "visible": "Hint"
           },
           "children": [
             {
               "name": "Hint Text",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Hint#2009:11"
+                "characters": "✏️ Hint"
               }
             }
           ]
@@ -74,14 +69,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "✏️ Label#2009:7",
+      "propertyName": "✏️ Label",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "[Label]"
     },
     {
-      "figmaPropertyName": "Hint#2009:8",
+      "propertyName": "Hint",
       "codePropName": "hasHint",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -91,14 +86,14 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Content#2009:9",
+      "propertyName": "✏️ Content",
       "codePropName": "value",
       "type": "TEXT",
       "tsType": "string",
       "defaultValue": "[Content]"
     },
     {
-      "figmaPropertyName": "✏️ Hint#2009:11",
+      "propertyName": "✏️ Hint",
       "codePropName": "hint",
       "type": "TEXT",
       "tsType": "string",
@@ -108,7 +103,7 @@
       ]
     },
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Default\" | \"Error\" | \"Filled\" | \"Disabled\" | \"Hover\" | \"Focus\"",

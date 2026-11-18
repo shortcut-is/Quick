@@ -1,16 +1,11 @@
 {
   "name": "Kbd",
   "figmaName": "Kbd",
-  "figmaNodeId": "2605:3459",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2605:3437",
-    "name": "Kbd"
-  },
+  "section": "Kbd",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Kbd",
-  "figmaDescription": "Import: @/components/ui/Kbd (renders HTML <kbd> element)\nProps Mapping (Figma -> React):\n- Use (Subtle | Outline | Solid) -> variant: subtle | outline | solid\n- Size (SM | MD) -> size: sm | md\n- Modifier (Boolean/Text) & Key (Text) -> children (e.g., <Kbd>⌘K</Kbd>)\n",
+  "description": "Import: @/components/ui/Kbd (renders HTML <kbd> element)\nProps Mapping (Figma -> React):\n- Use (Subtle | Outline | Solid) -> variant: subtle | outline | solid\n- Size (SM | MD) -> size: sm | md\n- Modifier (Boolean/Text) & Key (Text) -> children (e.g., <Kbd>⌘K</Kbd>)\n",
   "anatomy": {
     "root": {
       "name": "Use=Subtle, Size=SM",
@@ -27,15 +22,15 @@
           "name": "Modifier",
           "type": "TEXT",
           "refs": {
-            "visible": "👁️ Modifier#2605:0",
-            "characters": "✏️ Modifier#2605:7"
+            "visible": "👁️ Modifier",
+            "characters": "✏️ Modifier"
           }
         },
         {
           "name": "Key",
           "type": "TEXT",
           "refs": {
-            "characters": "✏️ Key#2605:14"
+            "characters": "✏️ Key"
           }
         }
       ]
@@ -65,7 +60,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Modifier#2605:0",
+      "propertyName": "👁️ Modifier",
       "codePropName": "hasModifier",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -75,7 +70,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Modifier#2605:7",
+      "propertyName": "✏️ Modifier",
       "codePropName": "modifierKey",
       "type": "TEXT",
       "tsType": "string",
@@ -85,7 +80,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Key#2605:14",
+      "propertyName": "✏️ Key",
       "codePropName": "keyLabel",
       "type": "TEXT",
       "tsType": "string",
@@ -95,7 +90,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Subtle\" | \"Outline\" | \"Solid\"",
@@ -107,7 +102,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\"",

@@ -1,16 +1,11 @@
 {
   "name": "DataTable",
   "figmaName": "Data Table",
-  "figmaNodeId": "2154:5663",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5663",
-    "name": "Data Table"
-  },
+  "section": "Data Table",
   "nodeType": "COMPOSITE_SECTION",
   "category": "Data Display",
   "importPath": "@/components/ui/DataTable",
-  "figmaDescription": "Composite Data Table built from Data table Header (476:3937), Data table Row (476:3823), Data table Footer (478:6008), cells, selection checkbox, and row actions.",
+  "description": "Composite Data Table built from Data table Header, Data table Row, Data table Footer, cells, selection checkbox, and row actions.",
   "anatomy": {
     "root": {
       "name": "DataTable",
@@ -60,15 +55,15 @@
       "children": [
         {
           "name": "Data table - Header",
-          "figmaNodeId": "476:3937"
+          "component": "Data table  - Header"
         },
         {
           "name": "Data table - Row",
-          "figmaNodeId": "476:3823"
+          "component": "Data table  - Row"
         },
         {
           "name": "Data table - Footer",
-          "figmaNodeId": "478:6008"
+          "component": "Data table  - Footer"
         }
       ]
     }
@@ -89,7 +84,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Density",
+      "propertyName": "Density",
       "codePropName": "density",
       "type": "VARIANT",
       "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
@@ -101,14 +96,14 @@
       ]
     },
     {
-      "figmaPropertyName": "Selectable#478:6",
+      "propertyName": "Selectable",
       "codePropName": "isSelectable",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true
     },
     {
-      "figmaPropertyName": "Actions#478:9",
+      "propertyName": "Actions",
       "codePropName": "hasActions",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -149,7 +144,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "476:3937",
       "figmaName": "Data table  - Header",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -166,7 +160,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Cell 1#476:24",
+          "propertyName": "Cell 1",
           "codePropName": "showCell1",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -176,7 +170,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 2#476:27",
+          "propertyName": "Cell 2",
           "codePropName": "showCell2",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -186,7 +180,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 3#476:30",
+          "propertyName": "Cell 3",
           "codePropName": "showCell3",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -196,7 +190,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 4#476:33",
+          "propertyName": "Cell 4",
           "codePropName": "showCell4",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -206,7 +200,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 5#476:36",
+          "propertyName": "Cell 5",
           "codePropName": "showCell5",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -216,7 +210,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 6#476:39",
+          "propertyName": "Cell 6",
           "codePropName": "showCell6",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -226,7 +220,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 7#476:42",
+          "propertyName": "Cell 7",
           "codePropName": "showCell7",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -236,7 +230,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Cell 8#476:45",
+          "propertyName": "Cell 8",
           "codePropName": "showCell8",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -246,7 +240,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Actions#478:0",
+          "propertyName": "Actions",
           "codePropName": "hasActions",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -256,7 +250,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selectable#478:3",
+          "propertyName": "Selectable",
           "codePropName": "isSelectable",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -266,7 +260,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Density",
+          "propertyName": "Density",
           "codePropName": "density",
           "type": "VARIANT",
           "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
@@ -292,7 +286,6 @@
       "importPath": "@/components/ui/DataTableHeader"
     },
     {
-      "figmaNodeId": "476:3823",
       "figmaName": "Data table  - Row",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -309,7 +302,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Col 1#476:0",
+          "propertyName": "Col 1",
           "codePropName": "showCol1",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -319,7 +312,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 2#476:3",
+          "propertyName": "Col 2",
           "codePropName": "showCol2",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -329,7 +322,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 3#476:6",
+          "propertyName": "Col 3",
           "codePropName": "showCol3",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -339,7 +332,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 4#476:9",
+          "propertyName": "Col 4",
           "codePropName": "showCol4",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -349,7 +342,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 5#476:12",
+          "propertyName": "Col 5",
           "codePropName": "showCol5",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -359,7 +352,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 6#476:15",
+          "propertyName": "Col 6",
           "codePropName": "showCol6",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -369,7 +362,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 7#476:18",
+          "propertyName": "Col 7",
           "codePropName": "showCol7",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -379,7 +372,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Col 8#476:21",
+          "propertyName": "Col 8",
           "codePropName": "showCol8",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -389,7 +382,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selectable#478:6",
+          "propertyName": "Selectable",
           "codePropName": "isSelectable",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -399,7 +392,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Actions#478:9",
+          "propertyName": "Actions",
           "codePropName": "hasActions",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -409,7 +402,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Density",
+          "propertyName": "Density",
           "codePropName": "density",
           "type": "VARIANT",
           "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
@@ -434,7 +427,6 @@
       "importPath": "@/components/ui/DataTableRow"
     },
     {
-      "figmaNodeId": "478:6008",
       "figmaName": "Data table  - Footer",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -454,7 +446,6 @@
       "importPath": "@/components/ui/DataTableFooter"
     },
     {
-      "figmaNodeId": "476:3657",
       "figmaName": "_Data table Cell",
       "nodeType": "COMPONENT_SET",
       "variantCount": 4,
@@ -478,7 +469,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Disabled\" | \"Enabled\"",
@@ -489,7 +480,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
@@ -515,7 +506,6 @@
       "importPath": "@/components/ui/DataTableCell"
     },
     {
-      "figmaNodeId": "580:12541",
       "figmaName": "_Data table Header Cell",
       "nodeType": "COMPONENT_SET",
       "variantCount": 2,
@@ -531,7 +521,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Sort#580:32",
+          "propertyName": "Sort",
           "codePropName": "hasSortDirection",
           "type": "BOOLEAN",
           "tsType": "boolean",
@@ -541,7 +531,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
@@ -565,7 +555,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "476:3684",
       "figmaName": "_Data table Select",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -582,7 +571,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "478:4244",
       "figmaName": "_Data table Actions",
       "nodeType": "COMPONENT",
       "variantCount": 1,

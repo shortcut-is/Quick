@@ -1,16 +1,11 @@
 {
   "name": "AvatarGroup",
   "figmaName": "Avatar Group",
-  "figmaNodeId": "2606:3514",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2606:3456",
-    "name": "Avatar Group"
-  },
+  "section": "Avatar Group",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/AvatarGroup",
-  "figmaDescription": "Import: @/components/ui/AvatarGroup (composes @/components/ui/Avatar)\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (24px / 32px / 40px)\n- Layout (Stacked | Spaced) -> spacing: stacked (-8px overlap) | spaced (8px gap)\n- Avatar 4 / Overflow -> max?: number, ",
+  "description": "Import: @/components/ui/AvatarGroup (composes @/components/ui/Avatar)\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (24px / 32px / 40px)\n- Layout (Stacked | Spaced) -> spacing: stacked (-8px overlap) | spaced (8px gap)\n- Avatar 4 / Overflow -> max?: number, ",
   "anatomy": {
     "root": {
       "name": "Size=SM, Layout=Stacked",
@@ -64,7 +59,7 @@
           "type": "INSTANCE",
           "instanceOf": "Avatar",
           "refs": {
-            "visible": "👁️ Avatar 4#2606:0"
+            "visible": "👁️ Avatar 4"
           }
         },
         {
@@ -72,14 +67,14 @@
           "type": "FRAME",
           "layout": "HORIZONTAL",
           "refs": {
-            "visible": "👁️ Overflow#2606:7"
+            "visible": "👁️ Overflow"
           },
           "children": [
             {
               "name": "OverflowText",
               "type": "TEXT",
               "refs": {
-                "characters": "✏️ Overflow#2606:14"
+                "characters": "✏️ Overflow"
               }
             }
           ]
@@ -111,7 +106,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "👁️ Avatar 4#2606:0",
+      "propertyName": "👁️ Avatar 4",
       "codePropName": "hasFourthAvatar",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -121,7 +116,7 @@
       ]
     },
     {
-      "figmaPropertyName": "👁️ Overflow#2606:7",
+      "propertyName": "👁️ Overflow",
       "codePropName": "hasOverflow",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -131,7 +126,7 @@
       ]
     },
     {
-      "figmaPropertyName": "✏️ Overflow#2606:14",
+      "propertyName": "✏️ Overflow",
       "codePropName": "overflowLabel",
       "type": "TEXT",
       "tsType": "string",
@@ -141,7 +136,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"SM\" | \"MD\" | \"LG\"",
@@ -153,7 +148,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Layout",
+      "propertyName": "Layout",
       "codePropName": "layout",
       "type": "VARIANT",
       "tsType": "\"Stacked\" | \"Spaced\"",
@@ -192,7 +187,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "79:1653",
       "figmaName": "Avatar",
       "nodeType": "COMPONENT_SET",
       "variantCount": 6,
@@ -218,7 +212,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Type",
+          "propertyName": "Type",
           "codePropName": "type",
           "type": "VARIANT",
           "tsType": "\"image\" | \"initials\" | \"Letter\"",
@@ -230,7 +224,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"40\" | \"32\" | \"24\"",
@@ -265,7 +259,7 @@
     ]
   },
   "behaviorRules": [
-    "Componer múltiples instancias de `Avatar` (`79:1653`) con superposición negativa en `Layout=Stacked` (`border: 2px solid Surfaces/Background`).",
+    "Componer múltiples instancias de `Avatar` con superposición negativa en `Layout=Stacked` (`border: 2px solid Surfaces/Background`).",
     "Agrupar usuarios excedentes dentro de `OverflowBadge` (`+N`) con tooltip opcional al pasar el cursor/foco."
   ]
 }

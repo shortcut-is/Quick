@@ -1,16 +1,11 @@
 {
   "name": "Badge",
   "figmaName": "Badge",
-  "figmaNodeId": "203:979",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5657",
-    "name": "Badges"
-  },
+  "section": "Badges",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Badge",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Type=Label, Use=Bold",
@@ -27,7 +22,7 @@
           "name": "Label",
           "type": "TEXT",
           "refs": {
-            "characters": "✏️ Text#2506:0"
+            "characters": "✏️ Text"
           }
         }
       ]
@@ -62,14 +57,14 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Icon#339:0",
+      "propertyName": "Icon",
       "codePropName": "icon",
       "type": "INSTANCE_SWAP",
       "tsType": "React.ReactNode",
-      "defaultValue": "145:1174"
+      "defaultValue": "Icon/Line / Command"
     },
     {
-      "figmaPropertyName": "✏️ Text#2506:0",
+      "propertyName": "✏️ Text",
       "codePropName": "label",
       "type": "TEXT",
       "tsType": "string",
@@ -79,7 +74,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Type",
+      "propertyName": "Type",
       "codePropName": "appearance",
       "type": "VARIANT",
       "tsType": "\"Label\" | \"Label + Icon\" | \"Dot\"",
@@ -91,7 +86,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "tone",
       "type": "VARIANT",
       "tsType": "\"Bold\" | \"Subtle\" | \"Outline\" | \"Info\" | \"Success\" | \"Warning\" | \"Danger\"",

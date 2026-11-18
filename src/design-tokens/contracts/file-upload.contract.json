@@ -1,16 +1,11 @@
 {
   "name": "FileUpload",
   "figmaName": "File Upload",
-  "figmaNodeId": "473:3902",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5667",
-    "name": "File Upload"
-  },
+  "section": "File Upload",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/FileUpload",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Active=No",
@@ -73,7 +68,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Active",
+      "propertyName": "Active",
       "codePropName": "isActive",
       "type": "VARIANT",
       "tsType": "\"No\" | \"Yes\"",

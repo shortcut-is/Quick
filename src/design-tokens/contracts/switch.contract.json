@@ -1,16 +1,11 @@
 {
   "name": "Switch",
   "figmaName": "Switch",
-  "figmaNodeId": "309:1604",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5681",
-    "name": "Switch"
-  },
+  "section": "Switch",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Switch",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=Small, Selected=Off",
@@ -72,7 +67,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "State",
+      "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
       "tsType": "\"Enabled\" | \"Disabled\"",
@@ -83,7 +78,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Size",
+      "propertyName": "Size",
       "codePropName": "size",
       "type": "VARIANT",
       "tsType": "\"Small\" | \"Large\"",
@@ -94,7 +89,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selected",
+      "propertyName": "Selected",
       "codePropName": "selected",
       "type": "VARIANT",
       "tsType": "\"Off\" | \"On\"",
@@ -141,7 +136,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "79:1328",
       "figmaName": "Switch Standalone",
       "nodeType": "COMPONENT_SET",
       "variantCount": 8,
@@ -173,7 +167,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\" | \"Disabled\"",
@@ -184,7 +178,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Selected",
+          "propertyName": "Selected",
           "codePropName": "selected",
           "type": "VARIANT",
           "tsType": "\"Off\" | \"On\"",
@@ -195,7 +189,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"Small\" | \"Large\"",

@@ -1,16 +1,11 @@
 {
   "name": "DataTableRow",
   "figmaName": "Data table  - Row",
-  "figmaNodeId": "476:3823",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5663",
-    "name": "Data Table"
-  },
+  "section": "Data Table",
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableRow",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Density=Compact",
@@ -45,7 +40,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Select",
           "refs": {
-            "visible": "Selectable#478:6"
+            "visible": "Selectable"
           }
         },
         {
@@ -54,7 +49,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 1#476:0"
+            "visible": "Col 1"
           }
         },
         {
@@ -63,7 +58,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 2#476:3"
+            "visible": "Col 2"
           }
         },
         {
@@ -72,7 +67,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 3#476:6"
+            "visible": "Col 3"
           }
         },
         {
@@ -81,7 +76,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 4#476:9"
+            "visible": "Col 4"
           }
         },
         {
@@ -90,7 +85,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 5#476:12"
+            "visible": "Col 5"
           }
         },
         {
@@ -99,7 +94,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 6#476:15"
+            "visible": "Col 6"
           }
         },
         {
@@ -108,7 +103,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 7#476:18"
+            "visible": "Col 7"
           }
         },
         {
@@ -117,7 +112,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Cell",
           "refs": {
-            "visible": "Col 8#476:21"
+            "visible": "Col 8"
           }
         },
         {
@@ -126,7 +121,7 @@
           "layout": "HORIZONTAL",
           "instanceOf": "_Data table Actions",
           "refs": {
-            "visible": "Actions#478:9"
+            "visible": "Actions"
           }
         }
       ]
@@ -148,7 +143,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Col 1#476:0",
+      "propertyName": "Col 1",
       "codePropName": "showCol1",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -158,7 +153,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 2#476:3",
+      "propertyName": "Col 2",
       "codePropName": "showCol2",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -168,7 +163,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 3#476:6",
+      "propertyName": "Col 3",
       "codePropName": "showCol3",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -178,7 +173,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 4#476:9",
+      "propertyName": "Col 4",
       "codePropName": "showCol4",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -188,7 +183,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 5#476:12",
+      "propertyName": "Col 5",
       "codePropName": "showCol5",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -198,7 +193,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 6#476:15",
+      "propertyName": "Col 6",
       "codePropName": "showCol6",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -208,7 +203,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 7#476:18",
+      "propertyName": "Col 7",
       "codePropName": "showCol7",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -218,7 +213,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Col 8#476:21",
+      "propertyName": "Col 8",
       "codePropName": "showCol8",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -228,7 +223,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Selectable#478:6",
+      "propertyName": "Selectable",
       "codePropName": "isSelectable",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -238,7 +233,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Actions#478:9",
+      "propertyName": "Actions",
       "codePropName": "hasActions",
       "type": "BOOLEAN",
       "tsType": "boolean",
@@ -248,7 +243,7 @@
       ]
     },
     {
-      "figmaPropertyName": "Density",
+      "propertyName": "Density",
       "codePropName": "density",
       "type": "VARIANT",
       "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
@@ -290,7 +285,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "476:3657",
       "figmaName": "_Data table Cell",
       "nodeType": "COMPONENT_SET",
       "variantCount": 4,
@@ -314,7 +308,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Disabled\" | \"Enabled\"",
@@ -325,7 +319,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Size",
+          "propertyName": "Size",
           "codePropName": "size",
           "type": "VARIANT",
           "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
@@ -351,7 +345,6 @@
       "importPath": "@/components/ui/DataTableCell"
     },
     {
-      "figmaNodeId": "476:3684",
       "figmaName": "_Data table Select",
       "nodeType": "COMPONENT",
       "variantCount": 1,
@@ -368,7 +361,6 @@
       "effectStyles": []
     },
     {
-      "figmaNodeId": "478:4244",
       "figmaName": "_Data table Actions",
       "nodeType": "COMPONENT",
       "variantCount": 1,

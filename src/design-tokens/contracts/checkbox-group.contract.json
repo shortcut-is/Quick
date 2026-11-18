@@ -1,16 +1,11 @@
 {
   "name": "CheckboxGroup",
   "figmaName": "Checkbox Group",
-  "figmaNodeId": "288:1385",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5662",
-    "name": "Checkbox"
-  },
+  "section": "Checkbox",
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/CheckboxGroup",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Checkbox Group",
@@ -124,7 +119,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "288:1265",
       "figmaName": "Checkbox",
       "nodeType": "COMPONENT_SET",
       "variantCount": 12,
@@ -157,7 +151,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "Selection",
+          "propertyName": "Selection",
           "codePropName": "checked",
           "type": "VARIANT",
           "tsType": "\"Indeterminate\" | \"Unchecked\" | \"Checked\"",
@@ -169,7 +163,7 @@
           ]
         },
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\" | \"Disabled\"",
@@ -180,7 +174,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Description",
+          "propertyName": "Description",
           "codePropName": "hasDescription",
           "type": "VARIANT",
           "tsType": "\"No\" | \"Yes\"",

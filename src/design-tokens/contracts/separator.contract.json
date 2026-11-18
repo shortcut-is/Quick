@@ -1,16 +1,11 @@
 {
   "name": "Separator",
   "figmaName": "SEPARATOR",
-  "figmaNodeId": "536:6183",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5677",
-    "name": "Separator"
-  },
+  "section": "Separator",
   "nodeType": "COMPONENT_SET",
   "category": "Layout Primitive",
   "importPath": "@/components/ui/Separator",
-  "figmaDescription": "Divider, Separator",
+  "description": "Divider, Separator",
   "anatomy": {
     "root": {
       "name": "Direction=Horizontal",
@@ -44,7 +39,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Direction",
+      "propertyName": "Direction",
       "codePropName": "orientation",
       "type": "VARIANT",
       "tsType": "\"Horizontal\" | \"Vertical\"",

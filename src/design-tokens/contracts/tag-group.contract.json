@@ -1,16 +1,11 @@
 {
   "name": "TagGroup",
   "figmaName": "Tag Group",
-  "figmaNodeId": "331:1784",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2154:5683",
-    "name": "Tag"
-  },
+  "section": "Tag",
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/TagGroup",
-  "figmaDescription": null,
+  "description": null,
   "anatomy": {
     "root": {
       "name": "Tag Group",
@@ -168,7 +163,6 @@
   },
   "subcomponents": [
     {
-      "figmaNodeId": "79:216",
       "figmaName": "Tag",
       "nodeType": "COMPONENT_SET",
       "variantCount": 3,
@@ -192,7 +186,7 @@
       },
       "properties": [
         {
-          "figmaPropertyName": "State",
+          "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
           "tsType": "\"Enabled\" | \"Disabled\"",
@@ -203,7 +197,7 @@
           ]
         },
         {
-          "figmaPropertyName": "Dismissible",
+          "propertyName": "Dismissible",
           "codePropName": "isDismissible",
           "type": "VARIANT",
           "tsType": "\"No\" | \"Yes\"",

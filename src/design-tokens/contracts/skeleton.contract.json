@@ -1,16 +1,11 @@
 {
   "name": "Skeleton",
   "figmaName": "Skeleton",
-  "figmaNodeId": "2604:3455",
-  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
-  "figmaSection": {
-    "id": "2604:3401",
-    "name": "Skeleton & Spinner"
-  },
+  "section": "Skeleton & Spinner",
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Skeleton",
-  "figmaDescription": "Import: @/components/ui/Skeleton\nProps Mapping (Figma -> React):\n- Use (Text | Heading | Avatar | ListRow | Card) -> primitive <Skeleton className=... /> or composed loading placeholder\nTokens: Placeholder fill Surfaces/Muted, card surface Surfaces/Background + Surfaces/Border, pulse ani",
+  "description": "Import: @/components/ui/Skeleton\nProps Mapping (Figma -> React):\n- Use (Text | Heading | Avatar | ListRow | Card) -> primitive <Skeleton className=... /> or composed loading placeholder\nTokens: Placeholder fill Surfaces/Muted, card surface Surfaces/Background + Surfaces/Border, pulse ani",
   "anatomy": {
     "root": {
       "name": "Use=Text",
@@ -43,7 +38,7 @@
   },
   "properties": [
     {
-      "figmaPropertyName": "Use",
+      "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
       "tsType": "\"Text\" | \"Heading\" | \"Avatar\" | \"ListRow\" | \"Card\"",
