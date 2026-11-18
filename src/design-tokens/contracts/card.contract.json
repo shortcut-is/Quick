@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Surfaces",
   "importPath": "@/components/ui/Card",
-  "description": "Import: `@/components/ui/Card` (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`)\nProps Mapping (Figma -> React):\n- Use (`Default | Media | Stat | Profile | Form | Settings | List | Pricing`) -> `variant` / composed pattern\n- Size (`SM | MD | LG`) -> `size?:",
+  "description": "Contenedor modular para agrupar contenido relacionado en dashboards, formularios, ajustes, listados, métricas o planes de precio.\n\nVariantes y propiedades:\n- Use: Default | Media | Stat | Profile | Form | Settings | List | Pricing.\n- Size: SM (320px, compacto/Mobile) | MD (380px, estándar) | LG (440px, destacado).\n- Propiedades: ✏️ Title, ✏️ Description, métricas, perfil, 👁️ Badge, 👁️ Footer, 👁️ Secondary Action.\n\nReglas de diseño:\n- En el pie de tarjeta mantener siempre jerarquía de 1 acción Primary acompañada de 1 acción secundaria (Outline o Ghost).\n- No anidar una Card dentro de otra Card ni usarla para tablas comparativas extensas (usar Data Table).",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",

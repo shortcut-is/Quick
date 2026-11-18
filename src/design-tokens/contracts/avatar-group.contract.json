@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/AvatarGroup",
-  "description": "Import: @/components/ui/AvatarGroup (composes @/components/ui/Avatar)\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (24px / 32px / 40px)\n- Layout (Stacked | Spaced) -> spacing: stacked (-8px overlap) | spaced (8px gap)\n- Avatar 4 / Overflow -> max?: number, ",
+  "description": "Grupo compacto de múltiples Avatar superpuestos o espaciados con contador numérico excedente.\n\nVariantes y propiedades:\n- Size: SM | MD | LG.\n- Layout: Stacked | Spaced.\n- Propiedades: 👁️ Avatar 4, 👁️ Overflow, ✏️ Overflow.",
   "anatomy": {
     "root": {
       "name": "Size=SM, Layout=Stacked",

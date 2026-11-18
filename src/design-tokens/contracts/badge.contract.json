@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Badge",
-  "description": null,
+  "description": "Etiqueta compacta de solo lectura para mostrar estados semánticos, versiones o contadores numéricos.\n\nVariantes y propiedades:\n- Type: Label | Label + Icon | Dot.\n- Use: Bold | Subtle | Outline | Info | Success | Warning | Danger.\n- Propiedades: ✏️ Text, Icon.\n\nCuándo no usar: No utilizar para acciones clicables (usar Button), filtros removibles (usar Tag) ni atajos de teclado (usar Kbd).",
   "anatomy": {
     "root": {
       "name": "Type=Label, Use=Bold",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableCell",
-  "description": null,
+  "description": "Subcomponente de celda de datos dentro de Data table - Row con variantes de densidad (Size) y estado.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=← Fill →",

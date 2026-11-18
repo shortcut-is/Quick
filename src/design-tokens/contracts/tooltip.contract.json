@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Tooltip",
-  "description": null,
+  "description": "Etiqueta emergente breve de apoyo visual sobre un elemento o botón de solo icono al pasar el cursor o enfocar. No incluir botones ni formularios dentro (usar Popover).",
   "anatomy": {
     "root": {
       "name": "Tail=↖ Top Left, Type=Default",

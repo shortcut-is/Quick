@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/Calendar",
-  "description": null,
+  "description": "Selector mensual de fechas reutilizado dentro de Date Picker y Popover (Use=DateCalendar).\n\nReglas de diseño:\n- Diferenciar visualmente el día actual, la fecha seleccionada y los días fuera del mes activo.\n- No insertar abierto de forma fija en formularios cortos; preferir Date Picker.",
   "anatomy": {
     "root": {
       "name": "Calendar",

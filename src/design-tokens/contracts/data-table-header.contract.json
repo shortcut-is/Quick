@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableHeader",
-  "description": null,
+  "description": "Fila de encabezados de columna para Data Table con soporte de ordenación, selección y columna de acciones. Variantes Density sync con Row.",
   "anatomy": {
     "root": {
       "name": "Density=Compact",

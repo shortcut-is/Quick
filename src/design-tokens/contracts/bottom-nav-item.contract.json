@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BottomNavItem",
-  "description": "Import: @/components/ui/BottomNavItem\nCategory: Navigation (Subcomponent)\n\nMobile bottom navigation item supporting Default (muted), Hover (Surfaces/Muted pill), and Active (Surfaces/Muted + Surfaces/Border 1px stroke) states.\n\nProps / Variants:\n- State: \"Default\" | \"Hover\" | &qu",
+  "description": "Subcomponente de pestaña individual para Bottom Navigation.\n\nVariantes y propiedades:\n- State: Default (sin fondo, icono y texto muted) | Hover (píldora Surfaces/Muted) | Active (píldora Surfaces/Muted + borde Surfaces/Border).\n- Propiedades: ✏️ Label, ↪️ Icon.",
   "anatomy": {
     "root": {
       "name": "State=Default",

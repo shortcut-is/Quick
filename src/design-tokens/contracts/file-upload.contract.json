@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/FileUpload",
-  "description": null,
+  "description": "Área interactiva para seleccionar o arrastrar y soltar archivos dentro de formularios. Variantes Active = False | True.",
   "anatomy": {
     "root": {
       "name": "Active=No",

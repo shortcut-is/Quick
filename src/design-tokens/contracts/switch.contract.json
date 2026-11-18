@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Switch",
-  "description": null,
+  "description": "Interruptor con etiqueta para activar o desactivar preferencias de efecto inmediato sin requerir botón Guardar. Variantes Selected × State × Size. En formularios usar Checkbox.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=Small, Selected=Off",

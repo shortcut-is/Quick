@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Alert",
-  "description": "Import: @/components/ui/Alert (built on @radix-ui/react-alert-dialog for Danger/confirmation or inline role=alert)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: neutral | success | warning | danger\n- Icon -> showIcon: boolean\n- Actions -> showAc",
+  "description": "Banner contextual dentro de página para comunicar estados importantes, confirmaciones, advertencias o errores.\n\nVariantes y propiedades:\n- Use: Neutral | Success | Warning | Danger.\n- Propiedades: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de diseño:\n- Cuando muestre acciones, combinar siempre 1 botón principal con 1 botón secundario (Outline o Ghost), nunca dos botones Primary juntos.\n- Usar Toast para avisos efímeros tras guardar o copiar, y Dialog si la acción requiere confirmación bloqueante.",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",

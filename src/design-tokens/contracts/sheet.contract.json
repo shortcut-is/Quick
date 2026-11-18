@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/Sheet",
-  "description": "Import: @/components/ui/Sheet\nCategory: Overlay & Navigation\n\nSide Sheet (Web, Position=Right (Web)) and Bottom Sheet (Mobile, Position=Bottom (Mobile)) built with Quick v1.2 tokens and primitives (Button, Input Text, Input Select, Switch Standalone, Slot: Content, Separator).\n\nProps / Variants:",
+  "description": "Panel deslizante lateral para Desktop y hoja inferior deslizable para Mobile, compuesto con primitives del sistema para detalles, formularios o filtros.\n\nVariantes y propiedades:\n- Position: Right (Web) (360px, radios izquierdos) | Bottom (Mobile) (360px con drag handle superior, radios superiores y botones MD a ancho completo).\n- Use: Default | Form | Filter.\n- Propiedades: 👁️ Close, 👁️ Description, 👁️ Footer, ✏️ Title, ✏️ Description.\n\nReglas de diseño:\n- Usar siempre sobre OVERLAY.\n- En el footer combinar siempre 1 botón secundario (Outline para Cancel/Reset) con 1 botón Primary de confirmación, nunca dos botones Primary juntos.\n- Para confirmaciones breves centradas usar Dialog; para controles ligeros anclados usar Popover.",
   "anatomy": {
     "root": {
       "name": "Position=Right (Web), Use=Default",

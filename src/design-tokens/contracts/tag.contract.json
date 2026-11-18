@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Tag",
-  "description": null,
+  "description": "Etiqueta interactiva para representar filtros aplicados o categorías removibles con botón de cierre opcional (Dismissible). Para estados fijos usar Badge.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Dismissible=No",

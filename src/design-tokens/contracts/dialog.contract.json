@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Dialog",
-  "description": "Import: @/components/ui/Dialog (built on @radix-ui/react-dialog; use AlertDialog for Use=Destructive)\nProps Mapping (Figma -> React):\n- Use (Default | Destructive | Form) -> dialog composition pattern\n- Size (SM | MD) -> maxWidth 380px / 460px\n- Close / Description / Footer / Secondary Acti",
+  "description": "Ventana modal centrada que interrumpe la vista actual para confirmaciones críticas, alertas destructivas o formularios breves.\n\nVariantes y propiedades:\n- Use: Default | Destructive | Form.\n- Size: SM (380px, confirmaciones) | MD (460px, formularios).\n- Propiedades: 👁️ Close, 👁️ Description, 👁️ Footer, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de jerarquía y uso:\n- Combinar siempre sobre OVERLAY para enfocar la atención.\n- En DialogFooter nunca usar dos botones Primary juntos: combinar 1 botón secundario (Outline o Ghost para Cancel) con 1 botón de confirmación (Primary o Destructive).\n- Para inspectores laterales extensos en Web o menús táctiles en Mobile usar Sheet; para controles pequeños anclados usar Popover.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",

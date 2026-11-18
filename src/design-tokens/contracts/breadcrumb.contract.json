@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Breadcrumb",
-  "description": null,
+  "description": "Rastro de navegación jerárquico que ubica al usuario dentro de rutas profundas (3 o más niveles).\n\nPropiedades:\n- Level 1 a Level 7: activan o desactivan cada nivel de la ruta.\n\nReglas de diseño:\n- Ocultar el separador final después del último nivel activo y sustituir los textos de relleno por nombres reales de página.\n- En pantallas móviles estrechas simplificar a botón de regreso en Topbar (MobileAppBar).",
   "anatomy": {
     "root": {
       "name": "Breadcrumb",

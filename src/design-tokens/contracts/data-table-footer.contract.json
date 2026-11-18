@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableFooter",
-  "description": null,
+  "description": "Pie de tabla para Data Table con conteo de registros y controles de Pagination.",
   "anatomy": {
     "root": {
       "name": "Data table  - Footer",

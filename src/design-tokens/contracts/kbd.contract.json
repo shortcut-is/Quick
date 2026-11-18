@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Kbd",
-  "description": "Import: @/components/ui/Kbd (renders HTML <kbd> element)\nProps Mapping (Figma -> React):\n- Use (Subtle | Outline | Solid) -> variant: subtle | outline | solid\n- Size (SM | MD) -> size: sm | md\n- Modifier (Boolean/Text) & Key (Text) -> children (e.g., <Kbd>⌘K</Kbd>)\n",
+  "description": "Insignia tipográfica para mostrar teclas individuales o atajos de teclado (como Cmd+K en buscadores o menús).\n\nVariantes y propiedades:\n- Use: Subtle | Outline | Solid.\n- Size: SM | MD.\n- Propiedades: 👁️ Modifier, ✏️ Modifier, ✏️ Key.",
   "anatomy": {
     "root": {
       "name": "Use=Subtle, Size=SM",

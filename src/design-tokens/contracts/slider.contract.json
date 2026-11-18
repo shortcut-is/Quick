@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Slider",
-  "description": null,
+  "description": "Control deslizante para seleccionar un valor o rango continuo dentro de límites definidos. Variantes Progress × Show Knob. No usar para progreso pasivo de solo lectura (usar Progress Bar).",
   "anatomy": {
     "root": {
       "name": "Progress=0 %",

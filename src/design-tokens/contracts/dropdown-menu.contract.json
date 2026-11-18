@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/DropdownMenu",
-  "description": "Import: @/components/ui/DropdownMenu (built on @radix-ui/react-dropdown-menu)\nProps Mapping (Figma -> React):\n- Use (Actions | Grouped | Context) -> composed menu structure using DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator\n- Subcomponents: menu item, menu title",
+  "description": "Menú flotante desplegable con acciones contextuales, grupos etiquetados y atajos de teclado.\n\nVariantes: Use = Actions | Grouped | Context.\nCuándo no usar: Para seleccionar un valor dentro de un formulario usar Input Select; para filtros con controles ricos usar Popover.",
   "anatomy": {
     "root": {
       "name": "Use=Actions",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/SidebarNavigation",
-  "description": "Import: @/components/ui/SidebarNavigation\nCategory: Navigation\n\nApplication sidebar supporting Expanded (248px) and Collapsed icon-rail (72px) modes, composed from _Sidebar Item, Badge, Separator, Switch Standalone, Avatar, and Button.\n\nProps / Variants:\n- Mode: \"Expanded\" | \"Collapse",
+  "description": "Barra lateral de navegación principal para aplicaciones web y dashboards.\n\nVariantes y propiedades:\n- Mode: Expanded (248px) | Collapsed (72px).\n- Propiedades: 👁️ Mode Switch, 👁️ Workspace Group, ✏️ Brand.\n\nReglas de diseño:\n- Mantener exactamente un enlace en estado Active coincidiendo con la ruta actual; en Collapsed los demás enlaces permanecen en State=Default sin fondo.\n- En pantallas móviles ocultar dentro de Sheet o sustituir por Bottom Navigation + Topbar MobileAppBar.",
   "anatomy": {
     "root": {
       "name": "Mode=Expanded",

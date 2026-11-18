@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Pagination",
-  "description": null,
+  "description": "Barra de paginación numerada para navegar bloques extensos de registros en listas y al pie de Data Table.\n\nPropiedades: Show Previous, Show Next, Item 1..7, More.",
   "anatomy": {
     "root": {
       "name": "Pagination",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/EmptyState",
-  "description": "Import: @/components/ui/EmptyState\nProps Mapping (Figma -> React):\n- Use (Default | Search | Error) -> variant: default | search | error\n- Size (SM | MD) -> size: sm (320px) | md (420px)\n- Icon / Actions / Secondary Action -> showIcon, showActions, showSecondaryAction\n- Title / Descripti",
+  "description": "Estado vacío ilustrado para listados sin registros iniciales, búsquedas sin coincidencias o errores de carga con llamada a la acción.\n\nVariantes y propiedades:\n- Use: Default | Search | Error.\n- Size: SM | MD.\n- Propiedades: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de diseño: Cuando muestre acción principal y secundaria, combinar 1 botón Primary con 1 Outline o Ghost, nunca dos Primary juntos.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",

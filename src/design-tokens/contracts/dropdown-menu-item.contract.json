@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation (Subcomponent)",
   "importPath": "@/components/ui/DropdownMenuItem",
-  "description": "Import: @/components/ui/DropdownMenu (DropdownMenuItem)\nProps Mapping (Figma -> React):\n- State (Default | Hover | Active | Disabled | Destructive) -> hover/selected CSS, disabled prop, variant: destructive\n- Left Icon / Icon -> leftIcon?: ReactNode\n- Right Icon / Secondary Icon -> hasSu",
+  "description": "Opción individual dentro de Dropdown Menu con soporte para icono izquierdo, icono derecho, etiqueta y atajo.\n\nVariantes: State = Default | Hover | Active | Disabled | Destructive.\nReglas de diseño: Reservar la variante Destructive para la acción final separada por SEPARATOR.",
   "anatomy": {
     "root": {
       "name": "State=Default",

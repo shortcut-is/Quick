@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/ProgressBar",
-  "description": "Import: `@/components/ui/ProgressBar` (built on `@radix-ui/react-progress`)\nProps Mapping (Figma -> React):\n- Use (`Default | Success | Warning | Danger`) -> `variant?: 'default' | 'success' | 'warning' | 'danger'`\n- Progress (`25% | 75% | 100%`) -> `value: n",
+  "description": "Indicador lineal de progreso determinado o consumo de cuota entre 0% y 100%.\n\nVariantes y propiedades:\n- Use: Default | Success | Warning | Danger.\n- Progress: 25% | 75% | 100%.\n- Size: SM (8px) | LG (16px).\n- Propiedades: 👁️ Header, 👁️ Value, 👁️ Caption, ✏️ Label, ✏️ Caption.\n\nCuándo no usar: Si no se conoce el porcentaje usar Spinner o Skeleton; si el usuario puede arrastrar el valor usar Slider.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Progress=25%, Size=SM",

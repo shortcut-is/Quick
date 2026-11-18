@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Toast",
-  "description": "Import: @/components/ui/Toast (built on @radix-ui/react-toast or sonner)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: default | success | warning | danger\n- Icon / Description / Action / Close -> showIcon, showDescription, showAction, dismissible\n",
+  "description": "Notificación flotante breve y no bloqueante para confirmar acciones completadas (guardar, copiar, errores temporales).\n\nVariantes y propiedades:\n- Use: Neutral | Success | Warning | Danger.\n- Propiedades: 👁️ Icon, 👁️ Description, 👁️ Action, 👁️ Close, ✏️ Title, ✏️ Description.\n\nCuándo no usar: Para mensajes que deben permanecer visibles dentro de un formulario usar Alert; para confirmaciones críticas usar Dialog.",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Controls",
   "importPath": "@/components/ui/Popover",
-  "description": "Import: @/components/ui/Popover\nCategory: Overlay & Controls\n\nFloating non-modal popover anchored to a trigger control for quick controls, multi-field filters, interactive Date Calendar picker (Calendar), or User Profile preview.\n\nProps / Variants:\n- Use: \"Default\" | \"Fil",
+  "description": "Contenedor flotante no modal anclado a un botón disparador para controles rápidos, filtros, calendario (Calendar) o vista previa de perfil.\n\nVariantes y propiedades:\n- Use: Default | Filter | DateCalendar | ProfilePreview.\n- Propiedades: 👁️ Header, 👁️ Footer, ✏️ Title.\n\nReglas de diseño:\n- En el footer usar siempre 1 botón Outline XS + 1 Primary XS, nunca dos botones Primary juntos.\n- Para texto puramente informativo al pasar el cursor usar Tooltip; para listas simples de acciones usar Dropdown Menu.",
   "anatomy": {
     "root": {
       "name": "Use=Default",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Tabs",
-  "description": null,
+  "description": "Navegación por pestañas para alternar entre vistas hermanas dentro de una página o dentro de Topbar (Use=DesktopTabs). Para filtros compactos en tarjetas usar Segment Control.",
   "anatomy": {
     "root": {
       "name": "Tab",

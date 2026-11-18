@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Actions",
   "importPath": "@/components/ui/Button",
-  "description": null,
+  "description": "Control principal para ejecutar acciones, enviar formularios o abrir modales y paneles.\n\nVariantes y propiedades:\n- Content: Label | Icon.\n- Variant: Primary | Outline | Ghost | Destructive.\n- Size: LG | MD | SM | XS.\n- State: Default | Hover | Focus | Disabled.\n- Propiedades: ✏️ Text, 👁️ Icon Left, ↪️ Swap Icon Left, 👁️ Icon Right, ↪️ Swap Icon Right, Swap Icon.\n\nReglas de jerarquía:\n- Nunca colocar dos botones Primary juntos dentro de un Dialog, Sheet, Card o Popover; combinar siempre 1 botón principal (Primary o Destructive) con 1 secundario (Outline o Ghost para Cancel/Reset).\n- No usar como indicador de estado (usar Badge) ni como navegación principal (usar Sidebar Navigation, Topbar o Tab).",
   "anatomy": {
     "root": {
       "name": "Content=Label, Variant=Primary, Size=LG, State=Default",

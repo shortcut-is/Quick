@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/CheckboxGroup",
-  "description": null,
+  "description": "Contenedor vertical con título de grupo para alinear múltiples instancias de Checkbox con espaciado uniforme.",
   "anatomy": {
     "root": {
       "name": "Checkbox Group",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Primitives",
   "importPath": "@/components/ui/SlotContent",
-  "description": null,
+  "description": "Marcador de contenido flexible integrado en Card, Dialog, Sheet y Popover para sustituirlo por formularios, textos o componentes reales en cada pantalla.",
   "anatomy": {
     "root": {
       "name": "Slot: Content",

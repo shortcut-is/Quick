@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Overlay (Primitive)",
   "importPath": "@/components/ui/Overlay",
-  "description": "Import: @/components/ui/Dialog (DialogOverlay). Full-viewport backdrop bound to Surfaces/Overlay token.",
+  "description": "Capa semitransparente de pantalla completa para atenuar el fondo detrás de Dialog y Sheet.",
   "anatomy": {
     "root": {
       "name": "OVERLAY",

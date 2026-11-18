@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Spinner",
-  "description": "Import: @/components/ui/Spinner\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (16px / 20px / 24px icon)\n- Use (Default | Muted) -> variant: default | muted\n- Label (Boolean) / Label (Text) -> label?: string (renders sr-only accessible text when hidden)\nToken",
+  "description": "Indicador animado de carga breve o indeterminada con etiqueta opcional.\n\nVariantes y propiedades:\n- Size: SM | MD | LG.\n- Use: Default | Muted.\n- Propiedades: 👁️ Label, ✏️ Label.\n\nCuándo no usar: Para anticipar el esqueleto completo de tarjetas o listas durante la carga usar Skeleton; si se conoce el porcentaje usar Progress Bar.",
   "anatomy": {
     "root": {
       "name": "Size=SM, Use=Default",

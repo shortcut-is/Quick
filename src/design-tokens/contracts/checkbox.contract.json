@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Checkbox",
-  "description": null,
+  "description": "Casilla de verificación con etiqueta y descripción opcional para selecciones múltiples independientes o aceptación de términos.\n\nVariantes: Selection (Checked | Unchecked | Indeterminate) × State (Enabled | Hover | Focus | Disabled | Error) × Description.\n\nCuándo no usar: Si las opciones son excluyentes usar Radio Button o Input Select; si el efecto es inmediato sin botón Guardar usar Switch.",
   "anatomy": {
     "root": {
       "name": "Selection=Unchecked, State=Enabled, Description=No",

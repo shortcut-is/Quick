@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Avatar",
-  "description": null,
+  "description": "Representación visual circular de un usuario o cuenta mediante fotografía, iniciales o letra inicial.\n\nVariantes y propiedades:\n- Type: image | initials | Letter.\n- Size: 24 | 32 | 40.\n\nReglas de diseño:\n- Usar Size=24 en Topbar Mobile o filas densas; 32 y 40 en tarjetas, perfiles y Sidebar Navigation.\n- Para mostrar varios colaboradores apilados usar Avatar Group en lugar de superponer instancias sueltas.",
   "anatomy": {
     "root": {
       "name": "Type=image, Size=24",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation & Inputs",
   "importPath": "@/components/ui/SegmentControl",
-  "description": null,
+  "description": "Selector segmentado compacto para alternar entre 2 y 5 vistas, modos o escalas dentro de una misma tarjeta o barra. No usar como navegación global de página (usar Tab o Sidebar Navigation).",
   "anatomy": {
     "root": {
       "name": "Segment",

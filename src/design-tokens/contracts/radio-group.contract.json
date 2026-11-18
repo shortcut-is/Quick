@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioGroup",
-  "description": null,
+  "description": "Contenedor vertical con título común para agrupar opciones mutuamente excluyentes de Radio Button.",
   "anatomy": {
     "root": {
       "name": "Radio Group",

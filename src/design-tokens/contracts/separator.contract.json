@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Layout Primitive",
   "importPath": "@/components/ui/Separator",
-  "description": "Divider, Separator",
+  "description": "Línea divisoria estructural horizontal o vertical vinculada al token Surfaces/Border.\n\nVariantes: Direction = Horizontal | Vertical.\nReglas de diseño: Usar solo cuando ayude a agrupar secciones claras en Card, Sheet, Sidebar o Topbar.",
   "anatomy": {
     "root": {
       "name": "Direction=Horizontal",

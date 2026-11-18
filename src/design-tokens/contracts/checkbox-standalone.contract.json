@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/CheckboxStandalone",
-  "description": null,
+  "description": "Casilla de verificación sin etiqueta pensada para integrarse dentro de tablas (Data Table), filas de filtros o paneles personalizados.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selection=Unchecked",

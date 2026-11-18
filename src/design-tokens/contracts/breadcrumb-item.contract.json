@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BreadcrumbItem",
-  "description": null,
+  "description": "Subcomponente atómico que representa cada nivel dentro de Breadcrumb.\n\nVariantes: State = Default | Hover | Active.\nReglas de diseño: No usar de forma aislada fuera de Breadcrumb.",
   "anatomy": {
     "root": {
       "name": "State=Default",

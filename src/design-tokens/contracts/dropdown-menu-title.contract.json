@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation (Subcomponent)",
   "importPath": "@/components/ui/DropdownMenuLabel",
-  "description": "Import: @/components/ui/DropdownMenu (DropdownMenuLabel). Type=Title (default) or inset padding.",
+  "description": "Encabezado de sección no interactivo dentro de Dropdown Menu. Variantes Type = Default | Inset.",
   "anatomy": {
     "root": {
       "name": "Type=Title",

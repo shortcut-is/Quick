@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Skeleton",
-  "description": "Import: @/components/ui/Skeleton\nProps Mapping (Figma -> React):\n- Use (Text | Heading | Avatar | ListRow | Card) -> primitive <Skeleton className=... /> or composed loading placeholder\nTokens: Placeholder fill Surfaces/Muted, card surface Surfaces/Background + Surfaces/Border, pulse ani",
+  "description": "Marcador de carga estructural que replica la geometría del contenido antes de mostrarse.\n\nVariantes: Use = Text | Heading | Avatar | ListRow | Card.\nCuándo no usar: En indicadores pequeños dentro de botones usar Spinner; si no hay datos tras cargar usar Empty State.",
   "anatomy": {
     "root": {
       "name": "Use=Text",

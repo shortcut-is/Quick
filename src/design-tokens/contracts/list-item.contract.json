@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/ListItem",
-  "description": null,
+  "description": "Fila de listado versátil con título, subtítulo, Avatar opcional (👁️ Avatar) y chevron de navegación (👁️ Chevron). Ideal para directorios y adaptación móvil de Data Table.",
   "anatomy": {
     "root": {
       "name": "List Item",

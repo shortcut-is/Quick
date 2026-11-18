@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Disclosure",
   "importPath": "@/components/ui/Accordion",
-  "description": null,
+  "description": "Panel desplegable para organizar contenido extenso en secciones colapsables (como preguntas frecuentes o especificaciones).\n\nVariantes y propiedades:\n- State: Default | Open.\n\nCuándo usar: Cuando conviene revelar detalles paso a paso sin cambiar de pantalla.\nCuándo no usar: No utilizar para alternar vistas principales hermanas (usar Tab o Segment) ni para ocultar advertencias críticas (usar Alert).",
   "anatomy": {
     "root": {
       "name": "State=Open",

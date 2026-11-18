@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/InputSelect",
-  "description": null,
+  "description": "Selector de lista cerrada con etiqueta superior, flecha desplegable y texto de ayuda/error.\n\nVariantes y propiedades:\n- State: Default | Filled | Hover | Focus | Error | Disabled.\n- Propiedades: ✏️ Label, ✏️ Content, Hint, ✏️ Hint.\n\nCuándo usar: Cuando hay 4 o más opciones excluyentes; si solo hay 2 o 3 opciones breves usar Radio Button o Segment.",
   "anatomy": {
     "root": {
       "name": "State=Default",

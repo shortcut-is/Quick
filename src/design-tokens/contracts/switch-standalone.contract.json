@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/SwitchStandalone",
-  "description": null,
+  "description": "Interruptor binario sin etiqueta externa para filas de Settings en Card, filtros en Sheet/Popover o Developer Mode en Sidebar Navigation.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Size=Small",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/SidebarItem",
-  "description": "Import: @/components/ui/SidebarItem\nCategory: Navigation (Subcomponent)\n\nReusable navigation row / icon-rail tile for Sidebar Navigation with full Mode (Expanded | Collapsed) x State (Default | Hover | Active) variants.\n\nProps / Variants:\n- Mode: \"Expanded\" (216x40px row) | \"Collapsed",
+  "description": "Subcomponente de enlace para Sidebar Navigation con cobertura completa para barra expandida y colapsada.\n\nVariantes y propiedades:\n- Mode: Expanded (216×40px) | Collapsed (40×40px).\n- State: Default (transparente, icono muted) | Hover (fondo Surfaces/Muted) | Active (fondo Surfaces/Muted + borde Surfaces/Border).\n- Propiedades: 👁️ Badge, 👁️ Chevron, ✏️ Label, ↪️ Icon.",
   "anatomy": {
     "root": {
       "name": "Mode=Expanded, State=Default",

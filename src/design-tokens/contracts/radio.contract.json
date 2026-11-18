@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/Radio",
-  "description": null,
+  "description": "Indicador circular atómico de selección única reutilizado dentro de Radio Button y listas compactas.",
   "anatomy": {
     "root": {
       "name": "State=Default, Selected=Off",

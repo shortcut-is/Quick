@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/DatePicker",
-  "description": null,
+  "description": "Campo interactivo para capturar una fecha mediante un input conectado a Calendar.\n\nVariantes: State = Default | Active.\nReglas de diseño: Usar en formularios para ahorrar espacio vertical; en Mobile presentar el calendario dentro de Sheet (Bottom).",
   "anatomy": {
     "root": {
       "name": "State=Default",

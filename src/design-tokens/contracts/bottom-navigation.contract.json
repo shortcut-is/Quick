@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/BottomNavigation",
-  "description": "Import: @/components/ui/BottomNavigation\nCategory: Navigation\n\nMobile thumb-zone navigation bar (390x68px) composed of exposed _Bottom Nav Item instances (State = Default | Hover | Active) and optional centered Primary Icon MD CTA button.\n\nProps / Variants:\n- Items: \"4 Tabs\" | \"5 Tabs",
+  "description": "Barra de navegación inferior fija para dispositivos móviles (390×68px).\n\nVariantes:\n- Items: 4 Tabs | 5 Tabs (CTA) con botón central Primary Icon MD.\n\nReglas de diseño:\n- Cada una de sus 4 pestañas es una instancia expuesta de _Bottom Nav Item para cambiar individualmente su State (Default | Hover | Active), etiqueta e icono según la pantalla.\n- Usar solo en Mobile; en Desktop emplear Sidebar Navigation o Topbar.",
   "anatomy": {
     "root": {
       "name": "Items=4 Tabs",

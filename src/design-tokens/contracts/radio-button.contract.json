@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioButton",
-  "description": null,
+  "description": "Opción de selección única con etiqueta y descripción opcional para usarse dentro de Radio Group.\n\nVariantes: Selection × State × Description.\nCuándo no usar: Para selecciones múltiples usar Checkbox; si hay más de 5 opciones usar Input Select.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Description=Off",

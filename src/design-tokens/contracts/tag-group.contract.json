@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/TagGroup",
-  "description": null,
+  "description": "Contenedor con flujo envolvente para agrupar múltiples instancias de Tag.",
   "anatomy": {
     "root": {
       "name": "Tag Group",

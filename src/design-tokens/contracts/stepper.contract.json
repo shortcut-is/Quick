@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Stepper",
-  "description": null,
+  "description": "Indicador visual de pasos secuenciales para flujos guiados como registros o checkout. Variantes Direction = Horizontal (Desktop) | Vertical (Mobile/flujos largos).",
   "anatomy": {
     "root": {
       "name": "Direction=↓ Vertical",

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Notification",
-  "description": null,
+  "description": "Aviso enriquecido para bandeja de notificaciones o alertas persistentes descartables.\n\nVariantes y propiedades:\n- Type: Default | Success | Warning | Danger.\n- Propiedades: Action, Dismissible.\n\nCuándo no usar: Para confirmaciones rápidas que desaparecen solas usar Toast; para alertas estáticas dentro de formularios usar Alert.",
   "anatomy": {
     "root": {
       "name": "Type=Neutral",

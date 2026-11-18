@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/TabItem",
-  "description": null,
+  "description": "Subcomponente de pestaña individual para Tab con barra inferior activa. Variantes State = Default | Hover | Selected.",
   "anatomy": {
     "root": {
       "name": "State=Default",

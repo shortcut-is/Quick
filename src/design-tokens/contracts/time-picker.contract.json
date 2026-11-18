@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/TimePicker",
-  "description": null,
+  "description": "Control de selección de hora y minutos para formularios de programación. Para fechas usar Date Picker o Calendar.",
   "anatomy": {
     "root": {
       "name": "State=Default",

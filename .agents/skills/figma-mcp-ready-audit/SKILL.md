@@ -31,18 +31,19 @@ Evalúa el componente contra estas cuatro dimensiones clave:
    - Todo color, espaciado (`padding`, `gap`), radio de borde (`border-radius`) y tipografía debe estar vinculado a Variables de Figma semánticas (ej. `surface/primary`, `text/danger`, `spacing/md`, `radius/card`).
    - Detectar y marcar como error cualquier valor hexadecimal crudo (`#FFFFFF`), píxel fijo suelto o estilo desvinculado.
 
-4. **Component Description como Micro-Prompt Técnico**
-   - El componente maestro debe incluir una descripción estructurada para que el servidor MCP la exponga al LLM con:
-     - Ruta de importación o componente base en código (ej. `@/components/ui/Button`).
-     - Reglas de comportamiento o estados dinámicos no evidentes visualmente (ej. comportamiento de `isLoading` o foco).
-     - Restricciones de jerarquía o uso (ej. cuándo usar variante sólida frente a enlace sin borde).
+4. **Component Description Coherente en Figma (Guía de Diseño y Uso)**
+   - El componente maestro debe incluir en el campo nativo `Description` de Figma una descripción orientada a diseño y uso dentro del sistema (sin rutas de importación de código como `@/components/...`, librerías de JS ni etiquetas HTML/CSS), cubriendo:
+     - **Propósito:** qué resuelve el componente visual y funcionalmente dentro del sistema.
+     - **Variantes y propiedades:** guía rápida de cuándo elegir cada eje (`Variant`, `Use`, `Size`, `State`) o propiedad booleana/de texto.
+     - **Cuándo usar / Reglas de diseño:** jerarquía visual (ej. nunca colocar dos botones `Primary` juntos en un modal/panel; combinar 1 principal + 1 secundario) y qué componente alternativo del sistema usar en los casos excluidos.
+   - Las rutas de código (`importPath`) y detalles de implementación técnica (`behaviorRules`) se documentan en los contratos del repositorio (`src/design-tokens/contracts/*.contract.json`), no dentro del panel de Figma.
 
 ## Flujo de ejecución
 
 1. **Analizar la entrada del usuario:** Identifica qué información proporcionó el usuario (árbol JSON del MCP, lista de capas/variantes, captura de pantalla o descripción textual) y aclara brevemente qué aspectos no son visibles si falta información (por ejemplo, si solo compartió una imagen y no se pueden verificar los tokens internos).
 2. **Calcular el Puntaje AI-Ready (0 a 100):** Asigna una calificación ponderada (25 puntos por cada pilar) basada en los hallazgos.
 3. **Listar Bloqueadores Críticos y Mejoras:** Agrupa los hallazgos por pilar indicando exactamente qué nodo, variante o propiedad falló, por qué confundirá al agente de código y cómo corregirlo en Figma.
-4. **Generar la Description lista para Figma:** Redacta un bloque de texto conciso y estructurado que el usuario pueda copiar y pegar directamente en el panel derecho (*Component Description*) de Figma para ese componente.
+4. **Generar la Description lista para Figma:** Redacta un bloque de texto conciso y coherente en lenguaje de diseño que el usuario pueda copiar y pegar directamente en el panel derecho (*Component Description*) de Figma para ese componente.
 
 ## Formato de salida esperado
 
@@ -51,7 +52,7 @@ Estructura siempre la respuesta en este orden:
 - **Puntaje AI-Ready:** `XX / 100` con un resumen de 1 línea del estado general.
 - **Bloqueadores Críticos (Alto impacto en generación de código):** Lista puntual de errores que harán que el agente genere mal layout, props erróneas o estilos hardcodeados.
 - **Mejoras Recomendadas (Optimización):** Ajustes de nomenclatura, propiedades booleanas o limpieza de capas.
-- **Component Description (Copiar y pegar en Figma):** Bloque de código Markdown con el micro-prompt técnico listo para usar.
+- **Component Description (Copiar y pegar en Figma):** Bloque de texto claro con propósito, variantes/propiedades y reglas de diseño/jerarquía (sin sintaxis de código ni IDs de nodo).
 
 ## Gotchas
 

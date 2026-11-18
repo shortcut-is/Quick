@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Textarea",
-  "description": null,
+  "description": "Campo de texto multilínea para descripciones, notas o comentarios largos. Variantes State = Default | Focus | Error | Disabled y toggle Show Hint.",
   "anatomy": {
     "root": {
       "name": "State=Default",

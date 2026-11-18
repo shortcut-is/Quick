@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableRow",
-  "description": null,
+  "description": "Fila horizontal de registro para Data Table con densidad configurable (Density), casilla de selección y acciones. En Mobile adaptar como List Item.",
   "anatomy": {
     "root": {
       "name": "Density=Compact",

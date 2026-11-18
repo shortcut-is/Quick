@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Topbar",
-  "description": "Import: @/components/ui/Topbar\nCategory: Navigation\n\nTop application bar covering Desktop (with Breadcrumb + Cmd+K Search + Notification + Avatar, or Primary Tabs + CTA actions) and Mobile App Bar (390px).\n\nProps / Variants:\n- Use: \"DesktopBreadcrumb\" | \"DesktopTabs\" | \"Mobi",
+  "description": "Barra superior de aplicación para Desktop y Mobile.\n\nVariantes y propiedades:\n- Use: DesktopBreadcrumb (marca + Breadcrumb + buscador Cmd+K + campana + Avatar) | DesktopTabs (marca + Tab + acciones + Avatar) | MobileAppBar (390px, botón atrás + título centrado + alertas + Avatar).\n- Propiedades: 👁️ Avatar, 👁️ Notifications.",
   "anatomy": {
     "root": {
       "name": "Use=DesktopBreadcrumb",
