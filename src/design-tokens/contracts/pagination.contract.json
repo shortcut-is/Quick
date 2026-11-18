@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Pagination",
-  "description": "Barra de paginación numerada para navegar bloques extensos de registros en listas y al pie de Data Table.\n\nPropiedades: Show Previous, Show Next, Item 1..7, More.",
+  "description": "Numbered pagination bar for navigating paged lists and Data Table footers.\n\nProperties: Show Previous, Show Next, Item 1..7, More.",
   "anatomy": {
     "root": {
       "name": "Pagination",
@@ -343,16 +343,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para navegar entre páginas numeradas de listados grandes o al pie de `DataTable` (`DataTableFooter`)."
+      "Use to navigate numbered pages across large record sets and inside `DataTableFooter`."
     ],
     "whenNotToUse": [
-      "No usar para mostrar la ubicación jerárquica actual; usar `Breadcrumb`.",
-      "No usar para indicar avance dentro de un flujo guiado por pasos; usar `Stepper`."
+      "Do not use for hierarchical path orientation (`Breadcrumb`), sibling page tabs (`Tabs`), or sequential wizards (`Stepper`)."
     ]
   },
   "behaviorRules": [
-    "Envolver en `<nav aria-label=\"Pagination\">` con `aria-current=\"page\"` en la página activa.",
-    "Deshabilitar botones `Previous` y `Next` cuando el usuario se encuentre en el primer o último límite.",
-    "Colapsar páginas intermedias con elipsis (`More`) en rangos amplios o viewports estrechos."
+    "Wrap in `<nav aria-label=\"Pagination\">` marking the active page button with `aria-current=\"page\"`.",
+    "Disable `Previous` and `Next` controls at boundary pages and condense large ranges with ellipsis (`More`)."
   ]
 }

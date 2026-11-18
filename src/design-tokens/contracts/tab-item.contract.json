@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/TabItem",
-  "description": "Subcomponente de pestaña individual para Tab con barra inferior activa. Variantes State = Default | Hover | Selected.",
+  "description": "Individual tab trigger subcomponent for Tab with active bottom indicator. Variants: State = Default | Hover | Selected.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -106,13 +106,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Exclusivamente como pestaña individual dentro de `Tabs` (`Tab`)."
+      "Use strictly as individual triggers inside `Tabs` (`Tab`)."
     ],
     "whenNotToUse": [
-      "No usar de forma aislada fuera de un contenedor `role=\"tablist\"`."
+      "Do not use standalone outside a `role=\"tablist\"` container."
     ]
   },
   "behaviorRules": [
-    "Trigger individual dentro de `Tabs` (`Default`, `Hover`, `Selected`) con indicador inferior vinculado a `Primary/Top..Bottom`."
+    "Expose `role=\"tab\"`, `aria-selected`, and `aria-controls` linking to its associated panel."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioGroup",
-  "description": "Contenedor vertical con título común para agrupar opciones mutuamente excluyentes de Radio Button.",
+  "description": "Vertical group wrapper with shared label for mutually exclusive Radio Button choices.",
   "anatomy": {
     "root": {
       "name": "Radio Group",
@@ -204,14 +204,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para envolver y organizar un conjunto de opciones `RadioButton` mutuamente excluyentes con accesibilidad `role=\"radiogroup\"`."
+      "Use to organize mutually exclusive `RadioButton` options under a shared accessible group heading."
     ],
     "whenNotToUse": [
-      "No usar para selección múltiple; usar `CheckboxGroup`."
+      "Do not use for multi-select checkboxes; use `CheckboxGroup`."
     ]
   },
   "behaviorRules": [
-    "Contenedor lógico con `role=\"radiogroup\"` y roving tabindex entre sus ítems `RadioButton`.",
-    "Mantener separación vertical uniforme (`spacing/2`) y título accesible de grupo."
+    "Expose `role=\"radiogroup\"` with `aria-labelledby` and uniform vertical spacing (`spacing/2`)."
   ]
 }

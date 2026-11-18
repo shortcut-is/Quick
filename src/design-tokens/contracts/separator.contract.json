@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Layout Primitive",
   "importPath": "@/components/ui/Separator",
-  "description": "Línea divisoria estructural horizontal o vertical vinculada al token Surfaces/Border.\n\nVariantes: Direction = Horizontal | Vertical.\nReglas de diseño: Usar solo cuando ayude a agrupar secciones claras en Card, Sheet, Sidebar o Topbar.",
+  "description": "Structural horizontal or vertical divider bound to Surfaces/Border.\n\nVariants: Direction = Horizontal | Vertical.\nDesign rules: Use sparingly to separate distinct logical groups inside Card, Sheet, Sidebar, Popover, or Topbar.",
   "anatomy": {
     "root": {
       "name": "Direction=Horizontal",
@@ -64,14 +64,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para dividir visualmente secciones dentro de `Card`, `Sheet`, `Popover`, `DropdownMenu`, `SidebarNavigation` o `Topbar` (`Horizontal` o `Vertical`)."
+      "Use to visually divide logical groups inside `Card`, `Sheet`, `Popover`, `DropdownMenu`, `SidebarNavigation`, or `Topbar` (`Horizontal` or `Vertical`)."
     ],
     "whenNotToUse": [
-      "No abusar añadiendo separadores entre cada campo cuando el espaciado (`spacing/*`) por sí solo ya establece jerarquía clara."
+      "Do not insert dividers between every row or field when Quick v1.2 spacing tokens (`spacing/*`) already establish clean hierarchy."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-separator`; usar `aria-orientation=\"vertical\"` cuando `Direction=Vertical`.",
-    "Marcar como decorativo (`decorative`) cuando solo divida visualmente bloques sin valor estructural."
+    "Render `<hr>` or `role=\"separator\"` with `aria-orientation=\"vertical\"` for vertical dividers, marking purely decorative dividers with `role=\"none\"`."
   ]
 }

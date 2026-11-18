@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Tag",
-  "description": "Etiqueta interactiva para representar filtros aplicados o categorías removibles con botón de cierre opcional (Dismissible). Para estados fijos usar Badge.",
+  "description": "Interactive chip for active removable filters (Dismissible) or user-assigned categories. For non-interactive status indicators use Badge.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Dismissible=No",
@@ -96,15 +96,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para representar filtros activos que el usuario puede quitar (`Dismissible=true`), etiquetas asignadas o palabras clave interactivas."
+      "Use for active user-removable filters (`Dismissible=true`), assigned categories, or interactive keyword chips."
     ],
     "whenNotToUse": [
-      "No usar para estados fijos de solo lectura ni contadores; usar `Badge`.",
-      "No usar para acciones principales de formulario; usar `Button`."
+      "Do not use for non-interactive status indicators or numeric counts; use `Badge`.",
+      "Do not use as primary action triggers; use `Button`."
     ]
   },
   "behaviorRules": [
-    "Representar etiquetas de clasificación o filtros aplicados.",
-    "Cuando `Dismissible=true`, incluir botón de cierre con `aria-label=\"Remove tag\"` y gestión de foco tras eliminar."
+    "When `Dismissible=true`, provide an accessible close button (`aria-label=\"Remove tag\"`) and manage focus cleanly after removal."
   ]
 }

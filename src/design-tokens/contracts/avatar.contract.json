@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Avatar",
-  "description": "Representación visual circular de un usuario o cuenta mediante fotografía, iniciales o letra inicial.\n\nVariantes y propiedades:\n- Type: image | initials | Letter.\n- Size: 24 | 32 | 40.\n\nReglas de diseño:\n- Usar Size=24 en Topbar Mobile o filas densas; 32 y 40 en tarjetas, perfiles y Sidebar Navigation.\n- Para mostrar varios colaboradores apilados usar Avatar Group en lugar de superponer instancias sueltas.",
+  "description": "Circular visual representation of a user or account using a photograph, initials, or single letter.\n\nVariants & Properties:\n- Type: image | initials | Letter.\n- Size: 24 | 32 | 40.\n\nDesign rules:\n- Use Size=24 in mobile top bars or compact rows; use 32 and 40 in cards, profiles, and Sidebar Navigation.\n- To show multiple overlapping collaborators, use Avatar Group instead of stacking loose Avatar instances.",
   "anatomy": {
     "root": {
       "name": "Type=image, Size=24",
@@ -88,17 +88,17 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para representar visualmente a un usuario, miembro de equipo o cuenta mediante foto (`Type=image`), iniciales (`Type=initials`) o letra (`Type=Letter`).",
-      "Dentro de `Card` (`Use=Profile`), `Topbar`, `SidebarNavigation`, `ListItem` o `Popover` (`Use=ProfilePreview`)."
+      "Use to represent a user, teammate, or account via photo (`Type=image`), two-letter initials (`Type=initials`), or single letter (`Type=Letter`).",
+      "Use inside `Card` (`Use=Profile`), `Topbar`, `SidebarNavigation`, `ListItem`, and `Popover` (`Use=ProfilePreview`)."
     ],
     "whenNotToUse": [
-      "No usar como icono genérico de objeto o categoría cuando corresponde un icono de `Icon/Line/*`.",
-      "No apilar avatares manualmente con márgenes negativos ad-hoc; usar `AvatarGroup`."
+      "Do not use as a generic object or category icon when an `Icon/Line/*` vector belongs there.",
+      "Do not manually overlap loose avatars with ad-hoc negative margins; use `AvatarGroup`."
     ]
   },
   "behaviorRules": [
-    "Cargar imagen con fallback determinístico a iniciales (`Type=initials`) o letra (`Type=Letter`) usando `Heebo SemiBold` (`FontFamily/Primary`).",
-    "Respetar dimensiones exactas por tamaño (`Size`: `24`, `32`, `40`) y radio circular (`Radius/full`).",
-    "Incluir atributo `alt` descriptivo cuando `Type=image` y `aria-hidden` en iniciales decorativas junto a texto."
+    "Render `<img>` with deterministic fallback to initials (`Heebo SemiBold` / `FontFamily/Primary`) or single letter when images fail or are absent.",
+    "Respect exact square sizes (`24`, `32`, `40`) and circular `Radius/full` bound to Tailwind theme tokens.",
+    "Provide meaningful `alt` text for standalone user images, or `alt=\"\"` / `aria-hidden` when paired right next to the user name text."
   ]
 }

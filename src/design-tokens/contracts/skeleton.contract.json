@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Skeleton",
-  "description": "Marcador de carga estructural que replica la geometría del contenido antes de mostrarse.\n\nVariantes: Use = Text | Heading | Avatar | ListRow | Card.\nCuándo no usar: En indicadores pequeños dentro de botones usar Spinner; si no hay datos tras cargar usar Empty State.",
+  "description": "Structural loading placeholder matching content geometry before data resolves.\n\nVariants: Use = Text | Heading | Avatar | ListRow | Card.\nWhen not to use: Use Spinner inside small buttons or inline triggers; use Empty State when loading finishes with zero records.",
   "anatomy": {
     "root": {
       "name": "Use=Text",
@@ -88,15 +88,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Durante la carga inicial de páginas, tarjetas (`Use=Card`), filas de listas (`Use=ListRow`) o perfiles (`Use=Avatar`) para anticipar la anatomía final sin saltos de layout (CLS)."
+      "Use during initial load of pages, cards (`Use=Card`), list rows (`Use=ListRow`), or avatars (`Use=Avatar`) to mirror final geometry and prevent layout shift (CLS)."
     ],
     "whenNotToUse": [
-      "No usar dentro de botones o indicadores inline pequeños; usar `Spinner`.",
-      "No usar cuando ya terminó la carga y no existen datos; usar `EmptyState`."
+      "Do not use inside small buttons or inline triggers; use `Spinner`.",
+      "Do not show once loading finishes with zero records; use `EmptyState`."
     ]
   },
   "behaviorRules": [
-    "Aplicar pulso sutil sobre `Surfaces/Muted` respetando `prefers-reduced-motion: reduce`.",
-    "Usar `aria-hidden=\"true\"` en los placeholders y `aria-busy=\"true\"` en el contenedor padre mientras cargan los datos."
+    "Mark placeholders `aria-hidden=\"true\"` and parent regions `aria-busy=\"true\"`, disabling pulse animation under `prefers-reduced-motion: reduce`."
   ]
 }

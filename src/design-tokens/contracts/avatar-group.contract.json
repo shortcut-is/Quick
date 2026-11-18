@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/AvatarGroup",
-  "description": "Grupo compacto de múltiples Avatar superpuestos o espaciados con contador numérico excedente.\n\nVariantes y propiedades:\n- Size: SM | MD | LG.\n- Layout: Stacked | Spaced.\n- Propiedades: 👁️ Avatar 4, 👁️ Overflow, ✏️ Overflow.",
+  "description": "Compact group of overlapping or spaced Avatar instances with overflow counter badge.\n\nVariants & Properties:\n- Size: SM | MD | LG.\n- Layout: Stacked | Spaced.\n- Properties: 👁️ Avatar 4, 👁️ Overflow, ✏️ Overflow.",
   "anatomy": {
     "root": {
       "name": "Size=SM, Layout=Stacked",
@@ -250,16 +250,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para mostrar múltiples colaboradores asignados, participantes o miembros activos de forma compacta con contador `+N` (`OverflowBadge`).",
-      "Cuando interesa comunicar presencia grupal sin listar cada perfil completo."
+      "Use to display multiple assignees, collaborators, or active members compactly with an optional `+N` overflow badge.",
+      "Use when communicating group presence without listing full profile cards."
     ],
     "whenNotToUse": [
-      "No usar para representar una sola persona; usar `Avatar`.",
-      "No usar cuando sea necesario consultar nombre, rol o email de cada miembro en detalle; usar `Card` (`Use=List`) o `ListItem`."
+      "Do not use for a single person; use `Avatar`.",
+      "Do not use when users need to inspect every member's full name, email, or role; use `Card` (`Use=List`) or `ListItem`."
     ]
   },
   "behaviorRules": [
-    "Componer múltiples instancias de `Avatar` con superposición negativa en `Layout=Stacked` (`border: 2px solid Surfaces/Background`).",
-    "Agrupar usuarios excedentes dentro de `OverflowBadge` (`+N`) con tooltip opcional al pasar el cursor/foco."
+    "Compose multiple `Avatar` instances with negative overlap spacing in `Layout=Stacked` and a `2px` ring using `Surfaces/Background`.",
+    "Group hidden members into `OverflowBadge` (`+N`) with an optional accessible count label."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Disclosure",
   "importPath": "@/components/ui/Accordion",
-  "description": "Panel desplegable para organizar contenido extenso en secciones colapsables (como preguntas frecuentes o especificaciones).\n\nVariantes y propiedades:\n- State: Default | Open.\n\nCuándo usar: Cuando conviene revelar detalles paso a paso sin cambiar de pantalla.\nCuándo no usar: No utilizar para alternar vistas principales hermanas (usar Tab o Segment) ni para ocultar advertencias críticas (usar Alert).",
+  "description": "Expandable disclosure panel for organizing long sections of content such as FAQs or secondary settings.\n\nVariants & Properties:\n- State: Default | Open.\n\nWhen to use: To reveal details progressively without navigating away.\nWhen not to use: Do not use to switch between sibling views on the same screen (use Tab or Segment) or to hide critical warnings (use Alert).",
   "anatomy": {
     "root": {
       "name": "State=Open",
@@ -109,17 +109,17 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para ocultar o revelar secciones extensas de contenido progresivo como FAQs, especificaciones o paneles de configuración secundaria.",
-      "Cuando el usuario necesita comparar o expandir múltiples secciones verticalmente sin cambiar de ruta."
+      "Use to progressively disclose long sections of content such as FAQs, product details, or secondary settings without leaving the current page.",
+      "Use when users need to scan and toggle multiple collapsible sections vertically."
     ],
     "whenNotToUse": [
-      "No usar para cambiar entre vistas principales paralelas en la misma pantalla; usar `Tabs` o `SegmentControl`.",
-      "No ocultar información crítica, advertencias de validación o pasos obligatorios que el usuario deba ver de inmediato (usar `Alert` o mostrar en el flujo)."
+      "Do not use to switch between sibling top-level views on the same screen; use `Tabs` or `SegmentControl`.",
+      "Do not hide critical system alerts, form errors, or mandatory instructions inside collapsed panels; use `Alert` or inline copy."
     ]
   },
   "behaviorRules": [
-    "Implementar con primitivas accesibles de acordeón (@radix-ui/react-accordion) con soporte de teclado (Enter/Space para alternar, ArrowUp/ArrowDown entre triggers).",
-    "Exponer `aria-expanded` en el trigger y asociarlo vía `aria-controls` con el panel de contenido.",
-    "Soportar modo único (`type=\"single\" collapsible`) y múltiple (`type=\"multiple\"`)."
+    "Implement with semantic `<button>` triggers inside headings and `role=\"region\"` panels using WAI-ARIA disclosure keyboard interaction (`Enter`/`Space` to toggle, `ArrowUp`/`ArrowDown` between triggers).",
+    "Bind `aria-expanded` on each trigger and link it to its panel via `aria-controls`.",
+    "Support both single-expanded (`collapsible`) and multi-expanded modes while mapping spacing and border tokens to Tailwind CSS variables."
   ]
 }

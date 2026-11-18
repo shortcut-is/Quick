@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/SidebarItem",
-  "description": "Subcomponente de enlace para Sidebar Navigation con cobertura completa para barra expandida y colapsada.\n\nVariantes y propiedades:\n- Mode: Expanded (216×40px) | Collapsed (40×40px).\n- State: Default (transparente, icono muted) | Hover (fondo Surfaces/Muted) | Active (fondo Surfaces/Muted + borde Surfaces/Border).\n- Propiedades: 👁️ Badge, 👁️ Chevron, ✏️ Label, ↪️ Icon.",
+  "description": "Navigation item subcomponent for Sidebar Navigation covering both Expanded and Collapsed states.\n\nVariants & Properties:\n- Mode: Expanded (216×40px) | Collapsed (40×40px).\n- State: Default (transparent, muted icon/text) | Hover (Surfaces/Muted fill) | Active (Surfaces/Muted fill + Surfaces/Border stroke).\n- Properties: 👁️ Badge, 👁️ Chevron, ✏️ Label, ↪️ Icon.",
   "anatomy": {
     "root": {
       "name": "Mode=Expanded, State=Default",
@@ -210,14 +210,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Como enlace de navegación unitario dentro de `SidebarNavigation`, cubriendo tanto `Mode=Expanded` como `Mode=Collapsed` con estados `Default`, `Hover` y `Active`."
+      "Use as individual route rows/tiles inside `SidebarNavigation`, supporting both `Expanded` (`216×40px`) and `Collapsed` (`40×40px`) modes across `Default`, `Hover`, and `Active`."
     ],
     "whenNotToUse": [
-      "No usar en barras horizontales superiores (`TabItem`) ni dentro de `BottomNavigation` (`BottomNavItem`)."
+      "Do not use in top horizontal tabs (`TabItem`) or mobile bottom bars (`BottomNavItem`)."
     ]
   },
   "behaviorRules": [
-    "Soportar matriz completa `Mode = Expanded | Collapsed` × `State = Default | Hover | Active`.",
-    "En `Mode=Collapsed`, ocultar texto/badge/chevron y proveer `Tooltip` o `aria-label` con el nombre de la ruta."
+    "Mark active destination with `aria-current=\"page\"`.",
+    "In `Mode=Collapsed`, hide label/badge/chevron and expose the route name via `aria-label` and optional `Tooltip`."
   ]
 }

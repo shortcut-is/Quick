@@ -585,15 +585,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para mostrar conjuntos estructurados de registros tabulares con múltiples columnas comparables, ordenación (`_Data table Header Cell`), selección masiva (`Selectable`) y paginación (`DataTableFooter`)."
+      "Use to display structured tabular datasets across multiple comparable columns with sorting, bulk row selection (`Selectable`), row actions, and pagination (`DataTableFooter`)."
     ],
     "whenNotToUse": [
-      "No usar en viewports estrechos de mobile sin adaptación a filas tipo tarjeta (`ListItem`); ni para colecciones de 2–3 campos simples que lucen mejor en `Card` (`Use=List`)."
+      "Do not force multi-column tables onto narrow mobile screens without adapting to `ListItem` rows or horizontal scrolling; for simple 2–3 field collections prefer `Card` (`Use=List`)."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@tanstack/react-table` combinando tabla semántica (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`) en Desktop y tarjetas `ListItem` o scroll horizontal en Mobile.",
-    "Sincronizar `density`, columnas visibles (`Col 1..8` / `Cell 1..8`), `isSelectable` y `hasActions` entre `DataTableHeader` y `DataTableRow`.",
-    "Mantener `aria-sort` actualizado en `_Data table Header Cell` cuando `sortDirection` esté activo."
+    "Render semantic HTML `<table>`, `<thead>`, `<tbody>`, `<tfoot>` in Desktop views and adapt cleanly to `ListItem` cards or horizontal scroll on Mobile using Quick v1.2 Tailwind tokens.",
+    "Keep `density`, visible columns (`Col 1..8` / `Cell 1..8`), `isSelectable`, and `hasActions` synchronized between `DataTableHeader` and `DataTableRow`.",
+    "Maintain accurate `aria-sort` attributes on sortable header cells."
   ]
 }

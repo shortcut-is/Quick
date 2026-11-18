@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/DatePicker",
-  "description": "Campo interactivo para capturar una fecha mediante un input conectado a Calendar.\n\nVariantes: State = Default | Active.\nReglas de diseño: Usar en formularios para ahorrar espacio vertical; en Mobile presentar el calendario dentro de Sheet (Bottom).",
+  "description": "Interactive input control for selecting a single date via an attached Calendar trigger.\n\nVariants: State = Default | Active.\nDesign rules: Use inside forms to preserve vertical space; on Mobile consider presenting the calendar inside a bottom Sheet.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -125,16 +125,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "En formularios cuando se solicita capturar una fecha mediante un input compacto que abre `Calendar` al activarse."
+      "Use in forms when users need to pick a calendar date through a compact input trigger linked to `Calendar`."
     ],
     "whenNotToUse": [
-      "No usar cuando el calendario deba permanecer siempre visible en pantalla; usar `Calendar`.",
-      "No usar si solo se requiere capturar hora; usar `TimePicker`."
+      "Do not use when an always-visible calendar grid is required; use `Calendar`.",
+      "Do not use for time-only selection; use `TimePicker`."
     ]
   },
   "behaviorRules": [
-    "Componer un campo de entrada (`Input Text`) como disparador de un `Popover` que contiene `Calendar`.",
-    "Permitir tanto selección mediante calendario desplegable como entrada o borrado accesible por teclado.",
-    "En Mobile, considerar presentar el `Calendar` dentro de `Sheet` (`Position=Bottom (Mobile)`)."
+    "Compose an `InputText` trigger controlling an anchored `Popover` with `Calendar` on Desktop, or bottom `Sheet` on touch devices.",
+    "Support `Escape` dismissal, keyboard clear/edit, and locale-aware date formatting."
   ]
 }

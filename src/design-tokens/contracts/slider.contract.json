@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Slider",
-  "description": "Control deslizante para seleccionar un valor o rango continuo dentro de límites definidos. Variantes Progress × Show Knob. No usar para progreso pasivo de solo lectura (usar Progress Bar).",
+  "description": "Interactive range track for picking continuous or stepped values within defined bounds. Variants: Progress × Show Knob. Do not use for read-only status display (use Progress Bar).",
   "anatomy": {
     "root": {
       "name": "Progress=0 %",
@@ -149,15 +149,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Cuando el usuario necesita ajustar de manera interactiva un valor o rango continuo/aproximado dentro de límites conocidos (volumen, precio, opacidad)."
+      "Use when users adjust continuous or stepped numeric values within bounded limits (volume, price filter, opacity)."
     ],
     "whenNotToUse": [
-      "No usar como indicador pasivo de solo lectura; usar `ProgressBar`.",
-      "No usar si se requiere precisión numérica exacta rápida de muchos dígitos; usar `InputText` numérico."
+      "Do not use for read-only progress metrics; use `ProgressBar`.",
+      "Do not use when exact multi-digit numeric typing is faster; use a numeric `InputText`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-slider` usando valor continuo (`min`, `max`, `step`), nunca texto repetido para simular track.",
-    "Exponer `aria-label` o `aria-labelledby`, `aria-valuemin`, `aria-valuemax`, `aria-valuenow` y soporte para flechas/Home/End."
+    "Implement using semantic `<input type=\"range\">` or WAI-ARIA `role=\"slider\"` with `aria-valuemin`, `aria-valuemax`, `aria-valuenow`, and full arrow/Home/End keyboard control rather than repeating character hacks."
   ]
 }

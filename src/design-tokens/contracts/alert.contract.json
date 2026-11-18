@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Alert",
-  "description": "Banner contextual dentro de página para comunicar estados importantes, confirmaciones, advertencias o errores.\n\nVariantes y propiedades:\n- Use: Neutral | Success | Warning | Danger.\n- Propiedades: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de diseño:\n- Cuando muestre acciones, combinar siempre 1 botón principal con 1 botón secundario (Outline o Ghost), nunca dos botones Primary juntos.\n- Usar Toast para avisos efímeros tras guardar o copiar, y Dialog si la acción requiere confirmación bloqueante.",
+  "description": "In-page contextual banner used to communicate system status, confirmations, warnings, or errors.\n\nVariants & Properties:\n- Use: Neutral | Success | Warning | Danger.\n- Properties: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nDesign rules:\n- When displaying two actions, always pair 1 primary button with 1 secondary button (Outline or Ghost); never place two Primary buttons side by side.\n- Use Toast for brief non-blocking confirmations after saving or copying, and Dialog when explicit blocking confirmation is required.",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",
@@ -214,18 +214,17 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para mostrar feedback persistente dentro de la página sobre el estado del sistema, errores de formulario o advertencias contextuales (`Neutral`, `Success`, `Warning`, `Danger`).",
-      "Cuando el mensaje requiere permanecer visible mientras el usuario lee o corrige la vista actual."
+      "Use for persistent in-page feedback communicating system status, form validation summaries, warnings, or danger notices (`Neutral`, `Success`, `Warning`, `Danger`).",
+      "Use when the message must stay visible while the user reads or resolves the surrounding context."
     ],
     "whenNotToUse": [
-      "No usar para confirmaciones efímeras tras guardar o copiar; usar `Toast`.",
-      "No usar cuando se requiera bloquear al usuario y exigir una confirmación explícita; usar `Dialog`."
+      "Do not use for brief transient confirmations after saving or copying; use `Toast`.",
+      "Do not use when blocking user input and demanding explicit confirmation; use `Dialog`."
     ]
   },
   "behaviorRules": [
-    "Usar `role=\"alert\"` para avisos críticos (`Use=Danger` / `Warning`) o `role=\"status\"` para mensajes informativos (`Neutral` / `Success`).",
-    "En flujos de confirmación destructiva bloqueante, combinar con Dialog / AlertDialog.",
-    "Ocultar `ActionsWrapper` mediante `hasActions={false}` cuando el aviso sea puramente informativo.",
-    "Cuando `ActionsWrapper` muestre dos botones (`hasSecondaryAction=true`), usar un único botón principal y uno secundario (`Outline`/`Ghost`), nunca dos botones `Primary` juntos."
+    "Use `role=\"alert\"` for urgent notices (`Warning` / `Danger`) and `role=\"status\"` for informational or success feedback (`Neutral` / `Success`).",
+    "Hide `ActionsWrapper` via `hasActions={false}` for purely informational banners.",
+    "Strict button hierarchy: when showing two actions (`hasSecondaryAction=true`), always pair 1 main action button (`Primary`/`Destructive`) with 1 secondary button (`Outline`/`Ghost`), never two `Primary` buttons together."
   ]
 }

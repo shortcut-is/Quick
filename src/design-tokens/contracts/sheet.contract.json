@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/Sheet",
-  "description": "Panel deslizante lateral para Desktop y hoja inferior deslizable para Mobile, compuesto con primitives del sistema para detalles, formularios o filtros.\n\nVariantes y propiedades:\n- Position: Right (Web) (360px, radios izquierdos) | Bottom (Mobile) (360px con drag handle superior, radios superiores y botones MD a ancho completo).\n- Use: Default | Form | Filter.\n- Propiedades: 👁️ Close, 👁️ Description, 👁️ Footer, ✏️ Title, ✏️ Description.\n\nReglas de diseño:\n- Usar siempre sobre OVERLAY.\n- En el footer combinar siempre 1 botón secundario (Outline para Cancel/Reset) con 1 botón Primary de confirmación, nunca dos botones Primary juntos.\n- Para confirmaciones breves centradas usar Dialog; para controles ligeros anclados usar Popover.",
+  "description": "Side drawer for Desktop and bottom sheet for Mobile, composed with system primitives for inspectors, multi-field forms, or filters.\n\nVariants & Properties:\n- Position: Right (Web) (360px, left corners rounded) | Bottom (Mobile) (360px with top drag handle, top corners rounded, and full-width MD footer buttons).\n- Use: Default | Form | Filter.\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, ✏️ Title, ✏️ Description.\n\nDesign & hierarchy rules:\n- Always pair over OVERLAY.\n- In SheetFooter always pair 1 secondary button (Outline for Cancel/Reset) with 1 Primary confirmation button; never place two Primary buttons side by side.\n- Use Dialog for centered short confirmations; use Popover for small trigger-anchored controls.",
   "anatomy": {
     "root": {
       "name": "Position=Right (Web), Use=Default",
@@ -306,17 +306,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "En Desktop (`Position=Right (Web)`) para formularios de edición laterales, paneles de detalle o filtros avanzados sin abandonar la vista principal.",
-      "En Mobile (`Position=Bottom (Mobile)`) como hoja inferior estándar con *drag handle* para menús, filtros o formularios táctiles."
+      "Use `Position=Right (Web)` (`360px`) on Desktop for side inspectors, multi-field edit forms, or slide-over filters without leaving page context.",
+      "Use `Position=Bottom (Mobile)` on touch devices as the standard bottom drawer with drag handle and full-width `MD` actions."
     ],
     "whenNotToUse": [
-      "No usar para alertas de confirmación rápidas ni mensajes de dos líneas; usar `Dialog`.",
-      "No usar para menús ligeros de 2–4 campos anclados a un disparador en Desktop; usar `Popover`."
+      "Do not use for short centered confirmations or urgent destructive prompts; use `Dialog`.",
+      "Do not use for lightweight trigger-anchored controls of 2–4 fields on Desktop; use `Popover`."
     ]
   },
   "behaviorRules": [
-    "Emparejar siempre con `OVERLAY`, atrapar foco dentro del panel mientras esté abierto y cerrar con `Escape`.",
-    "Usar `Position=Right (Web)` (`360px`) en escritorio para inspectores, formularios o filtros; usar `Position=Bottom (Mobile)` con `DragHandle` y botones `MD` a ancho completo en touch.",
-    "En `SheetFooter`, respetar la jerarquía de 1 botón secundario (`Outline` para `Cancel`/`Reset`) + 1 botón principal (`Primary` para confirmar/aplicar); nunca colocar dos botones `Primary` juntos."
+    "Always pair over `Overlay`, render `role=\"dialog\"` with `aria-modal=\"true\"`, trap focus while open, and close on `Escape`.",
+    "Strict button hierarchy in `SheetFooter`: always combine 1 secondary button (`Outline` for `Cancel`/`Reset`) with 1 `Primary` action button; never render two `Primary` buttons together."
   ]
 }

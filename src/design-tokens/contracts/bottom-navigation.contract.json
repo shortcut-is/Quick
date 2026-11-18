@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/BottomNavigation",
-  "description": "Barra de navegación inferior fija para dispositivos móviles (390×68px).\n\nVariantes:\n- Items: 4 Tabs | 5 Tabs (CTA) con botón central Primary Icon MD.\n\nReglas de diseño:\n- Cada una de sus 4 pestañas es una instancia expuesta de _Bottom Nav Item para cambiar individualmente su State (Default | Hover | Active), etiqueta e icono según la pantalla.\n- Usar solo en Mobile; en Desktop emplear Sidebar Navigation o Topbar.",
+  "description": "Fixed bottom thumb-zone navigation bar for mobile viewports (390×68px).\n\nVariants:\n- Items: 4 Tabs | 5 Tabs (CTA) with centered Primary Icon MD action button.\n\nDesign rules:\n- Each of the 4 navigation tabs is an exposed instance of _Bottom Nav Item allowing independent control of State (Default | Hover | Active), label, and icon per screen.\n- Use on Mobile only; on Desktop use Sidebar Navigation or Topbar.",
   "anatomy": {
     "root": {
       "name": "Items=4 Tabs",
@@ -213,15 +213,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Como barra de navegación principal fija en la zona inferior en aplicaciones móviles o viewports estrechos (`390px`), con 4 destinos principales (y CTA central opcional en `5 Tabs (CTA)`)."
+      "Use as the primary fixed bottom thumb-zone navigation bar on mobile viewports (`390px`), supporting 4 main destinations plus an optional centered CTA (`5 Tabs (CTA)`)."
     ],
     "whenNotToUse": [
-      "No usar en interfaces Desktop; en escritorio usar `SidebarNavigation` y/o `Topbar`.",
-      "No usar para acciones secundarias dentro de una misma vista; usar `Tabs` o `SegmentControl`."
+      "Do not use on desktop viewports; use `SidebarNavigation` and/or `Topbar`.",
+      "Do not use for local in-page content switching; use `Tabs` or `SegmentControl`."
     ]
   },
   "behaviorRules": [
-    "Fijar en la parte inferior de viewports móviles (`390×68px`) respetando `env(safe-area-inset-bottom)`.",
-    "Contener 4 instancias expuestas de `_Bottom Nav Item` (`State = Default | Hover | Active`) más CTA central opcional (`5 Tabs (CTA)`)."
+    "Pin to the bottom of mobile viewports (`390×68px`) using `<nav aria-label=\"Bottom Navigation\">` and safe-area bottom inset (`env(safe-area-inset-bottom)`).",
+    "Compose 4 exposed `_Bottom Nav Item` instances (`State = Default | Hover | Active`) plus the optional centered `Button` Primary Icon MD CTA."
   ]
 }

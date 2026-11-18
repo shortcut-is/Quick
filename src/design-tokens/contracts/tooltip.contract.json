@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Tooltip",
-  "description": "Etiqueta emergente breve de apoyo visual sobre un elemento o botón de solo icono al pasar el cursor o enfocar. No incluir botones ni formularios dentro (usar Popover).",
+  "description": "Brief non-interactive floating hint shown on hover or keyboard focus for icon buttons and short labels. Never place buttons or forms inside (use Popover).",
   "anatomy": {
     "root": {
       "name": "Tail=↖ Top Left, Type=Default",
@@ -146,15 +146,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Exclusivamente para texto breve suplementario (etiqueta de botón de solo icono, descripción corta o atajo `⌘K`) al hacer hover o enfocar con teclado."
+      "Use strictly for concise supplemental text labels (icon-button names, brief hints, keyboard shortcuts) triggered by hover or keyboard focus."
     ],
     "whenNotToUse": [
-      "No colocar botones, formularios ni información indispensable dentro de `Tooltip` (en táctil no existe hover); usar `Popover`.",
-      "No ocultar mensajes de error de validación dentro de un tooltip; usar texto inline o `Alert`."
+      "Never place interactive buttons, links, or form inputs inside `Tooltip` (touch devices cannot hover); use `Popover`.",
+      "Do not hide validation errors inside a tooltip; use inline copy or `Alert`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-tooltip` (`role=\"tooltip\"`), nunca para contenido crítico o interactivo (para eso usar `Popover`).",
-    "Evitar depender únicamente de hover en dispositivos táctiles; soportar activación por foco de teclado."
+    "Use `role=\"tooltip\"` linked via `aria-describedby`, opening on both pointer hover and keyboard focus and dismissing on `Escape`."
   ]
 }

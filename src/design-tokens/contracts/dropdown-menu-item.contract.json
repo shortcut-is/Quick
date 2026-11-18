@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation (Subcomponent)",
   "importPath": "@/components/ui/DropdownMenuItem",
-  "description": "Opción individual dentro de Dropdown Menu con soporte para icono izquierdo, icono derecho, etiqueta y atajo.\n\nVariantes: State = Default | Hover | Active | Disabled | Destructive.\nReglas de diseño: Reservar la variante Destructive para la acción final separada por SEPARATOR.",
+  "description": "Individual action item within Dropdown Menu supporting left/right icons, label, and optional shortcut hint.\n\nVariants: State = Default | Hover | Active | Disabled | Destructive.\nDesign rules: Place Destructive items at the bottom separated by SEPARATOR.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -209,14 +209,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Como cada acción individual dentro de `DropdownMenu`, aprovechando sus 5 estados (`Default`, `Hover`, `Active`, `Disabled`, `Destructive`) y atajo opcional."
+      "Use as each individual action row within `DropdownMenu`, leveraging `Default`, `Hover`, `Active`, `Disabled`, and `Destructive` states plus optional shortcut."
     ],
     "whenNotToUse": [
-      "No usar como enlace principal en barras laterales (`SidebarItem`) ni como fila de datos (`ListItem`)."
+      "Do not use as primary app navigation links (`SidebarItem`) or general list rows (`ListItem`)."
     ]
   },
   "behaviorRules": [
-    "Soportar 5 estados visuales (`Default`, `Hover`, `Active`, `Disabled`, `Destructive`) con `role=\"menuitem\"`.",
-    "Mostrar atajo de teclado alineado a la derecha (`Show Shortcut`) y omitirlo en pantallas táctiles."
+    "Render with `role=\"menuitem\"` and `aria-disabled=\"true\"` when `State=Disabled`.",
+    "Hide keyboard shortcut hints on touch-only viewports while preserving leading/trailing icon alignment."
   ]
 }

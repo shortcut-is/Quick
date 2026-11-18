@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Topbar",
-  "description": "Barra superior de aplicación para Desktop y Mobile.\n\nVariantes y propiedades:\n- Use: DesktopBreadcrumb (marca + Breadcrumb + buscador Cmd+K + campana + Avatar) | DesktopTabs (marca + Tab + acciones + Avatar) | MobileAppBar (390px, botón atrás + título centrado + alertas + Avatar).\n- Propiedades: 👁️ Avatar, 👁️ Notifications.",
+  "description": "Top application header bar across Desktop and Mobile breakpoints.\n\nVariants & Properties:\n- Use: DesktopBreadcrumb (brand + Breadcrumb + Cmd+K search + notifications + Avatar) | DesktopTabs (brand + Tab + actions + Avatar) | MobileAppBar (390px, back button + centered title + notifications + Avatar).\n- Properties: 👁️ Avatar, 👁️ Notifications.",
   "anatomy": {
     "root": {
       "name": "Use=DesktopBreadcrumb",
@@ -514,15 +514,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Como cabecera fija superior de la aplicación para mostrar identidad de marca, `Breadcrumb` o `Tabs`, buscador rápido (`⌘K`), alertas y perfil en Desktop, o cabecera de pantalla en Mobile (`MobileAppBar`)."
+      "Use as the sticky or fixed top application bar displaying brand, `Breadcrumb` or `Tabs`, `⌘K` search trigger, notifications, and `Avatar` on Desktop (`64px`), or screen title bar (`MobileAppBar` `56px`) on Mobile."
     ],
     "whenNotToUse": [
-      "No sobrecargar con demasiados enlaces secundarios que compitan con `SidebarNavigation`.",
-      "No confundir con la barra de pestañas inferior móvil (`BottomNavigation`)."
+      "Do not crowd topbars with secondary route links that duplicate `SidebarNavigation`.",
+      "Do not confuse with mobile bottom tab bars (`BottomNavigation`)."
     ]
   },
   "behaviorRules": [
-    "Renderizar dentro de `<header>` con altura `64px` en Desktop (`DesktopBreadcrumb` / `DesktopTabs`) y `56px` en `MobileAppBar` (`390px`).",
-    "Integrar `Breadcrumb`, `Tabs`, disparador de búsqueda con `Kbd` (`⌘K`), notificaciones y `Avatar`."
+    "Render inside semantic `<header>` matching `64px` height on Desktop breakpoints and `56px` height on Mobile breakpoints with Quick v1.2 Tailwind tokens."
   ]
 }

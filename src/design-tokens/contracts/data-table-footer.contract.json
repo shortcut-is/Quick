@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableFooter",
-  "description": "Pie de tabla para Data Table con conteo de registros y controles de Pagination.",
+  "description": "Table footer bar combining row summary details and Pagination controls for Data Table.",
   "anatomy": {
     "root": {
       "name": "Data table  - Footer",
@@ -64,13 +64,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Como pie integrado de `DataTable` para resumen de selección, total de registros y navegación mediante `Pagination`."
+      "Use as the integrated bottom bar of `DataTable` showing selection summary, row counts, and `Pagination`."
     ],
     "whenNotToUse": [
-      "No usar fuera de tablas ni como paginación independiente; usar `Pagination`."
+      "Do not use outside `DataTable`; use standalone `Pagination` for generic paged lists."
     ]
   },
   "behaviorRules": [
-    "Mostrar resumen de filas seleccionadas/totales e integrar `Pagination` al pie de la tabla."
+    "Align selection summary text on the left and `Pagination` controls on the right using Quick v1.2 typography tokens."
   ]
 }

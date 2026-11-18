@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Surfaces",
   "importPath": "@/components/ui/Card",
-  "description": "Contenedor modular para agrupar contenido relacionado en dashboards, formularios, ajustes, listados, métricas o planes de precio.\n\nVariantes y propiedades:\n- Use: Default | Media | Stat | Profile | Form | Settings | List | Pricing.\n- Size: SM (320px, compacto/Mobile) | MD (380px, estándar) | LG (440px, destacado).\n- Propiedades: ✏️ Title, ✏️ Description, métricas, perfil, 👁️ Badge, 👁️ Footer, 👁️ Secondary Action.\n\nReglas de diseño:\n- En el pie de tarjeta mantener siempre jerarquía de 1 acción Primary acompañada de 1 acción secundaria (Outline o Ghost).\n- No anidar una Card dentro de otra Card ni usarla para tablas comparativas extensas (usar Data Table).",
+  "description": "Modular container for grouping related information across dashboards, forms, settings, lists, KPI stats, or pricing tiers.\n\nVariants & Properties:\n- Use: Default | Media | Stat | Profile | Form | Settings | List | Pricing.\n- Size: SM (320px, compact/Mobile) | MD (380px, standard) | LG (440px, featured).\n- Properties: ✏️ Title, ✏️ Description, KPI fields, profile fields, 👁️ Badge, 👁️ Footer, 👁️ Secondary Action.\n\nDesign rules:\n- In CardFooter, always keep a hierarchy of 1 Primary action paired with 1 secondary action (Outline or Ghost).\n- Avoid nesting a Card inside another Card or using cards instead of Data Table for dense multi-column comparisons.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -319,18 +319,17 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para agrupar información relacionada o módulos cohesivos en grids de dashboard, formularios breves (`Use=Form`), ajustes (`Use=Settings`), métricas KPI (`Use=Stat`), listados (`Use=List`) o planes (`Use=Pricing`)."
+      "Use to group cohesive information or self-contained modules in dashboard grids, compact forms (`Use=Form`), settings (`Use=Settings`), KPI metrics (`Use=Stat`), lists (`Use=List`), or pricing plans (`Use=Pricing`)."
     ],
     "whenNotToUse": [
-      "No usar para flujos superpuestos o modales que interrumpen la vista; usar `Dialog` o `Sheet`.",
-      "No usar cuando las filas deban compararse por columnas con ordenación y filtros masivos; usar `DataTable`.",
-      "No anidar `Card` dentro de otra `Card` creando doble borde y doble sombra."
+      "Do not use for blocking or overlay workflows; use `Dialog` or `Sheet`.",
+      "Do not use when records need multi-column sorting and bulk selection; use `DataTable`.",
+      "Avoid nesting `Card` inside another `Card` with double borders and shadows."
     ]
   },
   "behaviorRules": [
-    "Seguir el patrón composable (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`).",
-    "Respetar radios concéntricos entre el contenedor (`radius/xl|2xl|3xl`) y el `Slot: Content` o imagen en `Use=Media`.",
-    "Usar `Size=SM` (`320px`) para grids densos o mobile, `MD` (`380px`) para tarjetas estándar y `LG` (`440px`) para paneles destacados o pricing.",
-    "En `CardFooter`, mantener siempre jerarquía de 1 acción principal (`Primary`) acompañada de una secundaria (`Outline`/`Ghost`), evitando dos botones `Primary` compitiendo."
+    "Follow composable structure (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`) styled with Quick v1.2 Tailwind CSS surface, radius, and shadow tokens.",
+    "Preserve concentric border radii between outer container (`radius/xl|2xl|3xl`) and inner `Slot: Content` or media containers.",
+    "In `CardFooter`, maintain strict hierarchy of 1 `Primary` action paired with 1 secondary action (`Outline`/`Ghost`), never two `Primary` buttons together."
   ]
 }

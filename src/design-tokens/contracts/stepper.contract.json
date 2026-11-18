@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/Stepper",
-  "description": "Indicador visual de pasos secuenciales para flujos guiados como registros o checkout. Variantes Direction = Horizontal (Desktop) | Vertical (Mobile/flujos largos).",
+  "description": "Sequential step indicator for multi-stage flows such as onboarding or checkout. Variants: Direction = Horizontal (Desktop) | Vertical (Mobile/long flows).",
   "anatomy": {
     "root": {
       "name": "Direction=↓ Vertical",
@@ -317,14 +317,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para orientar al usuario a lo largo de flujos secuenciales multipaso (*onboarding*, checkout, asistentes) mostrando progreso completado y paso actual."
+      "Use to guide users through sequential multi-step workflows (onboarding, checkout, setup wizards) showing completed, active, and upcoming steps."
     ],
     "whenNotToUse": [
-      "No usar para navegar entre pestañas no secuenciales (`Tabs`) ni para mostrar rutas jerárquicas (`Breadcrumb`)."
+      "Do not use for non-sequential sibling views (`Tabs`) or hierarchical navigation paths (`Breadcrumb`)."
     ]
   },
   "behaviorRules": [
-    "Indicar el paso actual con `aria-current=\"step\"` y diferenciar visualmente pasos completados, activos y pendientes.",
-    "Soportar orientación `Horizontal` en Desktop y `Vertical` para flujos largos o Mobile."
+    "Render as semantic ordered list `<ol>` marking the current step with `aria-current=\"step\"` and switching to `Vertical` orientation on narrow mobile screens."
   ]
 }

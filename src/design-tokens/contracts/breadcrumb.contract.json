@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Breadcrumb",
-  "description": "Rastro de navegación jerárquico que ubica al usuario dentro de rutas profundas (3 o más niveles).\n\nPropiedades:\n- Level 1 a Level 7: activan o desactivan cada nivel de la ruta.\n\nReglas de diseño:\n- Ocultar el separador final después del último nivel activo y sustituir los textos de relleno por nombres reales de página.\n- En pantallas móviles estrechas simplificar a botón de regreso en Topbar (MobileAppBar).",
+  "description": "Hierarchical navigation trail orienting users within deep structures (3 or more levels).\n\nProperties:\n- Level 1 through Level 7: toggle visibility of each path segment.\n\nDesign rules:\n- Hide the trailing separator after the final active item and replace placeholder labels with real page names.\n- On narrow mobile viewports, simplify to a back button inside Topbar (MobileAppBar).",
   "anatomy": {
     "root": {
       "name": "Breadcrumb",
@@ -261,16 +261,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para orientar al usuario dentro de jerarquías de navegación profundas (3 o más niveles), habitualmente en el `Topbar` (`Use=DesktopBreadcrumb`) o encabezado de página."
+      "Use to orient users within hierarchical architectures of 3 or more levels, typically inside `Topbar` (`Use=DesktopBreadcrumb`) or page headers."
     ],
     "whenNotToUse": [
-      "No usar como sustituto de navegación principal ni para flujos secuenciales paso a paso; usar `Tabs`, `SidebarNavigation` o `Stepper`.",
-      "No mostrar si la arquitectura tiene un solo nivel."
+      "Do not use as primary app navigation or linear multi-step progress; use `SidebarNavigation`, `Tabs`, or `Stepper`.",
+      "Do not display when the hierarchy is only one level deep."
     ]
   },
   "behaviorRules": [
-    "Envolver en `<nav aria-label=\"Breadcrumb\">` con lista ordenada `<ol>` y enlaces `<a>` para cada nivel previo.",
-    "El último nivel visible debe marcarse con `aria-current=\"page\"` y no renderizar separador final (`>`).",
-    "En mobile, colapsar niveles intermedios manteniendo primer nivel o botón de retroceso."
+    "Wrap in `<nav aria-label=\"Breadcrumb\">` containing an ordered `<ol>` list of links.",
+    "Mark the current leaf level with `aria-current=\"page\"` and hide its trailing `>` separator.",
+    "On narrow mobile screens, collapse intermediate levels or switch to the back button inside `Topbar` (`MobileAppBar`)."
   ]
 }

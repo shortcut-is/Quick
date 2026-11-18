@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/TimePicker",
-  "description": "Control de selección de hora y minutos para formularios de programación. Para fechas usar Date Picker o Calendar.",
+  "description": "Time selector control for picking hours and minutes in scheduling flows. For calendar dates use Date Picker or Calendar.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -153,14 +153,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Cuando un formulario requiere seleccionar una hora específica (y minutos) con formato controlado."
+      "Use in scheduling or booking forms where users pick a specific time (hour/minute)."
     ],
     "whenNotToUse": [
-      "No usar para seleccionar fechas del calendario; usar `DatePicker` o `Calendar`."
+      "Do not use for calendar date picking; use `DatePicker` or `Calendar`."
     ]
   },
   "behaviorRules": [
-    "Permitir selección de hora y minutos con teclado, soporte 12h/24h y validación de rangos.",
-    "Reutiliza segmentos interactivos de `_TimePicker Elements`."
+    "Support keyboard selection of hours, minutes, and AM/PM or 24h formats with clear focus indicators."
   ]
 }

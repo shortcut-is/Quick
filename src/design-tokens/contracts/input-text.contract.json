@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/InputText",
-  "description": "Campo de texto de una línea con etiqueta superior, icono opcional, texto de ayuda y estados de validación.\n\nVariantes y propiedades:\n- State: Default | Filled | Hover | Focus | Error | Disabled.\n- Propiedades: ✏️ Label, Content, 👁️ Icon, Swap Icon, 👁️ Hint, ✏️ Hint.\n\nReglas de diseño: En Mobile mantener tamaño de texto de al menos 16px y evitar textos extensos que rompan el ancho.",
+  "description": "Single-line text input with label, optional leading icon, helper/error hint, and full interactive validation states.\n\nVariants & Properties:\n- State: Default | Filled | Hover | Focus | Error | Disabled.\n- Properties: ✏️ Label, Content, 👁️ Icon, Swap Icon, 👁️ Hint, ✏️ Hint.\n\nDesign rules: Maintain at least 16px body text on mobile viewports and keep labels concise.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -201,16 +201,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para capturar cadenas cortas de una sola línea (texto, email, URL, credenciales, búsqueda) con etiqueta, icono opcional y texto de ayuda o error."
+      "Use to capture single-line text values (name, email, URL, credentials, search) with label, optional leading icon, and helper/error hint."
     ],
     "whenNotToUse": [
-      "No usar para párrafos o texto multilínea; usar `Textarea` (`Input Area`).",
-      "No usar para listas cerradas de opciones; usar `InputSelect`."
+      "Do not use for multi-line paragraphs; use `Textarea` (`Input Area`).",
+      "Do not use for closed option lists; use `InputSelect`."
     ]
   },
   "behaviorRules": [
-    "Renderizar `<input>` asociado a `<label>` mediante `htmlFor`, con soporte para icono opcional (`hasIcon`) y texto de ayuda/error (`hasHint`).",
-    "En `State=Error`, aplicar `aria-invalid=\"true\"` y vincular `Hint Text` mediante `aria-describedby`.",
-    "Mantener mínimo `16px` en mobile para prevenir zoom automático en iOS."
+    "Render semantic `<input>` bound to `<label htmlFor>`, applying `aria-invalid=\"true\"` and `aria-describedby` on `State=Error`.",
+    "Keep body text at least `16px` on mobile inputs to prevent browser auto-zoom."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Controls",
   "importPath": "@/components/ui/Popover",
-  "description": "Contenedor flotante no modal anclado a un botón disparador para controles rápidos, filtros, calendario (Calendar) o vista previa de perfil.\n\nVariantes y propiedades:\n- Use: Default | Filter | DateCalendar | ProfilePreview.\n- Propiedades: 👁️ Header, 👁️ Footer, ✏️ Title.\n\nReglas de diseño:\n- En el footer usar siempre 1 botón Outline XS + 1 Primary XS, nunca dos botones Primary juntos.\n- Para texto puramente informativo al pasar el cursor usar Tooltip; para listas simples de acciones usar Dropdown Menu.",
+  "description": "Non-modal floating container anchored to a trigger button for quick controls, filters, date selection (Calendar), or profile previews.\n\nVariants & Properties:\n- Use: Default | Filter | DateCalendar | ProfilePreview.\n- Properties: 👁️ Header, 👁️ Footer, ✏️ Title.\n\nDesign & hierarchy rules:\n- In PopoverFooter always pair 1 Outline XS button with 1 Primary XS button, never two Primary buttons together.\n- Use Tooltip for plain hover text hints; use Dropdown Menu for simple command lists.",
   "anatomy": {
     "root": {
       "name": "Use=Default",
@@ -260,17 +260,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para mostrar controles flotantes no modales anclados a un botón: filtros rápidos (`Use=Filter`), selector de fecha (`Use=DateCalendar` con `Calendar`), vista previa de perfil (`Use=ProfilePreview`) o ajustes breves."
+      "Use for non-modal trigger-anchored floating controls: quick filters (`Use=Filter`), date picker (`Use=DateCalendar` with `Calendar`), profile previews (`Use=ProfilePreview`), or compact settings."
     ],
     "whenNotToUse": [
-      "No usar para texto breve meramente informativo al hacer hover; usar `Tooltip`.",
-      "No usar para listas simples de comandos; usar `DropdownMenu`.",
-      "No usar cuando el contenido sea extenso o requiera foco modal completo; usar `Dialog` o `Sheet`."
+      "Do not use for brief read-only hover hints; use `Tooltip`.",
+      "Do not use for simple action menus; use `DropdownMenu`.",
+      "Do not use for blocking modals or wide multi-field drawers; use `Dialog` or `Sheet`."
     ]
   },
   "behaviorRules": [
-    "Anclar al disparador mediante posicionamiento flotante y cerrar al presionar `Escape` o hacer clic fuera.",
-    "Preferir `Use=DateCalendar` junto con `Calendar` para selectores de fecha contextuales.",
-    "En `PopoverFooter`, combinar siempre 1 botón secundario (`Outline XS`) con 1 botón principal (`Primary XS`), nunca dos botones `Primary` simultáneos."
+    "Anchor smoothly to the invoking trigger, close on `Escape` or outside click, and manage focus return cleanly.",
+    "Strict button hierarchy in `PopoverFooter`: always pair 1 secondary `Outline XS` button with 1 `Primary XS` button, never two `Primary` buttons together."
   ]
 }

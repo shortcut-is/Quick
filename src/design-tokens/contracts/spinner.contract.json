@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Spinner",
-  "description": "Indicador animado de carga breve o indeterminada con etiqueta opcional.\n\nVariantes y propiedades:\n- Size: SM | MD | LG.\n- Use: Default | Muted.\n- Propiedades: 👁️ Label, ✏️ Label.\n\nCuándo no usar: Para anticipar el esqueleto completo de tarjetas o listas durante la carga usar Skeleton; si se conoce el porcentaje usar Progress Bar.",
+  "description": "Animated loading indicator for short or indeterminate wait states with optional label.\n\nVariants & Properties:\n- Size: SM | MD | LG.\n- Use: Default | Muted.\n- Properties: 👁️ Label, ✏️ Label.\n\nWhen not to use: Use Skeleton for full card/list layout placeholders; use Progress Bar when completion percentage is known.",
   "anatomy": {
     "root": {
       "name": "Size=SM, Use=Default",
@@ -133,15 +133,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para operaciones de espera breves e indeterminadas (procesando envío, botón en carga, actualización parcial de bloque o estado inline)."
+      "Use for brief indeterminate loading states (button submit pending, inline refresh, partial panel update)."
     ],
     "whenNotToUse": [
-      "No usar cuando se conozca el progreso numérico exacto; usar `ProgressBar`.",
-      "No usar para simular esqueletos de páginas completas o tarjetas complejas; usar `Skeleton`."
+      "Do not use when completion percentage is known; use `ProgressBar`.",
+      "Do not use to replace full multi-element page layouts; use `Skeleton`."
     ]
   },
   "behaviorRules": [
-    "Rotar el icono `Icon/Line / Loader` con CSS `animate-spin` respetando `@media (prefers-reduced-motion: reduce)`.",
-    "Incluir `role=\"status\"` y texto visual (`hasLabel`) o `aria-label=\"Loading\"` cuando la etiqueta esté oculta."
+    "Animate rotation with Tailwind `animate-spin` and respect `prefers-reduced-motion: reduce`.",
+    "Provide `role=\"status\"` and `aria-label=\"Loading\"` when `hasLabel={false}`."
   ]
 }

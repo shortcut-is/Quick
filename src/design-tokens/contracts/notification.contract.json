@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Notification",
-  "description": "Aviso enriquecido para bandeja de notificaciones o alertas persistentes descartables.\n\nVariantes y propiedades:\n- Type: Default | Success | Warning | Danger.\n- Propiedades: Action, Dismissible.\n\nCuándo no usar: Para confirmaciones rápidas que desaparecen solas usar Toast; para alertas estáticas dentro de formularios usar Alert.",
+  "description": "Rich alert card for persistent notification trays or dismissible status notices.\n\nVariants & Properties:\n- Type: Default | Success | Warning | Danger.\n- Properties: Action, Dismissible.\n\nWhen not to use: Use Toast for temporary auto-dismissing confirmations; use Alert for inline form messages.",
   "anatomy": {
     "root": {
       "name": "Type=Neutral",
@@ -172,15 +172,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para avisos ricos persistentes o bandeja de alertas con título, detalle y acción opcional que el usuario puede descartar manualmente."
+      "Use for rich persistent inbox notices or dismissible status cards containing title, detailed copy, and optional action."
     ],
     "whenNotToUse": [
-      "No usar para confirmaciones efímeras que desaparecen solas tras pocos segundos; usar `Toast`.",
-      "No usar para errores inline dentro de formularios; usar `Alert`."
+      "Do not use for brief auto-dismissing confirmations; use `Toast`.",
+      "Do not use for inline form field feedback; use `Alert`."
     ]
   },
   "behaviorRules": [
-    "Anunciar notificaciones en región live accesible (`role=\"status\"` o `role=\"alert\"`).",
-    "Permitir cierre manual cuando `isDismissible` esté activo y acción secundaria contextual cuando `hasAction` sea true."
+    "Announce dynamic notifications via `role=\"status\"` or `role=\"alert\"`, exposing keyboard-accessible close and action triggers when enabled."
   ]
 }

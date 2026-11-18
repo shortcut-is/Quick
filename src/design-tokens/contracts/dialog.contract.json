@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Dialog",
-  "description": "Ventana modal centrada que interrumpe la vista actual para confirmaciones críticas, alertas destructivas o formularios breves.\n\nVariantes y propiedades:\n- Use: Default | Destructive | Form.\n- Size: SM (380px, confirmaciones) | MD (460px, formularios).\n- Propiedades: 👁️ Close, 👁️ Description, 👁️ Footer, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de jerarquía y uso:\n- Combinar siempre sobre OVERLAY para enfocar la atención.\n- En DialogFooter nunca usar dos botones Primary juntos: combinar 1 botón secundario (Outline o Ghost para Cancel) con 1 botón de confirmación (Primary o Destructive).\n- Para inspectores laterales extensos en Web o menús táctiles en Mobile usar Sheet; para controles pequeños anclados usar Popover.",
+  "description": "Centered modal window that interrupts the current flow for critical confirmations, destructive warnings, or short focused forms.\n\nVariants & Properties:\n- Use: Default | Destructive | Form.\n- Size: SM (380px, confirmations) | MD (460px, forms).\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nHierarchy & usage rules:\n- Always pair over OVERLAY to dim background content.\n- In DialogFooter never place two Primary buttons side by side: always combine 1 secondary button (Outline or Ghost for Cancel) with 1 confirmation button (Primary or Destructive).\n- Use Sheet for wide side inspectors on Web or touch drawers on Mobile; use Popover for lightweight trigger-anchored controls.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -272,20 +272,20 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para decisiones críticas o bloqueantes que exigen atención inmediata (`Use=Destructive`), confirmaciones importantes o formularios cortos centrados (`SM` `380px`, `MD` `460px`).",
-      "Combinar en el footer siempre un botón primario (`Primary` o `Destructive`) con uno secundario (`Outline` o `Ghost` para `Cancel`)."
+      "Use for critical or blocking decisions demanding immediate attention (`Use=Destructive`), important confirmations, or short focused forms (`SM` `380px`, `MD` `460px`).",
+      "Always pair 1 main confirmation button (`Primary` or `Destructive`) with 1 secondary button (`Outline` or `Ghost` for `Cancel`) inside `DialogFooter`."
     ],
     "whenNotToUse": [
-      "No usar dos botones `Primary` simultáneos dentro del `DialogFooter`; la acción de cancelar o descartar siempre debe usar `Outline` o `Ghost`.",
-      "No usar en paneles extensos de filtros, inspectores laterales o flujos táctiles en mobile; usar `Sheet` (`Right (Web)` o `Bottom (Mobile)`).",
-      "No usar para mensajes breves que no requieren bloquear la UI; usar `Toast` o `Alert`.",
-      "No usar para controles rápidos anclados a un botón; usar `Popover`."
+      "Never place two `Primary` buttons side by side in `DialogFooter`; cancel/dismiss must always use `Outline` or `Ghost`.",
+      "Do not use for wide multi-field inspectors, filter drawers, or mobile-native bottom panels; use `Sheet` (`Right (Web)` or `Bottom (Mobile)`).",
+      "Do not use for brief non-blocking notices; use `Toast` or `Alert`.",
+      "Do not use for small trigger-anchored controls; use `Popover`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-dialog` (o `@radix-ui/react-alert-dialog` cuando `Use=Destructive`).",
-    "Atrapar el foco dentro del modal mientras esté abierto, cerrar con `Escape` y devolver el foco al trigger al cerrar.",
-    "Combinar siempre con `OVERLAY`; usar `Size=SM` (`380px`) para confirmaciones breves y `Size=MD` (`460px`) para formularios.",
-    "Jerarquía obligatoria de acciones en `DialogFooter`: nunca usar dos botones `Primary` juntos; combinar siempre 1 botón secundario (`Outline` o `Ghost` para `Cancel`) + 1 botón de confirmación (`Primary` en `Default`/`Form`, o `Destructive` en `Use=Destructive`)."
+    "Implement using semantic `role=\"dialog\"` (or `role=\"alertdialog\"` for `Use=Destructive`), `aria-modal=\"true\"`, `aria-labelledby`, and `aria-describedby`.",
+    "Trap keyboard focus while open, close on `Escape`, and restore focus to the invoking trigger upon close.",
+    "Always pair over `Overlay`; use `SM` (`380px`) for short confirmations and `MD` (`460px`) for forms.",
+    "Mandatory footer button hierarchy: never render two `Primary` buttons side by side; always combine 1 secondary button (`Outline` or `Ghost` for `Cancel`) with 1 confirmation button (`Primary` for `Default`/`Form`, or `Destructive` for `Use=Destructive`)."
   ]
 }

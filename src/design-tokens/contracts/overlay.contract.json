@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Overlay (Primitive)",
   "importPath": "@/components/ui/Overlay",
-  "description": "Capa semitransparente de pantalla completa para atenuar el fondo detrás de Dialog y Sheet.",
+  "description": "Full-viewport translucent backdrop used behind Dialog and Sheet to focus attention on the foreground surface.",
   "anatomy": {
     "root": {
       "name": "OVERLAY",
@@ -38,14 +38,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Siempre como capa backdrop detrás de `Dialog` y `Sheet` para oscurecer el contenido base y enfocar la atención en el nivel modal."
+      "Always pair behind `Dialog` and `Sheet` to dim background content and clearly separate the modal layer."
     ],
     "whenNotToUse": [
-      "No usar detrás de `Popover`, `Tooltip` o `DropdownMenu` no modales."
+      "Do not render behind non-modal overlays such as `Popover`, `Tooltip`, or `DropdownMenu`."
     ]
   },
   "behaviorRules": [
-    "Capa backdrop de viewport completo vinculada al token semántico `Surfaces/Overlay`.",
-    "Bloquear interacción del fondo y cerrar modales no destructivos al hacer clic si `closeOnOverlayClick` está activo."
+    "Bind fill strictly to `Surfaces/Overlay` token, blocking pointer interaction with background elements while active."
   ]
 }

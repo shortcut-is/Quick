@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs",
   "importPath": "@/components/ui/CheckboxGroup",
-  "description": "Contenedor vertical con título de grupo para alinear múltiples instancias de Checkbox con espaciado uniforme.",
+  "description": "Vertical group container with section title for organizing multiple Checkbox instances with consistent spacing.",
   "anatomy": {
     "root": {
       "name": "Checkbox Group",
@@ -206,14 +206,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para agrupar verticalmente múltiples `Checkbox` relacionados bajo un título semántico común y espaciado uniforme."
+      "Use to vertically group related `Checkbox` choices under a shared legend and consistent `spacing/2` rhythm."
     ],
     "whenNotToUse": [
-      "No usar si solo se puede elegir una única opción entre varias; usar `RadioGroup` o `InputSelect`."
+      "Do not use when only one option may be chosen; use `RadioGroup` or `InputSelect`."
     ]
   },
   "behaviorRules": [
-    "Agrupar múltiples `Checkbox` dentro de `<fieldset>` con `<legend>` o `role=\"group\"` y `aria-labelledby`.",
-    "Mantener espaciado vertical uniforme (`spacing/2`) y soporte para validación a nivel de grupo."
+    "Wrap options inside semantic `<fieldset>` + `<legend>` or `role=\"group\"` with `aria-labelledby`.",
+    "Maintain consistent vertical `spacing/2` gap and support group-level validation messages."
   ]
 }

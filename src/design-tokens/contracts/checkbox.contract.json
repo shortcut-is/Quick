@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Checkbox",
-  "description": "Casilla de verificación con etiqueta y descripción opcional para selecciones múltiples independientes o aceptación de términos.\n\nVariantes: Selection (Checked | Unchecked | Indeterminate) × State (Enabled | Hover | Focus | Disabled | Error) × Description.\n\nCuándo no usar: Si las opciones son excluyentes usar Radio Button o Input Select; si el efecto es inmediato sin botón Guardar usar Switch.",
+  "description": "Labeled checkbox with optional helper description for independent multi-select choices or explicit agreements.\n\nVariants: Selection (Checked | Unchecked | Indeterminate) × State (Enabled | Hover | Focus | Disabled | Error) × Description.\n\nWhen not to use: For mutually exclusive options use Radio Button or Input Select; for instant settings without a Save button use Switch.",
   "anatomy": {
     "root": {
       "name": "Selection=Unchecked, State=Enabled, Description=No",
@@ -208,16 +208,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "En formularios o listas donde el usuario puede elegir cero, una o varias opciones independientes, o aceptar términos/confirmaciones que requieren pulsar Guardar/Enviar."
+      "Use in forms or lists where users can select zero, one, or multiple independent options, or confirm an agreement prior to submitting."
     ],
     "whenNotToUse": [
-      "No usar cuando las opciones son mutuamente excluyentes; usar `RadioButton` / `RadioGroup` o `InputSelect`.",
-      "No usar para activar o desactivar configuraciones de efecto inmediato en el sistema; usar `Switch`."
+      "Do not use for mutually exclusive options; use `RadioButton` / `RadioGroup` or `InputSelect`.",
+      "Do not use for instant system preferences that apply immediately without Save; use `Switch`."
     ]
   },
   "behaviorRules": [
-    "Asociar `<label>` explícitamente al control mediante `htmlFor` / `id` y soportar estado indeterminado (`indeterminate`).",
-    "Acompañar errores de validación con `aria-invalid` y mensaje descriptivo vinculado por `aria-describedby`.",
-    "Soportar los estados `Unchecked`, `Checked` e `Indeterminate` en combinación con `Enabled`, `Hover`, `Focus`, `Disabled` y `Error`."
+    "Use native `<input type=\"checkbox\">` or WAI-ARIA `role=\"checkbox\"` with explicit `<label htmlFor>` association and `indeterminate` state support.",
+    "Bind `aria-invalid=\"true\"` and `aria-describedby` to validation helper text when `State=Error`.",
+    "Support `Unchecked`, `Checked`, and `Indeterminate` across `Enabled`, `Hover`, `Focus`, `Disabled`, and `Error` states."
   ]
 }

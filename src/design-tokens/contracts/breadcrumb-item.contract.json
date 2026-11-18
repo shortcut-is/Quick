@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BreadcrumbItem",
-  "description": "Subcomponente atómico que representa cada nivel dentro de Breadcrumb.\n\nVariantes: State = Default | Hover | Active.\nReglas de diseño: No usar de forma aislada fuera de Breadcrumb.",
+  "description": "Atomic subcomponent representing an individual segment within Breadcrumb.\n\nVariants: State = Default | Hover | Active.\nDesign rules: Do not use standalone outside Breadcrumb.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -92,14 +92,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Únicamente como segmento individual de ruta dentro de `Breadcrumb`."
+      "Use strictly as an individual path segment within `Breadcrumb`."
     ],
     "whenNotToUse": [
-      "No usar de forma aislada fuera de `Breadcrumb`; para enlaces o botones independientes usar `Button` (`Variant=Ghost`)."
+      "Do not use standalone outside `Breadcrumb`; use a ghost `Button` or standard link for isolated navigation."
     ]
   },
   "behaviorRules": [
-    "Representa un nivel individual dentro de `Breadcrumb` con estados `Default`, `Active` y `Hover`.",
-    "Ocultar el separador `>` cuando el ítem corresponda a la ruta activa (`aria-current=\"page\"`)."
+    "Render `<a>` for navigable parent segments (`Default` / `Hover`) and `<span>` with `aria-current=\"page\"` for the active leaf without a trailing separator."
   ]
 }

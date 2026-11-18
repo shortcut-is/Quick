@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Switch",
-  "description": "Interruptor con etiqueta para activar o desactivar preferencias de efecto inmediato sin requerir botón Guardar. Variantes Selected × State × Size. En formularios usar Checkbox.",
+  "description": "Labeled binary toggle for system preferences with immediate effect (no Save step needed). Variants: Selected × State × Size. Use Checkbox inside explicit forms.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=Small, Selected=Off",
@@ -220,15 +220,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para activar o desactivar preferencias del sistema con efecto inmediato (`Activar notificaciones`, `Modo oscuro`, `Developer Mode`) sin requerir paso adicional de guardado."
+      "Use for binary system preferences that take effect immediately without pressing Save (e.g., notifications, dark mode, developer mode)."
     ],
     "whenNotToUse": [
-      "No usar cuando el cambio forma parte de un formulario con botón `Guardar/Enviar` o selección múltiple en listas; usar `Checkbox`.",
-      "No usar para elegir entre dos valores nombrados distintos; usar `RadioGroup` o `SegmentControl`."
+      "Do not use inside forms requiring explicit Save/Submit or multi-item selection lists; use `Checkbox`.",
+      "Do not use to choose between two distinct named values; use `RadioGroup` or `SegmentControl`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-switch` (`role=\"switch\"`, `aria-checked`).",
-    "Efecto inmediato sin necesidad de botón Guardar salvo dentro de formularios explícitos."
+    "Render using `<button role=\"switch\" aria-checked={checked}>` paired with an accessible label via `<label>` or `aria-labelledby`."
   ]
 }

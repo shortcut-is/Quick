@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableHeader",
-  "description": "Fila de encabezados de columna para Data Table con soporte de ordenación, selección y columna de acciones. Variantes Density sync con Row.",
+  "description": "Column header row for Data Table supporting sorting, row selection, and actions column alignment across Density variants.",
   "anatomy": {
     "root": {
       "name": "Density=Compact",
@@ -336,14 +336,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Como fila de encabezados de columnas de `DataTable` alineada 1:1 con `DataTableRow`."
+      "Use as the column header row of `DataTable` matched 1:1 with `DataTableRow` columns and density."
     ],
     "whenNotToUse": [
-      "No usar fuera de `DataTable` ni como barra superior de página; usar `Topbar`."
+      "Do not use outside `DataTable` or as a page navigation bar; use `Topbar`."
     ]
   },
   "behaviorRules": [
-    "Renderizar como `<thead><tr>` usando celdas `_Data table Header Cell` con indicadores de ordenación (`aria-sort`).",
-    "Sincronizar visibilidad de columna de selección (`Selectable`) y columna de acciones (`Actions`) con `DataTableRow`."
+    "Render inside `<thead><tr>` using `<th>` cells (`_Data table Header Cell`) with keyboard-accessible sorting and `aria-sort`."
   ]
 }

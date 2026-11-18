@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/DropdownMenu",
-  "description": "Menú flotante desplegable con acciones contextuales, grupos etiquetados y atajos de teclado.\n\nVariantes: Use = Actions | Grouped | Context.\nCuándo no usar: Para seleccionar un valor dentro de un formulario usar Input Select; para filtros con controles ricos usar Popover.",
+  "description": "Floating contextual menu displaying grouped actions, nested labels, and optional keyboard shortcuts.\n\nVariants: Use = Actions | Grouped | Context.\nWhen not to use: Use Input Select for form value selection, or Popover for rich controls such as date pickers or filters.",
   "anatomy": {
     "root": {
       "name": "Use=Actions",
@@ -327,15 +327,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para exponer una lista compacta de acciones contextuales, menús de cuenta, opciones secundarias (`...`) o comandos agrupados disparados por un botón."
+      "Use for compact lists of contextual actions, account menus, overflow `More` actions, or grouped command lists triggered by a button."
     ],
     "whenNotToUse": [
-      "No usar como selector de valor dentro de un formulario; usar `InputSelect`.",
-      "No usar para formularios ricos con inputs o calendarios; usar `Popover` o `Sheet`."
+      "Do not use as a form value selector; use `InputSelect`.",
+      "Do not use for multi-field filters or date calendars; use `Popover` or `Sheet`."
     ]
   },
   "behaviorRules": [
-    "Construir sobre `@radix-ui/react-dropdown-menu` con navegación por flechas (`ArrowUp`/`ArrowDown`), `Enter`, `Escape` y typeahead.",
-    "Agrupar acciones relacionadas con `menu title` y `SEPARATOR`; ubicar ítems destructivos al final tras un separador."
+    "Implement WAI-ARIA menu keyboard model (`role=\"menu\"`, `ArrowUp`/`ArrowDown`, `Home`/`End`, typeahead, `Enter` to activate, `Escape` to close).",
+    "Group related actions with `DropdownMenuLabel` and `Separator`; place destructive actions at the bottom after a divider."
   ]
 }

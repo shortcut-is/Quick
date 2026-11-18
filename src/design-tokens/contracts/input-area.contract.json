@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/Textarea",
-  "description": "Campo de texto multilínea para descripciones, notas o comentarios largos. Variantes State = Default | Focus | Error | Disabled y toggle Show Hint.",
+  "description": "Multi-line text input field for long descriptions, notes, or messages. Variants: State = Default | Focus | Error | Disabled and Show Hint toggle.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -138,14 +138,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para capturar texto largo de múltiples líneas como descripciones, comentarios, notas o mensajes."
+      "Use to capture multi-line free-form text such as descriptions, notes, or feedback messages."
     ],
     "whenNotToUse": [
-      "No usar para datos cortos de una sola línea (nombre, email, búsqueda, contraseña); usar `InputText`."
+      "Do not use for short single-line values (name, email, URL, search); use `InputText`."
     ]
   },
   "behaviorRules": [
-    "Renderizar `<textarea>` asociado a su etiqueta mediante `htmlFor`, con soporte de estado `Error`, `Disabled` y `Focus`.",
-    "En Mobile usar tamaño de fuente mínimo `16px` para evitar auto-zoom en iOS Safari."
+    "Render semantic `<textarea>` paired with `<label htmlFor>` and helper/error copy via `aria-describedby`.",
+    "Use minimum `16px` font size on mobile touch viewports to prevent automatic zoom on focus."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/InputSelect",
-  "description": "Selector de lista cerrada con etiqueta superior, flecha desplegable y texto de ayuda/error.\n\nVariantes y propiedades:\n- State: Default | Filled | Hover | Focus | Error | Disabled.\n- Propiedades: ✏️ Label, ✏️ Content, Hint, ✏️ Hint.\n\nCuándo usar: Cuando hay 4 o más opciones excluyentes; si solo hay 2 o 3 opciones breves usar Radio Button o Segment.",
+  "description": "Closed-list selector field with top label, chevron indicator, and validation hint support.\n\nVariants & Properties:\n- State: Default | Filled | Hover | Focus | Error | Disabled.\n- Properties: ✏️ Label, ✏️ Content, Hint, ✏️ Hint.\n\nWhen to use: For 4 or more mutually exclusive options; when only 2 to 3 short choices exist prefer Radio Button or Segment.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -162,16 +162,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "En formularios o filtros cuando el usuario debe seleccionar una opción única dentro de una lista cerrada (habitualmente 4 o más opciones)."
+      "Use inside forms or filters when choosing a single value from a closed list of 4 or more options."
     ],
     "whenNotToUse": [
-      "No usar si hay solo 2–3 opciones cortas siempre visibles que conviene comparar de un vistazo; usar `RadioGroup` o `SegmentControl`.",
-      "No usar para disparar menús de comandos o acciones; usar `DropdownMenu`."
+      "Do not use when only 2–3 short options exist that benefit from immediate visibility; use `RadioGroup` or `SegmentControl`.",
+      "Do not use for command menus; use `DropdownMenu`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-select` o `<select>` estilizado accesible con navegación por teclado completa.",
-    "Vincular `Hint` mediante `aria-describedby` cuando `hasHint` es true y marcar `aria-invalid` en `State=Error`.",
-    "Soportar estados `Default`, `Filled`, `Hover`, `Focus`, `Error` y `Disabled`."
+    "Support full keyboard navigation (`Space`/`Enter` to open, `ArrowUp`/`ArrowDown`, `Escape`), `aria-invalid` on `State=Error`, and `aria-describedby` for hints.",
+    "Style borders, focus rings, and fills exclusively through Quick v1.2 Tailwind CSS tokens across all 6 states (`Default`, `Filled`, `Hover`, `Focus`, `Error`, `Disabled`)."
   ]
 }

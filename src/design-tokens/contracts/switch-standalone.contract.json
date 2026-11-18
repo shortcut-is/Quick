@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/SwitchStandalone",
-  "description": "Interruptor binario sin etiqueta externa para filas de Settings en Card, filtros en Sheet/Popover o Developer Mode en Sidebar Navigation.",
+  "description": "Unlabeled binary toggle for embedding inside Card Settings rows, Sheet/Popover filter rows, and Sidebar Navigation.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Size=Small",
@@ -125,13 +125,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Dentro de contenedores que ya proveen su propia fila y etiqueta (`Card` `Use=Settings`, `Sheet` `Use=Filter`, `Popover` `Use=Filter`, `SidebarNavigation`)."
+      "Use inside parent rows that already provide text labels (`Card` `Use=Settings`, `Sheet` `Use=Filter`, `Popover` `Use=Filter`, `SidebarNavigation`)."
     ],
     "whenNotToUse": [
-      "No usar suelto sin etiqueta asociada visible o accesible; en formularios usar `Switch`."
+      "Do not use standalone without an accessible label; use `Switch` in forms."
     ]
   },
   "behaviorRules": [
-    "Toggle atómico con tamaños `Small` (`44×32`) y `Large`; exige `aria-label` o etiqueta contenedora externa (como `FilterRow` en `Sheet` o `SidebarNavigation`)."
+    "Require `aria-label` or `aria-labelledby` linking back to the parent row label."
   ]
 }

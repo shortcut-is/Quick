@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableCell",
-  "description": "Subcomponente de celda de datos dentro de Data table - Row con variantes de densidad (Size) y estado.",
+  "description": "Data cell subcomponent for Data table - Row supporting Size density and State variants.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Size=← Fill →",
@@ -94,13 +94,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para renderizar celdas individuales dentro de `DataTableRow` manteniendo alineación y densidad (`Default`, `Compact`, `Comfortable`) consistentes."
+      "Use to render individual body cells inside `DataTableRow` aligned with header columns and `Size` density."
     ],
     "whenNotToUse": [
-      "No usar fuera de `DataTable`; para filas genéricas de lista usar `ListItem`."
+      "Do not use outside `DataTable`; use `ListItem` for standalone list rows."
     ]
   },
   "behaviorRules": [
-    "Renderizar `<td>` con densidad sincronizada (`Size`) y truncamiento controlado cuando el contenido exceda el ancho de columna."
+    "Render as semantic `<td>` matching `DataTableRow` density and controlled text truncation on overflow."
   ]
 }

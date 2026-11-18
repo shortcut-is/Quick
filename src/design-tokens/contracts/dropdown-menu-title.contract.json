@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation (Subcomponent)",
   "importPath": "@/components/ui/DropdownMenuLabel",
-  "description": "Encabezado de sección no interactivo dentro de Dropdown Menu. Variantes Type = Default | Inset.",
+  "description": "Non-interactive section label for grouping items inside Dropdown Menu. Variants: Type = Default | Inset.",
   "anatomy": {
     "root": {
       "name": "Type=Title",
@@ -77,13 +77,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para etiquetar y agrupar secciones lógicas de acciones dentro de `DropdownMenu`."
+      "Use as a non-interactive section heading to group actions inside `DropdownMenu`."
     ],
     "whenNotToUse": [
-      "No usar como botón ni como encabezado fuera de menús desplegables."
+      "Do not use as an interactive button or outside menu containers."
     ]
   },
   "behaviorRules": [
-    "Encabezado no interactivo para agrupar secciones dentro de `DropdownMenu` (`Type=Title` o con sangría `Inset`)."
+    "Render as non-focusable `role=\"presentation\"` heading; support `Type=Default` and `Type=Inset` alignment."
   ]
 }

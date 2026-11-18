@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/Calendar",
-  "description": "Selector mensual de fechas reutilizado dentro de Date Picker y Popover (Use=DateCalendar).\n\nReglas de diseño:\n- Diferenciar visualmente el día actual, la fecha seleccionada y los días fuera del mes activo.\n- No insertar abierto de forma fija en formularios cortos; preferir Date Picker.",
+  "description": "Monthly date grid selector reused inside Date Picker and Popover (Use=DateCalendar).\n\nDesign rules:\n- Clearly distinguish today, the selected date, and out-of-month days.\n- Do not embed persistently inside short forms; prefer Date Picker.",
   "anatomy": {
     "root": {
       "name": "Calendar",
@@ -496,16 +496,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para seleccionar una fecha concreta dentro de `Popover` (`Use=DateCalendar`), dentro de `DatePicker` o embebido en vistas de agenda/programación."
+      "Use for picking a calendar date inside `Popover` (`Use=DateCalendar`), inside `DatePicker`, or in dedicated scheduling views."
     ],
     "whenNotToUse": [
-      "No colocar suelto dentro de formularios estándar ocupando altura fija sin disparador; usar `DatePicker`.",
-      "No usar para seleccionar horas o minutos; usar `TimePicker`."
+      "Do not embed persistently expanded inside compact forms; use `DatePicker`.",
+      "Do not use for selecting time of day; use `TimePicker`."
     ]
   },
   "behaviorRules": [
-    "Implementar navegación por teclado completa en la cuadrícula de días (ArrowLeft/Right/Up/Down, PageUp/PageDown para mes, Home/End).",
-    "Diferenciar visualmente día actual, seleccionado (`Primary/Top..Bottom`), fuera de mes (`Surfaces/Foreground-Muted`) y deshabilitado.",
-    "Exponer `locale` y zona horaria configurable cuando se incruste dentro de `DatePicker` o `Popover`."
+    "Implement full WAI-ARIA date-grid keyboard navigation (`ArrowLeft`/`Right`/`Up`/`Down`, `PageUp`/`PageDown` for months, `Home`/`End`).",
+    "Visually distinguish today, selected day (`Primary/Top..Bottom`), out-of-month muted days, and disabled dates.",
+    "Expose configurable `locale` and timezone context when used inside `DatePicker` or `Popover`."
   ]
 }

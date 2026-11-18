@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/TagGroup",
-  "description": "Contenedor con flujo envolvente para agrupar múltiples instancias de Tag.",
+  "description": "Wrapping flex container for displaying multiple Tag instances with uniform spacing.",
   "anatomy": {
     "root": {
       "name": "Tag Group",
@@ -225,13 +225,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para agrupar múltiples `Tag` relacionados con flujo *wrap* y separación consistente."
+      "Use to lay out multiple `Tag` items in a wrapping row with consistent spacing tokens."
     ],
     "whenNotToUse": [
-      "No usar como grupo de selección de formulario persistente; usar `CheckboxGroup`."
+      "Do not use as a persistent form multi-select input; use `CheckboxGroup`."
     ]
   },
   "behaviorRules": [
-    "Contenedor `flex-wrap` con separación uniforme para agrupar múltiples instancias de `Tag`."
+    "Use `flex-wrap` with uniform gap tokens and keyboard focus order across dismissible tags."
   ]
 }

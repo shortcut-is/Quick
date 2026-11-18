@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/Radio",
-  "description": "Indicador circular atómico de selección única reutilizado dentro de Radio Button y listas compactas.",
+  "description": "Atomic circular radio control reused inside Radio Button and compact single-selection rows.",
   "anatomy": {
     "root": {
       "name": "State=Default, Selected=Off",
@@ -91,14 +91,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Como indicador circular primitivo dentro de `RadioButton` o tablas/tarjetas con selección única explícita."
+      "Use as the atomic circular radio indicator inside `RadioButton` or compact single-choice containers."
     ],
     "whenNotToUse": [
-      "No usar suelto sin etiqueta asociada en formularios; usar `RadioButton` dentro de `RadioGroup`."
+      "Do not render standalone without a visible or accessible label; wrap with `RadioButton` inside `RadioGroup`."
     ]
   },
   "behaviorRules": [
-    "Indicador circular atómico de selección única usado dentro de `RadioButton`.",
-    "Requiere etiqueta asociada (`aria-labelledby` o `<label>`) cuando se use de forma independiente."
+    "Use `<input type=\"radio\">` or `role=\"radio\"` with `aria-checked` and associated label text."
   ]
 }

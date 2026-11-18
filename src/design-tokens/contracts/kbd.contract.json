@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Kbd",
-  "description": "Insignia tipográfica para mostrar teclas individuales o atajos de teclado (como Cmd+K en buscadores o menús).\n\nVariantes y propiedades:\n- Use: Subtle | Outline | Solid.\n- Size: SM | MD.\n- Propiedades: 👁️ Modifier, ✏️ Modifier, ✏️ Key.",
+  "description": "Typographic keycap badge displaying individual keys or shortcut combinations (such as Cmd+K in search triggers or menus).\n\nVariants & Properties:\n- Use: Subtle | Outline | Solid.\n- Size: SM | MD.\n- Properties: 👁️ Modifier, ✏️ Modifier, ✏️ Key.",
   "anatomy": {
     "root": {
       "name": "Use=Subtle, Size=SM",
@@ -156,15 +156,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para representar visualmente atajos o combinaciones de teclas (`⌘K`, `Esc`, `⇧P`) dentro de triggers de búsqueda, documentación o `DropdownMenuItem`."
+      "Use to visually render keyboard keys or shortcut combinations (`⌘K`, `Esc`, `⇧P`) inside search triggers, help overlays, or `DropdownMenuItem`."
     ],
     "whenNotToUse": [
-      "No usar como etiqueta de estado ni como chip de filtro; usar `Badge` o `Tag`.",
-      "No usar como botón clicable por sí solo."
+      "Do not use as a status indicator or removable filter tag; use `Badge` or `Tag`.",
+      "Do not use standalone as a clickable button."
     ]
   },
   "behaviorRules": [
-    "Renderizar elemento semántico HTML `<kbd>` en una sola línea.",
-    "Ocultar modificador con `hasModifier={false}` para teclas individuales; ideal dentro de disparadores de Command Palette (`⌘K`) y menús."
+    "Render using semantic `<kbd>` HTML element on a single horizontal line (`whitespace-nowrap`).",
+    "Hide the modifier cap via `hasModifier={false}` for single-key hints."
   ]
 }

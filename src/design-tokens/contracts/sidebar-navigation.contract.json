@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation",
   "importPath": "@/components/ui/SidebarNavigation",
-  "description": "Barra lateral de navegación principal para aplicaciones web y dashboards.\n\nVariantes y propiedades:\n- Mode: Expanded (248px) | Collapsed (72px).\n- Propiedades: 👁️ Mode Switch, 👁️ Workspace Group, ✏️ Brand.\n\nReglas de diseño:\n- Mantener exactamente un enlace en estado Active coincidiendo con la ruta actual; en Collapsed los demás enlaces permanecen en State=Default sin fondo.\n- En pantallas móviles ocultar dentro de Sheet o sustituir por Bottom Navigation + Topbar MobileAppBar.",
+  "description": "Primary vertical application sidebar for desktop dashboards and workspace navigation.\n\nVariants & Properties:\n- Mode: Expanded (248px) | Collapsed (72px).\n- Properties: 👁️ Mode Switch, 👁️ Workspace Group, ✏️ Brand.\n\nDesign rules:\n- Keep exactly one navigation item in State=Active matching the current route; in Collapsed mode inactive items remain in State=Default with transparent background.\n- On mobile viewports, place inside a Sheet drawer or replace with Bottom Navigation + MobileAppBar Topbar.",
   "anatomy": {
     "root": {
       "name": "Mode=Expanded",
@@ -322,14 +322,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Como estructura de navegación vertical principal en dashboards y aplicaciones web (`Expanded` `248px` o `Collapsed` `72px`), con soporte para marca, grupos de rutas, badge de conteo y perfil."
+      "Use as the primary vertical application sidebar on Desktop dashboards (`Expanded` `248px` or collapsed icon-rail `72px`) combining brand header, route groups, counts, mode switch, and user profile."
     ],
     "whenNotToUse": [
-      "No renderizar fija en pantalla en viewports móviles; en Mobile ocultarla dentro de `Sheet` o reemplazar por `BottomNavigation` + `Topbar` (`MobileAppBar`)."
+      "Do not keep fixed open on narrow mobile viewports; hide inside a slide-over `Sheet` or replace with `BottomNavigation` + `Topbar` (`MobileAppBar`)."
     ]
   },
   "behaviorRules": [
-    "Envolver navegación principal en `<aside><nav aria-label=\"Main Navigation\">` marcando la ruta activa con `aria-current=\"page\"`.",
-    "Permitir alternancia entre `Mode=Expanded` (`248px`) y `Mode=Collapsed` (`72px`); en viewport móvil `< 768px` desplegar dentro de `Sheet`."
+    "Wrap in `<aside><nav aria-label=\"Main Navigation\">` keeping exactly one route active (`State=Active`) while inactive items remain in `State=Default`."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/Badge",
-  "description": "Etiqueta compacta de solo lectura para mostrar estados semánticos, versiones o contadores numéricos.\n\nVariantes y propiedades:\n- Type: Label | Label + Icon | Dot.\n- Use: Bold | Subtle | Outline | Info | Success | Warning | Danger.\n- Propiedades: ✏️ Text, Icon.\n\nCuándo no usar: No utilizar para acciones clicables (usar Button), filtros removibles (usar Tag) ni atajos de teclado (usar Kbd).",
+  "description": "Compact read-only label used to display semantic status, versions, or numeric counts.\n\nVariants & Properties:\n- Type: Label | Label + Icon | Dot.\n- Use: Bold | Subtle | Outline | Info | Success | Warning | Danger.\n- Properties: ✏️ Text, Icon.\n\nWhen not to use: Do not use for clickable actions (use Button), removable filter chips (use Tag), or keyboard shortcuts (use Kbd).",
   "anatomy": {
     "root": {
       "name": "Type=Label, Use=Bold",
@@ -138,18 +138,18 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para mostrar metadatos breves de solo lectura, estados (`Success`, `Warning`, `Danger`, `Info`) o contadores numéricos (`v1.2`, `4`, `Active`).",
-      "Como indicador visual adjunto en tarjetas, filas de tabla, `SidebarItem` o encabezados de `Popover`."
+      "Use for compact read-only metadata, semantic statuses (`Success`, `Warning`, `Danger`, `Info`), version tags (`v1.2`), or unread counts.",
+      "Use attached inside `Card`, table cells, `SidebarItem`, or `Popover` headers."
     ],
     "whenNotToUse": [
-      "No usar para acciones clicables ni navegación; usar `Button`.",
-      "No usar para filtros removibles o selecciones que el usuario pueda descartar con `×`; usar `Tag` o `TagGroup`.",
-      "No usar para atajos de teclado; usar `Kbd`."
+      "Do not use for clickable actions or route navigation; use `Button`.",
+      "Do not use for removable filter chips with a dismiss button; use `Tag` or `TagGroup`.",
+      "Do not use for keyboard shortcut hints; use `Kbd`."
     ]
   },
   "behaviorRules": [
-    "Mantener texto en una sola línea (`whitespace-nowrap`, `HUG` en Figma) para evitar truncamiento o saltos inesperados.",
-    "Elegir `Use` según semántica (`Bold` / `Subtle` / `Outline` neutros; `Info` / `Success` / `Warning` / `Danger` para estados).",
-    "Cuando `Type=Dot`, renderizar indicador circular de estado antes de la etiqueta."
+    "Keep text single-line (`whitespace-nowrap`) matching Figma `HUG` behavior so labels never wrap or clip.",
+    "Choose `Use` purely by semantic intent (`Bold`/`Subtle`/`Outline` neutral; `Info`/`Success`/`Warning`/`Danger` for states).",
+    "Render a circular status dot before the label when `Type=Dot`."
   ]
 }

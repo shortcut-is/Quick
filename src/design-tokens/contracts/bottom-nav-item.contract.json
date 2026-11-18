@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Navigation (Subcomponent)",
   "importPath": "@/components/ui/BottomNavItem",
-  "description": "Subcomponente de pestaña individual para Bottom Navigation.\n\nVariantes y propiedades:\n- State: Default (sin fondo, icono y texto muted) | Hover (píldora Surfaces/Muted) | Active (píldora Surfaces/Muted + borde Surfaces/Border).\n- Propiedades: ✏️ Label, ↪️ Icon.",
+  "description": "Individual navigation tab subcomponent for Bottom Navigation.\n\nVariants & Properties:\n- State: Default (transparent, muted icon/label) | Hover (Surfaces/Muted pill) | Active (Surfaces/Muted pill + Surfaces/Border stroke).\n- Properties: ✏️ Label, ↪️ Icon.",
   "anatomy": {
     "root": {
       "name": "State=Default",
@@ -123,14 +123,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Exclusivamente como pestaña atómica interna de `BottomNavigation`, controlando de forma individual el estado (`Default`, `Hover`, `Active`), etiqueta e icono de cada sección."
+      "Use exclusively inside `BottomNavigation` to independently control each tab's state (`Default`, `Hover`, `Active`), label, and `20×20` icon."
     ],
     "whenNotToUse": [
-      "No usar fuera de `BottomNavigation` ni como botón suelto en formularios; usar `Button` o `TabItem`."
+      "Do not use standalone outside `BottomNavigation` or inside forms; use `Button` or `TabItem`."
     ]
   },
   "behaviorRules": [
-    "Cada pestaña de `BottomNavigation` controla de manera independiente su estado (`Default`, `Hover`, `Active`), etiqueta e icono (`20×20`).",
-    "Mantener área táctil mínima de `48×48px` (actual `72×52px`) y marcar la ruta actual con `aria-current=\"page\"`."
+    "Ensure a minimum touch target of `48×48px` (`72×52px` base box) and mark the active destination with `aria-current=\"page\"`.",
+    "Apply `Surfaces/Muted` pill on `Hover`, adding `1px` `Surfaces/Border` stroke and `Surfaces/Foreground` styling on `Active`."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/FileUpload",
-  "description": "Área interactiva para seleccionar o arrastrar y soltar archivos dentro de formularios. Variantes Active = False | True.",
+  "description": "Interactive dropzone for selecting or dragging and dropping local files in forms. Variants: Active = False | True.",
   "anatomy": {
     "root": {
       "name": "Active=No",
@@ -115,14 +115,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Cuando el usuario necesita adjuntar archivos locales mediante selección tradicional o arrastrando y soltando (*drag & drop*)."
+      "Use when users need to attach local files via file dialog picker or drag-and-drop."
     ],
     "whenNotToUse": [
-      "No usar para pegar URLs externas ni texto plano; usar `InputText`."
+      "Do not use to paste external URLs or plain text; use `InputText`."
     ]
   },
   "behaviorRules": [
-    "Soportar drag & drop nativo con feedback visual en `Active=true` además de activación por botón/teclado sobre `<input type=\"file\" />`.",
-    "Validar tipos MIME aceptados y tamaño máximo mostrando errores claros al usuario."
+    "Bind a native `<input type=\"file\">` trigger supporting keyboard activation, drag-over active feedback (`Active=true`), and file type/size validation."
   ]
 }

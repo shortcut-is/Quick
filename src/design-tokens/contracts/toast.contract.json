@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/Toast",
-  "description": "Notificación flotante breve y no bloqueante para confirmar acciones completadas (guardar, copiar, errores temporales).\n\nVariantes y propiedades:\n- Use: Neutral | Success | Warning | Danger.\n- Propiedades: 👁️ Icon, 👁️ Description, 👁️ Action, 👁️ Close, ✏️ Title, ✏️ Description.\n\nCuándo no usar: Para mensajes que deben permanecer visibles dentro de un formulario usar Alert; para confirmaciones críticas usar Dialog.",
+  "description": "Brief non-blocking floating notification confirming completed actions or transient feedback.\n\nVariants & Properties:\n- Use: Neutral | Success | Warning | Danger.\n- Properties: 👁️ Icon, 👁️ Description, 👁️ Action, 👁️ Close, ✏️ Title, ✏️ Description.\n\nWhen not to use: Use Alert for persistent messages inside forms; use Dialog for mandatory decisions.",
   "anatomy": {
     "root": {
       "name": "Use=Neutral",
@@ -228,15 +228,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para feedback transitorio no bloqueante tras completar una acción (`Cambios guardados`, `Enlace copiado`, `Error de red temporal`) con cierre opcional o botón `Undo`."
+      "Use for transient non-blocking status feedback after user actions (`Saved`, `Copied`, temporary network errors) with optional `Undo` action and close button."
     ],
     "whenNotToUse": [
-      "No usar para errores críticos de validación que el usuario deba consultar mientras edita un formulario; usar `Alert`.",
-      "No usar cuando se requiera decisión obligatoria; usar `Dialog`."
+      "Do not use for persistent form validation errors users need to reference while editing; use `Alert`.",
+      "Do not use when an immediate blocking decision is required; use `Dialog`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-toast` o `sonner`, anunciado vía `aria-live=\"polite\"` (`Neutral`/`Success`) o `assertive` (`Danger`).",
-    "Respetar límite simultáneo en viewport (`<= 3` toasts) y pausar el auto-dismiss al hacer hover o foco."
+    "Render inside an accessible live region (`aria-live=\"polite\"` for `Neutral`/`Success`, `aria-live=\"assertive\"` for `Danger`).",
+    "Pause auto-dismiss timers on hover or keyboard focus and cap simultaneous visible toasts."
   ]
 }

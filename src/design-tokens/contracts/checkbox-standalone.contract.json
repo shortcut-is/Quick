@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/CheckboxStandalone",
-  "description": "Casilla de verificación sin etiqueta pensada para integrarse dentro de tablas (Data Table), filas de filtros o paneles personalizados.",
+  "description": "Minimal unlabeled checkbox designed for table selection columns (Data Table), filter rows, or custom list containers.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selection=Unchecked",
@@ -93,14 +93,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "En celdas de selección de tablas (`DataTable`), filas de `Sheet` (`Use=Filter`) o controles donde la etiqueta ya la provee el contenedor padre."
+      "Use inside table selection columns (`DataTable`), filter rows, or custom panels where the surrounding container provides the label."
     ],
     "whenNotToUse": [
-      "No usar en formularios estándar donde se requiera etiqueta de texto visible y descripción; usar `Checkbox`."
+      "Do not use in standard forms where a visible text label and description are needed; use `Checkbox`."
     ]
   },
   "behaviorRules": [
-    "Control binario atómico reutilizado dentro de `Checkbox`, `Data Table` y formularios compactos.",
-    "Debe recibir `aria-label` o `aria-labelledby` cuando se renderice sin etiqueta visible."
+    "Always supply `aria-label` or `aria-labelledby` when rendered without an adjacent text label."
   ]
 }

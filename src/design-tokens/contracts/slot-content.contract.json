@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Primitives",
   "importPath": "@/components/ui/SlotContent",
-  "description": "Marcador de contenido flexible integrado en Card, Dialog, Sheet y Popover para sustituirlo por formularios, textos o componentes reales en cada pantalla.",
+  "description": "Flexible content placeholder embedded inside Card, Dialog, Sheet, and Popover to be swapped with real layouts, forms, or components.",
   "anatomy": {
     "root": {
       "name": "Slot: Content",
@@ -56,14 +56,13 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "En Figma como marcador composable (`children`) dentro de `Card`, `Dialog`, `Sheet` y `Popover` para sustituir el cuerpo por instancias reales."
+      "Use in Figma layouts as the swappable body region inside `Card`, `Dialog`, `Sheet`, and `Popover`."
     ],
     "whenNotToUse": [
-      "En código productivo de React nunca se renderiza como caja visual dashed; se reemplaza directamente por la prop `children`."
+      "Never render the dashed placeholder box in production code; replace directly with React `children`."
     ]
   },
   "behaviorRules": [
-    "Slot de composición flexible reutilizado en `Card`, `Dialog`, `Sheet` y `Popover`.",
-    "En código se reemplaza directamente por `children` sin renderizar el placeholder dashed de diseño."
+    "Maps 1:1 to `children` slot composition in React components."
   ]
 }

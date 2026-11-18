@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Data Display (Subcomponent)",
   "importPath": "@/components/ui/DataTableRow",
-  "description": "Fila horizontal de registro para Data Table con densidad configurable (Density), casilla de selección y acciones. En Mobile adaptar como List Item.",
+  "description": "Horizontal data row for Data Table supporting Density variants, selection checkbox, and row actions. Adapt to List Item on narrow mobile viewports.",
   "anatomy": {
     "root": {
       "name": "Density=Compact",
@@ -375,14 +375,13 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para construir cada registro horizontal dentro de `DataTable`, soportando selección, hover y acciones por fila."
+      "Use to compose horizontal records inside `DataTable`, supporting density, selection checkboxes, hover states, and row actions."
     ],
     "whenNotToUse": [
-      "No usar fuera de `DataTable`; para listados móviles o menús de selección usar `ListItem`."
+      "Do not use outside `DataTable`; use `ListItem` for mobile directories or action lists."
     ]
   },
   "behaviorRules": [
-    "Renderizar como `<tbody><tr>` respetando densidades (`Density`) y estados de selección/hover.",
-    "Mantener alineación de columnas (`Col 1..8`) idéntica a `DataTableHeader`."
+    "Render as `<tr>` inside `<tbody>`, keeping column visibility and selection state synced with `DataTableHeader`."
   ]
 }

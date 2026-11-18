@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/EmptyState",
-  "description": "Estado vacío ilustrado para listados sin registros iniciales, búsquedas sin coincidencias o errores de carga con llamada a la acción.\n\nVariantes y propiedades:\n- Use: Default | Search | Error.\n- Size: SM | MD.\n- Propiedades: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nReglas de diseño: Cuando muestre acción principal y secundaria, combinar 1 botón Primary con 1 Outline o Ghost, nunca dos Primary juntos.",
+  "description": "Illustrated empty-view layout for blank states, zero search results, or recoverable load errors with call-to-action buttons.\n\nVariants & Properties:\n- Use: Default | Search | Error.\n- Size: SM | MD.\n- Properties: 👁️ Icon, 👁️ Actions, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nDesign rules: When displaying both primary and secondary actions, pair 1 Primary button with 1 Outline or Ghost button, never two Primary buttons side by side.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -252,16 +252,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Cuando una tabla, listado o vista no contiene elementos iniciales (`Use=Default`), una búsqueda no arroja resultados (`Use=Search`) o falló la carga completa de datos (`Use=Error`)."
+      "Use when a table, list, or workspace has zero initial items (`Use=Default`), a search/filter returns no matches (`Use=Search`), or data loading failed (`Use=Error`)."
     ],
     "whenNotToUse": [
-      "No usar mientras los datos siguen cargando; usar `Skeleton` o `Spinner`.",
-      "No usar para advertencias puntuales dentro de contenido ya cargado; usar `Alert`."
+      "Do not use while data is still loading; use `Skeleton` or `Spinner`.",
+      "Do not use for inline warnings alongside populated content; use `Alert`."
     ]
   },
   "behaviorRules": [
-    "Usar `Use=Default` para listados vacíos iniciales, `Use=Search` cuando no hay coincidencias de filtro y `Use=Error` con CTA de reintento tras fallo.",
-    "Mantener layout de acciones con `flex-wrap` para adaptarse limpiamente entre Desktop y Mobile.",
-    "Cuando muestre acción principal y secundaria (`hasSecondaryAction=true`), usar 1 botón `Primary` y 1 `Outline`/`Ghost`, nunca dos botones `Primary` juntos."
+    "Keep action bar responsive with flex wrapping so buttons stack cleanly across Desktop and Mobile breakpoints.",
+    "When displaying both primary and secondary actions (`hasSecondaryAction=true`), always pair 1 `Primary` button with 1 `Outline`/`Ghost` button, never two `Primary` buttons together."
   ]
 }

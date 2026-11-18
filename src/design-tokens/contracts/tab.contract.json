@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Navigation",
   "importPath": "@/components/ui/Tabs",
-  "description": "Navegación por pestañas para alternar entre vistas hermanas dentro de una página o dentro de Topbar (Use=DesktopTabs). Para filtros compactos en tarjetas usar Segment Control.",
+  "description": "Tabbed navigation bar for switching between sibling views within a page or inside Topbar (Use=DesktopTabs). Use Segment Control for compact local toggles.",
   "anatomy": {
     "root": {
       "name": "Tab",
@@ -316,15 +316,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Para alternar entre vistas o subsecciones hermanas dentro del mismo contexto de página o dentro de `Topbar` (`Use=DesktopTabs`)."
+      "Use to switch between related sibling views inside a page or inside `Topbar` (`Use=DesktopTabs`)."
     ],
     "whenNotToUse": [
-      "No usar como navegación global de toda la aplicación con jerarquías múltiples; usar `SidebarNavigation` o `BottomNavigation`.",
-      "No usar para filtros rápidos compactos de 2–3 opciones dentro de una tarjeta; usar `SegmentControl`."
+      "Do not use as global hierarchical app navigation; use `SidebarNavigation` or `BottomNavigation`.",
+      "Do not use for compact 2–3 option toggles inside cards; use `SegmentControl`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-tabs` (`role=\"tablist\"`, `role=\"tab\"`, `role=\"tabpanel\"`).",
-    "Navegar horizontalmente con `ArrowLeft` / `ArrowRight` y activar en selección; habilitar scroll horizontal si los ítems desbordan en Mobile."
+    "Follow WAI-ARIA Tabs pattern (`role=\"tablist\"`, `role=\"tab\"`, `role=\"tabpanel\"`, `ArrowLeft`/`ArrowRight` keyboard switching, `aria-selected`).",
+    "Allow horizontal overflow scrolling when tab labels exceed mobile viewport width."
   ]
 }

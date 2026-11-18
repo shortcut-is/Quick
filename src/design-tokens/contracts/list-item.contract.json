@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Data Display",
   "importPath": "@/components/ui/ListItem",
-  "description": "Fila de listado versátil con título, subtítulo, Avatar opcional (👁️ Avatar) y chevron de navegación (👁️ Chevron). Ideal para directorios y adaptación móvil de Data Table.",
+  "description": "Flexible list row with title, subtitle, optional Avatar (👁️ Avatar), and trailing navigation chevron (👁️ Chevron). Ideal for mobile directories and responsive Data Table rows.",
   "anatomy": {
     "root": {
       "name": "List Item",
@@ -115,15 +115,14 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "En listas interactivas de elementos, directorios móviles o transformación adaptativa de filas de `DataTable` en viewports estrechos."
+      "Use for interactive directories, mobile record rows, or responsive card-row transformations of `DataTable`."
     ],
     "whenNotToUse": [
-      "No usar para comparativas tabulares complejas de muchas columnas en Desktop; usar `DataTable`.",
-      "No usar como enlace principal dentro de `SidebarNavigation`; usar `SidebarItem`."
+      "Do not use instead of `DataTable` for dense multi-column desktop comparisons.",
+      "Do not use as primary sidebar links; use `SidebarItem`."
     ]
   },
   "behaviorRules": [
-    "Usar dentro de listas (`<ul>`/`<li>`) para directorios, resultados o filas adaptativas mobile de `Data Table`.",
-    "Exponer toggles booleanos para `Avatar` inicial y `Chevron` final según si la fila es navegable."
+    "Render within semantic `<ul>`/`<li>` containers with boolean toggles for leading `Avatar` and trailing chevron when rows are interactive."
   ]
 }

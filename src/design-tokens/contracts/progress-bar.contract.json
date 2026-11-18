@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Feedback",
   "importPath": "@/components/ui/ProgressBar",
-  "description": "Indicador lineal de progreso determinado o consumo de cuota entre 0% y 100%.\n\nVariantes y propiedades:\n- Use: Default | Success | Warning | Danger.\n- Progress: 25% | 75% | 100%.\n- Size: SM (8px) | LG (16px).\n- Propiedades: 👁️ Header, 👁️ Value, 👁️ Caption, ✏️ Label, ✏️ Caption.\n\nCuándo no usar: Si no se conoce el porcentaje usar Spinner o Skeleton; si el usuario puede arrastrar el valor usar Slider.",
+  "description": "Linear progress indicator for known completion percentages or quota usage between 0% and 100%.\n\nVariants & Properties:\n- Use: Default | Success | Warning | Danger.\n- Progress: 25% | 75% | 100%.\n- Size: SM (8px) | LG (16px).\n- Properties: 👁️ Header, 👁️ Value, 👁️ Caption, ✏️ Label, ✏️ Caption.\n\nWhen not to use: For unknown durations use Spinner or Skeleton; for interactive value picking use Slider.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Progress=25%, Size=SM",
@@ -218,16 +218,15 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Para indicar porcentaje conocido y determinado de avance, carga de archivo o consumo de cuota/almacenamiento (`0–100%`) con semántica (`Default`, `Success`, `Warning`, `Danger`)."
+      "Use to display a known determinate completion percentage or storage/quota ratio (`0–100%`) with semantic state (`Default`, `Success`, `Warning`, `Danger`)."
     ],
     "whenNotToUse": [
-      "No usar si la duración o el porcentaje exacto es desconocido; usar `Spinner` o `Skeleton`.",
-      "No usar como control manipulable por el usuario para elegir un valor; usar `Slider`."
+      "Do not use for unknown wait durations; use `Spinner` or `Skeleton`.",
+      "Do not use as an interactive input control; use `Slider`."
     ]
   },
   "behaviorRules": [
-    "Implementar con `@radix-ui/react-progress` o `role=\"progressbar\"` con `aria-valuenow`, `aria-valuemin=\"0\"` y `aria-valuemax=\"100\"`.",
-    "En código, `value` es continuo (`0..100`) y controla el ancho porcentual de `Indicator` (`width: ${value}%`), sin limitarse a los 3 presets visuales (`25%`, `75%`, `100%`).",
-    "Usar `Use=Default` para progreso estándar y `Success`/`Warning`/`Danger` para cuotas, umbrales o alertas."
+    "Implement using semantic `role=\"progressbar\"` with `aria-valuenow`, `aria-valuemin=\"0\"`, and `aria-valuemax=\"100\"`.",
+    "In code, bind `Indicator` width continuously (`width: ${value}%`) using Quick v1.2 Tailwind gradient/status tokens rather than limiting to the 3 visual Figma presets (`25%`, `75%`, `100%`)."
   ]
 }

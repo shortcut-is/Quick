@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioButton",
-  "description": "Opción de selección única con etiqueta y descripción opcional para usarse dentro de Radio Group.\n\nVariantes: Selection × State × Description.\nCuándo no usar: Para selecciones múltiples usar Checkbox; si hay más de 5 opciones usar Input Select.",
+  "description": "Single-choice option row with label and optional description designed for use inside Radio Group.\n\nVariants: Selection × State × Description.\nWhen not to use: Use Checkbox for multi-select; use Input Select when more than 5 options are available.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Description=Off",
@@ -211,15 +211,14 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Siempre dentro de `RadioGroup` cuando el usuario debe elegir exactamente una opción de entre 2 a 5 alternativas mutuamente excluyentes con etiqueta y descripción opcional."
+      "Always use inside `RadioGroup` when selecting exactly one option from 2 to 5 mutually exclusive choices with label and optional description."
     ],
     "whenNotToUse": [
-      "No usar si se pueden marcar varias opciones simultáneamente; usar `Checkbox`.",
-      "No usar cuando hay muchas opciones que alargarían demasiado el formulario; usar `InputSelect`."
+      "Do not use when multiple items can be active simultaneously; use `Checkbox`.",
+      "Do not use for long option lists (more than 5 items); use `InputSelect`."
     ]
   },
   "behaviorRules": [
-    "Siempre renderizarse dentro de un `RadioGroup` (`role=\"radiogroup\"`) navegable con flechas del teclado.",
-    "Soportar descripción opcional debajo de la etiqueta y estados `Enabled`/`Disabled`/`Hover`/`Focus`."
+    "Participate in `RadioGroup` roving tabindex and arrow-key selection (`ArrowUp`/`ArrowDown` or `ArrowLeft`/`ArrowRight`)."
   ]
 }
