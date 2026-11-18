@@ -1,0 +1,56 @@
+{
+  "name": "Overlay",
+  "figmaName": "OVERLAY",
+  "figmaNodeId": "351:2136",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5665",
+    "name": "Dialog"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Overlay (Primitive)",
+  "importPath": "@/components/ui/Overlay",
+  "figmaDescription": "Import: @/components/ui/Dialog (DialogOverlay). Full-viewport backdrop bound to Surfaces/Overlay token.",
+  "anatomy": {
+    "root": {
+      "name": "OVERLAY",
+      "type": "COMPONENT",
+      "layout": "NONE"
+    },
+    "slots": [],
+    "layers": {
+      "name": "OVERLAY",
+      "type": "COMPONENT",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "Surfaces/Overlay"
+    ],
+    "directVariables": [
+      "Surfaces/Overlay"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Siempre como capa backdrop detrás de `Dialog` y `Sheet` para oscurecer el contenido base y enfocar la atención en el nivel modal."
+    ],
+    "whenNotToUse": [
+      "No usar detrás de `Popover`, `Tooltip` o `DropdownMenu` no modales."
+    ]
+  },
+  "behaviorRules": [
+    "Capa backdrop de viewport completo vinculada al token semántico `Surfaces/Overlay`.",
+    "Bloquear interacción del fondo y cerrar modales no destructivos al hacer clic si `closeOnOverlayClick` está activo."
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "name": "Spinner",
+  "figmaName": "Spinner",
+  "figmaNodeId": "2604:3430",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2604:3401",
+    "name": "Skeleton & Spinner"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/Spinner",
+  "figmaDescription": "Import: @/components/ui/Spinner\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (16px / 20px / 24px icon)\n- Use (Default | Muted) -> variant: default | muted\n- Label (Boolean) / Label (Text) -> label?: string (renders sr-only accessible text when hidden)\nToken",
+  "anatomy": {
+    "root": {
+      "name": "Size=SM, Use=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "LoaderIcon",
+        "component": "Icon/Line / Loader",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "Size=SM, Use=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "LoaderIcon",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Loader"
+        },
+        {
+          "name": "Label",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Label#2604:0",
+            "characters": "✏️ Label#2604:7"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "SM",
+          "MD",
+          "LG"
+        ]
+      },
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Muted"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Label#2604:0",
+      "codePropName": "hasLabel",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Label#2604:7",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Loading...",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"SM\" | \"MD\" | \"LG\"",
+      "defaultValue": "SM",
+      "options": [
+        "SM",
+        "MD",
+        "LG"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Muted\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Muted"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/medium",
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para operaciones de espera breves e indeterminadas (procesando envío, botón en carga, actualización parcial de bloque o estado inline)."
+    ],
+    "whenNotToUse": [
+      "No usar cuando se conozca el progreso numérico exacto; usar `ProgressBar`.",
+      "No usar para simular esqueletos de páginas completas o tarjetas complejas; usar `Skeleton`."
+    ]
+  },
+  "behaviorRules": [
+    "Rotar el icono `Icon/Line / Loader` con CSS `animate-spin` respetando `@media (prefers-reduced-motion: reduce)`.",
+    "Incluir `role=\"status\"` y texto visual (`hasLabel`) o `aria-label=\"Loading\"` cuando la etiqueta esté oculta."
+  ]
+}

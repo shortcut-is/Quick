@@ -1,0 +1,240 @@
+{
+  "name": "Switch",
+  "figmaName": "Switch",
+  "figmaNodeId": "309:1604",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5681",
+    "name": "Switch"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/Switch",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Size=Small, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Switch Standalone",
+        "component": "Switch Standalone",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "State=Enabled, Size=Small, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Switch Standalone",
+          "type": "INSTANCE",
+          "instanceOf": "Switch Standalone"
+        },
+        {
+          "name": "Value",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 8,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "Small",
+        "options": [
+          "Small",
+          "Large"
+        ]
+      },
+      "Selected": {
+        "codePropName": "selected",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"Small\" | \"Large\"",
+      "defaultValue": "Small",
+      "options": [
+        "Small",
+        "Large"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selected",
+      "codePropName": "selected",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Input",
+      "spacing/0-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Input",
+      "spacing/0-5"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "79:1328",
+      "figmaName": "Switch Standalone",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 8,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        "Selected": {
+          "codePropName": "selected",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        },
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "Small",
+          "options": [
+            "Small",
+            "Large"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\" | \"Disabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selected",
+          "codePropName": "selected",
+          "type": "VARIANT",
+          "tsType": "\"Off\" | \"On\"",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"Small\" | \"Large\"",
+          "defaultValue": "Small",
+          "options": [
+            "Small",
+            "Large"
+          ]
+        }
+      ],
+      "tokens": [
+        "Primary/Bottom",
+        "Primary/Foreground",
+        "Primary/Top",
+        "Radius/full",
+        "Surfaces/Background",
+        "Surfaces/Input",
+        "spacing/0-5",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": [
+        "Shadow 1"
+      ],
+      "contractFile": "switch-standalone.contract.json",
+      "importPath": "@/components/ui/SwitchStandalone"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para activar o desactivar preferencias del sistema con efecto inmediato (`Activar notificaciones`, `Modo oscuro`, `Developer Mode`) sin requerir paso adicional de guardado."
+    ],
+    "whenNotToUse": [
+      "No usar cuando el cambio forma parte de un formulario con botón `Guardar/Enviar` o selección múltiple en listas; usar `Checkbox`.",
+      "No usar para elegir entre dos valores nombrados distintos; usar `RadioGroup` o `SegmentControl`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-switch` (`role=\"switch\"`, `aria-checked`).",
+    "Efecto inmediato sin necesidad de botón Guardar salvo dentro de formularios explícitos."
+  ]
+}

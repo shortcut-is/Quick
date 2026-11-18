@@ -1,0 +1,134 @@
+{
+  "name": "ListItem",
+  "figmaName": "List Item",
+  "figmaNodeId": "95:340",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5671",
+    "name": "List Item"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Data Display",
+  "importPath": "@/components/ui/ListItem",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "List Item",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Avatar",
+        "component": "Avatar",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Chevron",
+        "component": "Icon/Line / Chevron-Right",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "List Item",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Avatar",
+          "type": "INSTANCE",
+          "instanceOf": "Avatar",
+          "refs": {
+            "visible": "👁️ Avatar#95:4"
+          }
+        },
+        {
+          "name": "List Item Content",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Long Option",
+              "type": "TEXT"
+            },
+            {
+              "name": "Long Option",
+              "type": "TEXT"
+            }
+          ]
+        },
+        {
+          "name": "Chevron",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Chevron-Right"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Avatar#95:4",
+      "codePropName": "hasAvatar",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Avatar"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Chevron#95:5",
+      "codePropName": "hasChevron",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "En listas interactivas de elementos, directorios móviles o transformación adaptativa de filas de `DataTable` en viewports estrechos."
+    ],
+    "whenNotToUse": [
+      "No usar para comparativas tabulares complejas de muchas columnas en Desktop; usar `DataTable`.",
+      "No usar como enlace principal dentro de `SidebarNavigation`; usar `SidebarItem`."
+    ]
+  },
+  "behaviorRules": [
+    "Usar dentro de listas (`<ul>`/`<li>`) para directorios, resultados o filas adaptativas mobile de `Data Table`.",
+    "Exponer toggles booleanos para `Avatar` inicial y `Chevron` final según si la fila es navegable."
+  ]
+}

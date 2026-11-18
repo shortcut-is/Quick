@@ -1,0 +1,109 @@
+{
+  "name": "Avatar",
+  "figmaName": "Avatar",
+  "figmaNodeId": "79:1653",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5656",
+    "name": "Avatar"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display",
+  "importPath": "@/components/ui/Avatar",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Type=image, Size=24",
+      "type": "COMPONENT",
+      "layout": "NONE"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Type=image, Size=24",
+      "type": "COMPONENT",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Type": {
+        "codePropName": "type",
+        "defaultValue": "image",
+        "options": [
+          "image",
+          "initials",
+          "Letter"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "24",
+        "options": [
+          "40",
+          "32",
+          "24"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Type",
+      "codePropName": "type",
+      "type": "VARIANT",
+      "tsType": "\"image\" | \"initials\" | \"Letter\"",
+      "defaultValue": "image",
+      "options": [
+        "image",
+        "initials",
+        "Letter"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"40\" | \"32\" | \"24\"",
+      "defaultValue": "24",
+      "options": [
+        "40",
+        "32",
+        "24"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Foreground",
+      "Surfaces/Muted"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Foreground",
+      "Surfaces/Muted"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para representar visualmente a un usuario, miembro de equipo o cuenta mediante foto (`Type=image`), iniciales (`Type=initials`) o letra (`Type=Letter`).",
+      "Dentro de `Card` (`Use=Profile`), `Topbar`, `SidebarNavigation`, `ListItem` o `Popover` (`Use=ProfilePreview`)."
+    ],
+    "whenNotToUse": [
+      "No usar como icono genérico de objeto o categoría cuando corresponde un icono de `Icon/Line/*`.",
+      "No apilar avatares manualmente con márgenes negativos ad-hoc; usar `AvatarGroup`."
+    ]
+  },
+  "behaviorRules": [
+    "Cargar imagen con fallback determinístico a iniciales (`Type=initials`) o letra (`Type=Letter`) usando `Heebo SemiBold` (`FontFamily/Primary`).",
+    "Respetar dimensiones exactas por tamaño (`Size`: `24`, `32`, `40`) y radio circular (`Radius/full`).",
+    "Incluir atributo `alt` descriptivo cuando `Type=image` y `aria-hidden` en iniciales decorativas junto a texto."
+  ]
+}

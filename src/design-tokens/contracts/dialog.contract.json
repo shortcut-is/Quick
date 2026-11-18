@@ -1,0 +1,297 @@
+{
+  "name": "Dialog",
+  "figmaName": "Dialog",
+  "figmaNodeId": "2595:3688",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5665",
+    "name": "Dialog"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay",
+  "importPath": "@/components/ui/Dialog",
+  "figmaDescription": "Import: @/components/ui/Dialog (built on @radix-ui/react-dialog; use AlertDialog for Use=Destructive)\nProps Mapping (Figma -> React):\n- Use (Default | Destructive | Form) -> dialog composition pattern\n- Size (SM | MD) -> maxWidth 380px / 460px\n- Close / Description / Footer / Secondary Acti",
+  "anatomy": {
+    "root": {
+      "name": "Use=Default, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "SlotContent",
+        "component": "Slot: Content",
+        "kind": "slot"
+      },
+      {
+        "slotName": "SecondaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "PrimaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Default, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Header",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "TitleRow",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "refs": {
+                "visible": "👁️ Description#2595:7",
+                "characters": "✏️ Description#2595:35"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SlotContent",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "Slot: Content"
+        },
+        {
+          "name": "Footer",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Footer#2595:14"
+          },
+          "children": [
+            {
+              "name": "SecondaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button",
+              "refs": {
+                "visible": "👁️ Secondary Action#2595:21"
+              }
+            },
+            {
+              "name": "PrimaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Destructive",
+          "Form"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "SM",
+          "MD"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Close#2595:0",
+      "codePropName": "hasCloseButton",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true
+    },
+    {
+      "figmaPropertyName": "👁️ Description#2595:7",
+      "codePropName": "hasDescription",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Description"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Footer#2595:14",
+      "codePropName": "hasFooter",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Footer"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Secondary Action#2595:21",
+      "codePropName": "hasSecondaryAction",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "SecondaryAction"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Title#2595:28",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Dialog Title"
+    },
+    {
+      "figmaPropertyName": "✏️ Description#2595:35",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Review the details below before continuing.",
+      "boundLayers": [
+        "Description"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Destructive\" | \"Form\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Destructive",
+        "Form"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"SM\" | \"MD\"",
+      "defaultValue": "SM",
+      "options": [
+        "SM",
+        "MD"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Overlay",
+      "Surfaces/Transparent",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Overlay"
+    ],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/normal",
+      "Text/Heading/2xl/bold **",
+      "Text/Heading/xl/bold **"
+    ],
+    "effectStyles": [
+      "Shadow 3"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "351:2136",
+      "figmaName": "OVERLAY",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "Surfaces/Overlay"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "overlay.contract.json",
+      "importPath": "@/components/ui/Overlay"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para decisiones críticas o bloqueantes que exigen atención inmediata (`Use=Destructive`), confirmaciones importantes o formularios cortos centrados (`SM` `380px`, `MD` `460px`).",
+      "Combinar en el footer siempre un botón primario (`Primary` o `Destructive`) con uno secundario (`Outline` o `Ghost` para `Cancel`)."
+    ],
+    "whenNotToUse": [
+      "No usar dos botones `Primary` simultáneos dentro del `DialogFooter`; la acción de cancelar o descartar siempre debe usar `Outline` o `Ghost`.",
+      "No usar en paneles extensos de filtros, inspectores laterales o flujos táctiles en mobile; usar `Sheet` (`Right (Web)` o `Bottom (Mobile)`).",
+      "No usar para mensajes breves que no requieren bloquear la UI; usar `Toast` o `Alert`.",
+      "No usar para controles rápidos anclados a un botón; usar `Popover`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-dialog` (o `@radix-ui/react-alert-dialog` cuando `Use=Destructive`).",
+    "Atrapar el foco dentro del modal mientras esté abierto, cerrar con `Escape` y devolver el foco al trigger al cerrar.",
+    "Combinar siempre con `OVERLAY` (`351:2136`); usar `Size=SM` (`380px`) para confirmaciones breves y `Size=MD` (`460px`) para formularios.",
+    "Jerarquía obligatoria de acciones en `DialogFooter`: nunca usar dos botones `Primary` juntos; combinar siempre 1 botón secundario (`Outline` o `Ghost` para `Cancel`) + 1 botón de confirmación (`Primary` en `Default`/`Form`, o `Destructive` en `Use=Destructive`)."
+  ]
+}

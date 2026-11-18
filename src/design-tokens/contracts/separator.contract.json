@@ -1,0 +1,82 @@
+{
+  "name": "Separator",
+  "figmaName": "SEPARATOR",
+  "figmaNodeId": "536:6183",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5677",
+    "name": "Separator"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Layout Primitive",
+  "importPath": "@/components/ui/Separator",
+  "figmaDescription": "Divider, Separator",
+  "anatomy": {
+    "root": {
+      "name": "Direction=Horizontal",
+      "type": "COMPONENT",
+      "layout": "NONE"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Direction=Horizontal",
+      "type": "COMPONENT",
+      "children": [
+        {
+          "name": "DIVIDER",
+          "type": "VECTOR"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Direction": {
+        "codePropName": "orientation",
+        "defaultValue": "Horizontal",
+        "options": [
+          "Horizontal",
+          "Vertical"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Direction",
+      "codePropName": "orientation",
+      "type": "VARIANT",
+      "tsType": "\"Horizontal\" | \"Vertical\"",
+      "defaultValue": "Horizontal",
+      "options": [
+        "Horizontal",
+        "Vertical"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Border"
+    ],
+    "directVariables": [
+      "Surfaces/Border"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para dividir visualmente secciones dentro de `Card`, `Sheet`, `Popover`, `DropdownMenu`, `SidebarNavigation` o `Topbar` (`Horizontal` o `Vertical`)."
+    ],
+    "whenNotToUse": [
+      "No abusar añadiendo separadores entre cada campo cuando el espaciado (`spacing/*`) por sí solo ya establece jerarquía clara."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-separator`; usar `aria-orientation=\"vertical\"` cuando `Direction=Vertical`.",
+    "Marcar como decorativo (`decorative`) cuando solo divida visualmente bloques sin valor estructural."
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "name": "RadioGroup",
+  "figmaName": "Radio Group",
+  "figmaNodeId": "292:1344",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5675",
+    "name": "Radio Button"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Inputs",
+  "importPath": "@/components/ui/RadioGroup",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Radio Group",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Item 1",
+        "component": "Radio Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 2",
+        "component": "Radio Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 3",
+        "component": "Radio Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 4",
+        "component": "Radio Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 5",
+        "component": "Radio Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Radio Group",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Radio Group Label",
+          "type": "TEXT"
+        },
+        {
+          "name": "Item 1",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Radio Button"
+        },
+        {
+          "name": "Item 2",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Radio Button"
+        },
+        {
+          "name": "Item 3",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Radio Button"
+        },
+        {
+          "name": "Item 4",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Radio Button"
+        },
+        {
+          "name": "Item 5",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Radio Button"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "291:1327",
+      "figmaName": "Radio Button",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 8,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        "Selected": {
+          "codePropName": "selected",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        },
+        "Description": {
+          "codePropName": "hasDescription",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\" | \"Disabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selected",
+          "codePropName": "selected",
+          "type": "VARIANT",
+          "tsType": "\"Off\" | \"On\"",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        },
+        {
+          "figmaPropertyName": "Description",
+          "codePropName": "hasDescription",
+          "type": "VARIANT",
+          "tsType": "\"Off\" | \"On\"",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Top",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "radio-button.contract.json",
+      "importPath": "@/components/ui/RadioButton"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para envolver y organizar un conjunto de opciones `RadioButton` mutuamente excluyentes con accesibilidad `role=\"radiogroup\"`."
+    ],
+    "whenNotToUse": [
+      "No usar para selección múltiple; usar `CheckboxGroup`."
+    ]
+  },
+  "behaviorRules": [
+    "Contenedor lógico con `role=\"radiogroup\"` y roving tabindex entre sus ítems `RadioButton`.",
+    "Mantener separación vertical uniforme (`spacing/2`) y título accesible de grupo."
+  ]
+}

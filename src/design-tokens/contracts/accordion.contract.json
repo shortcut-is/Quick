@@ -1,0 +1,130 @@
+{
+  "name": "Accordion",
+  "figmaName": "Accordion",
+  "figmaNodeId": "105:345",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5653",
+    "name": "Accordion"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Disclosure",
+  "importPath": "@/components/ui/Accordion",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Open",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon Up",
+        "component": "Icon/Line / Chevron-Up",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "State=Open",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Heading",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Long Option",
+              "type": "TEXT"
+            },
+            {
+              "name": "Icon Up",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Chevron-Up"
+            }
+          ]
+        },
+        {
+          "name": "Content",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Long Option",
+              "type": "TEXT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Open",
+        "options": [
+          "Open",
+          "Closed"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Open\" | \"Closed\"",
+      "defaultValue": "Open",
+      "options": [
+        "Open",
+        "Closed"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/2xl",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/2xl",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para ocultar o revelar secciones extensas de contenido progresivo como FAQs, especificaciones o paneles de configuración secundaria.",
+      "Cuando el usuario necesita comparar o expandir múltiples secciones verticalmente sin cambiar de ruta."
+    ],
+    "whenNotToUse": [
+      "No usar para cambiar entre vistas principales paralelas en la misma pantalla; usar `Tabs` o `SegmentControl`.",
+      "No ocultar información crítica, advertencias de validación o pasos obligatorios que el usuario deba ver de inmediato (usar `Alert` o mostrar en el flujo)."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con primitivas accesibles de acordeón (@radix-ui/react-accordion) con soporte de teclado (Enter/Space para alternar, ArrowUp/ArrowDown entre triggers).",
+    "Exponer `aria-expanded` en el trigger y asociarlo vía `aria-controls` con el panel de contenido.",
+    "Soportar modo único (`type=\"single\" collapsible`) y múltiple (`type=\"multiple\"`)."
+  ]
+}

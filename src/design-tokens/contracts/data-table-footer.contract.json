@@ -1,0 +1,81 @@
+{
+  "name": "DataTableFooter",
+  "figmaName": "Data table  - Footer",
+  "figmaNodeId": "478:6008",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5663",
+    "name": "Data Table"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Data Display (Subcomponent)",
+  "importPath": "@/components/ui/DataTableFooter",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Data table  - Footer",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Pagination",
+        "component": "Pagination",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Data table  - Footer",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Caption",
+          "type": "TEXT"
+        },
+        {
+          "name": "Pagination",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Pagination"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground-Muted",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground-Muted",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como pie integrado de `DataTable` para resumen de selección, total de registros y navegación mediante `Pagination`."
+    ],
+    "whenNotToUse": [
+      "No usar fuera de tablas ni como paginación independiente; usar `Pagination`."
+    ]
+  },
+  "behaviorRules": [
+    "Mostrar resumen de filas seleccionadas/totales e integrar `Pagination` al pie de la tabla."
+  ]
+}

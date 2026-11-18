@@ -1,0 +1,221 @@
+{
+  "name": "InputText",
+  "figmaName": "Input Text",
+  "figmaNodeId": "84:3866",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5669",
+    "name": "Input Text"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/InputText",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Command",
+        "component": "Icon/Line / Command",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Input",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Label+Content",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "Command",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Command",
+              "refs": {
+                "visible": "👁️ Icon#2009:10",
+                "mainComponent": "Swap Icon#163:4"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Hint",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Hint#2009:8"
+          },
+          "children": [
+            {
+              "name": "Hint",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Hint#2009:11"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 7,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Filled",
+          "Success",
+          "Error",
+          "Disabled",
+          "Hover",
+          "Focus"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Swap Icon#163:4",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174",
+      "boundLayers": [
+        "Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Label#2009:7",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Label]"
+    },
+    {
+      "figmaPropertyName": "👁️ Hint#2009:8",
+      "codePropName": "hasHint",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "figmaPropertyName": "Content#2009:9",
+      "codePropName": "placeholder",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Content]"
+    },
+    {
+      "figmaPropertyName": "👁️ Icon#2009:10",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Hint#2009:11",
+      "codePropName": "hint",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[This is a hint]",
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Filled\" | \"Success\" | \"Error\" | \"Disabled\" | \"Hover\" | \"Focus\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Filled",
+        "Success",
+        "Error",
+        "Disabled",
+        "Hover",
+        "Focus"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Focus",
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para capturar cadenas cortas de una sola línea (texto, email, URL, credenciales, búsqueda) con etiqueta, icono opcional y texto de ayuda o error."
+    ],
+    "whenNotToUse": [
+      "No usar para párrafos o texto multilínea; usar `Textarea` (`Input Area`).",
+      "No usar para listas cerradas de opciones; usar `InputSelect`."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar `<input>` asociado a `<label>` mediante `htmlFor`, con soporte para icono opcional (`hasIcon`) y texto de ayuda/error (`hasHint`).",
+    "En `State=Error`, aplicar `aria-invalid=\"true\"` y vincular `Hint Text` mediante `aria-describedby`.",
+    "Mantener mínimo `16px` en mobile para prevenir zoom automático en iOS."
+  ]
+}

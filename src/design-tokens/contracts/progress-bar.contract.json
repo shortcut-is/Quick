@@ -1,0 +1,238 @@
+{
+  "name": "ProgressBar",
+  "figmaName": "Progress Bar",
+  "figmaNodeId": "2583:3503",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5674",
+    "name": "Progress Bar"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/ProgressBar",
+  "figmaDescription": "Import: `@/components/ui/ProgressBar` (built on `@radix-ui/react-progress`)\nProps Mapping (Figma -> React):\n- Use (`Default | Success | Warning | Danger`) -> `variant?: 'default' | 'success' | 'warning' | 'danger'`\n- Progress (`25% | 75% | 100%`) -> `value: n",
+  "anatomy": {
+    "root": {
+      "name": "Use=Default, Progress=25%, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Use=Default, Progress=25%, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Header",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Header#2583:0"
+          },
+          "children": [
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Label#2583:75"
+              }
+            },
+            {
+              "name": "Value",
+              "type": "TEXT",
+              "refs": {
+                "visible": "👁️ Value#2583:25"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Track",
+          "type": "FRAME",
+          "children": [
+            {
+              "name": "Indicator",
+              "type": "FRAME"
+            }
+          ]
+        },
+        {
+          "name": "Caption",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Caption#2583:50",
+            "characters": "✏️ Caption#2583:100"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 24,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      },
+      "Progress": {
+        "codePropName": "progress",
+        "defaultValue": "25%",
+        "options": [
+          "75%",
+          "25%",
+          "100%"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "LG",
+          "SM"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Header#2583:0",
+      "codePropName": "hasHeader",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Header"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Value#2583:25",
+      "codePropName": "hasValue",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Value"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Caption#2583:50",
+      "codePropName": "hasCaption",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": [
+        "Caption"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Label#2583:75",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Progress",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Caption#2583:100",
+      "codePropName": "caption",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "320 MB of 400 MB synced",
+      "boundLayers": [
+        "Caption"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Success\" | \"Warning\" | \"Danger\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Success",
+        "Warning",
+        "Danger"
+      ]
+    },
+    {
+      "figmaPropertyName": "Progress",
+      "codePropName": "progress",
+      "type": "VARIANT",
+      "tsType": "\"75%\" | \"25%\" | \"100%\"",
+      "defaultValue": "25%",
+      "options": [
+        "75%",
+        "25%",
+        "100%"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"LG\" | \"SM\"",
+      "defaultValue": "SM",
+      "options": [
+        "LG",
+        "SM"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/full",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/full",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para indicar porcentaje conocido y determinado de avance, carga de archivo o consumo de cuota/almacenamiento (`0–100%`) con semántica (`Default`, `Success`, `Warning`, `Danger`)."
+    ],
+    "whenNotToUse": [
+      "No usar si la duración o el porcentaje exacto es desconocido; usar `Spinner` o `Skeleton`.",
+      "No usar como control manipulable por el usuario para elegir un valor; usar `Slider`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-progress` o `role=\"progressbar\"` con `aria-valuenow`, `aria-valuemin=\"0\"` y `aria-valuemax=\"100\"`.",
+    "En código, `value` es continuo (`0..100`) y controla el ancho porcentual de `Indicator` (`width: ${value}%`), sin limitarse a los 3 presets visuales (`25%`, `75%`, `100%`).",
+    "Usar `Use=Default` para progreso estándar y `Success`/`Warning`/`Danger` para cuotas, umbrales o alertas."
+  ]
+}

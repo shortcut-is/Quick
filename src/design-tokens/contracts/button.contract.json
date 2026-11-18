@@ -1,0 +1,269 @@
+{
+  "name": "Button",
+  "figmaName": "Button",
+  "figmaNodeId": "67:19",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5659",
+    "name": "Button"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Actions",
+  "importPath": "@/components/ui/Button",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Content=Label, Variant=Primary, Size=LG, State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon/Line / Command",
+        "component": "Icon/Line / Command",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "Content=Label, Variant=Primary, Size=LG, State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Text+Icon",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Icon/Line / Command",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Command",
+              "refs": {
+                "visible": "👁️ Icon Left#93:0",
+                "mainComponent": "↪️ Swap Icon Left#173:0"
+              }
+            },
+            {
+              "name": "Primary",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Text#162:0"
+              }
+            },
+            {
+              "name": "Icon/Line / Command",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Command",
+              "refs": {
+                "visible": "👁️ Icon Right#580:6",
+                "mainComponent": "↪️ Swap Icon Right#580:19"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 128,
+    "axes": {
+      "Content": {
+        "codePropName": "contentMode",
+        "defaultValue": "Label",
+        "options": [
+          "Icon",
+          "Label"
+        ]
+      },
+      "Variant": {
+        "codePropName": "variant",
+        "defaultValue": "Primary",
+        "options": [
+          "Primary",
+          "Ghost",
+          "Destructive",
+          "Outline"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "LG",
+        "options": [
+          "LG",
+          "MD",
+          "SM",
+          "XS"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Disabled",
+          "Hover",
+          "Focus"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Icon Left#93:0",
+      "codePropName": "hasLeftIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Icon/Line / Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Text#162:0",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Button]",
+      "boundLayers": [
+        "Primary"
+      ]
+    },
+    {
+      "figmaPropertyName": "↪️ Swap Icon Left#173:0",
+      "codePropName": "leftIcon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174",
+      "boundLayers": [
+        "Icon/Line / Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Icon Right#580:6",
+      "codePropName": "hasRightIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Icon/Line / Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "↪️ Swap Icon Right#580:19",
+      "codePropName": "rightIcon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174",
+      "boundLayers": [
+        "Icon/Line / Command"
+      ]
+    },
+    {
+      "figmaPropertyName": "Swap Icon#620:0",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174"
+    },
+    {
+      "figmaPropertyName": "Content",
+      "codePropName": "contentMode",
+      "type": "VARIANT",
+      "tsType": "\"Icon\" | \"Label\"",
+      "defaultValue": "Label",
+      "options": [
+        "Icon",
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "Variant",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Primary\" | \"Ghost\" | \"Destructive\" | \"Outline\"",
+      "defaultValue": "Primary",
+      "options": [
+        "Primary",
+        "Ghost",
+        "Destructive",
+        "Outline"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"LG\" | \"MD\" | \"SM\" | \"XS\"",
+      "defaultValue": "LG",
+      "options": [
+        "LG",
+        "MD",
+        "SM",
+        "XS"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Disabled\" | \"Hover\" | \"Focus\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Disabled",
+        "Hover",
+        "Focus"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Foreground",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "radius/2xl",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Foreground",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "radius/2xl",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para disparar acciones o comandos (`Save`, `Deploy`, `Cancel`, `Delete`), envíos de formularios y apertura de `Dialog`, `Sheet` o `Popover`.",
+      "Usar `Primary` para la acción principal de la vista (máximo una por bloque), `Outline` para acciones secundarias, `Ghost` para herramientas discretas y `Destructive` para eliminaciones irreversibles."
+    ],
+    "whenNotToUse": [
+      "No colocar dos botones `Primary` juntos ni usar múltiples botones primarios dentro de un `Dialog`, `Sheet`, `Card` o `Popover`: todo grupo de acciones debe combinar 1 botón principal (`Primary` o `Destructive`) + 1 botón secundario (`Outline` o `Ghost` para `Cancel`/`Reset`).",
+      "No usar para representar estados estáticos o contadores; usar `Badge`.",
+      "No usar para alternar selecciones binarias persistentes; usar `Switch` o `Checkbox`.",
+      "Para navegación principal entre secciones de app usar `SidebarNavigation`, `Topbar`, `BottomNavigation` o `Tabs`."
+    ]
+  },
+  "behaviorRules": [
+    "Regla estricta de jerarquía visual: nunca colocar dos botones `Primary` juntos dentro de un mismo contenedor o grupo de acciones (por ejemplo, en el footer de un `Dialog`, `Sheet`, `Card` o `Popover`); todo par de acciones debe combinar exactamente un botón principal (`Primary` o `Destructive`) con un botón secundario (`Outline` o `Ghost` para `Cancel`/`Reset`).",
+    "Soportar todos los estados interactivos (`Default`, `Hover`, `Focus` con ring accesible, `Disabled` con `disabled` nativo y `pointer-events-none`).",
+    "Cuando `Content=Icon`, es obligatorio proporcionar `aria-label` accesible ya que la etiqueta visual no está visible.",
+    "En `Variant=Primary`, consumir gradiente o tokens `Primary/Top` → `Primary/Bottom` y texto en `Primary/Foreground`."
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "name": "Tooltip",
+  "figmaName": "Tooltip title",
+  "figmaNodeId": "79:525",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5686",
+    "name": "Tooltip"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay",
+  "importPath": "@/components/ui/Tooltip",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Tail=↖ Top Left, Type=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Tail=↖ Top Left, Type=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Tail container",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Tail",
+              "type": "FRAME"
+            }
+          ]
+        },
+        {
+          "name": "Tooltip",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Label",
+              "type": "TEXT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 16,
+    "axes": {
+      "Tail": {
+        "codePropName": "tailPlacement",
+        "defaultValue": "↖ Top Left",
+        "options": [
+          "← Left",
+          "↑ Top",
+          "→ Right",
+          "↓ Bottom",
+          "↖ Top Left",
+          "↗ Top Right",
+          "↘ Bottom Right",
+          "↙ Bottom Left"
+        ]
+      },
+      "Type": {
+        "codePropName": "type",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Block"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Tail",
+      "codePropName": "tailPlacement",
+      "type": "VARIANT",
+      "tsType": "\"\\u2190 Left\" | \"\\u2191 Top\" | \"\\u2192 Right\" | \"\\u2193 Bottom\" | \"\\u2196 Top Left\" | \"\\u2197 Top Right\" | \"\\u2198 Bottom Right\" | \"\\u2199 Bottom Left\"",
+      "defaultValue": "↖ Top Left",
+      "options": [
+        "← Left",
+        "↑ Top",
+        "→ Right",
+        "↓ Bottom",
+        "↖ Top Left",
+        "↗ Top Right",
+        "↘ Bottom Right",
+        "↙ Bottom Left"
+      ]
+    },
+    {
+      "figmaPropertyName": "Type",
+      "codePropName": "type",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Block\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Block"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/sm",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "radius/md",
+      "radius/sm",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/sm",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "radius/md",
+      "radius/sm",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "73:56",
+      "figmaName": "_Tooltip - Tail",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "Surfaces/Invert-Background"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Exclusivamente para texto breve suplementario (etiqueta de botón de solo icono, descripción corta o atajo `⌘K`) al hacer hover o enfocar con teclado."
+    ],
+    "whenNotToUse": [
+      "No colocar botones, formularios ni información indispensable dentro de `Tooltip` (en táctil no existe hover); usar `Popover`.",
+      "No ocultar mensajes de error de validación dentro de un tooltip; usar texto inline o `Alert`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-tooltip` (`role=\"tooltip\"`), nunca para contenido crítico o interactivo (para eso usar `Popover`).",
+    "Evitar depender únicamente de hover en dispositivos táctiles; soportar activación por foco de teclado."
+  ]
+}

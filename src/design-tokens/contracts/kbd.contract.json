@@ -1,0 +1,175 @@
+{
+  "name": "Kbd",
+  "figmaName": "Kbd",
+  "figmaNodeId": "2605:3459",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2605:3437",
+    "name": "Kbd"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display",
+  "importPath": "@/components/ui/Kbd",
+  "figmaDescription": "Import: @/components/ui/Kbd (renders HTML <kbd> element)\nProps Mapping (Figma -> React):\n- Use (Subtle | Outline | Solid) -> variant: subtle | outline | solid\n- Size (SM | MD) -> size: sm | md\n- Modifier (Boolean/Text) & Key (Text) -> children (e.g., <Kbd>⌘K</Kbd>)\n",
+  "anatomy": {
+    "root": {
+      "name": "Use=Subtle, Size=SM",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Use=Subtle, Size=SM",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Modifier",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Modifier#2605:0",
+            "characters": "✏️ Modifier#2605:7"
+          }
+        },
+        {
+          "name": "Key",
+          "type": "TEXT",
+          "refs": {
+            "characters": "✏️ Key#2605:14"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Subtle",
+        "options": [
+          "Subtle",
+          "Outline",
+          "Solid"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "SM",
+          "MD"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Modifier#2605:0",
+      "codePropName": "hasModifier",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Modifier"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Modifier#2605:7",
+      "codePropName": "modifierKey",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "⌘",
+      "boundLayers": [
+        "Modifier"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Key#2605:14",
+      "codePropName": "keyLabel",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "K",
+      "boundLayers": [
+        "Key"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Subtle\" | \"Outline\" | \"Solid\"",
+      "defaultValue": "Subtle",
+      "options": [
+        "Subtle",
+        "Outline",
+        "Solid"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"SM\" | \"MD\"",
+      "defaultValue": "SM",
+      "options": [
+        "SM",
+        "MD"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para representar visualmente atajos o combinaciones de teclas (`⌘K`, `Esc`, `⇧P`) dentro de triggers de búsqueda, documentación o `DropdownMenuItem`."
+    ],
+    "whenNotToUse": [
+      "No usar como etiqueta de estado ni como chip de filtro; usar `Badge` o `Tag`.",
+      "No usar como botón clicable por sí solo."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar elemento semántico HTML `<kbd>` en una sola línea.",
+    "Ocultar modificador con `hasModifier={false}` para teclas individuales; ideal dentro de disparadores de Command Palette (`⌘K`) y menús."
+  ]
+}

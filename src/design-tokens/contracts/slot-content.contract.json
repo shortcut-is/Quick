@@ -1,0 +1,74 @@
+{
+  "name": "SlotContent",
+  "figmaName": "Slot: Content",
+  "figmaNodeId": "2366:6163",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5661",
+    "name": "Card"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Primitives",
+  "importPath": "@/components/ui/SlotContent",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Slot: Content",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Slot: Content",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "En Figma como marcador composable (`children`) dentro de `Card`, `Dialog`, `Sheet` y `Popover` para sustituir el cuerpo por instancias reales."
+    ],
+    "whenNotToUse": [
+      "En código productivo de React nunca se renderiza como caja visual dashed; se reemplaza directamente por la prop `children`."
+    ]
+  },
+  "behaviorRules": [
+    "Slot de composición flexible reutilizado en `Card`, `Dialog`, `Sheet` y `Popover`.",
+    "En código se reemplaza directamente por `children` sin renderizar el placeholder dashed de diseño."
+  ]
+}

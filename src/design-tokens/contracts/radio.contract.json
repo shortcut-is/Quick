@@ -1,0 +1,109 @@
+{
+  "name": "Radio",
+  "figmaName": "Radio",
+  "figmaNodeId": "69:92",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5675",
+    "name": "Radio Button"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs (Primitive)",
+  "importPath": "@/components/ui/Radio",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Default, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Disabled"
+        ]
+      },
+      "Selected": {
+        "codePropName": "selected",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Disabled\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selected",
+      "codePropName": "selected",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como indicador circular primitivo dentro de `RadioButton` o tablas/tarjetas con selección única explícita."
+    ],
+    "whenNotToUse": [
+      "No usar suelto sin etiqueta asociada en formularios; usar `RadioButton` dentro de `RadioGroup`."
+    ]
+  },
+  "behaviorRules": [
+    "Indicador circular atómico de selección única usado dentro de `RadioButton`.",
+    "Requiere etiqueta asociada (`aria-labelledby` o `<label>`) cuando se use de forma independiente."
+  ]
+}

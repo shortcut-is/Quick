@@ -1,0 +1,236 @@
+{
+  "name": "Alert",
+  "figmaName": "Alert",
+  "figmaNodeId": "2594:3473",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5654",
+    "name": "Alerts"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/Alert",
+  "figmaDescription": "Import: @/components/ui/Alert (built on @radix-ui/react-alert-dialog for Danger/confirmation or inline role=alert)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: neutral | success | warning | danger\n- Icon -> showIcon: boolean\n- Actions -> showAc",
+  "anatomy": {
+    "root": {
+      "name": "Use=Neutral",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "SecondaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "PrimaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Neutral",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "HeaderRow",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "IconWrapper",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "refs": {
+                "visible": "👁️ Icon#2594:0"
+              }
+            },
+            {
+              "name": "TextContent",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        },
+        {
+          "name": "Footer",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Actions#2594:5"
+          },
+          "children": [
+            {
+              "name": "SecondaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button",
+              "refs": {
+                "visible": "👁️ Secondary Action#2594:10"
+              }
+            },
+            {
+              "name": "PrimaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Neutral",
+        "options": [
+          "Neutral",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Icon#2594:0",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "IconWrapper"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Actions#2594:5",
+      "codePropName": "hasActions",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Footer"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Secondary Action#2594:10",
+      "codePropName": "hasSecondaryAction",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "SecondaryAction"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Title#2594:15",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "System update available"
+    },
+    {
+      "figmaPropertyName": "✏️ Description#2594:20",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "A new version of the design token library is ready to sync."
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",
+      "defaultValue": "Neutral",
+      "options": [
+        "Neutral",
+        "Success",
+        "Warning",
+        "Danger"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "Feedback/Success",
+      "Feedback/Success-Subtle",
+      "Feedback/Warning",
+      "Feedback/Warning-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/lg",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "Feedback/Success",
+      "Feedback/Success-Subtle",
+      "Feedback/Warning",
+      "Feedback/Warning-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/lg",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para mostrar feedback persistente dentro de la página sobre el estado del sistema, errores de formulario o advertencias contextuales (`Neutral`, `Success`, `Warning`, `Danger`).",
+      "Cuando el mensaje requiere permanecer visible mientras el usuario lee o corrige la vista actual."
+    ],
+    "whenNotToUse": [
+      "No usar para confirmaciones efímeras tras guardar o copiar; usar `Toast`.",
+      "No usar cuando se requiera bloquear al usuario y exigir una confirmación explícita; usar `Dialog`."
+    ]
+  },
+  "behaviorRules": [
+    "Usar `role=\"alert\"` para avisos críticos (`Use=Danger` / `Warning`) o `role=\"status\"` para mensajes informativos (`Neutral` / `Success`).",
+    "En flujos de confirmación destructiva bloqueante, combinar con Dialog / AlertDialog.",
+    "Ocultar `ActionsWrapper` mediante `hasActions={false}` cuando el aviso sea puramente informativo.",
+    "Cuando `ActionsWrapper` muestre dos botones (`hasSecondaryAction=true`), usar un único botón principal y uno secundario (`Outline`/`Ghost`), nunca dos botones `Primary` juntos."
+  ]
+}

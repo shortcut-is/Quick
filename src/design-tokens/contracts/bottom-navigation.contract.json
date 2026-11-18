@@ -1,0 +1,233 @@
+{
+  "name": "BottomNavigation",
+  "figmaName": "Bottom Navigation",
+  "figmaNodeId": "2619:4479",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2619:4309",
+    "name": "Navigation Bars"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation",
+  "importPath": "@/components/ui/BottomNavigation",
+  "figmaDescription": "Import: @/components/ui/BottomNavigation\nCategory: Navigation\n\nMobile thumb-zone navigation bar (390x68px) composed of exposed _Bottom Nav Item instances (State = Default | Hover | Active) and optional centered Primary Icon MD CTA button.\n\nProps / Variants:\n- Items: \"4 Tabs\" | \"5 Tabs",
+  "anatomy": {
+    "root": {
+      "name": "Items=4 Tabs",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "NavTabHome",
+        "component": "_Bottom Nav Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "NavTabSearch",
+        "component": "_Bottom Nav Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "NavTabAlerts",
+        "component": "_Bottom Nav Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "NavTabProfile",
+        "component": "_Bottom Nav Item",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Items=4 Tabs",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "NavTabHome",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "_Bottom Nav Item"
+        },
+        {
+          "name": "NavTabSearch",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "_Bottom Nav Item"
+        },
+        {
+          "name": "NavTabAlerts",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "_Bottom Nav Item"
+        },
+        {
+          "name": "NavTabProfile",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "_Bottom Nav Item"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Items": {
+        "codePropName": "itemsLayout",
+        "defaultValue": "4 Tabs",
+        "options": [
+          "4 Tabs",
+          "5 Tabs (CTA)"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Items",
+      "codePropName": "itemsLayout",
+      "type": "VARIANT",
+      "tsType": "\"4 Tabs\" | \"5 Tabs (CTA)\"",
+      "defaultValue": "4 Tabs",
+      "options": [
+        "4 Tabs",
+        "5 Tabs (CTA)"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/full",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/full",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted"
+    ],
+    "textStyles": [
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "2624:4500",
+      "figmaName": "_Bottom Nav Item",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Hover",
+            "Active"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "✏️ Label#2624:0",
+          "codePropName": "label",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "Home",
+          "boundLayers": [
+            "TabLabel"
+          ]
+        },
+        {
+          "figmaPropertyName": "↪️ Icon#2624:4",
+          "codePropName": "icon",
+          "type": "INSTANCE_SWAP",
+          "tsType": "React.ReactNode",
+          "defaultValue": "447:3559",
+          "boundLayers": [
+            "TabIcon"
+          ]
+        },
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Hover\" | \"Active\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Hover",
+            "Active"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Border",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Muted",
+        "radius/xl",
+        "spacing/1",
+        "spacing/1-5",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/xs/medium",
+        "Text/Body/xs/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "bottom-nav-item.contract.json",
+      "importPath": "@/components/ui/BottomNavItem"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como barra de navegación principal fija en la zona inferior en aplicaciones móviles o viewports estrechos (`390px`), con 4 destinos principales (y CTA central opcional en `5 Tabs (CTA)`)."
+    ],
+    "whenNotToUse": [
+      "No usar en interfaces Desktop; en escritorio usar `SidebarNavigation` y/o `Topbar`.",
+      "No usar para acciones secundarias dentro de una misma vista; usar `Tabs` o `SegmentControl`."
+    ]
+  },
+  "behaviorRules": [
+    "Fijar en la parte inferior de viewports móviles (`390×68px`) respetando `env(safe-area-inset-bottom)`.",
+    "Contener 4 instancias expuestas de `_Bottom Nav Item` (`State = Default | Hover | Active`) más CTA central opcional (`5 Tabs (CTA)`)."
+  ]
+}

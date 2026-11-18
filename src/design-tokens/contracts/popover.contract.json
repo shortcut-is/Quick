@@ -1,0 +1,283 @@
+{
+  "name": "Popover",
+  "figmaName": "Popover",
+  "figmaNodeId": "2617:3999",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2617:3792",
+    "name": "Popover"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay & Controls",
+  "importPath": "@/components/ui/Popover",
+  "figmaDescription": "Import: @/components/ui/Popover\nCategory: Overlay & Controls\n\nFloating non-modal popover anchored to a trigger control for quick controls, multi-field filters, interactive Date Calendar picker (Calendar 473:3594), or User Profile preview.\n\nProps / Variants:\n- Use: \"Default\" | \"Fil",
+  "anatomy": {
+    "root": {
+      "name": "Use=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "PopoverContentSlot",
+        "component": "Slot: Content",
+        "kind": "slot"
+      },
+      {
+        "slotName": "CancelButton",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "ApplyButton",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "PopoverHeader",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "refs": {
+            "visible": "👁️ Header#2617:0"
+          },
+          "children": [
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Title#2617:10"
+              }
+            },
+            {
+              "name": "Description",
+              "type": "TEXT"
+            }
+          ]
+        },
+        {
+          "name": "PopoverContentSlot",
+          "type": "INSTANCE",
+          "layout": "VERTICAL",
+          "instanceOf": "Slot: Content"
+        },
+        {
+          "name": "PopoverFooter",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Footer#2617:5"
+          },
+          "children": [
+            {
+              "name": "CancelButton",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            },
+            {
+              "name": "ApplyButton",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Filter",
+          "DateCalendar",
+          "ProfilePreview"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Header#2617:0",
+      "codePropName": "hasHeader",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "PopoverHeader"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Footer#2617:5",
+      "codePropName": "hasFooter",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "PopoverFooter"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Title#2617:10",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Popover Title",
+      "boundLayers": [
+        "Title"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Filter\" | \"DateCalendar\" | \"ProfilePreview\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Filter",
+        "DateCalendar",
+        "ProfilePreview"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/full",
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "radius/sm",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/md",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Radius/sm",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/sm"
+    ],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "2366:6163",
+      "figmaName": "Slot: Content",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Border",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Muted",
+        "radius/lg",
+        "spacing/4"
+      ],
+      "textStyles": [
+        "Text/Body/xs/medium"
+      ],
+      "effectStyles": [],
+      "contractFile": "slot-content.contract.json",
+      "importPath": "@/components/ui/SlotContent"
+    },
+    {
+      "figmaNodeId": "473:3594",
+      "figmaName": "Calendar",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "Primary/Bottom",
+        "Primary/Top",
+        "Radius/sm",
+        "Surfaces/Background",
+        "Surfaces/Transparent",
+        "radius/full",
+        "radius/sm",
+        "spacing/1-5",
+        "spacing/2",
+        "spacing/2-5",
+        "spacing/3"
+      ],
+      "textStyles": [],
+      "effectStyles": [
+        "Shadow 2"
+      ],
+      "contractFile": "calendar.contract.json",
+      "importPath": "@/components/ui/Calendar"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para mostrar controles flotantes no modales anclados a un botón: filtros rápidos (`Use=Filter`), selector de fecha (`Use=DateCalendar` con `Calendar`), vista previa de perfil (`Use=ProfilePreview`) o ajustes breves."
+    ],
+    "whenNotToUse": [
+      "No usar para texto breve meramente informativo al hacer hover; usar `Tooltip`.",
+      "No usar para listas simples de comandos; usar `DropdownMenu`.",
+      "No usar cuando el contenido sea extenso o requiera foco modal completo; usar `Dialog` o `Sheet`."
+    ]
+  },
+  "behaviorRules": [
+    "Anclar al disparador mediante posicionamiento flotante y cerrar al presionar `Escape` o hacer clic fuera.",
+    "Preferir `Use=DateCalendar` junto con `Calendar` (`473:3594`) para selectores de fecha contextuales.",
+    "En `PopoverFooter`, combinar siempre 1 botón secundario (`Outline XS`) con 1 botón principal (`Primary XS`), nunca dos botones `Primary` simultáneos."
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "name": "DropdownMenuItem",
+  "figmaName": "menu item",
+  "figmaNodeId": "415:3743",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5666",
+    "name": "Dropdown Menu"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay & Navigation (Subcomponent)",
+  "importPath": "@/components/ui/DropdownMenuItem",
+  "figmaDescription": "Import: @/components/ui/DropdownMenu (DropdownMenuItem)\nProps Mapping (Figma -> React):\n- State (Default | Hover | Active | Disabled | Destructive) -> hover/selected CSS, disabled prop, variant: destructive\n- Left Icon / Icon -> leftIcon?: ReactNode\n- Right Icon / Secondary Icon -> hasSu",
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon",
+        "component": "Icon/Line / Command",
+        "kind": "icon"
+      },
+      {
+        "slotName": "ChevronRightIcon",
+        "component": "Icon/Line / Chevron-Right",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "IconContainer",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Command",
+              "refs": {
+                "visible": "Left Icon#441:17",
+                "mainComponent": "Icon#422:13"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Value",
+          "type": "TEXT",
+          "refs": {
+            "characters": "Label#441:33"
+          }
+        },
+        {
+          "name": "Shortcut",
+          "type": "TEXT",
+          "refs": {
+            "visible": "Show Shortcut#448:4",
+            "characters": "Shortcut#448:0"
+          }
+        },
+        {
+          "name": "ChevronRightIcon",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Chevron-Right",
+          "refs": {
+            "visible": "Right Icon#441:25",
+            "mainComponent": "Secondary Icon#441:21"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 5,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Disabled",
+          "Active",
+          "Hover",
+          "Destructive"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Icon#422:13",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174",
+      "boundLayers": [
+        "Icon"
+      ]
+    },
+    {
+      "figmaPropertyName": "Left Icon#441:17",
+      "codePropName": "hasLeftIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Icon"
+      ]
+    },
+    {
+      "figmaPropertyName": "Secondary Icon#441:21",
+      "codePropName": "hasSecondaryIcon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1423",
+      "boundLayers": [
+        "ChevronRightIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "Right Icon#441:25",
+      "codePropName": "hasRightIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "ChevronRightIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "Label#441:33",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Menu Item",
+      "boundLayers": [
+        "Value"
+      ]
+    },
+    {
+      "figmaPropertyName": "Shortcut#448:0",
+      "codePropName": "shortcut",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "⌘⇧⌥",
+      "boundLayers": [
+        "Shortcut"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Shortcut#448:4",
+      "codePropName": "hasShortcut",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Shortcut"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Disabled\" | \"Active\" | \"Hover\" | \"Destructive\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Disabled",
+        "Active",
+        "Hover",
+        "Destructive"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Bold",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/lg",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Bold",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/lg",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/normal",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como cada acción individual dentro de `DropdownMenu`, aprovechando sus 5 estados (`Default`, `Hover`, `Active`, `Disabled`, `Destructive`) y atajo opcional."
+    ],
+    "whenNotToUse": [
+      "No usar como enlace principal en barras laterales (`SidebarItem`) ni como fila de datos (`ListItem`)."
+    ]
+  },
+  "behaviorRules": [
+    "Soportar 5 estados visuales (`Default`, `Hover`, `Active`, `Disabled`, `Destructive`) con `role=\"menuitem\"`.",
+    "Mostrar atajo de teclado alineado a la derecha (`Show Shortcut`) y omitirlo en pantallas táctiles."
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "name": "Slider",
+  "figmaName": "Slider",
+  "figmaNodeId": "79:1072",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5679",
+    "name": "Slider"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/Slider",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Progress=0 %",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Knob",
+        "component": "_Slider - Knob",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Progress=0 %",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Dot",
+          "type": "FRAME",
+          "refs": {
+            "visible": "Show Knob#79:8"
+          },
+          "children": [
+            {
+              "name": "Knob",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Slider - Knob"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Progress": {
+        "codePropName": "progress",
+        "defaultValue": "0 %",
+        "options": [
+          "0 %",
+          "25 %",
+          "50 %",
+          "75 %",
+          "100 %",
+          "Free"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "%% - Add \"X\" for free control#79:1",
+      "codePropName": "freeProgressHackDeprecated",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "XXXXXXXXXXXXXXXXXXX"
+    },
+    {
+      "figmaPropertyName": "Show Knob#79:8",
+      "codePropName": "hasKnob",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Dot"
+      ]
+    },
+    {
+      "figmaPropertyName": "Progress",
+      "codePropName": "progress",
+      "type": "VARIANT",
+      "tsType": "\"0 %\" | \"25 %\" | \"50 %\" | \"75 %\" | \"100 %\" | \"Free\"",
+      "defaultValue": "0 %",
+      "options": [
+        "0 %",
+        "25 %",
+        "50 %",
+        "75 %",
+        "100 %",
+        "Free"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Success",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Feedback/Success",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "79:948",
+      "figmaName": "_Slider - Knob",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [
+        {
+          "figmaPropertyName": "Show Tooltip#79:0",
+          "codePropName": "hasTooltip",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Tooltip title"
+          ]
+        }
+      ],
+      "tokens": [
+        "Surfaces/Invert-Background",
+        "Surfaces/Invert-Foreground",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": [
+        "Shadow 1"
+      ]
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Cuando el usuario necesita ajustar de manera interactiva un valor o rango continuo/aproximado dentro de límites conocidos (volumen, precio, opacidad)."
+    ],
+    "whenNotToUse": [
+      "No usar como indicador pasivo de solo lectura; usar `ProgressBar`.",
+      "No usar si se requiere precisión numérica exacta rápida de muchos dígitos; usar `InputText` numérico."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-slider` usando valor continuo (`min`, `max`, `step`), nunca texto repetido para simular track.",
+    "Exponer `aria-label` o `aria-labelledby`, `aria-valuemin`, `aria-valuemax`, `aria-valuenow` y soporte para flechas/Home/End."
+  ]
+}

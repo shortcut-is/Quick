@@ -1,0 +1,519 @@
+{
+  "name": "Calendar",
+  "figmaName": "Calendar",
+  "figmaNodeId": "473:3594",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5660",
+    "name": "Calendar"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Inputs & Date",
+  "importPath": "@/components/ui/Calendar",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Calendar",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Button",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Sun",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Mon",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tus",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Wen",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Thu",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Fri",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Sat",
+        "component": "_Calendar Days Label",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Day",
+        "component": "_Calendar Days",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Calendar",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Head",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Button",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            },
+            {
+              "name": "Calendar Header Nav",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "Button",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            }
+          ]
+        },
+        {
+          "name": "DAYS",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Sun",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Mon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Tus",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Wen",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Thu",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Fri",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            },
+            {
+              "name": "Sat",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days Label"
+            }
+          ]
+        },
+        {
+          "name": "MONTH",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            },
+            {
+              "name": "Day",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Calendar Days"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/sm",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/sm",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Primary/Foreground",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted"
+    ],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "472:9363",
+      "figmaName": "_Calendar Days",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 5,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Anchor",
+            "Past Next Day",
+            "Disabled",
+            "Selected"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Anchor\" | \"Past Next Day\" | \"Disabled\" | \"Selected\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Anchor",
+            "Past Next Day",
+            "Disabled",
+            "Selected"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Foreground",
+        "Primary/Top",
+        "Radius/sm",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Muted",
+        "radius/sm",
+        "spacing/2-5"
+      ],
+      "textStyles": [
+        "Text/Body/sm/bold",
+        "Text/Body/sm/medium",
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "472:9466",
+      "figmaName": "_Calendar Days Label",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground-Muted"
+      ],
+      "textStyles": [
+        "Text/Body/sm/medium"
+      ],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "472:9596",
+      "figmaName": "_Calendar Month-Year",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground"
+      ],
+      "textStyles": [
+        "Text/Body/sm/medium"
+      ],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para seleccionar una fecha concreta dentro de `Popover` (`Use=DateCalendar`), dentro de `DatePicker` o embebido en vistas de agenda/programación."
+    ],
+    "whenNotToUse": [
+      "No colocar suelto dentro de formularios estándar ocupando altura fija sin disparador; usar `DatePicker`.",
+      "No usar para seleccionar horas o minutos; usar `TimePicker`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar navegación por teclado completa en la cuadrícula de días (ArrowLeft/Right/Up/Down, PageUp/PageDown para mes, Home/End).",
+    "Diferenciar visualmente día actual, seleccionado (`Primary/Top..Bottom`), fuera de mes (`Surfaces/Foreground-Muted`) y deshabilitado.",
+    "Exponer `locale` y zona horaria configurable cuando se incruste dentro de `DatePicker` o `Popover`."
+  ]
+}

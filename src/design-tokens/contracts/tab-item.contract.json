@@ -1,0 +1,123 @@
+{
+  "name": "TabItem",
+  "figmaName": "_Tab Item",
+  "figmaNodeId": "120:411",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5682",
+    "name": "Tab"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation (Subcomponent)",
+  "importPath": "@/components/ui/TabItem",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "selection",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Current Item#2104:22"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Selected",
+          "Disabled"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "✏️ Item#2104:19",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Item]"
+    },
+    {
+      "figmaPropertyName": "✏️ Current Item#2104:22",
+      "codePropName": "currentLabel",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Item]",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Selected\" | \"Disabled\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Selected",
+        "Disabled"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Exclusivamente como pestaña individual dentro de `Tabs` (`Tab`)."
+    ],
+    "whenNotToUse": [
+      "No usar de forma aislada fuera de un contenedor `role=\"tablist\"`."
+    ]
+  },
+  "behaviorRules": [
+    "Trigger individual dentro de `Tabs` (`Default`, `Hover`, `Selected`) con indicador inferior vinculado a `Primary/Top..Bottom`."
+  ]
+}

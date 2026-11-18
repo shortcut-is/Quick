@@ -1,0 +1,282 @@
+{
+  "name": "Breadcrumb",
+  "figmaName": "Breadcrumb",
+  "figmaNodeId": "331:1878",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5658",
+    "name": "Breadcrumb"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Navigation",
+  "importPath": "@/components/ui/Breadcrumb",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Breadcrumb",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Level 1",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 2",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 3",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 4",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 5",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 6",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Level 7",
+        "component": "Breadcrumb Items",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Breadcrumb",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Level 1",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 1#626:0"
+          }
+        },
+        {
+          "name": "Level 2",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 2#626:1"
+          }
+        },
+        {
+          "name": "Level 3",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 3#626:2"
+          }
+        },
+        {
+          "name": "Level 4",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 4#626:3"
+          }
+        },
+        {
+          "name": "Level 5",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 5#626:4"
+          }
+        },
+        {
+          "name": "Level 6",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 6#626:5"
+          }
+        },
+        {
+          "name": "Level 7",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Breadcrumb Items",
+          "refs": {
+            "visible": "Level 7#626:6"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Level 1#626:0",
+      "codePropName": "showLevel1",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 1"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 2#626:1",
+      "codePropName": "showLevel2",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 2"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 3#626:2",
+      "codePropName": "showLevel3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 3"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 4#626:3",
+      "codePropName": "showLevel4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 4"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 5#626:4",
+      "codePropName": "showLevel5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 5"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 6#626:5",
+      "codePropName": "showLevel6",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 6"
+      ]
+    },
+    {
+      "figmaPropertyName": "Level 7#626:6",
+      "codePropName": "showLevel7",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Level 7"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/1"
+    ],
+    "directVariables": [],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/1"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "79:286",
+      "figmaName": "Breadcrumb Items",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Overflow",
+            "Current"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Overflow\" | \"Current\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Overflow",
+            "Current"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "spacing/1"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "breadcrumb-item.contract.json",
+      "importPath": "@/components/ui/BreadcrumbItem"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para orientar al usuario dentro de jerarquías de navegación profundas (3 o más niveles), habitualmente en el `Topbar` (`Use=DesktopBreadcrumb`) o encabezado de página."
+    ],
+    "whenNotToUse": [
+      "No usar como sustituto de navegación principal ni para flujos secuenciales paso a paso; usar `Tabs`, `SidebarNavigation` o `Stepper`.",
+      "No mostrar si la arquitectura tiene un solo nivel."
+    ]
+  },
+  "behaviorRules": [
+    "Envolver en `<nav aria-label=\"Breadcrumb\">` con lista ordenada `<ol>` y enlaces `<a>` para cada nivel previo.",
+    "El último nivel visible debe marcarse con `aria-current=\"page\"` y no renderizar separador final (`>`).",
+    "En mobile, colapsar niveles intermedios manteniendo primer nivel o botón de retroceso."
+  ]
+}

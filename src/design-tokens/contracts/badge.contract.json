@@ -1,0 +1,160 @@
+{
+  "name": "Badge",
+  "figmaName": "Badge",
+  "figmaNodeId": "203:979",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5657",
+    "name": "Badges"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display",
+  "importPath": "@/components/ui/Badge",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Type=Label, Use=Bold",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Type=Label, Use=Bold",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT",
+          "refs": {
+            "characters": "✏️ Text#2506:0"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 21,
+    "axes": {
+      "Type": {
+        "codePropName": "appearance",
+        "defaultValue": "Label",
+        "options": [
+          "Label",
+          "Label + Icon",
+          "Dot"
+        ]
+      },
+      "Use": {
+        "codePropName": "tone",
+        "defaultValue": "Bold",
+        "options": [
+          "Bold",
+          "Subtle",
+          "Outline",
+          "Info",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Icon#339:0",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "145:1174"
+    },
+    {
+      "figmaPropertyName": "✏️ Text#2506:0",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "badgeLabel",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "Type",
+      "codePropName": "appearance",
+      "type": "VARIANT",
+      "tsType": "\"Label\" | \"Label + Icon\" | \"Dot\"",
+      "defaultValue": "Label",
+      "options": [
+        "Label",
+        "Label + Icon",
+        "Dot"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "tone",
+      "type": "VARIANT",
+      "tsType": "\"Bold\" | \"Subtle\" | \"Outline\" | \"Info\" | \"Success\" | \"Warning\" | \"Danger\"",
+      "defaultValue": "Bold",
+      "options": [
+        "Bold",
+        "Subtle",
+        "Outline",
+        "Info",
+        "Success",
+        "Warning",
+        "Danger"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "Surfaces/Muted",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "Surfaces/Muted",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para mostrar metadatos breves de solo lectura, estados (`Success`, `Warning`, `Danger`, `Info`) o contadores numéricos (`v1.2`, `4`, `Active`).",
+      "Como indicador visual adjunto en tarjetas, filas de tabla, `SidebarItem` o encabezados de `Popover`."
+    ],
+    "whenNotToUse": [
+      "No usar para acciones clicables ni navegación; usar `Button`.",
+      "No usar para filtros removibles o selecciones que el usuario pueda descartar con `×`; usar `Tag` o `TagGroup`.",
+      "No usar para atajos de teclado; usar `Kbd`."
+    ]
+  },
+  "behaviorRules": [
+    "Mantener texto en una sola línea (`whitespace-nowrap`, `HUG` en Figma) para evitar truncamiento o saltos inesperados.",
+    "Elegir `Use` según semántica (`Bold` / `Subtle` / `Outline` neutros; `Info` / `Success` / `Warning` / `Danger` para estados).",
+    "Cuando `Type=Dot`, renderizar indicador circular de estado antes de la etiqueta."
+  ]
+}

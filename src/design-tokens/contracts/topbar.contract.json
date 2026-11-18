@@ -1,0 +1,536 @@
+{
+  "name": "Topbar",
+  "figmaName": "Topbar",
+  "figmaNodeId": "2619:4440",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2619:4309",
+    "name": "Navigation Bars"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation",
+  "importPath": "@/components/ui/Topbar",
+  "figmaDescription": "Import: @/components/ui/Topbar\nCategory: Navigation\n\nTop application bar covering Desktop (with Breadcrumb + Cmd+K Search + Notification + Avatar, or Primary Tabs + CTA actions) and Mobile App Bar (390px).\n\nProps / Variants:\n- Use: \"DesktopBreadcrumb\" | \"DesktopTabs\" | \"Mobi",
+  "anatomy": {
+    "root": {
+      "name": "Use=DesktopBreadcrumb",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "BrandSeparator",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "PageBreadcrumb",
+        "component": "Breadcrumb",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "NotificationButton",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "UserAvatar",
+        "component": "Avatar",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=DesktopBreadcrumb",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "LeftCluster",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "BrandMark",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "BrandSeparator",
+              "type": "INSTANCE",
+              "instanceOf": "SEPARATOR"
+            },
+            {
+              "name": "PageBreadcrumb",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Breadcrumb"
+            }
+          ]
+        },
+        {
+          "name": "RightCluster",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "SearchTrigger",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "NotificationButton",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button",
+              "refs": {
+                "visible": "👁️ Notifications#2619:4"
+              }
+            },
+            {
+              "name": "UserAvatar",
+              "type": "INSTANCE",
+              "instanceOf": "Avatar",
+              "refs": {
+                "visible": "👁️ Avatar#2619:0"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "DesktopBreadcrumb",
+        "options": [
+          "DesktopBreadcrumb",
+          "DesktopTabs",
+          "MobileAppBar"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Avatar#2619:0",
+      "codePropName": "hasAvatar",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "UserAvatar"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Notifications#2619:4",
+      "codePropName": "hasNotifications",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "NotificationButton"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"DesktopBreadcrumb\" | \"DesktopTabs\" | \"MobileAppBar\"",
+      "defaultValue": "DesktopBreadcrumb",
+      "options": [
+        "DesktopBreadcrumb",
+        "DesktopTabs",
+        "MobileAppBar"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Invert-Foreground",
+      "spacing/1"
+    ],
+    "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "331:1878",
+      "figmaName": "Breadcrumb",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [
+        {
+          "figmaPropertyName": "Level 1#626:0",
+          "codePropName": "showLevel1",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 1"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 2#626:1",
+          "codePropName": "showLevel2",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 2"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 3#626:2",
+          "codePropName": "showLevel3",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 3"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 4#626:3",
+          "codePropName": "showLevel4",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 4"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 5#626:4",
+          "codePropName": "showLevel5",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 5"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 6#626:5",
+          "codePropName": "showLevel6",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 6"
+          ]
+        },
+        {
+          "figmaPropertyName": "Level 7#626:6",
+          "codePropName": "showLevel7",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Level 7"
+          ]
+        }
+      ],
+      "tokens": [],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "breadcrumb.contract.json",
+      "importPath": "@/components/ui/Breadcrumb"
+    },
+    {
+      "figmaNodeId": "120:426",
+      "figmaName": "Tab",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [
+        {
+          "figmaPropertyName": "Show Item 1#344:0",
+          "codePropName": "showItem1",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 2#344:1",
+          "codePropName": "showItem2",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 3#344:2",
+          "codePropName": "showItem3",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 4#344:3",
+          "codePropName": "showItem4",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 5#344:4",
+          "codePropName": "showItem5",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 6#344:5",
+          "codePropName": "showItem6",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 7#344:6",
+          "codePropName": "showItem7",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 8#344:7",
+          "codePropName": "showItem8",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 9#344:8",
+          "codePropName": "showItem9",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Item 10#344:9",
+          "codePropName": "showItem10",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Tab Item"
+          ]
+        }
+      ],
+      "tokens": [
+        "Surfaces/Border",
+        "Surfaces/Transparent",
+        "spacing/2",
+        "spacing/3"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "tab.contract.json",
+      "importPath": "@/components/ui/Tabs"
+    },
+    {
+      "figmaNodeId": "2605:3459",
+      "figmaName": "Kbd",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "variants": {
+        "Use": {
+          "codePropName": "variant",
+          "defaultValue": "Subtle",
+          "options": [
+            "Subtle",
+            "Outline",
+            "Solid"
+          ]
+        },
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "SM",
+          "options": [
+            "SM",
+            "MD"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "👁️ Modifier#2605:0",
+          "codePropName": "hasModifier",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Modifier"
+          ]
+        },
+        {
+          "figmaPropertyName": "✏️ Modifier#2605:7",
+          "codePropName": "modifierKey",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "⌘",
+          "boundLayers": [
+            "Modifier"
+          ]
+        },
+        {
+          "figmaPropertyName": "✏️ Key#2605:14",
+          "codePropName": "keyLabel",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "K",
+          "boundLayers": [
+            "Key"
+          ]
+        },
+        {
+          "figmaPropertyName": "Use",
+          "codePropName": "variant",
+          "type": "VARIANT",
+          "tsType": "\"Subtle\" | \"Outline\" | \"Solid\"",
+          "defaultValue": "Subtle",
+          "options": [
+            "Subtle",
+            "Outline",
+            "Solid"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"SM\" | \"MD\"",
+          "defaultValue": "SM",
+          "options": [
+            "SM",
+            "MD"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Background",
+        "Surfaces/Border",
+        "Surfaces/Foreground",
+        "Surfaces/Invert-Background",
+        "Surfaces/Invert-Foreground",
+        "Surfaces/Muted",
+        "radius/lg",
+        "radius/md",
+        "spacing/0-5",
+        "spacing/1",
+        "spacing/1-5",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/medium",
+        "Text/Body/xs/medium"
+      ],
+      "effectStyles": [
+        "Shadow 1"
+      ],
+      "contractFile": "kbd.contract.json",
+      "importPath": "@/components/ui/Kbd"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como cabecera fija superior de la aplicación para mostrar identidad de marca, `Breadcrumb` o `Tabs`, buscador rápido (`⌘K`), alertas y perfil en Desktop, o cabecera de pantalla en Mobile (`MobileAppBar`)."
+    ],
+    "whenNotToUse": [
+      "No sobrecargar con demasiados enlaces secundarios que compitan con `SidebarNavigation`.",
+      "No confundir con la barra de pestañas inferior móvil (`BottomNavigation`)."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar dentro de `<header>` con altura `64px` en Desktop (`DesktopBreadcrumb` / `DesktopTabs`) y `56px` en `MobileAppBar` (`390px`).",
+    "Integrar `Breadcrumb`, `Tabs`, disparador de búsqueda con `Kbd` (`⌘K`), notificaciones y `Avatar`."
+  ]
+}

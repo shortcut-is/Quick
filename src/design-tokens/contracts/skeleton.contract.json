@@ -1,0 +1,107 @@
+{
+  "name": "Skeleton",
+  "figmaName": "Skeleton",
+  "figmaNodeId": "2604:3455",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2604:3401",
+    "name": "Skeleton & Spinner"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/Skeleton",
+  "figmaDescription": "Import: @/components/ui/Skeleton\nProps Mapping (Figma -> React):\n- Use (Text | Heading | Avatar | ListRow | Card) -> primitive <Skeleton className=... /> or composed loading placeholder\nTokens: Placeholder fill Surfaces/Muted, card surface Surfaces/Background + Surfaces/Border, pulse ani",
+  "anatomy": {
+    "root": {
+      "name": "Use=Text",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Use=Text",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 5,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Text",
+        "options": [
+          "Text",
+          "Heading",
+          "Avatar",
+          "ListRow",
+          "Card"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Text\" | \"Heading\" | \"Avatar\" | \"ListRow\" | \"Card\"",
+      "defaultValue": "Text",
+      "options": [
+        "Text",
+        "Heading",
+        "Avatar",
+        "ListRow",
+        "Card"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Durante la carga inicial de páginas, tarjetas (`Use=Card`), filas de listas (`Use=ListRow`) o perfiles (`Use=Avatar`) para anticipar la anatomía final sin saltos de layout (CLS)."
+    ],
+    "whenNotToUse": [
+      "No usar dentro de botones o indicadores inline pequeños; usar `Spinner`.",
+      "No usar cuando ya terminó la carga y no existen datos; usar `EmptyState`."
+    ]
+  },
+  "behaviorRules": [
+    "Aplicar pulso sutil sobre `Surfaces/Muted` respetando `prefers-reduced-motion: reduce`.",
+    "Usar `aria-hidden=\"true\"` en los placeholders y `aria-busy=\"true\"` en el contenedor padre mientras cargan los datos."
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "name": "AvatarGroup",
+  "figmaName": "Avatar Group",
+  "figmaNodeId": "2606:3514",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2606:3456",
+    "name": "Avatar Group"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display",
+  "importPath": "@/components/ui/AvatarGroup",
+  "figmaDescription": "Import: @/components/ui/AvatarGroup (composes @/components/ui/Avatar)\nProps Mapping (Figma -> React):\n- Size (SM | MD | LG) -> size: sm | md | lg (24px / 32px / 40px)\n- Layout (Stacked | Spaced) -> spacing: stacked (-8px overlap) | spaced (8px gap)\n- Avatar 4 / Overflow -> max?: number, ",
+  "anatomy": {
+    "root": {
+      "name": "Size=SM, Layout=Stacked",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "AvatarItem1",
+        "component": "Avatar",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "AvatarItem2",
+        "component": "Avatar",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "AvatarItem3",
+        "component": "Avatar",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "AvatarItem4",
+        "component": "Avatar",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Size=SM, Layout=Stacked",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "AvatarItem1",
+          "type": "INSTANCE",
+          "instanceOf": "Avatar"
+        },
+        {
+          "name": "AvatarItem2",
+          "type": "INSTANCE",
+          "instanceOf": "Avatar"
+        },
+        {
+          "name": "AvatarItem3",
+          "type": "INSTANCE",
+          "instanceOf": "Avatar"
+        },
+        {
+          "name": "AvatarItem4",
+          "type": "INSTANCE",
+          "instanceOf": "Avatar",
+          "refs": {
+            "visible": "👁️ Avatar 4#2606:0"
+          }
+        },
+        {
+          "name": "OverflowBadge",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Overflow#2606:7"
+          },
+          "children": [
+            {
+              "name": "OverflowText",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Overflow#2606:14"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "SM",
+          "MD",
+          "LG"
+        ]
+      },
+      "Layout": {
+        "codePropName": "layout",
+        "defaultValue": "Stacked",
+        "options": [
+          "Stacked",
+          "Spaced"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Avatar 4#2606:0",
+      "codePropName": "hasFourthAvatar",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "AvatarItem4"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Overflow#2606:7",
+      "codePropName": "hasOverflow",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "OverflowBadge"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Overflow#2606:14",
+      "codePropName": "overflowLabel",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "+4",
+      "boundLayers": [
+        "OverflowText"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"SM\" | \"MD\" | \"LG\"",
+      "defaultValue": "SM",
+      "options": [
+        "SM",
+        "MD",
+        "LG"
+      ]
+    },
+    {
+      "figmaPropertyName": "Layout",
+      "codePropName": "layout",
+      "type": "VARIANT",
+      "tsType": "\"Stacked\" | \"Spaced\"",
+      "defaultValue": "Stacked",
+      "options": [
+        "Stacked",
+        "Spaced"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/full",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/full",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "79:1653",
+      "figmaName": "Avatar",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "variants": {
+        "Type": {
+          "codePropName": "type",
+          "defaultValue": "image",
+          "options": [
+            "image",
+            "initials",
+            "Letter"
+          ]
+        },
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "24",
+          "options": [
+            "40",
+            "32",
+            "24"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Type",
+          "codePropName": "type",
+          "type": "VARIANT",
+          "tsType": "\"image\" | \"initials\" | \"Letter\"",
+          "defaultValue": "image",
+          "options": [
+            "image",
+            "initials",
+            "Letter"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"40\" | \"32\" | \"24\"",
+          "defaultValue": "24",
+          "options": [
+            "40",
+            "32",
+            "24"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Radius/full",
+        "Surfaces/Foreground",
+        "Surfaces/Muted"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "avatar.contract.json",
+      "importPath": "@/components/ui/Avatar"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para mostrar múltiples colaboradores asignados, participantes o miembros activos de forma compacta con contador `+N` (`OverflowBadge`).",
+      "Cuando interesa comunicar presencia grupal sin listar cada perfil completo."
+    ],
+    "whenNotToUse": [
+      "No usar para representar una sola persona; usar `Avatar`.",
+      "No usar cuando sea necesario consultar nombre, rol o email de cada miembro en detalle; usar `Card` (`Use=List`) o `ListItem`."
+    ]
+  },
+  "behaviorRules": [
+    "Componer múltiples instancias de `Avatar` (`79:1653`) con superposición negativa en `Layout=Stacked` (`border: 2px solid Surfaces/Background`).",
+    "Agrupar usuarios excedentes dentro de `OverflowBadge` (`+N`) con tooltip opcional al pasar el cursor/foco."
+  ]
+}

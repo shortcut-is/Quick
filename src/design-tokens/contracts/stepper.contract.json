@@ -1,0 +1,336 @@
+{
+  "name": "Stepper",
+  "figmaName": "Stepper",
+  "figmaNodeId": "223:3697",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5680",
+    "name": "Stepper"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation",
+  "importPath": "@/components/ui/Stepper",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Direction=↓ Vertical",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon",
+        "component": "_Steper Icon",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Direction=↓ Vertical",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Step 01",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Steper Icon"
+            },
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        },
+        {
+          "name": "conector",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "conector",
+              "type": "VECTOR"
+            }
+          ]
+        },
+        {
+          "name": "Step 02",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Steper Icon"
+            },
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        },
+        {
+          "name": "conector",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 3#223:17"
+          },
+          "children": [
+            {
+              "name": "conector",
+              "type": "VECTOR"
+            }
+          ]
+        },
+        {
+          "name": "Step 03",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 3#223:17"
+          },
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Steper Icon"
+            },
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        },
+        {
+          "name": "conector",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 4#223:18"
+          },
+          "children": [
+            {
+              "name": "conector",
+              "type": "VECTOR"
+            }
+          ]
+        },
+        {
+          "name": "Step 04",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 4#223:18"
+          },
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Steper Icon"
+            },
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        },
+        {
+          "name": "conector",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 5#223:19"
+          },
+          "children": [
+            {
+              "name": "conector",
+              "type": "VECTOR"
+            }
+          ]
+        },
+        {
+          "name": "Step 05",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Step 5#223:19"
+          },
+          "children": [
+            {
+              "name": "Icon",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "_Steper Icon"
+            },
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Direction": {
+        "codePropName": "orientation",
+        "defaultValue": "↓ Vertical",
+        "options": [
+          "↓ Vertical",
+          "→ Horizontal"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Step 3#223:17",
+      "codePropName": "hasStep3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "conector",
+        "Step 03"
+      ]
+    },
+    {
+      "figmaPropertyName": "Step 4#223:18",
+      "codePropName": "hasStep4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "conector",
+        "Step 04"
+      ]
+    },
+    {
+      "figmaPropertyName": "Step 5#223:19",
+      "codePropName": "hasStep5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "conector",
+        "Step 05"
+      ]
+    },
+    {
+      "figmaPropertyName": "Direction",
+      "codePropName": "orientation",
+      "type": "VARIANT",
+      "tsType": "\"\\u2193 Vertical\" | \"\\u2192 Horizontal\"",
+      "defaultValue": "↓ Vertical",
+      "options": [
+        "↓ Vertical",
+        "→ Horizontal"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Radius/full",
+      "Surfaces/Invert-Background",
+      "Surfaces/Invert-Foreground",
+      "spacing/3"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "220:1730",
+      "figmaName": "_Steper Icon",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "⌛️ Default",
+          "options": [
+            "⌛️ Default",
+            "👀 Active",
+            "✅ Done"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"\\u231b\\ufe0f Default\" | \"\\ud83d\\udc40 Active\" | \"\\u2705 Done\"",
+          "defaultValue": "⌛️ Default",
+          "options": [
+            "⌛️ Default",
+            "👀 Active",
+            "✅ Done"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Radius/full",
+        "Surfaces/Border",
+        "Surfaces/Foreground",
+        "Surfaces/Invert-Background",
+        "Surfaces/Invert-Foreground",
+        "spacing/2",
+        "spacing/3",
+        "spacing/4"
+      ],
+      "textStyles": [
+        "Text/Body/sm/medium"
+      ],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para orientar al usuario a lo largo de flujos secuenciales multipaso (*onboarding*, checkout, asistentes) mostrando progreso completado y paso actual."
+    ],
+    "whenNotToUse": [
+      "No usar para navegar entre pestañas no secuenciales (`Tabs`) ni para mostrar rutas jerárquicas (`Breadcrumb`)."
+    ]
+  },
+  "behaviorRules": [
+    "Indicar el paso actual con `aria-current=\"step\"` y diferenciar visualmente pasos completados, activos y pendientes.",
+    "Soportar orientación `Horizontal` en Desktop y `Vertical` para flujos largos o Mobile."
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "name": "CheckboxGroup",
+  "figmaName": "Checkbox Group",
+  "figmaNodeId": "288:1385",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5662",
+    "name": "Checkbox"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Inputs",
+  "importPath": "@/components/ui/CheckboxGroup",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Checkbox Group",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Item 1",
+        "component": "Checkbox",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 2",
+        "component": "Checkbox",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 3",
+        "component": "Checkbox",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 4",
+        "component": "Checkbox",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 5",
+        "component": "Checkbox",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Checkbox Group",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT"
+        },
+        {
+          "name": "Item 1",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox"
+        },
+        {
+          "name": "Item 2",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox"
+        },
+        {
+          "name": "Item 3",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox"
+        },
+        {
+          "name": "Item 4",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox"
+        },
+        {
+          "name": "Item 5",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "288:1265",
+      "figmaName": "Checkbox",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 12,
+      "variants": {
+        "Selection": {
+          "codePropName": "checked",
+          "defaultValue": "Unchecked",
+          "options": [
+            "Indeterminate",
+            "Unchecked",
+            "Checked"
+          ]
+        },
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        "Description": {
+          "codePropName": "hasDescription",
+          "defaultValue": "No",
+          "options": [
+            "No",
+            "Yes"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Selection",
+          "codePropName": "checked",
+          "type": "VARIANT",
+          "tsType": "\"Indeterminate\" | \"Unchecked\" | \"Checked\"",
+          "defaultValue": "Unchecked",
+          "options": [
+            "Indeterminate",
+            "Unchecked",
+            "Checked"
+          ]
+        },
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\" | \"Disabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Description",
+          "codePropName": "hasDescription",
+          "type": "VARIANT",
+          "tsType": "\"No\" | \"Yes\"",
+          "defaultValue": "No",
+          "options": [
+            "No",
+            "Yes"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Top",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "checkbox.contract.json",
+      "importPath": "@/components/ui/Checkbox"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para agrupar verticalmente múltiples `Checkbox` relacionados bajo un título semántico común y espaciado uniforme."
+    ],
+    "whenNotToUse": [
+      "No usar si solo se puede elegir una única opción entre varias; usar `RadioGroup` o `InputSelect`."
+    ]
+  },
+  "behaviorRules": [
+    "Agrupar múltiples `Checkbox` dentro de `<fieldset>` con `<legend>` o `role=\"group\"` y `aria-labelledby`.",
+    "Mantener espaciado vertical uniforme (`spacing/2`) y soporte para validación a nivel de grupo."
+  ]
+}

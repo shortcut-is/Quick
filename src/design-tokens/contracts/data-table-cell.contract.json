@@ -1,0 +1,111 @@
+{
+  "name": "DataTableCell",
+  "figmaName": "_Data table Cell",
+  "figmaNodeId": "476:3657",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5663",
+    "name": "Data Table"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display (Subcomponent)",
+  "importPath": "@/components/ui/DataTableCell",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Size=← Fill →",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Enabled, Size=← Fill →",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Content",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Disabled",
+          "Enabled"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "← Fill →",
+        "options": [
+          "← Fill →",
+          "SM"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Disabled\" | \"Enabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
+      "defaultValue": "← Fill →",
+      "options": [
+        "← Fill →",
+        "SM"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para renderizar celdas individuales dentro de `DataTableRow` manteniendo alineación y densidad (`Default`, `Compact`, `Comfortable`) consistentes."
+    ],
+    "whenNotToUse": [
+      "No usar fuera de `DataTable`; para filas genéricas de lista usar `ListItem`."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar `<td>` con densidad sincronizada (`Size`) y truncamiento controlado cuando el contenido exceda el ancho de columna."
+  ]
+}

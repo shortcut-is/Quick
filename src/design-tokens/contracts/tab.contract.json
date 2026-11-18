@@ -1,0 +1,336 @@
+{
+  "name": "Tabs",
+  "figmaName": "Tab",
+  "figmaNodeId": "120:426",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5682",
+    "name": "Tab"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Navigation",
+  "importPath": "@/components/ui/Tabs",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Tab",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "_Tab Item",
+        "component": "_Tab Item",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Tab",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 1#344:0"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 2#344:1"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 3#344:2"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 4#344:3"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 5#344:4"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 6#344:5"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 7#344:6"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 8#344:7"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 9#344:8"
+          }
+        },
+        {
+          "name": "_Tab Item",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Tab Item",
+          "refs": {
+            "visible": "Show Item 10#344:9"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Show Item 1#344:0",
+      "codePropName": "showItem1",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 2#344:1",
+      "codePropName": "showItem2",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 3#344:2",
+      "codePropName": "showItem3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 4#344:3",
+      "codePropName": "showItem4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 5#344:4",
+      "codePropName": "showItem5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 6#344:5",
+      "codePropName": "showItem6",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 7#344:6",
+      "codePropName": "showItem7",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 8#344:7",
+      "codePropName": "showItem8",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 9#344:8",
+      "codePropName": "showItem9",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Item 10#344:9",
+      "codePropName": "showItem10",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Tab Item"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Border",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Surfaces/Border",
+      "Surfaces/Transparent",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground-Muted"
+    ],
+    "textStyles": [
+      "Text/Body/base/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "120:411",
+      "figmaName": "_Tab Item",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Selected",
+            "Disabled"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "✏️ Item#2104:19",
+          "codePropName": "label",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "[Item]"
+        },
+        {
+          "figmaPropertyName": "✏️ Current Item#2104:22",
+          "codePropName": "currentLabel",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "[Item]",
+          "boundLayers": [
+            "Label"
+          ]
+        },
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Selected\" | \"Disabled\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Selected",
+            "Disabled"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Top",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Transparent",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/base/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "tab-item.contract.json",
+      "importPath": "@/components/ui/TabItem"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para alternar entre vistas o subsecciones hermanas dentro del mismo contexto de página o dentro de `Topbar` (`Use=DesktopTabs`)."
+    ],
+    "whenNotToUse": [
+      "No usar como navegación global de toda la aplicación con jerarquías múltiples; usar `SidebarNavigation` o `BottomNavigation`.",
+      "No usar para filtros rápidos compactos de 2–3 opciones dentro de una tarjeta; usar `SegmentControl`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-tabs` (`role=\"tablist\"`, `role=\"tab\"`, `role=\"tabpanel\"`).",
+    "Navegar horizontalmente con `ArrowLeft` / `ArrowRight` y activar en selección; habilitar scroll horizontal si los ítems desbordan en Mobile."
+  ]
+}

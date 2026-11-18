@@ -1,0 +1,191 @@
+{
+  "name": "Notification",
+  "figmaName": "Notification",
+  "figmaNodeId": "545:5052",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5672",
+    "name": "Notification"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/Notification",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Type=Neutral",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon",
+        "component": "Icon/Line / Info",
+        "kind": "icon"
+      },
+      {
+        "slotName": "Button",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Type=Neutral",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Icon",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Info"
+        },
+        {
+          "name": "Content",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Message",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            },
+            {
+              "name": "Button",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button",
+              "refs": {
+                "visible": "Action#545:0"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Button",
+          "refs": {
+            "visible": "Dismissible#550:0"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Type": {
+        "codePropName": "type",
+        "defaultValue": "Neutral",
+        "options": [
+          "Neutral",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Action#545:0",
+      "codePropName": "hasAction",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Button"
+      ]
+    },
+    {
+      "figmaPropertyName": "Dismissible#550:0",
+      "codePropName": "isDismissible",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Button"
+      ]
+    },
+    {
+      "figmaPropertyName": "Type",
+      "codePropName": "type",
+      "type": "VARIANT",
+      "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",
+      "defaultValue": "Neutral",
+      "options": [
+        "Neutral",
+        "Success",
+        "Warning",
+        "Danger"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Success",
+      "Feedback/Warning",
+      "FontFamily/Primary",
+      "Radius/xl",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/none",
+      "radius/sm",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Success",
+      "Feedback/Warning",
+      "FontFamily/Primary",
+      "Radius/xl",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/none",
+      "radius/sm",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/lg/medium",
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": [
+      "Shadow 4"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para avisos ricos persistentes o bandeja de alertas con título, detalle y acción opcional que el usuario puede descartar manualmente."
+    ],
+    "whenNotToUse": [
+      "No usar para confirmaciones efímeras que desaparecen solas tras pocos segundos; usar `Toast`.",
+      "No usar para errores inline dentro de formularios; usar `Alert`."
+    ]
+  },
+  "behaviorRules": [
+    "Anunciar notificaciones en región live accesible (`role=\"status\"` o `role=\"alert\"`).",
+    "Permitir cierre manual cuando `isDismissible` esté activo y acción secundaria contextual cuando `hasAction` sea true."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "name": "Tag",
+  "figmaName": "Tag",
+  "figmaNodeId": "79:216",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5683",
+    "name": "Tag"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display",
+  "importPath": "@/components/ui/Tag",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Dismissible=No",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Enabled, Dismissible=No",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Dismissible": {
+        "codePropName": "isDismissible",
+        "defaultValue": "No",
+        "options": [
+          "No",
+          "Yes"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Dismissible",
+      "codePropName": "isDismissible",
+      "type": "VARIANT",
+      "tsType": "\"No\" | \"Yes\"",
+      "defaultValue": "No",
+      "options": [
+        "No",
+        "Yes"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/4xl",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/4xl",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para representar filtros activos que el usuario puede quitar (`Dismissible=true`), etiquetas asignadas o palabras clave interactivas."
+    ],
+    "whenNotToUse": [
+      "No usar para estados fijos de solo lectura ni contadores; usar `Badge`.",
+      "No usar para acciones principales de formulario; usar `Button`."
+    ]
+  },
+  "behaviorRules": [
+    "Representar etiquetas de clasificación o filtros aplicados.",
+    "Cuando `Dismissible=true`, incluir botón de cierre con `aria-label=\"Remove tag\"` y gestión de foco tras eliminar."
+  ]
+}

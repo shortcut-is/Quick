@@ -1,0 +1,156 @@
+{
+  "name": "Textarea",
+  "figmaName": "Input Area",
+  "figmaNodeId": "194:1034",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5668",
+    "name": "Input Area"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/Textarea",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Label",
+              "type": "TEXT"
+            }
+          ]
+        },
+        {
+          "name": "Texarea&Label",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Content",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "Hint",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Show Hint#194:0"
+          },
+          "children": [
+            {
+              "name": "Hint",
+              "type": "TEXT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Filled",
+          "Disabled",
+          "Error"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Show Hint#194:0",
+      "codePropName": "hasHint",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Filled\" | \"Disabled\" | \"Error\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Filled",
+        "Disabled",
+        "Error"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2-5",
+      "spacing/4",
+      "spacing/6"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2-5",
+      "spacing/4",
+      "spacing/6"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para capturar texto largo de múltiples líneas como descripciones, comentarios, notas o mensajes."
+    ],
+    "whenNotToUse": [
+      "No usar para datos cortos de una sola línea (nombre, email, búsqueda, contraseña); usar `InputText`."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar `<textarea>` asociado a su etiqueta mediante `htmlFor`, con soporte de estado `Error`, `Disabled` y `Focus`.",
+    "En Mobile usar tamaño de fuente mínimo `16px` para evitar auto-zoom en iOS Safari."
+  ]
+}

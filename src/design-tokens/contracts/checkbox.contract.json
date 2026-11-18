@@ -1,0 +1,229 @@
+{
+  "name": "Checkbox",
+  "figmaName": "Checkbox",
+  "figmaNodeId": "288:1265",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5662",
+    "name": "Checkbox"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/Checkbox",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Selection=Unchecked, State=Enabled, Description=No",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Checkbox Standalone",
+        "component": "Checkbox Standalone",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Selection=Unchecked, State=Enabled, Description=No",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Checkbox Standalone",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Checkbox Standalone"
+        },
+        {
+          "name": "content",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Value",
+              "type": "TEXT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 12,
+    "axes": {
+      "Selection": {
+        "codePropName": "checked",
+        "defaultValue": "Unchecked",
+        "options": [
+          "Indeterminate",
+          "Unchecked",
+          "Checked"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Description": {
+        "codePropName": "hasDescription",
+        "defaultValue": "No",
+        "options": [
+          "No",
+          "Yes"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Selection",
+      "codePropName": "checked",
+      "type": "VARIANT",
+      "tsType": "\"Indeterminate\" | \"Unchecked\" | \"Checked\"",
+      "defaultValue": "Unchecked",
+      "options": [
+        "Indeterminate",
+        "Unchecked",
+        "Checked"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Description",
+      "codePropName": "hasDescription",
+      "type": "VARIANT",
+      "tsType": "\"No\" | \"Yes\"",
+      "defaultValue": "No",
+      "options": [
+        "No",
+        "Yes"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Foreground"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "69:36",
+      "figmaName": "Checkbox Standalone",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        "Selection": {
+          "codePropName": "checked",
+          "defaultValue": "Unchecked",
+          "options": [
+            "Unchecked",
+            "Checked",
+            "Indeterminate"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\" | \"Disabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selection",
+          "codePropName": "checked",
+          "type": "VARIANT",
+          "tsType": "\"Unchecked\" | \"Checked\" | \"Indeterminate\"",
+          "defaultValue": "Unchecked",
+          "options": [
+            "Unchecked",
+            "Checked",
+            "Indeterminate"
+          ]
+        }
+      ],
+      "tokens": [
+        "Primary/Bottom",
+        "Primary/Foreground",
+        "Primary/Top",
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "checkbox-standalone.contract.json",
+      "importPath": "@/components/ui/CheckboxStandalone"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "En formularios o listas donde el usuario puede elegir cero, una o varias opciones independientes, o aceptar términos/confirmaciones que requieren pulsar Guardar/Enviar."
+    ],
+    "whenNotToUse": [
+      "No usar cuando las opciones son mutuamente excluyentes; usar `RadioButton` / `RadioGroup` o `InputSelect`.",
+      "No usar para activar o desactivar configuraciones de efecto inmediato en el sistema; usar `Switch`."
+    ]
+  },
+  "behaviorRules": [
+    "Asociar `<label>` explícitamente al control mediante `htmlFor` / `id` y soportar estado indeterminado (`indeterminate`).",
+    "Acompañar errores de validación con `aria-invalid` y mensaje descriptivo vinculado por `aria-describedby`.",
+    "Soportar los estados `Unchecked`, `Checked` e `Indeterminate` en combinación con `Enabled`, `Hover`, `Focus`, `Disabled` y `Error`."
+  ]
+}

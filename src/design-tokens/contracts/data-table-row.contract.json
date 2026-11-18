@@ -1,0 +1,396 @@
+{
+  "name": "DataTableRow",
+  "figmaName": "Data table  - Row",
+  "figmaNodeId": "476:3823",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5663",
+    "name": "Data Table"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display (Subcomponent)",
+  "importPath": "@/components/ui/DataTableRow",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Density=Compact",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Row selector",
+        "component": "_Data table Select",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "_Data table Cell",
+        "component": "_Data table Cell",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Row actions",
+        "component": "_Data table Actions",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Density=Compact",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Row selector",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Select",
+          "refs": {
+            "visible": "Selectable#478:6"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 1#476:0"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 2#476:3"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 3#476:6"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 4#476:9"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 5#476:12"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 6#476:15"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 7#476:18"
+          }
+        },
+        {
+          "name": "_Data table Cell",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Cell",
+          "refs": {
+            "visible": "Col 8#476:21"
+          }
+        },
+        {
+          "name": "Row actions",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Data table Actions",
+          "refs": {
+            "visible": "Actions#478:9"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Density": {
+        "codePropName": "density",
+        "defaultValue": "Compact",
+        "options": [
+          "Compact",
+          "Normal",
+          "Relaxed"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Col 1#476:0",
+      "codePropName": "showCol1",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 2#476:3",
+      "codePropName": "showCol2",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 3#476:6",
+      "codePropName": "showCol3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 4#476:9",
+      "codePropName": "showCol4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 5#476:12",
+      "codePropName": "showCol5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 6#476:15",
+      "codePropName": "showCol6",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 7#476:18",
+      "codePropName": "showCol7",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Col 8#476:21",
+      "codePropName": "showCol8",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Data table Cell"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selectable#478:6",
+      "codePropName": "isSelectable",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Row selector"
+      ]
+    },
+    {
+      "figmaPropertyName": "Actions#478:9",
+      "codePropName": "hasActions",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Row actions"
+      ]
+    },
+    {
+      "figmaPropertyName": "Density",
+      "codePropName": "density",
+      "type": "VARIANT",
+      "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
+      "defaultValue": "Compact",
+      "options": [
+        "Compact",
+        "Normal",
+        "Relaxed"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Surfaces/Border",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Input"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "476:3657",
+      "figmaName": "_Data table Cell",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 4,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Disabled",
+            "Enabled"
+          ]
+        },
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Disabled\" | \"Enabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Disabled",
+            "Enabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "data-table-cell.contract.json",
+      "importPath": "@/components/ui/DataTableCell"
+    },
+    {
+      "figmaNodeId": "476:3684",
+      "figmaName": "_Data table Select",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "478:4244",
+      "figmaName": "_Data table Actions",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "spacing/1"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para construir cada registro horizontal dentro de `DataTable`, soportando selección, hover y acciones por fila."
+    ],
+    "whenNotToUse": [
+      "No usar fuera de `DataTable`; para listados móviles o menús de selección usar `ListItem`."
+    ]
+  },
+  "behaviorRules": [
+    "Renderizar como `<tbody><tr>` respetando densidades (`Density`) y estados de selección/hover.",
+    "Mantener alineación de columnas (`Col 1..8`) idéntica a `DataTableHeader`."
+  ]
+}

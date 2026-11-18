@@ -1,0 +1,247 @@
+{
+  "name": "Toast",
+  "figmaName": "Toast",
+  "figmaNodeId": "2594:3668",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5685",
+    "name": "Toast"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/Toast",
+  "figmaDescription": "Import: @/components/ui/Toast (built on @radix-ui/react-toast or sonner)\nProps Mapping (Figma -> React):\n- Use (Neutral | Success | Warning | Danger) -> variant: default | success | warning | danger\n- Icon / Description / Action / Close -> showIcon, showDescription, showAction, dismissible\n",
+  "anatomy": {
+    "root": {
+      "name": "Use=Neutral",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "StatusIcon",
+        "component": "Icon/Line / Info",
+        "kind": "icon"
+      },
+      {
+        "slotName": "ActionButton",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "CloseButton",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Neutral",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "StatusIcon",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Info",
+          "refs": {
+            "visible": "👁️ Icon#2594:25"
+          }
+        },
+        {
+          "name": "TextContent",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Title#2594:45"
+              }
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "refs": {
+                "visible": "👁️ Description#2594:30",
+                "characters": "✏️ Description#2594:50"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ActionButton",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Button",
+          "refs": {
+            "visible": "👁️ Action#2594:35"
+          }
+        },
+        {
+          "name": "CloseButton",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Button",
+          "refs": {
+            "visible": "👁️ Close#2594:40"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Neutral",
+        "options": [
+          "Neutral",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Icon#2594:25",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "StatusIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Description#2594:30",
+      "codePropName": "hasDescription",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Description"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Action#2594:35",
+      "codePropName": "hasAction",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "ActionButton"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Close#2594:40",
+      "codePropName": "hasCloseButton",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "CloseButton"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Title#2594:45",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Changes saved",
+      "boundLayers": [
+        "Title"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Description#2594:50",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Your workspace preferences have been updated.",
+      "boundLayers": [
+        "Description"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Neutral\" | \"Success\" | \"Warning\" | \"Danger\"",
+      "defaultValue": "Neutral",
+      "options": [
+        "Neutral",
+        "Success",
+        "Warning",
+        "Danger"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Success",
+      "Feedback/Warning",
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/3-5",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Success",
+      "Feedback/Warning",
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/lg",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/3-5",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow 3"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para feedback transitorio no bloqueante tras completar una acción (`Cambios guardados`, `Enlace copiado`, `Error de red temporal`) con cierre opcional o botón `Undo`."
+    ],
+    "whenNotToUse": [
+      "No usar para errores críticos de validación que el usuario deba consultar mientras edita un formulario; usar `Alert`.",
+      "No usar cuando se requiera decisión obligatoria; usar `Dialog`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-toast` o `sonner`, anunciado vía `aria-live=\"polite\"` (`Neutral`/`Success`) o `assertive` (`Danger`).",
+    "Respetar límite simultáneo en viewport (`<= 3` toasts) y pausar el auto-dismiss al hacer hover o foco."
+  ]
+}

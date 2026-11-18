@@ -1,0 +1,231 @@
+{
+  "name": "RadioButton",
+  "figmaName": "Radio Button",
+  "figmaNodeId": "291:1327",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5675",
+    "name": "Radio Button"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/RadioButton",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Selected=Off, Description=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Radio",
+        "component": "Radio",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "State=Enabled, Selected=Off, Description=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Radio Standalone",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Radio",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Radio"
+            }
+          ]
+        },
+        {
+          "name": "content",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Value",
+              "type": "TEXT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 8,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Selected": {
+        "codePropName": "selected",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On"
+        ]
+      },
+      "Description": {
+        "codePropName": "hasDescription",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selected",
+      "codePropName": "selected",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "figmaPropertyName": "Description",
+      "codePropName": "hasDescription",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Foreground"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "69:92",
+      "figmaName": "Radio",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 4,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Disabled"
+          ]
+        },
+        "Selected": {
+          "codePropName": "selected",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Disabled\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selected",
+          "codePropName": "selected",
+          "type": "VARIANT",
+          "tsType": "\"Off\" | \"On\"",
+          "defaultValue": "Off",
+          "options": [
+            "Off",
+            "On"
+          ]
+        }
+      ],
+      "tokens": [
+        "Primary/Bottom",
+        "Primary/Foreground",
+        "Primary/Top",
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "radio.contract.json",
+      "importPath": "@/components/ui/Radio"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Siempre dentro de `RadioGroup` cuando el usuario debe elegir exactamente una opción de entre 2 a 5 alternativas mutuamente excluyentes con etiqueta y descripción opcional."
+    ],
+    "whenNotToUse": [
+      "No usar si se pueden marcar varias opciones simultáneamente; usar `Checkbox`.",
+      "No usar cuando hay muchas opciones que alargarían demasiado el formulario; usar `InputSelect`."
+    ]
+  },
+  "behaviorRules": [
+    "Siempre renderizarse dentro de un `RadioGroup` (`role=\"radiogroup\"`) navegable con flechas del teclado.",
+    "Soportar descripción opcional debajo de la etiqueta y estados `Enabled`/`Disabled`/`Hover`/`Focus`."
+  ]
+}

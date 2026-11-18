@@ -1,0 +1,94 @@
+{
+  "name": "DropdownMenuLabel",
+  "figmaName": "menu title",
+  "figmaNodeId": "417:3912",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5666",
+    "name": "Dropdown Menu"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay & Navigation (Subcomponent)",
+  "importPath": "@/components/ui/DropdownMenuLabel",
+  "figmaDescription": "Import: @/components/ui/DropdownMenu (DropdownMenuLabel). Type=Title (default) or inset padding.",
+  "anatomy": {
+    "root": {
+      "name": "Type=Title",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "Type=Title",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Menu Title",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Type": {
+        "codePropName": "type",
+        "defaultValue": "Title",
+        "options": [
+          "Title",
+          "Title (padding L)"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Type",
+      "codePropName": "type",
+      "type": "VARIANT",
+      "tsType": "\"Title\" | \"Title (padding L)\"",
+      "defaultValue": "Title",
+      "options": [
+        "Title",
+        "Title (padding L)"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground-Muted",
+      "radius/sm",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/8"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground-Muted",
+      "radius/sm",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/8"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para etiquetar y agrupar secciones lógicas de acciones dentro de `DropdownMenu`."
+    ],
+    "whenNotToUse": [
+      "No usar como botón ni como encabezado fuera de menús desplegables."
+    ]
+  },
+  "behaviorRules": [
+    "Encabezado no interactivo para agrupar secciones dentro de `DropdownMenu` (`Type=Title` o con sangría `Inset`)."
+  ]
+}

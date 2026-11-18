@@ -1,0 +1,228 @@
+{
+  "name": "SidebarItem",
+  "figmaName": "_Sidebar Item",
+  "figmaNodeId": "2618:4130",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2618:4093",
+    "name": "Sidebar Navigation"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation (Subcomponent)",
+  "importPath": "@/components/ui/SidebarItem",
+  "figmaDescription": "Import: @/components/ui/SidebarItem\nCategory: Navigation (Subcomponent)\n\nReusable navigation row / icon-rail tile for Sidebar Navigation with full Mode (Expanded | Collapsed) x State (Default | Hover | Active) variants.\n\nProps / Variants:\n- Mode: \"Expanded\" (216x40px row) | \"Collapsed",
+  "anatomy": {
+    "root": {
+      "name": "Mode=Expanded, State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "ItemIcon",
+        "component": "Icon/Line / Dashboard",
+        "kind": "icon"
+      },
+      {
+        "slotName": "ItemBadge",
+        "component": "Badge",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "ChevronIcon",
+        "component": "Icon/Line / Chevron-Right",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "Mode=Expanded, State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "LeftContent",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "ItemIcon",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Dashboard",
+              "refs": {
+                "mainComponent": "↪️ Icon#2618:15"
+              }
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Label#2618:10"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RightContent",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "ItemBadge",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Badge",
+              "refs": {
+                "visible": "👁️ Badge#2618:0"
+              }
+            },
+            {
+              "name": "ChevronIcon",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Chevron-Right",
+              "refs": {
+                "visible": "👁️ Chevron#2618:5"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Mode": {
+        "codePropName": "mode",
+        "defaultValue": "Expanded",
+        "options": [
+          "Expanded",
+          "Collapsed"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Hover",
+          "Active"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Badge#2618:0",
+      "codePropName": "hasBadge",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": [
+        "ItemBadge"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Chevron#2618:5",
+      "codePropName": "hasChevron",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": [
+        "ChevronIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Label#2618:10",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Dashboard",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "figmaPropertyName": "↪️ Icon#2618:15",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "447:3559",
+      "boundLayers": [
+        "ItemIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "Mode",
+      "codePropName": "mode",
+      "type": "VARIANT",
+      "tsType": "\"Expanded\" | \"Collapsed\"",
+      "defaultValue": "Expanded",
+      "options": [
+        "Expanded",
+        "Collapsed"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Hover\" | \"Active\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Hover",
+        "Active"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como enlace de navegación unitario dentro de `SidebarNavigation`, cubriendo tanto `Mode=Expanded` como `Mode=Collapsed` con estados `Default`, `Hover` y `Active`."
+    ],
+    "whenNotToUse": [
+      "No usar en barras horizontales superiores (`TabItem`) ni dentro de `BottomNavigation` (`BottomNavItem`)."
+    ]
+  },
+  "behaviorRules": [
+    "Soportar matriz completa `Mode = Expanded | Collapsed` × `State = Default | Hover | Active`.",
+    "En `Mode=Collapsed`, ocultar texto/badge/chevron y proveer `Tooltip` o `aria-label` con el nombre de la ruta."
+  ]
+}

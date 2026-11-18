@@ -1,0 +1,142 @@
+{
+  "name": "SwitchStandalone",
+  "figmaName": "Switch Standalone",
+  "figmaNodeId": "79:1328",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5681",
+    "name": "Switch"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs (Primitive)",
+  "importPath": "@/components/ui/SwitchStandalone",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Selected=Off, Size=Small",
+      "type": "COMPONENT",
+      "layout": "NONE"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Enabled, Selected=Off, Size=Small",
+      "type": "COMPONENT",
+      "children": [
+        {
+          "name": "Toggle",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Drag",
+              "type": "RECTANGLE"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 8,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Selected": {
+        "codePropName": "selected",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "Small",
+        "options": [
+          "Small",
+          "Large"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selected",
+      "codePropName": "selected",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"Small\" | \"Large\"",
+      "defaultValue": "Small",
+      "options": [
+        "Small",
+        "Large"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Input",
+      "spacing/0-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Input",
+      "spacing/0-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Dentro de contenedores que ya proveen su propia fila y etiqueta (`Card` `Use=Settings`, `Sheet` `Use=Filter`, `Popover` `Use=Filter`, `SidebarNavigation`)."
+    ],
+    "whenNotToUse": [
+      "No usar suelto sin etiqueta asociada visible o accesible; en formularios usar `Switch`."
+    ]
+  },
+  "behaviorRules": [
+    "Toggle atómico con tamaños `Small` (`44×32`) y `Large`; exige `aria-label` o etiqueta contenedora externa (como `FilterRow` en `Sheet` o `SidebarNavigation`)."
+  ]
+}

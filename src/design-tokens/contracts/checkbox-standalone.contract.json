@@ -1,0 +1,111 @@
+{
+  "name": "CheckboxStandalone",
+  "figmaName": "Checkbox Standalone",
+  "figmaNodeId": "69:36",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5662",
+    "name": "Checkbox"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs (Primitive)",
+  "importPath": "@/components/ui/CheckboxStandalone",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Enabled, Selection=Unchecked",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Enabled, Selection=Unchecked",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Enabled",
+        "options": [
+          "Enabled",
+          "Disabled"
+        ]
+      },
+      "Selection": {
+        "codePropName": "checked",
+        "defaultValue": "Unchecked",
+        "options": [
+          "Unchecked",
+          "Checked",
+          "Indeterminate"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Enabled\" | \"Disabled\"",
+      "defaultValue": "Enabled",
+      "options": [
+        "Enabled",
+        "Disabled"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selection",
+      "codePropName": "checked",
+      "type": "VARIANT",
+      "tsType": "\"Unchecked\" | \"Checked\" | \"Indeterminate\"",
+      "defaultValue": "Unchecked",
+      "options": [
+        "Unchecked",
+        "Checked",
+        "Indeterminate"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "En celdas de selección de tablas (`DataTable`), filas de `Sheet` (`Use=Filter`) o controles donde la etiqueta ya la provee el contenedor padre."
+    ],
+    "whenNotToUse": [
+      "No usar en formularios estándar donde se requiera etiqueta de texto visible y descripción; usar `Checkbox`."
+    ]
+  },
+  "behaviorRules": [
+    "Control binario atómico reutilizado dentro de `Checkbox`, `Data Table` y formularios compactos.",
+    "Debe recibir `aria-label` o `aria-labelledby` cuando se renderice sin etiqueta visible."
+  ]
+}

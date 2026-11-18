@@ -1,0 +1,365 @@
+{
+  "name": "Pagination",
+  "figmaName": "Pagination",
+  "figmaNodeId": "106:384",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5673",
+    "name": "Pagination"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Navigation",
+  "importPath": "@/components/ui/Pagination",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Pagination",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "_Pagination - Nav ",
+        "component": "_Pagination - Nav ",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "_Pagination - Items",
+        "component": "_Pagination - Items",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Pagination",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "_Pagination - Nav ",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Pagination - Nav ",
+          "refs": {
+            "visible": "Show Previous#106:0"
+          }
+        },
+        {
+          "name": "pages",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 1#106:2"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 2#106:3"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 3#106:4"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "More#106:5"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 5#106:6"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 6#106:7"
+              }
+            },
+            {
+              "name": "_Pagination - Items",
+              "type": "INSTANCE",
+              "layout": "VERTICAL",
+              "instanceOf": "_Pagination - Items",
+              "refs": {
+                "visible": "Item 7#106:8"
+              }
+            }
+          ]
+        },
+        {
+          "name": "_Pagination - Nav ",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Pagination - Nav ",
+          "refs": {
+            "visible": "Show Next#106:1"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Show Previous#106:0",
+      "codePropName": "hasPrevious",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Nav "
+      ]
+    },
+    {
+      "figmaPropertyName": "Show Next#106:1",
+      "codePropName": "hasNext",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Nav "
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 1#106:2",
+      "codePropName": "showItem1",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 2#106:3",
+      "codePropName": "showItem2",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 3#106:4",
+      "codePropName": "showItem3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "More#106:5",
+      "codePropName": "hasEllipsis",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 5#106:6",
+      "codePropName": "showItem5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 6#106:7",
+      "codePropName": "showItem6",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 7#106:8",
+      "codePropName": "showItem7",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "_Pagination - Items"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Radius/sm",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "106:348",
+      "figmaName": "_Pagination - Items",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 4,
+      "variants": {
+        "Item": {
+          "codePropName": "item",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Current",
+            "More",
+            "Hover"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Item",
+          "codePropName": "item",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Current\" | \"More\" | \"Hover\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Current",
+            "More",
+            "Hover"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Radius/sm",
+        "Surfaces/Background",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Muted",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/medium"
+      ],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "106:589",
+      "figmaName": "_Pagination - Nav ",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled"
+          ]
+        },
+        "Type": {
+          "codePropName": "type",
+          "defaultValue": "Previous",
+          "options": [
+            "Next",
+            "Previous"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Type",
+          "codePropName": "type",
+          "type": "VARIANT",
+          "tsType": "\"Next\" | \"Previous\"",
+          "defaultValue": "Previous",
+          "options": [
+            "Next",
+            "Previous"
+          ]
+        }
+      ],
+      "tokens": [
+        "spacing/1"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para navegar entre páginas numeradas de listados grandes o al pie de `DataTable` (`DataTableFooter`)."
+    ],
+    "whenNotToUse": [
+      "No usar para mostrar la ubicación jerárquica actual; usar `Breadcrumb`.",
+      "No usar para indicar avance dentro de un flujo guiado por pasos; usar `Stepper`."
+    ]
+  },
+  "behaviorRules": [
+    "Envolver en `<nav aria-label=\"Pagination\">` con `aria-current=\"page\"` en la página activa.",
+    "Deshabilitar botones `Previous` y `Next` cuando el usuario se encuentre en el primer o último límite.",
+    "Colapsar páginas intermedias con elipsis (`More`) en rangos amplios o viewports estrechos."
+  ]
+}

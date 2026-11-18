@@ -1,0 +1,141 @@
+{
+  "name": "BottomNavItem",
+  "figmaName": "_Bottom Nav Item",
+  "figmaNodeId": "2624:4500",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2619:4309",
+    "name": "Navigation Bars"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation (Subcomponent)",
+  "importPath": "@/components/ui/BottomNavItem",
+  "figmaDescription": "Import: @/components/ui/BottomNavItem\nCategory: Navigation (Subcomponent)\n\nMobile bottom navigation item supporting Default (muted), Hover (Surfaces/Muted pill), and Active (Surfaces/Muted + Surfaces/Border 1px stroke) states.\n\nProps / Variants:\n- State: \"Default\" | \"Hover\" | &qu",
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "TabIcon",
+        "component": "Icon/Line / Dashboard",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "TabIcon",
+          "type": "INSTANCE",
+          "instanceOf": "Icon/Line / Dashboard",
+          "refs": {
+            "mainComponent": "↪️ Icon#2624:4"
+          }
+        },
+        {
+          "name": "TabLabel",
+          "type": "TEXT",
+          "refs": {
+            "characters": "✏️ Label#2624:0"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Hover",
+          "Active"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "✏️ Label#2624:0",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Home",
+      "boundLayers": [
+        "TabLabel"
+      ]
+    },
+    {
+      "figmaPropertyName": "↪️ Icon#2624:4",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "447:3559",
+      "boundLayers": [
+        "TabIcon"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Hover\" | \"Active\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Hover",
+        "Active"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Exclusivamente como pestaña atómica interna de `BottomNavigation`, controlando de forma individual el estado (`Default`, `Hover`, `Active`), etiqueta e icono de cada sección."
+    ],
+    "whenNotToUse": [
+      "No usar fuera de `BottomNavigation` ni como botón suelto en formularios; usar `Button` o `TabItem`."
+    ]
+  },
+  "behaviorRules": [
+    "Cada pestaña de `BottomNavigation` controla de manera independiente su estado (`Default`, `Hover`, `Active`), etiqueta e icono (`20×20`).",
+    "Mantener área táctil mínima de `48×48px` (actual `72×52px`) y marcar la ruta actual con `aria-current=\"page\"`."
+  ]
+}

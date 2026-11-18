@@ -1,0 +1,348 @@
+{
+  "name": "DropdownMenu",
+  "figmaName": "Dropdown Menu",
+  "figmaNodeId": "2596:3739",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5666",
+    "name": "Dropdown Menu"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Overlay & Navigation",
+  "importPath": "@/components/ui/DropdownMenu",
+  "figmaDescription": "Import: @/components/ui/DropdownMenu (built on @radix-ui/react-dropdown-menu)\nProps Mapping (Figma -> React):\n- Use (Actions | Grouped | Context) -> composed menu structure using DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator\n- Subcomponents: menu item (415:3743), menu title (417:3",
+  "anatomy": {
+    "root": {
+      "name": "Use=Actions",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Edit",
+        "component": "menu item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Duplicate",
+        "component": "menu item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Share",
+        "component": "menu item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Separator",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Delete",
+        "component": "menu item",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Actions",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Edit",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "menu item"
+        },
+        {
+          "name": "Duplicate",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "menu item"
+        },
+        {
+          "name": "Share",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "menu item"
+        },
+        {
+          "name": "Separator",
+          "type": "INSTANCE",
+          "instanceOf": "SEPARATOR"
+        },
+        {
+          "name": "Delete",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "menu item"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Actions",
+        "options": [
+          "Actions",
+          "Grouped",
+          "Context"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Actions\" | \"Grouped\" | \"Context\"",
+      "defaultValue": "Actions",
+      "options": [
+        "Actions",
+        "Grouped",
+        "Context"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Bold",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/sm",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/8"
+    ],
+    "directVariables": [
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/sm",
+      "radius/xl",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Feedback/Danger",
+      "Feedback/Danger-Bold",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/8"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow 2"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "415:3743",
+      "figmaName": "menu item",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 5,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Disabled",
+            "Active",
+            "Hover",
+            "Destructive"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Icon#422:13",
+          "codePropName": "icon",
+          "type": "INSTANCE_SWAP",
+          "tsType": "React.ReactNode",
+          "defaultValue": "145:1174",
+          "boundLayers": [
+            "Icon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Left Icon#441:17",
+          "codePropName": "hasLeftIcon",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Icon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Secondary Icon#441:21",
+          "codePropName": "hasSecondaryIcon",
+          "type": "INSTANCE_SWAP",
+          "tsType": "React.ReactNode",
+          "defaultValue": "145:1423",
+          "boundLayers": [
+            "ChevronRightIcon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Right Icon#441:25",
+          "codePropName": "hasRightIcon",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "ChevronRightIcon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Label#441:33",
+          "codePropName": "label",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "Menu Item",
+          "boundLayers": [
+            "Value"
+          ]
+        },
+        {
+          "figmaPropertyName": "Shortcut#448:0",
+          "codePropName": "shortcut",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "⌘⇧⌥",
+          "boundLayers": [
+            "Shortcut"
+          ]
+        },
+        {
+          "figmaPropertyName": "Show Shortcut#448:4",
+          "codePropName": "hasShortcut",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Shortcut"
+          ]
+        },
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Disabled\" | \"Active\" | \"Hover\" | \"Destructive\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Disabled",
+            "Active",
+            "Hover",
+            "Destructive"
+          ]
+        }
+      ],
+      "tokens": [
+        "Feedback/Danger",
+        "Feedback/Danger-Bold",
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Top",
+        "Radius/lg",
+        "Surfaces/Foreground",
+        "Surfaces/Muted",
+        "Surfaces/Transparent",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal",
+        "Text/Body/xs/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "dropdown-menu-item.contract.json",
+      "importPath": "@/components/ui/DropdownMenuItem"
+    },
+    {
+      "figmaNodeId": "417:3912",
+      "figmaName": "menu title",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "variants": {
+        "Type": {
+          "codePropName": "type",
+          "defaultValue": "Title",
+          "options": [
+            "Title",
+            "Title (padding L)"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Type",
+          "codePropName": "type",
+          "type": "VARIANT",
+          "tsType": "\"Title\" | \"Title (padding L)\"",
+          "defaultValue": "Title",
+          "options": [
+            "Title",
+            "Title (padding L)"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground-Muted",
+        "radius/sm",
+        "spacing/1-5",
+        "spacing/2",
+        "spacing/8"
+      ],
+      "textStyles": [
+        "Text/Body/xs/medium"
+      ],
+      "effectStyles": [],
+      "contractFile": "dropdown-menu-title.contract.json",
+      "importPath": "@/components/ui/DropdownMenuLabel"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para exponer una lista compacta de acciones contextuales, menús de cuenta, opciones secundarias (`...`) o comandos agrupados disparados por un botón."
+    ],
+    "whenNotToUse": [
+      "No usar como selector de valor dentro de un formulario; usar `InputSelect`.",
+      "No usar para formularios ricos con inputs o calendarios; usar `Popover` o `Sheet`."
+    ]
+  },
+  "behaviorRules": [
+    "Construir sobre `@radix-ui/react-dropdown-menu` con navegación por flechas (`ArrowUp`/`ArrowDown`), `Enter`, `Escape` y typeahead.",
+    "Agrupar acciones relacionadas con `menu title` y `SEPARATOR`; ubicar ítems destructivos al final tras un separador."
+  ]
+}

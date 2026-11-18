@@ -1,0 +1,611 @@
+{
+  "name": "DataTable",
+  "figmaName": "Data Table",
+  "figmaNodeId": "2154:5663",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5663",
+    "name": "Data Table"
+  },
+  "nodeType": "COMPOSITE_SECTION",
+  "category": "Data Display",
+  "importPath": "@/components/ui/DataTable",
+  "figmaDescription": "Composite Data Table built from Data table Header (476:3937), Data table Row (476:3823), Data table Footer (478:6008), cells, selection checkbox, and row actions.",
+  "anatomy": {
+    "root": {
+      "name": "DataTable",
+      "type": "SECTION",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Header",
+        "component": "Data table  - Header",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "BodyRow",
+        "component": "Data table  - Row",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Footer",
+        "component": "Data table  - Footer",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Cell",
+        "component": "_Data table Cell",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "HeaderCell",
+        "component": "_Data table Header Cell",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "SelectCell",
+        "component": "_Data table Select",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "ActionsCell",
+        "component": "_Data table Actions",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "DataTable",
+      "type": "TABLE",
+      "children": [
+        {
+          "name": "Data table - Header",
+          "figmaNodeId": "476:3937"
+        },
+        {
+          "name": "Data table - Row",
+          "figmaNodeId": "476:3823"
+        },
+        {
+          "name": "Data table - Footer",
+          "figmaNodeId": "478:6008"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 15,
+    "axes": {
+      "Density": {
+        "codePropName": "density",
+        "defaultValue": "Compact",
+        "options": [
+          "Compact",
+          "Normal",
+          "Relaxed"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Density",
+      "codePropName": "density",
+      "type": "VARIANT",
+      "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
+      "defaultValue": "Compact",
+      "options": [
+        "Compact",
+        "Normal",
+        "Relaxed"
+      ]
+    },
+    {
+      "figmaPropertyName": "Selectable#478:6",
+      "codePropName": "isSelectable",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true
+    },
+    {
+      "figmaPropertyName": "Actions#478:9",
+      "codePropName": "hasActions",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "476:3937",
+      "figmaName": "Data table  - Header",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "Density": {
+          "codePropName": "density",
+          "defaultValue": "Compact",
+          "options": [
+            "Compact",
+            "Normal",
+            "Relaxed"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Cell 1#476:24",
+          "codePropName": "showCell1",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 2#476:27",
+          "codePropName": "showCell2",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 3#476:30",
+          "codePropName": "showCell3",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 4#476:33",
+          "codePropName": "showCell4",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 5#476:36",
+          "codePropName": "showCell5",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 6#476:39",
+          "codePropName": "showCell6",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 7#476:42",
+          "codePropName": "showCell7",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Cell 8#476:45",
+          "codePropName": "showCell8",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Header Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Actions#478:0",
+          "codePropName": "hasActions",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Actions"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selectable#478:3",
+          "codePropName": "isSelectable",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Column selector"
+          ]
+        },
+        {
+          "figmaPropertyName": "Density",
+          "codePropName": "density",
+          "type": "VARIANT",
+          "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
+          "defaultValue": "Compact",
+          "options": [
+            "Compact",
+            "Normal",
+            "Relaxed"
+          ]
+        }
+      ],
+      "tokens": [
+        "Surfaces/Border",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/1",
+        "spacing/2",
+        "spacing/4"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "data-table-header.contract.json",
+      "importPath": "@/components/ui/DataTableHeader"
+    },
+    {
+      "figmaNodeId": "476:3823",
+      "figmaName": "Data table  - Row",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "Density": {
+          "codePropName": "density",
+          "defaultValue": "Compact",
+          "options": [
+            "Compact",
+            "Normal",
+            "Relaxed"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Col 1#476:0",
+          "codePropName": "showCol1",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 2#476:3",
+          "codePropName": "showCol2",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 3#476:6",
+          "codePropName": "showCol3",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 4#476:9",
+          "codePropName": "showCol4",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 5#476:12",
+          "codePropName": "showCol5",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 6#476:15",
+          "codePropName": "showCol6",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 7#476:18",
+          "codePropName": "showCol7",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Col 8#476:21",
+          "codePropName": "showCol8",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "_Data table Cell"
+          ]
+        },
+        {
+          "figmaPropertyName": "Selectable#478:6",
+          "codePropName": "isSelectable",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Row selector"
+          ]
+        },
+        {
+          "figmaPropertyName": "Actions#478:9",
+          "codePropName": "hasActions",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Row actions"
+          ]
+        },
+        {
+          "figmaPropertyName": "Density",
+          "codePropName": "density",
+          "type": "VARIANT",
+          "tsType": "\"Compact\" | \"Normal\" | \"Relaxed\"",
+          "defaultValue": "Compact",
+          "options": [
+            "Compact",
+            "Normal",
+            "Relaxed"
+          ]
+        }
+      ],
+      "tokens": [
+        "Surfaces/Border",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "data-table-row.contract.json",
+      "importPath": "@/components/ui/DataTableRow"
+    },
+    {
+      "figmaNodeId": "478:6008",
+      "figmaName": "Data table  - Footer",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground-Muted",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "data-table-footer.contract.json",
+      "importPath": "@/components/ui/DataTableFooter"
+    },
+    {
+      "figmaNodeId": "476:3657",
+      "figmaName": "_Data table Cell",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 4,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Disabled",
+            "Enabled"
+          ]
+        },
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Disabled\" | \"Enabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Disabled",
+            "Enabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "data-table-cell.contract.json",
+      "importPath": "@/components/ui/DataTableCell"
+    },
+    {
+      "figmaNodeId": "580:12541",
+      "figmaName": "_Data table Header Cell",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "variants": {
+        "Size": {
+          "codePropName": "size",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "Sort#580:32",
+          "codePropName": "hasSortDirection",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": true,
+          "boundLayers": [
+            "Icon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "type": "VARIANT",
+          "tsType": "\"\\u2190 Fill \\u2192\" | \"SM\"",
+          "defaultValue": "← Fill →",
+          "options": [
+            "← Fill →",
+            "SM"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/2"
+      ],
+      "textStyles": [
+        "Text/Body/sm/bold"
+      ],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "476:3684",
+      "figmaName": "_Data table Select",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "Surfaces/Input",
+        "Surfaces/Transparent",
+        "spacing/0-5",
+        "spacing/1",
+        "spacing/2"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    },
+    {
+      "figmaNodeId": "478:4244",
+      "figmaName": "_Data table Actions",
+      "nodeType": "COMPONENT",
+      "variantCount": 1,
+      "variants": {},
+      "properties": [],
+      "tokens": [
+        "spacing/1"
+      ],
+      "textStyles": [],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para mostrar conjuntos estructurados de registros tabulares con múltiples columnas comparables, ordenación (`_Data table Header Cell`), selección masiva (`Selectable`) y paginación (`DataTableFooter`)."
+    ],
+    "whenNotToUse": [
+      "No usar en viewports estrechos de mobile sin adaptación a filas tipo tarjeta (`ListItem`); ni para colecciones de 2–3 campos simples que lucen mejor en `Card` (`Use=List`)."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@tanstack/react-table` combinando tabla semántica (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`) en Desktop y tarjetas `ListItem` o scroll horizontal en Mobile.",
+    "Sincronizar `density`, columnas visibles (`Col 1..8` / `Cell 1..8`), `isSelectable` y `hasActions` entre `DataTableHeader` y `DataTableRow`.",
+    "Mantener `aria-sort` actualizado en `_Data table Header Cell` cuando `sortDirection` esté activo."
+  ]
+}

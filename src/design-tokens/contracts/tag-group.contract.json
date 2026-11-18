@@ -1,0 +1,243 @@
+{
+  "name": "TagGroup",
+  "figmaName": "Tag Group",
+  "figmaNodeId": "331:1784",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5683",
+    "name": "Tag"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Data Display",
+  "importPath": "@/components/ui/TagGroup",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Tag Group",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Tag 1",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 2",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 3",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 4",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 5",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 6",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 7",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 8",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 9",
+        "component": "Tag",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Tag 10",
+        "component": "Tag",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Tag Group",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Tag 1",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 2",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 3",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 4",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 5",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 6",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 7",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 8",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 9",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        },
+        {
+          "name": "Tag 10",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "Tag"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/4xl",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Surfaces/Muted",
+      "radius/4xl",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground"
+    ],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "79:216",
+      "figmaName": "Tag",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 3,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        "Dismissible": {
+          "codePropName": "isDismissible",
+          "defaultValue": "No",
+          "options": [
+            "No",
+            "Yes"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Enabled\" | \"Disabled\"",
+          "defaultValue": "Enabled",
+          "options": [
+            "Enabled",
+            "Disabled"
+          ]
+        },
+        {
+          "figmaPropertyName": "Dismissible",
+          "codePropName": "isDismissible",
+          "type": "VARIANT",
+          "tsType": "\"No\" | \"Yes\"",
+          "defaultValue": "No",
+          "options": [
+            "No",
+            "Yes"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Foreground",
+        "Surfaces/Muted",
+        "radius/4xl",
+        "spacing/1",
+        "spacing/2",
+        "spacing/4"
+      ],
+      "textStyles": [],
+      "effectStyles": [],
+      "contractFile": "tag.contract.json",
+      "importPath": "@/components/ui/Tag"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para agrupar múltiples `Tag` relacionados con flujo *wrap* y separación consistente."
+    ],
+    "whenNotToUse": [
+      "No usar como grupo de selección de formulario persistente; usar `CheckboxGroup`."
+    ]
+  },
+  "behaviorRules": [
+    "Contenedor `flex-wrap` con separación uniforme para agrupar múltiples instancias de `Tag`."
+  ]
+}

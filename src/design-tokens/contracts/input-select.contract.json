@@ -1,0 +1,182 @@
+{
+  "name": "InputSelect",
+  "figmaName": "Input Select",
+  "figmaNodeId": "88:355",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5670",
+    "name": "Input Select"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/InputSelect",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Input&Label",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Input",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "Hint",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "Hint#2009:8"
+          },
+          "children": [
+            {
+              "name": "Hint Text",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Hint#2009:11"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Error",
+          "Filled",
+          "Disabled",
+          "Hover",
+          "Focus"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "✏️ Label#2009:7",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Label]"
+    },
+    {
+      "figmaPropertyName": "Hint#2009:8",
+      "codePropName": "hasHint",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Content#2009:9",
+      "codePropName": "value",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Content]"
+    },
+    {
+      "figmaPropertyName": "✏️ Hint#2009:11",
+      "codePropName": "hint",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[This is a hint]",
+      "boundLayers": [
+        "Hint Text"
+      ]
+    },
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Error\" | \"Filled\" | \"Disabled\" | \"Hover\" | \"Focus\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Error",
+        "Filled",
+        "Disabled",
+        "Hover",
+        "Focus"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "FontFamily/Primary",
+      "Radius/lg",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "spacing/1",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Focus",
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "En formularios o filtros cuando el usuario debe seleccionar una opción única dentro de una lista cerrada (habitualmente 4 o más opciones)."
+    ],
+    "whenNotToUse": [
+      "No usar si hay solo 2–3 opciones cortas siempre visibles que conviene comparar de un vistazo; usar `RadioGroup` o `SegmentControl`.",
+      "No usar para disparar menús de comandos o acciones; usar `DropdownMenu`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `@radix-ui/react-select` o `<select>` estilizado accesible con navegación por teclado completa.",
+    "Vincular `Hint` mediante `aria-describedby` cuando `hasHint` es true y marcar `aria-invalid` en `State=Error`.",
+    "Soportar estados `Default`, `Filled`, `Hover`, `Focus`, `Error` y `Disabled`."
+  ]
+}

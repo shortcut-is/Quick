@@ -1,0 +1,257 @@
+{
+  "name": "SegmentControl",
+  "figmaName": "Segment",
+  "figmaNodeId": "88:670",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5676",
+    "name": "Segment Control"
+  },
+  "nodeType": "COMPONENT",
+  "category": "Navigation & Inputs",
+  "importPath": "@/components/ui/SegmentControl",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "Segment",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Item 1",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 2",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 3",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 4",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 5",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Item 6",
+        "component": "_Segment Item",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Segment",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Item 1",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item"
+        },
+        {
+          "name": "Item 2",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item"
+        },
+        {
+          "name": "Item 3",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item",
+          "refs": {
+            "visible": "Item 3#580:2"
+          }
+        },
+        {
+          "name": "Item 4",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item",
+          "refs": {
+            "visible": "Item 4#580:3"
+          }
+        },
+        {
+          "name": "Item 5",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item",
+          "refs": {
+            "visible": "Item 5#580:4"
+          }
+        },
+        {
+          "name": "Item 6",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_Segment Item",
+          "refs": {
+            "visible": "Item 6#580:5"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 1,
+    "axes": {}
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "Item 3#580:2",
+      "codePropName": "showItem3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Item 3"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 4#580:3",
+      "codePropName": "showItem4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Item 4"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 5#580:4",
+      "codePropName": "showItem5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Item 5"
+      ]
+    },
+    {
+      "figmaPropertyName": "Item 6#580:5",
+      "codePropName": "showItem6",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Item 6"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Radius/sm",
+      "Surfaces/Background",
+      "Surfaces/Muted",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted"
+    ],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "88:665",
+      "figmaName": "_Segment Item",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "variants": {
+        "Type": {
+          "codePropName": "type",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Selected"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "✏️ Label#1032:0",
+          "codePropName": "label",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "[Opción]",
+          "boundLayers": [
+            "Value"
+          ]
+        },
+        {
+          "figmaPropertyName": "Type",
+          "codePropName": "type",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Selected\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Selected"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Radius/sm",
+        "Surfaces/Background",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "spacing/1",
+        "spacing/2",
+        "spacing/4"
+      ],
+      "textStyles": [
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [
+        "Shadow 1"
+      ]
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Para alternar de forma compacta entre 2 y 5 modos, vistas o escalas paralelas dentro de una misma tarjeta o barra de herramientas (`Mensual` / `Anual`, `Lista` / `Grid`)."
+    ],
+    "whenNotToUse": [
+      "No usar como navegación de nivel superior entre páginas diferentes o secciones con gran cantidad de opciones; usar `Tabs`, `SidebarNavigation` o `InputSelect`."
+    ]
+  },
+  "behaviorRules": [
+    "Implementar con `role=\"radiogroup\"` o `@radix-ui/react-toggle-group` (`type=\"single\"`) para cambio inmediato de vista o filtro.",
+    "Asegurar que exactamente un segmento tenga estado activo con fondo `Surfaces/Background` y sombra `Shadow 1`."
+  ]
+}

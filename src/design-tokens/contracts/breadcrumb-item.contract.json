@@ -1,0 +1,110 @@
+{
+  "name": "BreadcrumbItem",
+  "figmaName": "Breadcrumb Items",
+  "figmaNodeId": "79:286",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5658",
+    "name": "Breadcrumb"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation (Subcomponent)",
+  "importPath": "@/components/ui/BreadcrumbItem",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "content",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Label",
+              "type": "TEXT"
+            }
+          ]
+        },
+        {
+          "name": "separator",
+          "type": "FRAME",
+          "children": [
+            {
+              "name": "Vector",
+              "type": "VECTOR"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Overflow",
+          "Current"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Overflow\" | \"Current\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Overflow",
+        "Current"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/1"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/1"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Únicamente como segmento individual de ruta dentro de `Breadcrumb`."
+    ],
+    "whenNotToUse": [
+      "No usar de forma aislada fuera de `Breadcrumb`; para enlaces o botones independientes usar `Button` (`Variant=Ghost`)."
+    ]
+  },
+  "behaviorRules": [
+    "Representa un nivel individual dentro de `Breadcrumb` con estados `Default`, `Active` y `Hover`.",
+    "Ocultar el separador `>` cuando el ítem corresponda a la ruta activa (`aria-current=\"page\"`)."
+  ]
+}

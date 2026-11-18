@@ -1,0 +1,272 @@
+{
+  "name": "EmptyState",
+  "figmaName": "Empty State",
+  "figmaNodeId": "2607:3630",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2607:3488",
+    "name": "Empty State"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Feedback",
+  "importPath": "@/components/ui/EmptyState",
+  "figmaDescription": "Import: @/components/ui/EmptyState\nProps Mapping (Figma -> React):\n- Use (Default | Search | Error) -> variant: default | search | error\n- Size (SM | MD) -> size: sm (320px) | md (420px)\n- Icon / Actions / Secondary Action -> showIcon, showActions, showSecondaryAction\n- Title / Descripti",
+  "anatomy": {
+    "root": {
+      "name": "Use=Default, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "StatusIcon",
+        "component": "Icon/Line / Archive",
+        "kind": "icon"
+      },
+      {
+        "slotName": "SecondaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "PrimaryAction",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Default, Size=SM",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "IconBadge",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Icon#2607:0"
+          },
+          "children": [
+            {
+              "name": "StatusIcon",
+              "type": "INSTANCE",
+              "instanceOf": "Icon/Line / Archive"
+            }
+          ]
+        },
+        {
+          "name": "TextContent",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Title#2607:21"
+              }
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Description#2607:28"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Actions",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Actions#2607:7"
+          },
+          "children": [
+            {
+              "name": "SecondaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button",
+              "refs": {
+                "visible": "👁️ Secondary Action#2607:14"
+              }
+            },
+            {
+              "name": "PrimaryAction",
+              "type": "INSTANCE",
+              "layout": "HORIZONTAL",
+              "instanceOf": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Search",
+          "Error"
+        ]
+      },
+      "Size": {
+        "codePropName": "size",
+        "defaultValue": "SM",
+        "options": [
+          "SM",
+          "MD"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Icon#2607:0",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "IconBadge"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Actions#2607:7",
+      "codePropName": "hasActions",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Actions"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Secondary Action#2607:14",
+      "codePropName": "hasSecondaryAction",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "SecondaryAction"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Title#2607:21",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "No projects yet",
+      "boundLayers": [
+        "Title"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Description#2607:28",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Get started by creating your first design system workspace.",
+      "boundLayers": [
+        "Description"
+      ]
+    },
+    {
+      "figmaPropertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Search\" | \"Error\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Search",
+        "Error"
+      ]
+    },
+    {
+      "figmaPropertyName": "Size",
+      "codePropName": "size",
+      "type": "VARIANT",
+      "tsType": "\"SM\" | \"MD\"",
+      "defaultValue": "SM",
+      "options": [
+        "SM",
+        "MD"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/3xl",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6",
+      "spacing/8"
+    ],
+    "directVariables": [
+      "Feedback/Danger-Subtle",
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/3xl",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4",
+      "spacing/5",
+      "spacing/6",
+      "spacing/8"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/normal",
+      "Text/Heading/2xl/bold **",
+      "Text/Heading/xl/bold **"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Cuando una tabla, listado o vista no contiene elementos iniciales (`Use=Default`), una búsqueda no arroja resultados (`Use=Search`) o falló la carga completa de datos (`Use=Error`)."
+    ],
+    "whenNotToUse": [
+      "No usar mientras los datos siguen cargando; usar `Skeleton` o `Spinner`.",
+      "No usar para advertencias puntuales dentro de contenido ya cargado; usar `Alert`."
+    ]
+  },
+  "behaviorRules": [
+    "Usar `Use=Default` para listados vacíos iniciales, `Use=Search` cuando no hay coincidencias de filtro y `Use=Error` con CTA de reintento tras fallo.",
+    "Mantener layout de acciones con `flex-wrap` para adaptarse limpiamente entre Desktop y Mobile.",
+    "Cuando muestre acción principal y secundaria (`hasSecondaryAction=true`), usar 1 botón `Primary` y 1 `Outline`/`Ghost`, nunca dos botones `Primary` juntos."
+  ]
+}

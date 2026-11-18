@@ -1,0 +1,172 @@
+{
+  "name": "TimePicker",
+  "figmaName": "Time Picker",
+  "figmaNodeId": "471:9247",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2154:5684",
+    "name": "Time Pickers"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs & Date",
+  "importPath": "@/components/ui/TimePicker",
+  "figmaDescription": null,
+  "anatomy": {
+    "root": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "_TimePicker Elements",
+        "component": "_TimePicker Elements",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "State=Default",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "_TimePicker Elements",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_TimePicker Elements"
+        },
+        {
+          "name": ":",
+          "type": "TEXT"
+        },
+        {
+          "name": "_TimePicker Elements",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_TimePicker Elements"
+        },
+        {
+          "name": ":",
+          "type": "TEXT"
+        },
+        {
+          "name": "_TimePicker Elements",
+          "type": "INSTANCE",
+          "layout": "HORIZONTAL",
+          "instanceOf": "_TimePicker Elements"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Filled"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Filled\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Filled"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Input",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Input",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/base/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "471:9039",
+      "figmaName": "_TimePicker Elements",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "variants": {
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Filled"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Filled\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Filled"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Background",
+        "Surfaces/Foreground",
+        "Surfaces/Input",
+        "radius/xl",
+        "spacing/1-5",
+        "spacing/2",
+        "spacing/4"
+      ],
+      "textStyles": [
+        "Text/Body/base/normal"
+      ],
+      "effectStyles": []
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Cuando un formulario requiere seleccionar una hora específica (y minutos) con formato controlado."
+    ],
+    "whenNotToUse": [
+      "No usar para seleccionar fechas del calendario; usar `DatePicker` o `Calendar`."
+    ]
+  },
+  "behaviorRules": [
+    "Permitir selección de hora y minutos con teclado, soporte 12h/24h y validación de rangos.",
+    "Reutiliza segmentos interactivos de `_TimePicker Elements` (`471:9039`)."
+  ]
+}

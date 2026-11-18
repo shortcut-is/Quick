@@ -1,0 +1,341 @@
+{
+  "name": "SidebarNavigation",
+  "figmaName": "Sidebar Navigation",
+  "figmaNodeId": "2618:4293",
+  "figmaFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "figmaSection": {
+    "id": "2618:4093",
+    "name": "Sidebar Navigation"
+  },
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation",
+  "importPath": "@/components/ui/SidebarNavigation",
+  "figmaDescription": "Import: @/components/ui/SidebarNavigation\nCategory: Navigation\n\nApplication sidebar supporting Expanded (248px) and Collapsed icon-rail (72px) modes, composed from _Sidebar Item, Badge, Separator, Switch Standalone, Avatar, and Button.\n\nProps / Variants:\n- Mode: \"Expanded\" | \"Collapse",
+  "anatomy": {
+    "root": {
+      "name": "Mode=Expanded",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "TopSeparator",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "GroupSeparator",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "FooterSeparator",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Mode=Expanded",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "TopSection",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "BrandHeader",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "TopSeparator",
+              "type": "INSTANCE",
+              "instanceOf": "SEPARATOR"
+            },
+            {
+              "name": "MainNavGroup",
+              "type": "FRAME",
+              "layout": "VERTICAL"
+            },
+            {
+              "name": "GroupSeparator",
+              "type": "INSTANCE",
+              "instanceOf": "SEPARATOR"
+            },
+            {
+              "name": "WorkspaceGroup",
+              "type": "FRAME",
+              "layout": "VERTICAL",
+              "refs": {
+                "visible": "👁️ Workspace Group#2618:23"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BottomSection",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            {
+              "name": "TestModeCard",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "refs": {
+                "visible": "👁️ Mode Switch#2618:20"
+              }
+            },
+            {
+              "name": "FooterSeparator",
+              "type": "INSTANCE",
+              "instanceOf": "SEPARATOR"
+            },
+            {
+              "name": "UserProfileRow",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Mode": {
+        "codePropName": "mode",
+        "defaultValue": "Expanded",
+        "options": [
+          "Expanded",
+          "Collapsed"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "figmaPropertyName": "👁️ Mode Switch#2618:20",
+      "codePropName": "hasModeSwitch",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "TestModeCard"
+      ]
+    },
+    {
+      "figmaPropertyName": "👁️ Workspace Group#2618:23",
+      "codePropName": "hasWorkspaceGroup",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "WorkspaceGroup"
+      ]
+    },
+    {
+      "figmaPropertyName": "✏️ Brand#2618:26",
+      "codePropName": "brandName",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Quick"
+    },
+    {
+      "figmaPropertyName": "Mode",
+      "codePropName": "mode",
+      "type": "VARIANT",
+      "tsType": "\"Expanded\" | \"Collapsed\"",
+      "defaultValue": "Expanded",
+      "options": [
+        "Expanded",
+        "Collapsed"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Invert-Background",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Radius/full",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Invert-Background",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "radius/md",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Foreground-Muted"
+    ],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal",
+      "Text/Body/xs/medium"
+    ],
+    "effectStyles": [
+      "Shadow 1"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaNodeId": "2618:4130",
+      "figmaName": "_Sidebar Item",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "variants": {
+        "Mode": {
+          "codePropName": "mode",
+          "defaultValue": "Expanded",
+          "options": [
+            "Expanded",
+            "Collapsed"
+          ]
+        },
+        "State": {
+          "codePropName": "state",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Hover",
+            "Active"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "figmaPropertyName": "👁️ Badge#2618:0",
+          "codePropName": "hasBadge",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": false,
+          "boundLayers": [
+            "ItemBadge"
+          ]
+        },
+        {
+          "figmaPropertyName": "👁️ Chevron#2618:5",
+          "codePropName": "hasChevron",
+          "type": "BOOLEAN",
+          "tsType": "boolean",
+          "defaultValue": false,
+          "boundLayers": [
+            "ChevronIcon"
+          ]
+        },
+        {
+          "figmaPropertyName": "✏️ Label#2618:10",
+          "codePropName": "label",
+          "type": "TEXT",
+          "tsType": "string",
+          "defaultValue": "Dashboard",
+          "boundLayers": [
+            "Label"
+          ]
+        },
+        {
+          "figmaPropertyName": "↪️ Icon#2618:15",
+          "codePropName": "icon",
+          "type": "INSTANCE_SWAP",
+          "tsType": "React.ReactNode",
+          "defaultValue": "447:3559",
+          "boundLayers": [
+            "ItemIcon"
+          ]
+        },
+        {
+          "figmaPropertyName": "Mode",
+          "codePropName": "mode",
+          "type": "VARIANT",
+          "tsType": "\"Expanded\" | \"Collapsed\"",
+          "defaultValue": "Expanded",
+          "options": [
+            "Expanded",
+            "Collapsed"
+          ]
+        },
+        {
+          "figmaPropertyName": "State",
+          "codePropName": "state",
+          "type": "VARIANT",
+          "tsType": "\"Default\" | \"Hover\" | \"Active\"",
+          "defaultValue": "Default",
+          "options": [
+            "Default",
+            "Hover",
+            "Active"
+          ]
+        }
+      ],
+      "tokens": [
+        "FontFamily/Primary",
+        "Surfaces/Border",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Muted",
+        "radius/lg",
+        "radius/md",
+        "spacing/0-5",
+        "spacing/1-5",
+        "spacing/2",
+        "spacing/2-5",
+        "spacing/3"
+      ],
+      "textStyles": [
+        "Text/Body/sm/bold",
+        "Text/Body/sm/medium",
+        "Text/Body/sm/normal"
+      ],
+      "effectStyles": [],
+      "contractFile": "sidebar-item.contract.json",
+      "importPath": "@/components/ui/SidebarItem"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Como estructura de navegación vertical principal en dashboards y aplicaciones web (`Expanded` `248px` o `Collapsed` `72px`), con soporte para marca, grupos de rutas, badge de conteo y perfil."
+    ],
+    "whenNotToUse": [
+      "No renderizar fija en pantalla en viewports móviles; en Mobile ocultarla dentro de `Sheet` o reemplazar por `BottomNavigation` + `Topbar` (`MobileAppBar`)."
+    ]
+  },
+  "behaviorRules": [
+    "Envolver navegación principal en `<aside><nav aria-label=\"Main Navigation\">` marcando la ruta activa con `aria-current=\"page\"`.",
+    "Permitir alternancia entre `Mode=Expanded` (`248px`) y `Mode=Collapsed` (`72px`); en viewport móvil `< 768px` desplegar dentro de `Sheet`."
+  ]
+}
