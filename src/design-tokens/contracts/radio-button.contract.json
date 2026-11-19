@@ -125,22 +125,24 @@
       "Surfaces/Foreground-Muted",
       "Surfaces/Input",
       "Surfaces/Transparent",
+      "radius/full",
       "spacing/1",
       "spacing/2"
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Input",
-      "Surfaces/Transparent",
-      "spacing/1",
       "spacing/2"
     ],
     "inheritedFromSubcomponents": [
-      "Primary/Foreground"
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "radius/full",
+      "spacing/1"
     ],
     "textStyles": [
       "Text/Body/sm/normal"
@@ -200,6 +202,7 @@
         "Primary/Top",
         "Surfaces/Input",
         "Surfaces/Transparent",
+        "radius/full",
         "spacing/1",
         "spacing/2"
       ],

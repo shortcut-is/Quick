@@ -185,6 +185,9 @@
   ],
   "tokens": {
     "variables": [
+      "Feedback/Danger-Bold",
+      "Feedback/Success-Bold",
+      "Feedback/Warning-Bold",
       "FontFamily/Primary",
       "Primary/Bottom",
       "Primary/Top",
@@ -196,6 +199,9 @@
       "spacing/2"
     ],
     "directVariables": [
+      "Feedback/Danger-Bold",
+      "Feedback/Success-Bold",
+      "Feedback/Warning-Bold",
       "FontFamily/Primary",
       "Primary/Bottom",
       "Primary/Top",

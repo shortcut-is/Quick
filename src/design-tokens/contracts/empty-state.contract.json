@@ -199,8 +199,6 @@
     "variables": [
       "Feedback/Danger-Subtle",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -211,7 +209,6 @@
       "radius/xl",
       "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4",
       "spacing/5",
@@ -221,8 +218,6 @@
     "directVariables": [
       "Feedback/Danger-Subtle",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -233,7 +228,6 @@
       "radius/xl",
       "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4",
       "spacing/5",

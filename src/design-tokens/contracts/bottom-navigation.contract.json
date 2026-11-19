@@ -95,50 +95,42 @@
   "tokens": {
     "variables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Muted",
       "radius/2xl",
-      "radius/full",
       "radius/xl",
       "spacing/1",
       "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4"
     ],
     "directVariables": [
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
-      "Surfaces/Muted",
       "radius/2xl",
-      "radius/full",
-      "radius/xl",
       "spacing/1",
-      "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
       "Surfaces/Foreground",
-      "Surfaces/Foreground-Muted"
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/xl",
+      "spacing/1-5"
     ],
     "textStyles": [
       "Text/Body/xs/medium",
       "Text/Body/xs/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [

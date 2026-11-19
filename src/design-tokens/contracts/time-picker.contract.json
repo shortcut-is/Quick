@@ -92,15 +92,16 @@
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Surfaces/Background",
       "Surfaces/Foreground",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Background",
       "Surfaces/Input",
       "radius/xl",
       "spacing/1-5",
-      "spacing/2",
-      "spacing/4"
+      "spacing/2"
     ],
-    "inheritedFromSubcomponents": [],
     "textStyles": [
       "Text/Body/base/bold",
       "Text/Body/base/normal"

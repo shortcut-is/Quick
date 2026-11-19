@@ -108,6 +108,7 @@
       "Surfaces/Invert-Foreground",
       "radius/md",
       "radius/sm",
+      "radius/xs",
       "spacing/1",
       "spacing/2"
     ],
@@ -118,6 +119,7 @@
       "Surfaces/Invert-Foreground",
       "radius/md",
       "radius/sm",
+      "radius/xs",
       "spacing/1",
       "spacing/2"
     ],
@@ -127,7 +129,7 @@
       "Text/Body/xs/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [
@@ -138,7 +140,8 @@
       "variants": {},
       "properties": [],
       "tokens": [
-        "Surfaces/Invert-Background"
+        "Surfaces/Invert-Background",
+        "radius/xs"
       ],
       "textStyles": [],
       "effectStyles": []

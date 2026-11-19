@@ -260,23 +260,21 @@
       "FontFamily/Primary",
       "Surfaces/Border",
       "Surfaces/Foreground",
-      "Surfaces/Input",
       "Surfaces/Transparent",
       "spacing/0-5",
       "spacing/1",
       "spacing/2"
     ],
     "directVariables": [
-      "Surfaces/Border",
-      "Surfaces/Transparent",
-      "spacing/0-5",
-      "spacing/1",
-      "spacing/2"
+      "Surfaces/Border"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
       "Surfaces/Foreground",
-      "Surfaces/Input"
+      "Surfaces/Transparent",
+      "spacing/0-5",
+      "spacing/1",
+      "spacing/2"
     ],
     "textStyles": [
       "Text/Body/sm/normal"
@@ -351,11 +349,7 @@
       "variants": {},
       "properties": [],
       "tokens": [
-        "Surfaces/Input",
-        "Surfaces/Transparent",
-        "spacing/0-5",
-        "spacing/1",
-        "spacing/2"
+        "spacing/0-5"
       ],
       "textStyles": [],
       "effectStyles": []

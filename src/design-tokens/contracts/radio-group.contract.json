@@ -89,13 +89,8 @@
   "tokens": {
     "variables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Input",
-      "Surfaces/Transparent",
-      "spacing/1",
       "spacing/2"
     ],
     "directVariables": [
@@ -104,12 +99,7 @@
       "spacing/2"
     ],
     "inheritedFromSubcomponents": [
-      "Primary/Bottom",
-      "Primary/Top",
-      "Surfaces/Foreground-Muted",
-      "Surfaces/Input",
-      "Surfaces/Transparent",
-      "spacing/1"
+      "Surfaces/Foreground-Muted"
     ],
     "textStyles": [
       "Text/Body/sm/medium",
@@ -185,13 +175,8 @@
       ],
       "tokens": [
         "FontFamily/Primary",
-        "Primary/Bottom",
-        "Primary/Top",
         "Surfaces/Foreground",
         "Surfaces/Foreground-Muted",
-        "Surfaces/Input",
-        "Surfaces/Transparent",
-        "spacing/1",
         "spacing/2"
       ],
       "textStyles": [

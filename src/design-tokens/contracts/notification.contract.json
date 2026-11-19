@@ -128,14 +128,9 @@
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/lg",
       "radius/none",
       "radius/sm",
       "spacing/1",
-      "spacing/1-5",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4"
     ],
@@ -149,14 +144,9 @@
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/lg",
       "radius/none",
       "radius/sm",
       "spacing/1",
-      "spacing/1-5",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4"
     ],
@@ -166,7 +156,7 @@
       "Text/Body/sm/medium"
     ],
     "effectStyles": [
-      "Shadow 4"
+      "Shadow/XL"
     ]
   },
   "subcomponents": [],

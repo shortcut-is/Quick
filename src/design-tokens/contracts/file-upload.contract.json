@@ -109,7 +109,10 @@
       "spacing/3"
     ],
     "inheritedFromSubcomponents": [],
-    "textStyles": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/xs/normal"
+    ],
     "effectStyles": []
   },
   "subcomponents": [],

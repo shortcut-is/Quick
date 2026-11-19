@@ -86,22 +86,18 @@
   "tokens": {
     "variables": [
       "FontFamily/Primary",
-      "Radius/full",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted",
       "spacing/1",
       "spacing/2",
       "spacing/4"
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Radius/full",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted",
       "spacing/1",
       "spacing/2",
       "spacing/4"

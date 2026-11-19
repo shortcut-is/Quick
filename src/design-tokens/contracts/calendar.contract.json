@@ -373,33 +373,29 @@
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Muted",
-      "Surfaces/Transparent",
-      "radius/full",
       "radius/sm",
-      "spacing/1-5",
+      "radius/xl",
       "spacing/2",
       "spacing/2-5",
       "spacing/3"
     ],
     "directVariables": [
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/sm",
       "Surfaces/Background",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/sm",
-      "spacing/1-5",
+      "radius/xl",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
+      "Primary/Bottom",
       "Primary/Foreground",
+      "Primary/Top",
+      "Radius/sm",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted"
+      "Surfaces/Muted",
+      "radius/sm",
+      "spacing/2-5"
     ],
     "textStyles": [
       "Text/Body/sm/bold",
@@ -407,7 +403,7 @@
       "Text/Body/sm/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [

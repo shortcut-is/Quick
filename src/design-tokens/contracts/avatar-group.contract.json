@@ -171,14 +171,15 @@
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Radius/full",
       "Surfaces/Background",
       "Surfaces/Foreground",
       "Surfaces/Muted",
       "radius/full",
       "spacing/2"
     ],
-    "inheritedFromSubcomponents": [],
+    "inheritedFromSubcomponents": [
+      "Radius/full"
+    ],
     "textStyles": [
       "Text/Body/sm/medium",
       "Text/Body/xs/medium"
@@ -242,7 +243,10 @@
         "Surfaces/Foreground",
         "Surfaces/Muted"
       ],
-      "textStyles": [],
+      "textStyles": [
+        "Text/Body/sm/medium",
+        "Text/Body/xs/medium"
+      ],
       "effectStyles": [],
       "contractFile": "avatar.contract.json",
       "importPath": "@/components/ui/Avatar"

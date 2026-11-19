@@ -149,24 +149,15 @@
   "tokens": {
     "variables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/full",
-      "Radius/sm",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Muted",
-      "Surfaces/Transparent",
-      "radius/full",
       "radius/lg",
-      "radius/md",
-      "radius/sm",
       "radius/xl",
       "spacing/0-5",
       "spacing/1",
-      "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
       "spacing/3",
@@ -174,30 +165,21 @@
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/full",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted",
-      "radius/lg",
-      "radius/md",
       "radius/xl",
       "spacing/0-5",
       "spacing/1",
-      "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
       "spacing/3",
       "spacing/4"
     ],
     "inheritedFromSubcomponents": [
-      "Radius/sm",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/sm"
+      "Surfaces/Muted",
+      "radius/lg"
     ],
     "textStyles": [
       "Text/Body/sm/bold",
@@ -206,7 +188,7 @@
       "Text/Body/xs/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [
@@ -238,21 +220,14 @@
       "variants": {},
       "properties": [],
       "tokens": [
-        "Primary/Bottom",
-        "Primary/Top",
-        "Radius/sm",
         "Surfaces/Background",
-        "Surfaces/Transparent",
-        "radius/full",
-        "radius/sm",
-        "spacing/1-5",
+        "radius/xl",
         "spacing/2",
-        "spacing/2-5",
         "spacing/3"
       ],
       "textStyles": [],
       "effectStyles": [
-        "Shadow 2"
+        "Shadow/MD"
       ],
       "contractFile": "calendar.contract.json",
       "importPath": "@/components/ui/Calendar"

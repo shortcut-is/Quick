@@ -148,17 +148,19 @@
       "spacing/4"
     ],
     "directVariables": [
-      "Surfaces/Muted",
-      "radius/4xl",
-      "spacing/1",
-      "spacing/2",
-      "spacing/4"
+      "spacing/2"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
-      "Surfaces/Foreground"
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/4xl",
+      "spacing/1",
+      "spacing/4"
     ],
-    "textStyles": [],
+    "textStyles": [
+      "Text/Body/base/normal"
+    ],
     "effectStyles": []
   },
   "subcomponents": [
@@ -217,7 +219,9 @@
         "spacing/2",
         "spacing/4"
       ],
-      "textStyles": [],
+      "textStyles": [
+        "Text/Body/base/normal"
+      ],
       "effectStyles": [],
       "contractFile": "tag.contract.json",
       "importPath": "@/components/ui/Tag"

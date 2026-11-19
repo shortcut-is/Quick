@@ -201,6 +201,7 @@
       "FontFamily/Primary",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
+      "radius/xs",
       "spacing/1"
     ],
     "directVariables": [],
@@ -208,6 +209,7 @@
       "FontFamily/Primary",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
+      "radius/xs",
       "spacing/1"
     ],
     "textStyles": [
@@ -249,6 +251,7 @@
         "FontFamily/Primary",
         "Surfaces/Foreground",
         "Surfaces/Foreground-Muted",
+        "radius/xs",
         "spacing/1"
       ],
       "textStyles": [

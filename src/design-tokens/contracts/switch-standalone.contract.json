@@ -103,6 +103,7 @@
       "Radius/full",
       "Surfaces/Background",
       "Surfaces/Input",
+      "radius/full",
       "spacing/0-5",
       "spacing/2"
     ],
@@ -113,13 +114,14 @@
       "Radius/full",
       "Surfaces/Background",
       "Surfaces/Input",
+      "radius/full",
       "spacing/0-5",
       "spacing/2"
     ],
     "inheritedFromSubcomponents": [],
     "textStyles": [],
     "effectStyles": [
-      "Shadow 1"
+      "Shadow/SM"
     ]
   },
   "subcomponents": [],

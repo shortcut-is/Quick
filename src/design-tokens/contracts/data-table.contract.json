@@ -116,24 +116,22 @@
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Input",
       "Surfaces/Transparent",
       "spacing/0-5",
       "spacing/1",
       "spacing/2",
-      "spacing/4"
+      "spacing/96"
     ],
     "directVariables": [
       "FontFamily/Primary",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Input",
       "Surfaces/Transparent",
       "spacing/0-5",
       "spacing/1",
       "spacing/2",
-      "spacing/4"
+      "spacing/96"
     ],
     "inheritedFromSubcomponents": [],
     "textStyles": [
@@ -273,12 +271,7 @@
         }
       ],
       "tokens": [
-        "Surfaces/Border",
-        "Surfaces/Transparent",
-        "spacing/0-5",
-        "spacing/1",
-        "spacing/2",
-        "spacing/4"
+        "Surfaces/Border"
       ],
       "textStyles": [],
       "effectStyles": [],
@@ -415,11 +408,7 @@
         }
       ],
       "tokens": [
-        "Surfaces/Border",
-        "Surfaces/Transparent",
-        "spacing/0-5",
-        "spacing/1",
-        "spacing/2"
+        "Surfaces/Border"
       ],
       "textStyles": [],
       "effectStyles": [],
@@ -436,7 +425,7 @@
         "FontFamily/Primary",
         "Surfaces/Foreground-Muted",
         "spacing/1",
-        "spacing/2"
+        "spacing/96"
       ],
       "textStyles": [
         "Text/Body/sm/normal"
@@ -561,11 +550,7 @@
       "variants": {},
       "properties": [],
       "tokens": [
-        "Surfaces/Input",
-        "Surfaces/Transparent",
-        "spacing/0-5",
-        "spacing/1",
-        "spacing/2"
+        "spacing/0-5"
       ],
       "textStyles": [],
       "effectStyles": []

@@ -47,13 +47,13 @@
       "FontFamily/Primary",
       "Surfaces/Foreground-Muted",
       "spacing/1",
-      "spacing/2"
+      "spacing/96"
     ],
     "directVariables": [
       "FontFamily/Primary",
       "Surfaces/Foreground-Muted",
       "spacing/1",
-      "spacing/2"
+      "spacing/96"
     ],
     "inheritedFromSubcomponents": [],
     "textStyles": [

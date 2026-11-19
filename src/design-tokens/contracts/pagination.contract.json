@@ -228,16 +228,16 @@
       "spacing/2"
     ],
     "directVariables": [
-      "Radius/sm",
-      "Surfaces/Muted",
-      "spacing/1",
       "spacing/2"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
+      "Radius/sm",
       "Surfaces/Background",
       "Surfaces/Foreground",
-      "Surfaces/Foreground-Muted"
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/1"
     ],
     "textStyles": [
       "Text/Body/sm/medium"

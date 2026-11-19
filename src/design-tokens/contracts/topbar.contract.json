@@ -145,17 +145,13 @@
   "tokens": {
     "variables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/full",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
       "Surfaces/Invert-Background",
       "Surfaces/Invert-Foreground",
       "Surfaces/Muted",
-      "Surfaces/Transparent",
-      "radius/full",
       "radius/lg",
       "radius/md",
       "radius/xl",
@@ -171,20 +167,14 @@
     ],
     "directVariables": [
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/full",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
       "Surfaces/Invert-Background",
       "Surfaces/Muted",
-      "Surfaces/Transparent",
-      "radius/full",
       "radius/lg",
-      "radius/md",
       "radius/xl",
-      "spacing/0-5",
       "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
@@ -195,15 +185,18 @@
     ],
     "inheritedFromSubcomponents": [
       "Surfaces/Invert-Foreground",
+      "radius/md",
+      "spacing/0-5",
       "spacing/1"
     ],
     "textStyles": [
       "Text/Body/base/bold",
       "Text/Body/sm/medium",
-      "Text/Body/xs/medium"
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
     ],
     "effectStyles": [
-      "Shadow 1"
+      "Shadow/SM"
     ]
   },
   "subcomponents": [
@@ -399,8 +392,6 @@
       ],
       "tokens": [
         "Surfaces/Border",
-        "Surfaces/Transparent",
-        "spacing/2",
         "spacing/3"
       ],
       "textStyles": [],
@@ -506,7 +497,7 @@
         "Text/Body/xs/medium"
       ],
       "effectStyles": [
-        "Shadow 1"
+        "Shadow/SM"
       ],
       "contractFile": "kbd.contract.json",
       "importPath": "@/components/ui/Kbd"

@@ -110,6 +110,7 @@
       "Surfaces/Background",
       "Surfaces/Foreground",
       "Surfaces/Input",
+      "radius/full",
       "spacing/0-5",
       "spacing/2"
     ],
@@ -125,13 +126,14 @@
       "Radius/full",
       "Surfaces/Background",
       "Surfaces/Input",
+      "radius/full",
       "spacing/0-5"
     ],
     "textStyles": [
       "Text/Body/sm/normal"
     ],
     "effectStyles": [
-      "Shadow 1"
+      "Shadow/SM"
     ]
   },
   "subcomponents": [
@@ -207,12 +209,13 @@
         "Radius/full",
         "Surfaces/Background",
         "Surfaces/Input",
+        "radius/full",
         "spacing/0-5",
         "spacing/2"
       ],
       "textStyles": [],
       "effectStyles": [
-        "Shadow 1"
+        "Shadow/SM"
       ],
       "contractFile": "switch-standalone.contract.json",
       "importPath": "@/components/ui/SwitchStandalone"

@@ -121,11 +121,17 @@
     "lote-a/alert-toast-dialog-dropdown-menu",
     "lote-b/spinner-skeleton-kbd-avatar-group-empty-state",
     "lote-c/sheet-popover-sidebar-topbar-bottom-nav",
-    "component-contracts/60-json-contracts-extracted"
+    "component-contracts/60-json-contracts-extracted",
+    "audit-cleanup/switzer-migration-text-styles-radii-spacing-slider-fileupload-shadow-styles"
   ],
+  "effectStyles": {
+    "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",
+    "Shadow/MD": "S:e1e4828e20e96310252ed3261711d8c70f2e8aaf,",
+    "Shadow/LG": "S:e6bf15a52642fa19b6a1518a5470193182ed63ec,",
+    "Shadow/XL": "S:af0a41a54993863ce31c6965bc2b62b4057111ad,",
+    "Shadow/Focus": "S:7d9e7e8fef712fad3630cacfb70a6e5c423b2414,"
+  },
   "pendingRecommendations": [
-    "fix-switzer-variable-missing-font (Input Text, Input Select, File Upload, List Item)",
-    "slider-scale-refactor-and-unbound-radii",
     "lote-d-advanced-inputs (Search/Filter Bar, Combobox, Number Input, Command Palette)",
     "device-variable-collection (Desktop/Mobile)",
     "button-secondary-and-loading",

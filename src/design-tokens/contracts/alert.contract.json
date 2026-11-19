@@ -160,8 +160,6 @@
       "Feedback/Warning",
       "Feedback/Warning-Subtle",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -170,9 +168,7 @@
       "radius/2xl",
       "radius/lg",
       "spacing/1",
-      "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4",
       "spacing/5"
@@ -185,8 +181,6 @@
       "Feedback/Warning",
       "Feedback/Warning-Subtle",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -195,9 +189,7 @@
       "radius/2xl",
       "radius/lg",
       "spacing/1",
-      "spacing/1-5",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3",
       "spacing/4",
       "spacing/5"
@@ -208,7 +200,7 @@
       "Text/Body/sm/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [],

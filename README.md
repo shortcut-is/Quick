@@ -40,7 +40,7 @@ Ningún componente nuevo depende de colores hexadecimales crudos ni espaciados s
 - **Colección `Mode`** (`VariableCollectionId:2154:4967`, modos **`Light`** y **`Dark`**):
   - **Superficies:** `Surfaces/Background`, `Surfaces/Muted`, `Surfaces/Foreground`, `Surfaces/Foreground-Muted`, `Surfaces/Border`, `Surfaces/Input`, `Surfaces/Overlay`, `Surfaces/Invert-Background`, `Surfaces/Invert-Foreground`.
   - **Marca y Estados:** `Primary/Top`, `Primary/Bottom`, `Primary/Foreground` y `Feedback/*` (`Success`, `Warning`, `Danger`, `Info` en variantes normal, `-Bold` y `-Subtle`).
-- **Text Styles & Effect Styles:** `Text/Body/*`, `Text/Heading/*`, `Shadow 1` .. `Shadow 4` y `Focus`.
+- **Text Styles & Effect Styles:** `Text/Body/*`, `Text/Heading/*`, `Shadow/SM`, `Shadow/MD`, `Shadow/LG`, `Shadow/XL` y `Shadow/Focus`.
 
 ### 4. Comportamiento Web y Mobile
 - **Superficies emergentes:** `Dialog` para confirmaciones/formularios modales centrados; `Sheet` (`Position=Right (Web)`) para paneles laterales de escritorio y `Sheet` (`Position=Bottom (Mobile)`) con *drag handle* superior y acciones a ancho completo en dispositivos táctiles; `Popover` para controles anclados no modales.

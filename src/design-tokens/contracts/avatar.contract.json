@@ -82,7 +82,10 @@
       "Surfaces/Muted"
     ],
     "inheritedFromSubcomponents": [],
-    "textStyles": [],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium"
+    ],
     "effectStyles": []
   },
   "subcomponents": [],

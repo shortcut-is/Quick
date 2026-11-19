@@ -43,7 +43,7 @@
     }
   },
   "variants": {
-    "totalVariants": 6,
+    "totalVariants": 5,
     "axes": {
       "Progress": {
         "codePropName": "progress",
@@ -53,20 +53,12 @@
           "25 %",
           "50 %",
           "75 %",
-          "100 %",
-          "Free"
+          "100 %"
         ]
       }
     }
   },
   "properties": [
-    {
-      "propertyName": "%% - Add \"X\" for free control",
-      "codePropName": "freeProgressHackDeprecated",
-      "type": "TEXT",
-      "tsType": "string",
-      "defaultValue": "XXXXXXXXXXXXXXXXXXX"
-    },
     {
       "propertyName": "Show Knob",
       "codePropName": "hasKnob",
@@ -81,15 +73,14 @@
       "propertyName": "Progress",
       "codePropName": "progress",
       "type": "VARIANT",
-      "tsType": "\"0 %\" | \"25 %\" | \"50 %\" | \"75 %\" | \"100 %\" | \"Free\"",
+      "tsType": "\"0 %\" | \"25 %\" | \"50 %\" | \"75 %\" | \"100 %\"",
       "defaultValue": "0 %",
       "options": [
         "0 %",
         "25 %",
         "50 %",
         "75 %",
-        "100 %",
-        "Free"
+        "100 %"
       ]
     }
   ],
@@ -101,6 +92,8 @@
       "Surfaces/Input",
       "Surfaces/Invert-Background",
       "Surfaces/Invert-Foreground",
+      "radius/full",
+      "radius/md",
       "spacing/2"
     ],
     "directVariables": [
@@ -108,14 +101,17 @@
       "Primary/Bottom",
       "Primary/Top",
       "Surfaces/Input",
+      "radius/full",
+      "radius/md"
+    ],
+    "inheritedFromSubcomponents": [
       "Surfaces/Invert-Background",
       "Surfaces/Invert-Foreground",
       "spacing/2"
     ],
-    "inheritedFromSubcomponents": [],
     "textStyles": [],
     "effectStyles": [
-      "Shadow 1"
+      "Shadow/SM"
     ]
   },
   "subcomponents": [
@@ -139,11 +135,12 @@
       "tokens": [
         "Surfaces/Invert-Background",
         "Surfaces/Invert-Foreground",
+        "radius/full",
         "spacing/2"
       ],
       "textStyles": [],
       "effectStyles": [
-        "Shadow 1"
+        "Shadow/SM"
       ]
     }
   ],

@@ -61,38 +61,21 @@
   ],
   "tokens": {
     "variables": [
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/sm",
       "Surfaces/Background",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/sm",
-      "spacing/1",
-      "spacing/1-5",
+      "radius/xl",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3"
     ],
-    "directVariables": [
-      "spacing/1"
-    ],
+    "directVariables": [],
     "inheritedFromSubcomponents": [
-      "Primary/Bottom",
-      "Primary/Top",
-      "Radius/sm",
       "Surfaces/Background",
-      "Surfaces/Transparent",
-      "radius/full",
-      "radius/sm",
-      "spacing/1-5",
+      "radius/xl",
       "spacing/2",
-      "spacing/2-5",
       "spacing/3"
     ],
     "textStyles": [],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [
@@ -103,21 +86,14 @@
       "variants": {},
       "properties": [],
       "tokens": [
-        "Primary/Bottom",
-        "Primary/Top",
-        "Radius/sm",
         "Surfaces/Background",
-        "Surfaces/Transparent",
-        "radius/full",
-        "radius/sm",
-        "spacing/1-5",
+        "radius/xl",
         "spacing/2",
-        "spacing/2-5",
         "spacing/3"
       ],
       "textStyles": [],
       "effectStyles": [
-        "Shadow 2"
+        "Shadow/MD"
       ],
       "contractFile": "calendar.contract.json",
       "importPath": "@/components/ui/Calendar"

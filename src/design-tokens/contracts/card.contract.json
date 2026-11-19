@@ -234,10 +234,8 @@
   ],
   "tokens": {
     "variables": [
-      "Feedback/Info-Subtle",
+      "FontFamily/Heading",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -246,9 +244,9 @@
       "radius/2xl",
       "radius/3xl",
       "radius/lg",
-      "radius/md",
       "radius/xl",
       "spacing/0-5",
+      "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
       "spacing/3",
@@ -258,10 +256,8 @@
       "spacing/8"
     ],
     "directVariables": [
-      "Feedback/Info-Subtle",
+      "FontFamily/Heading",
       "FontFamily/Primary",
-      "Primary/Bottom",
-      "Primary/Top",
       "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
@@ -270,9 +266,9 @@
       "radius/2xl",
       "radius/3xl",
       "radius/lg",
-      "radius/md",
       "radius/xl",
       "spacing/0-5",
+      "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
       "spacing/3",
@@ -283,15 +279,21 @@
     ],
     "inheritedFromSubcomponents": [],
     "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/base/medium",
       "Text/Body/base/normal",
+      "Text/Body/sm/medium",
       "Text/Body/sm/normal",
       "Text/Body/xs/medium",
+      "Text/Body/xs/normal",
       "Text/Heading/2xl/bold **",
+      "Text/Heading/3xl/bold",
+      "Text/Heading/4xl/normal",
       "Text/Heading/xl/bold **"
     ],
     "effectStyles": [
-      "Shadow 1",
-      "Shadow 2"
+      "Shadow/MD",
+      "Shadow/SM"
     ]
   },
   "subcomponents": [

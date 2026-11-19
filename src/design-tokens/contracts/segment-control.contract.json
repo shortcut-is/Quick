@@ -161,23 +161,23 @@
     ],
     "directVariables": [
       "Radius/sm",
-      "Surfaces/Background",
       "Surfaces/Muted",
       "spacing/0-5",
-      "spacing/1",
-      "spacing/2",
-      "spacing/4"
+      "spacing/1"
     ],
     "inheritedFromSubcomponents": [
       "FontFamily/Primary",
+      "Surfaces/Background",
       "Surfaces/Foreground",
-      "Surfaces/Foreground-Muted"
+      "Surfaces/Foreground-Muted",
+      "spacing/2",
+      "spacing/4"
     ],
     "textStyles": [
       "Text/Body/sm/normal"
     ],
     "effectStyles": [
-      "Shadow 1"
+      "Shadow/SM"
     ]
   },
   "subcomponents": [
@@ -232,7 +232,7 @@
         "Text/Body/sm/normal"
       ],
       "effectStyles": [
-        "Shadow 1"
+        "Shadow/SM"
       ]
     }
   ],
@@ -245,6 +245,6 @@
     ]
   },
   "behaviorRules": [
-    "Implement single-selection keyboard semantics (`role=\"radiogroup\"` / arrow keys) keeping exactly one active pill highlighted with `Surfaces/Background` and `Shadow 1`."
+    "Implement single-selection keyboard semantics (`role=\"radiogroup\"` / arrow keys) keeping exactly one active pill highlighted with `Surfaces/Background` and `Shadow/SM`."
   ]
 }

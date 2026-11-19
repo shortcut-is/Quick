@@ -127,17 +127,11 @@
       "spacing/8"
     ],
     "directVariables": [
-      "Radius/lg",
       "Surfaces/Background",
       "Surfaces/Border",
-      "Surfaces/Muted",
-      "Surfaces/Transparent",
-      "radius/sm",
       "radius/xl",
       "spacing/0-5",
-      "spacing/1",
-      "spacing/1-5",
-      "spacing/2"
+      "spacing/1"
     ],
     "inheritedFromSubcomponents": [
       "Feedback/Danger",
@@ -145,8 +139,14 @@
       "FontFamily/Primary",
       "Primary/Bottom",
       "Primary/Top",
+      "Radius/lg",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/sm",
+      "spacing/1-5",
+      "spacing/2",
       "spacing/8"
     ],
     "textStyles": [
@@ -155,7 +155,7 @@
       "Text/Body/xs/normal"
     ],
     "effectStyles": [
-      "Shadow 2"
+      "Shadow/MD"
     ]
   },
   "subcomponents": [

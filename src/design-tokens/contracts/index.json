@@ -425,7 +425,7 @@
       "importPath": "@/components/ui/Slider",
       "category": "Inputs",
       "contractFile": "slider.contract.json",
-      "totalVariants": 6
+      "totalVariants": 5
     },
     {
       "name": "SlotContent",

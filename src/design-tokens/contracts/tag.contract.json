@@ -90,7 +90,9 @@
       "spacing/4"
     ],
     "inheritedFromSubcomponents": [],
-    "textStyles": [],
+    "textStyles": [
+      "Text/Body/base/normal"
+    ],
     "effectStyles": []
   },
   "subcomponents": [],
