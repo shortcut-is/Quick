@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Layout Primitive",
   "importPath": "@/components/ui/Separator",
-  "description": "Structural horizontal or vertical divider bound to Surfaces/Border.\n\nVariants: Direction = Horizontal | Vertical.\nDesign rules: Use sparingly to separate distinct logical groups inside Card, Sheet, Sidebar, Popover, or Topbar.",
+  "description": "Structural horizontal or vertical divider bound to Surfaces/Border.\n\nVariants: Direction = Horizontal | Vertical.\nDesign rules: Use sparingly to separate distinct logical groups inside Card, Sheet, Sidebar, Date & Time Picker, or Topbar.",
   "anatomy": {
     "root": {
       "name": "Direction=Horizontal",
@@ -64,7 +64,7 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Use to visually divide logical groups inside `Card`, `Sheet`, `Popover`, `DropdownMenu`, `SidebarNavigation`, or `Topbar` (`Horizontal` or `Vertical`)."
+      "Use to visually divide logical groups inside `Card`, `Sheet`, `DateTimePicker`, `DropdownMenu`, `SidebarNavigation`, or `Topbar` (`Horizontal` or `Vertical`)."
     ],
     "whenNotToUse": [
       "Do not insert dividers between every row or field when Quick v1.2 spacing tokens (`spacing/*`) already establish clean hierarchy."

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Dialog",
-  "description": "Centered modal window that interrupts the current flow for critical confirmations, destructive warnings, or short focused forms.\n\nVariants & Properties:\n- Use: Default | Destructive | Form.\n- Size: SM (380px, confirmations) | MD (460px, forms).\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nHierarchy & usage rules:\n- Always pair over OVERLAY to dim background content.\n- In DialogFooter never place two Primary buttons side by side: always combine 1 secondary button (Outline or Ghost for Cancel) with 1 confirmation button (Primary or Destructive).\n- Use Sheet for wide side inspectors on Web or touch drawers on Mobile; use Popover for lightweight trigger-anchored controls.",
+  "description": "Centered modal window that interrupts the current flow for critical confirmations, destructive warnings, or short focused forms.\n\nVariants & Properties:\n- Use: Default | Destructive | Form.\n- Size: SM (380px, confirmations) | MD (460px, forms).\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, 👁️ Secondary Action, ✏️ Title, ✏️ Description.\n\nHierarchy & usage rules:\n- Always pair over OVERLAY to dim background content.\n- In DialogFooter never place two Primary buttons side by side: always combine 1 secondary button (Outline or Ghost for Cancel) with 1 confirmation button (Primary or Destructive).\n- Use Sheet for wide side inspectors on Web or touch drawers on Mobile; use Date & Time Picker for calendar and time pickers.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -257,7 +257,7 @@
       "Never place two `Primary` buttons side by side in `DialogFooter`; cancel/dismiss must always use `Outline` or `Ghost`.",
       "Do not use for wide multi-field inspectors, filter drawers, or mobile-native bottom panels; use `Sheet` (`Right (Web)` or `Bottom (Mobile)`).",
       "Do not use for brief non-blocking notices; use `Toast` or `Alert`.",
-      "Do not use for small trigger-anchored controls; use `Popover`."
+      "Do not use for calendar or time selection pickers; use `DateTimePicker`."
     ]
   },
   "behaviorRules": [

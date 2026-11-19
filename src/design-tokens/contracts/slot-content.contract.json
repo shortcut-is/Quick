@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Primitives",
   "importPath": "@/components/ui/SlotContent",
-  "description": "Flexible content placeholder embedded inside Card, Dialog, Sheet, and Popover to be swapped with real layouts, forms, or components.",
+  "description": "Flexible content placeholder embedded inside Card, Dialog, and Sheet to be swapped with real layouts, forms, or components.",
   "anatomy": {
     "root": {
       "name": "Slot: Content",
@@ -56,7 +56,7 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Use in Figma layouts as the swappable body region inside `Card`, `Dialog`, `Sheet`, and `Popover`."
+      "Use in Figma layouts as the swappable body region inside `Card`, `Dialog`, and `Sheet`."
     ],
     "whenNotToUse": [
       "Never render the dashed placeholder box in production code; replace directly with React `children`."

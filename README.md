@@ -16,8 +16,8 @@ Todos los componentes publicados en `⚡️ Components` (`0:1`) siguen una estru
 - **Auto Layout estructural:** Todos los contenedores usan Auto Layout (`HORIZONTAL` o `VERTICAL`) con políticas explícitas de dimensionamiento (`HUG` o `FILL`), evitando grupos arbitrarios o posicionamiento absoluto injustificado.
 - **Nomenclatura semántica:** Las capas internas están nombradas en `PascalCase` o `camelCase` orientadas al DOM (`CardHeader`, `TitleRow`, `CloseButton`, `SheetBody`, `NavTabHome`).
 - **Slots y composición modular:**
-  - `Slot: Content` (`2366:6163`) funciona como área de contenido libre (`children` en React) dentro de `Card`, `Dialog`, `Sheet` y `Popover`.
-  - Los componentes compuestos reutilizan primitivas nativas del sistema (`Button`, `Badge`, `Avatar`, `Input Text`, `Input Select`, `Switch Standalone`, `Calendar`, `Breadcrumb`, `Tab`, `Kbd`, `SEPARATOR`, `OVERLAY`) y subcomponentes internos (`_Sidebar Item`, `_Bottom Nav Item`, `_Tab Item`, `menu item`, etc.).
+  - `Slot: Content` (`2366:6163`) funciona como área de contenido libre (`children` en React) dentro de `Card`, `Dialog` y `Sheet`.
+  - Los componentes compuestos reutilizan primitivas nativas del sistema (`Button`, `Badge`, `Avatar`, `Input Text`, `Input Select`, `Switch Standalone`, `Calendar`, `Time Picker`, `Breadcrumb`, `Tab`, `Kbd`, `SEPARATOR`, `OVERLAY`) y subcomponentes internos (`_Calendar Days`, `_TimePicker Elements`, `_Sidebar Item`, `_Bottom Nav Item`, `_Tab Item`, `menu item`, etc.).
   - En componentes contenedores con ítems configurables (como `Bottom Navigation`), las instancias internas están expuestas (`isExposedInstance`) para controlar de forma independiente el estado (`Default`, `Hover`, `Active`), icono y etiqueta de cada pestaña.
 
 ### 2. Convención de Propiedades (1:1 Figma ↔ Código)
@@ -43,7 +43,7 @@ Ningún componente nuevo depende de colores hexadecimales crudos ni espaciados s
 - **Text Styles & Effect Styles:** `Text/Body/*`, `Text/Heading/*`, `Shadow/SM`, `Shadow/MD`, `Shadow/LG`, `Shadow/XL` y `Shadow/Focus`.
 
 ### 4. Comportamiento Web y Mobile
-- **Superficies emergentes:** `Dialog` para confirmaciones/formularios modales centrados; `Sheet` (`Position=Right (Web)`) para paneles laterales de escritorio y `Sheet` (`Position=Bottom (Mobile)`) con *drag handle* superior y acciones a ancho completo en dispositivos táctiles; `Popover` para controles anclados no modales.
+- **Superficies emergentes:** `Dialog` para confirmaciones, advertencias destructivas o formularios modales centrados (y para controles flotantes que requieran confirmación); `Sheet` (`Position=Right (Web)`) para paneles laterales de escritorio y `Sheet` (`Position=Bottom (Mobile)`) con *drag handle* superior y acciones a ancho completo en dispositivos táctiles; **`Date & Time Picker`** (`SingleCalendar`, `DateRange`, `PresetCalendar`, `DateAndTime`, `TimePicker12h`, `TimePicker24h`) para paneles anclados de calendario, rangos y selección horaria.
 - **Navegación adaptativa:** `Sidebar Navigation` (`Expanded` `248px` / `Collapsed` `72px`) + `Topbar` (`DesktopBreadcrumb` / `DesktopTabs`) en escritorio, y `Topbar` (`MobileAppBar` `390px`) + `Bottom Navigation` (`390×68px`) en móviles.
 
 ---
@@ -61,8 +61,8 @@ Cada archivo `.contract.json` funciona como especificación fuente para generaci
 - **`subcomponents`, `usageGuidelines` y `behaviorRules`:** Subcomponentes internos relacionados, criterios explícitos de cuándo usar y cuándo no usar cada componente (`whenToUse` / `whenNotToUse` con alternativas dentro del sistema) y reglas de accesibilidad (ARIA, gestión de foco, teclado), estados y comportamiento responsivo.
 
 Categorías disponibles en [`index.json`](src/design-tokens/contracts/index.json):
-- **Acciones y Formularios:** `button`, `input-text`, `input-select`, `input-area`, `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker`, `time-picker`, `calendar`, `file-upload`.
-- **Superficies y Overlays:** `card`, `slot-content`, `dialog`, `overlay`, `sheet`, `popover`, `dropdown-menu`, `dropdown-menu-item`, `dropdown-menu-title`, `tooltip`.
+- **Acciones y Formularios:** `button`, `input-text`, `input-select`, `input-area`, `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker` (6 variantes `Single`/`Range`/`DateTime` × `Default`/`Filled`), `time-picker` (4 variantes `24h`/`12h` × `Default`/`Filled` + `_TimePicker Elements`), `calendar` (`Calendar` + 6 estados de `_Calendar Days` incluyendo `Range`), `date-time-picker` (`SingleCalendar`, `DateRange`, `PresetCalendar`, `DateAndTime`, `TimePicker12h`, `TimePicker24h`), `file-upload`.
+- **Superficies y Overlays:** `card`, `slot-content`, `dialog`, `overlay`, `sheet`, `dropdown-menu`, `dropdown-menu-item`, `dropdown-menu-title`, `tooltip`.
 - **Feedback:** `alert`, `toast`, `notification`, `progress-bar`, `spinner`, `skeleton`, `empty-state`.
 - **Datos y Layout:** `accordion`, `avatar`, `avatar-group`, `badge`, `tag`, `tag-group`, `kbd`, `list-item`, `separator`, `data-table` (+ `data-table-header`, `data-table-row`, `data-table-footer`, `data-table-cell`).
 - **Navegación:** `breadcrumb`, `breadcrumb-item`, `pagination`, `segment-control`, `stepper`, `tab`, `tab-item`, `sidebar-navigation`, `sidebar-item`, `topbar`, `bottom-navigation`, `bottom-nav-item`.

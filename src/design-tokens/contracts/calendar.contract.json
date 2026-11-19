@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/Calendar",
-  "description": "Monthly date grid selector reused inside Date Picker and Popover (Use=DateCalendar).\n\nDesign rules:\n- Clearly distinguish today, the selected date, and out-of-month days.\n- Do not embed persistently inside short forms; prefer Date Picker.",
+  "description": "Monthly calendar grid composed of _Calendar Days, _Calendar Days Label, _Calendar Month-Year headers, and Ghost XS navigation buttons.\n\nSupports single-date selection, today markers, disabled dates, outside-month dates, and continuous date-range bands via the _Calendar Days State property.\n\nUse inside Date & Time Picker panels or embedded scheduling views with semantic surface, spacing, and typography tokens.",
   "anatomy": {
     "root": {
       "name": "Calendar",
@@ -17,6 +17,26 @@
         "slotName": "Button",
         "component": "Button",
         "kind": "primitive"
+      },
+      {
+        "slotName": "Icon/Line / Chevron-Left",
+        "component": "Icon/Line / Chevron-Left",
+        "kind": "icon"
+      },
+      {
+        "slotName": "Calendar Month",
+        "component": "_Calendar Month-Year",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Calendar Year",
+        "component": "_Calendar Month-Year",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Icon/Line / Chevron-Right",
+        "component": "Icon/Line / Chevron-Right",
+        "kind": "icon"
       },
       {
         "slotName": "Sun",
@@ -73,18 +93,52 @@
               "name": "Button",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "Button"
+              "instanceOf": "Button",
+              "children": [
+                {
+                  "name": "Icon/Line / Chevron-Left",
+                  "type": "INSTANCE",
+                  "instanceOf": "Icon/Line / Chevron-Left",
+                  "refs": {
+                    "mainComponent": "Swap Icon"
+                  }
+                }
+              ]
             },
             {
               "name": "Calendar Header Nav",
               "type": "FRAME",
-              "layout": "HORIZONTAL"
+              "layout": "HORIZONTAL",
+              "children": [
+                {
+                  "name": "Calendar Month",
+                  "type": "INSTANCE",
+                  "layout": "HORIZONTAL",
+                  "instanceOf": "_Calendar Month-Year"
+                },
+                {
+                  "name": "Calendar Year",
+                  "type": "INSTANCE",
+                  "layout": "HORIZONTAL",
+                  "instanceOf": "_Calendar Month-Year"
+                }
+              ]
             },
             {
               "name": "Button",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "Button"
+              "instanceOf": "Button",
+              "children": [
+                {
+                  "name": "Icon/Line / Chevron-Right",
+                  "type": "INSTANCE",
+                  "instanceOf": "Icon/Line / Chevron-Right",
+                  "refs": {
+                    "mainComponent": "Swap Icon"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -97,43 +151,85 @@
               "name": "Sun",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Mon",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Tus",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Wen",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Thu",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Fri",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Sat",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days Label"
+              "instanceOf": "_Calendar Days Label",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             }
           ]
         },
@@ -146,211 +242,421 @@
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             },
             {
               "name": "Day",
               "type": "INSTANCE",
               "layout": "HORIZONTAL",
-              "instanceOf": "_Calendar Days"
+              "instanceOf": "_Calendar Days",
+              "children": [
+                {
+                  "name": "00",
+                  "type": "TEXT"
+                }
+              ]
             }
           ]
         }
@@ -368,34 +674,44 @@
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
-      "Radius/sm",
       "Surfaces/Background",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
       "radius/sm",
       "radius/xl",
+      "radius/xs",
+      "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
-      "spacing/3"
+      "spacing/3",
+      "spacing/4",
+      "spacing/6"
     ],
     "directVariables": [
-      "Surfaces/Background",
-      "radius/xl",
-      "spacing/2",
-      "spacing/3"
-    ],
-    "inheritedFromSubcomponents": [
       "FontFamily/Primary",
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
-      "Radius/sm",
+      "Surfaces/Background",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted",
+      "Surfaces/Transparent",
+      "radius/full",
       "radius/sm",
-      "spacing/2-5"
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/2-5",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Muted",
+      "radius/xs",
+      "spacing/4",
+      "spacing/6"
     ],
     "textStyles": [
       "Text/Body/sm/bold",
@@ -410,7 +726,7 @@
     {
       "figmaName": "_Calendar Days",
       "nodeType": "COMPONENT_SET",
-      "variantCount": 5,
+      "variantCount": 6,
       "variants": {
         "State": {
           "codePropName": "state",
@@ -420,7 +736,8 @@
             "Anchor",
             "Past Next Day",
             "Disabled",
-            "Selected"
+            "Selected",
+            "Range"
           ]
         }
       },
@@ -429,14 +746,15 @@
           "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
-          "tsType": "\"Default\" | \"Anchor\" | \"Past Next Day\" | \"Disabled\" | \"Selected\"",
+          "tsType": "\"Default\" | \"Anchor\" | \"Past Next Day\" | \"Disabled\" | \"Selected\" | \"Range\"",
           "defaultValue": "Default",
           "options": [
             "Default",
             "Anchor",
             "Past Next Day",
             "Disabled",
-            "Selected"
+            "Selected",
+            "Range"
           ]
         }
       ],
@@ -445,12 +763,14 @@
         "Primary/Bottom",
         "Primary/Foreground",
         "Primary/Top",
-        "Radius/sm",
         "Surfaces/Foreground",
         "Surfaces/Foreground-Muted",
         "Surfaces/Muted",
         "radius/sm",
-        "spacing/2-5"
+        "radius/xs",
+        "spacing/2-5",
+        "spacing/4",
+        "spacing/6"
       ],
       "textStyles": [
         "Text/Body/sm/bold",
@@ -492,16 +812,16 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use for picking a calendar date inside `Popover` (`Use=DateCalendar`), inside `DatePicker`, or in dedicated scheduling views."
+      "Use inside `DateTimePicker` (`SingleCalendar`, `DateRange`, `PresetCalendar`, `DateAndTime`), linked from `DatePicker`, or embedded directly in dedicated scheduling views."
     ],
     "whenNotToUse": [
       "Do not embed persistently expanded inside compact forms; use `DatePicker`.",
-      "Do not use for selecting time of day; use `TimePicker`."
+      "Do not use for selecting time of day; use `TimePicker` or `DateTimePicker` (`TimePicker12h` / `TimePicker24h`)."
     ]
   },
   "behaviorRules": [
     "Implement full WAI-ARIA date-grid keyboard navigation (`ArrowLeft`/`Right`/`Up`/`Down`, `PageUp`/`PageDown` for months, `Home`/`End`).",
-    "Visually distinguish today, selected day (`Primary/Top..Bottom`), out-of-month muted days, and disabled dates.",
-    "Expose configurable `locale` and timezone context when used inside `DatePicker` or `Popover`."
+    "Support all 6 `_Calendar Days` states: `Default`, `Selected`, `Anchor` (solid primary selection/range endpoints), `Range` (soft continuous range span), `Past Next Day`, and `Disabled`.",
+    "Expose configurable `locale` and timezone context when used inside `DatePicker` or `DateTimePicker`."
   ]
 }

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/DropdownMenu",
-  "description": "Floating contextual menu displaying grouped actions, nested labels, and optional keyboard shortcuts.\n\nVariants: Use = Actions | Grouped | Context.\nWhen not to use: Use Input Select for form value selection, or Popover for rich controls such as date pickers or filters.",
+  "description": "Floating contextual menu displaying grouped actions, nested labels, and optional keyboard shortcuts.\n\nVariants: Use = Actions | Grouped | Context.\nWhen not to use: Use Input Select for form value selection, or Date & Time Picker for calendar and time pickers.",
   "anatomy": {
     "root": {
       "name": "Use=Actions",
@@ -331,7 +331,7 @@
     ],
     "whenNotToUse": [
       "Do not use as a form value selector; use `InputSelect`.",
-      "Do not use for multi-field filters or date calendars; use `Popover` or `Sheet`."
+      "Do not use for date/time selection; use `DateTimePicker` or `Sheet`."
     ]
   },
   "behaviorRules": [

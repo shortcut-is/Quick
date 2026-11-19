@@ -191,7 +191,16 @@
       "importPath": "@/components/ui/DatePicker",
       "category": "Inputs & Date",
       "contractFile": "date-picker.contract.json",
-      "totalVariants": 2
+      "totalVariants": 6
+    },
+    {
+      "name": "DateTimePicker",
+      "figmaName": "Date & Time Picker",
+      "section": "Date & Time Pickers",
+      "importPath": "@/components/ui/DateTimePicker",
+      "category": "Inputs & Date",
+      "contractFile": "date-time-picker.contract.json",
+      "totalVariants": 6
     },
     {
       "name": "Dialog",
@@ -318,15 +327,6 @@
       "category": "Navigation",
       "contractFile": "pagination.contract.json",
       "totalVariants": 1
-    },
-    {
-      "name": "Popover",
-      "figmaName": "Popover",
-      "section": "Popover",
-      "importPath": "@/components/ui/Popover",
-      "category": "Overlay & Controls",
-      "contractFile": "popover.contract.json",
-      "totalVariants": 4
     },
     {
       "name": "ProgressBar",
@@ -515,7 +515,7 @@
       "importPath": "@/components/ui/TimePicker",
       "category": "Inputs & Date",
       "contractFile": "time-picker.contract.json",
-      "totalVariants": 2
+      "totalVariants": 4
     },
     {
       "name": "Toast",

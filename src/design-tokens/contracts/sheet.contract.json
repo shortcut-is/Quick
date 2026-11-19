@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay & Navigation",
   "importPath": "@/components/ui/Sheet",
-  "description": "Side drawer for Desktop and bottom sheet for Mobile, composed with system primitives for inspectors, multi-field forms, or filters.\n\nVariants & Properties:\n- Position: Right (Web) (360px, left corners rounded) | Bottom (Mobile) (360px with top drag handle, top corners rounded, and full-width MD footer buttons).\n- Use: Default | Form | Filter.\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, ✏️ Title, ✏️ Description.\n\nDesign & hierarchy rules:\n- Always pair over OVERLAY.\n- In SheetFooter always pair 1 secondary button (Outline for Cancel/Reset) with 1 Primary confirmation button; never place two Primary buttons side by side.\n- Use Dialog for centered short confirmations; use Popover for small trigger-anchored controls.",
+  "description": "Side drawer for Desktop and bottom sheet for Mobile, composed with system primitives for inspectors, multi-field forms, or filters.\n\nVariants & Properties:\n- Position: Right (Web) (360px, left corners rounded) | Bottom (Mobile) (360px with top drag handle, top corners rounded, and full-width MD footer buttons).\n- Use: Default | Form | Filter.\n- Properties: 👁️ Close, 👁️ Description, 👁️ Footer, ✏️ Title, ✏️ Description.\n\nDesign & hierarchy rules:\n- Always pair over OVERLAY.\n- In SheetFooter always pair 1 secondary button (Outline for Cancel/Reset) with 1 Primary confirmation button; never place two Primary buttons side by side.\n- Use Dialog for centered short confirmations and trigger-anchored panels.",
   "anatomy": {
     "root": {
       "name": "Position=Right (Web), Use=Default",
@@ -303,7 +303,7 @@
     ],
     "whenNotToUse": [
       "Do not use for short centered confirmations or urgent destructive prompts; use `Dialog`.",
-      "Do not use for lightweight trigger-anchored controls of 2–4 fields on Desktop; use `Popover`."
+      "Do not use for compact contextual action menus; use `DropdownMenu`."
     ]
   },
   "behaviorRules": [

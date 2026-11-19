@@ -94,9 +94,14 @@
       "Sheet Section": "2616:3584",
       "Sheet": "2616:3862",
       "Sheet Ex": "2616:3863",
-      "Popover Section": "2617:3792",
-      "Popover": "2617:3999",
-      "Popover Ex": "2617:4000",
+      "Date & Time Pickers Section": "2617:3792",
+      "Date & Time Picker": "2617:3999",
+      "Date & Time Pickers Ex": "2617:4000",
+      "Calendar": "473:3594",
+      "_Calendar Days": "472:9363",
+      "Date Picker": "471:9314",
+      "Time Picker": "471:9247",
+      "_TimePicker Elements": "471:9039",
       "Sidebar Navigation Section": "2618:4093",
       "_Sidebar Item": "2618:4130",
       "Sidebar Navigation": "2618:4293",
@@ -122,7 +127,8 @@
     "lote-b/spinner-skeleton-kbd-avatar-group-empty-state",
     "lote-c/sheet-popover-sidebar-topbar-bottom-nav",
     "component-contracts/60-json-contracts-extracted",
-    "audit-cleanup/switzer-migration-text-styles-radii-spacing-slider-fileupload-shadow-styles"
+    "audit-cleanup/switzer-migration-text-styles-radii-spacing-slider-fileupload-shadow-styles",
+    "date-time-pickers/replace-popover-and-expand-calendar-date-time-variants"
   ],
   "effectStyles": {
     "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",

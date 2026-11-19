@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Overlay",
   "importPath": "@/components/ui/Tooltip",
-  "description": "Brief non-interactive floating hint shown on hover or keyboard focus for icon buttons and short labels. Never place buttons or forms inside (use Popover).",
+  "description": "Brief non-interactive floating hint shown on hover or keyboard focus for icon buttons and short labels. Never place buttons or forms inside (use Dialog, Sheet, or Dropdown Menu).",
   "anatomy": {
     "root": {
       "name": "Tail=↖ Top Left, Type=Default",
@@ -152,7 +152,7 @@
       "Use strictly for concise supplemental text labels (icon-button names, brief hints, keyboard shortcuts) triggered by hover or keyboard focus."
     ],
     "whenNotToUse": [
-      "Never place interactive buttons, links, or form inputs inside `Tooltip` (touch devices cannot hover); use `Popover`.",
+      "Never place interactive buttons, links, or form inputs inside `Tooltip` (touch devices cannot hover); use `Dialog`, `Sheet`, or `DropdownMenu`.",
       "Do not hide validation errors inside a tooltip; use inline copy or `Alert`."
     ]
   },

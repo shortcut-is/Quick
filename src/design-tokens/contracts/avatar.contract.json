@@ -92,7 +92,7 @@
   "usageGuidelines": {
     "whenToUse": [
       "Use to represent a user, teammate, or account via photo (`Type=image`), two-letter initials (`Type=initials`), or single letter (`Type=Letter`).",
-      "Use inside `Card` (`Use=Profile`), `Topbar`, `SidebarNavigation`, `ListItem`, and `Popover` (`Use=ProfilePreview`)."
+      "Use inside `Card` (`Use=Profile`), `Topbar`, `SidebarNavigation`, and `ListItem`."
     ],
     "whenNotToUse": [
       "Do not use as a generic object or category icon when an `Icon/Line/*` vector belongs there.",

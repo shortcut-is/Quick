@@ -5,10 +5,10 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/DatePicker",
-  "description": "Interactive input control for selecting a single date via an attached Calendar trigger.\n\nVariants: State = Default | Active.\nDesign rules: Use inside forms to preserve vertical space; on Mobile consider presenting the calendar inside a bottom Sheet.",
+  "description": "Input trigger control that opens a Calendar or Date & Time Picker floating panel.\n\nVariants (Use x State):\n- Use=Single (Default | Filled): Single calendar date trigger.\n- Use=Range (Default | Filled): Start-to-end date range trigger.\n- Use=DateTime (Default | Filled): Combined date and time trigger.\n\nInherits semantic height, spacing, focus, and trailing Calendar icon tokens from Input Text.",
   "anatomy": {
     "root": {
-      "name": "State=Default",
+      "name": "Use=Single, State=Default",
       "type": "COMPONENT",
       "layout": "VERTICAL"
     },
@@ -17,10 +17,15 @@
         "slotName": "Input Text",
         "component": "Input Text",
         "kind": "primitive"
+      },
+      {
+        "slotName": "Command",
+        "component": "Icon/Line / Calendar",
+        "kind": "icon"
       }
     ],
     "layers": {
-      "name": "State=Default",
+      "name": "Use=Single, State=Default",
       "type": "COMPONENT",
       "layout": "VERTICAL",
       "children": [
@@ -28,14 +33,46 @@
           "name": "Input Text",
           "type": "INSTANCE",
           "layout": "VERTICAL",
-          "instanceOf": "Input Text"
+          "instanceOf": "Input Text",
+          "children": [
+            {
+              "name": "Input",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "children": [
+                {
+                  "name": "Label+Content",
+                  "type": "FRAME",
+                  "layout": "HORIZONTAL"
+                },
+                {
+                  "name": "Command",
+                  "type": "INSTANCE",
+                  "instanceOf": "Icon/Line / Calendar",
+                  "refs": {
+                    "visible": "👁️ Icon",
+                    "mainComponent": "Swap Icon"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   },
   "variants": {
-    "totalVariants": 2,
+    "totalVariants": 6,
     "axes": {
+      "Use": {
+        "codePropName": "variant",
+        "defaultValue": "Single",
+        "options": [
+          "Single",
+          "Range",
+          "DateTime"
+        ]
+      },
       "State": {
         "codePropName": "state",
         "defaultValue": "Default",
@@ -47,6 +84,18 @@
     }
   },
   "properties": [
+    {
+      "propertyName": "Use",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Single\" | \"Range\" | \"DateTime\"",
+      "defaultValue": "Single",
+      "options": [
+        "Single",
+        "Range",
+        "DateTime"
+      ]
+    },
     {
       "propertyName": "State",
       "codePropName": "state",
@@ -61,19 +110,53 @@
   ],
   "tokens": {
     "variables": [
+      "FontFamily/Primary",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
       "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/sm",
       "radius/xl",
+      "spacing/1",
+      "spacing/1-5",
       "spacing/2",
-      "spacing/3"
+      "spacing/2-5",
+      "spacing/3",
+      "spacing/4"
     ],
-    "directVariables": [],
+    "directVariables": [
+      "FontFamily/Primary",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/4"
+    ],
     "inheritedFromSubcomponents": [
-      "Surfaces/Background",
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Transparent",
+      "radius/full",
+      "radius/sm",
       "radius/xl",
-      "spacing/2",
+      "spacing/2-5",
       "spacing/3"
     ],
-    "textStyles": [],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal",
+      "Text/Body/xs/normal"
+    ],
     "effectStyles": [
       "Shadow/MD"
     ]
@@ -86,12 +169,26 @@
       "variants": {},
       "properties": [],
       "tokens": [
+        "FontFamily/Primary",
+        "Primary/Bottom",
+        "Primary/Foreground",
+        "Primary/Top",
         "Surfaces/Background",
+        "Surfaces/Foreground",
+        "Surfaces/Foreground-Muted",
+        "Surfaces/Transparent",
+        "radius/full",
+        "radius/sm",
         "radius/xl",
+        "spacing/1-5",
         "spacing/2",
+        "spacing/2-5",
         "spacing/3"
       ],
-      "textStyles": [],
+      "textStyles": [
+        "Text/Body/sm/medium",
+        "Text/Body/sm/normal"
+      ],
       "effectStyles": [
         "Shadow/MD"
       ],
@@ -101,15 +198,15 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use in forms when users need to pick a calendar date through a compact input trigger linked to `Calendar`."
+      "Use in forms when users need to select a single calendar date (`Use=Single`), a start-to-end range (`Use=Range`), or a combined date and time (`Use=DateTime`) through a compact trigger paired with `DateTimePicker`."
     ],
     "whenNotToUse": [
-      "Do not use when an always-visible calendar grid is required; use `Calendar`.",
-      "Do not use for time-only selection; use `TimePicker`."
+      "Do not use when an always-visible inline calendar grid is required; use `Calendar`.",
+      "Do not use for standalone time entry; use `TimePicker` or `DateTimePicker` (`TimePicker12h` / `TimePicker24h`)."
     ]
   },
   "behaviorRules": [
-    "Compose an `InputText` trigger controlling an anchored `Popover` with `Calendar` on Desktop, or bottom `Sheet` on touch devices.",
-    "Support `Escape` dismissal, keyboard clear/edit, and locale-aware date formatting."
+    "Compose an `InputText` trigger (`Single`, `Range`, or `DateTime` in `Default` or `Filled` state) anchored to `DateTimePicker` on Desktop or bottom `Sheet` on touch devices.",
+    "Support `Escape` dismissal, keyboard clear/edit, trailing `Calendar` icon affordance, and locale-aware formatting."
   ]
 }

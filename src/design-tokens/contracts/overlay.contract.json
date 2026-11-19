@@ -41,7 +41,7 @@
       "Always pair behind `Dialog` and `Sheet` to dim background content and clearly separate the modal layer."
     ],
     "whenNotToUse": [
-      "Do not render behind non-modal overlays such as `Popover`, `Tooltip`, or `DropdownMenu`."
+      "Do not render behind non-modal floating surfaces such as `DateTimePicker`, `Tooltip`, or `DropdownMenu`."
     ]
   },
   "behaviorRules": [

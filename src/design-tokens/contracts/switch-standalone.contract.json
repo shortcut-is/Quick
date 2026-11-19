@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
   "importPath": "@/components/ui/SwitchStandalone",
-  "description": "Unlabeled binary toggle for embedding inside Card Settings rows, Sheet/Popover filter rows, and Sidebar Navigation.",
+  "description": "Unlabeled binary toggle for embedding inside Card Settings rows, Sheet filter rows, and Sidebar Navigation.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Size=Small",
@@ -127,7 +127,7 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Use inside parent rows that already provide text labels (`Card` `Use=Settings`, `Sheet` `Use=Filter`, `Popover` `Use=Filter`, `SidebarNavigation`)."
+      "Use inside parent rows that already provide text labels (`Card` `Use=Settings`, `Sheet` `Use=Filter`, `Dialog` `Use=Form`, `SidebarNavigation`)."
     ],
     "whenNotToUse": [
       "Do not use standalone without an accessible label; use `Switch` in forms."

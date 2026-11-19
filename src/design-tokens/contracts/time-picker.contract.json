@@ -5,10 +5,10 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/TimePicker",
-  "description": "Time selector control for picking hours and minutes in scheduling flows. For calendar dates use Date Picker or Calendar.",
+  "description": "Structured segmented time entry control built from _TimePicker Elements.\n\nVariants (Format x State):\n- Format=24h (Default | Filled): Three-segment HH:MM:SS layout for 24-hour schedules and durations.\n- Format=12h (Default | Filled): Two-segment HH:MM layout paired with a vertical AM/PM period toggle.",
   "anatomy": {
     "root": {
-      "name": "State=Default",
+      "name": "Format=24h, State=Default",
       "type": "COMPONENT",
       "layout": "HORIZONTAL"
     },
@@ -20,7 +20,7 @@
       }
     ],
     "layers": {
-      "name": "State=Default",
+      "name": "Format=24h, State=Default",
       "type": "COMPONENT",
       "layout": "HORIZONTAL",
       "children": [
@@ -28,7 +28,20 @@
           "name": "_TimePicker Elements",
           "type": "INSTANCE",
           "layout": "HORIZONTAL",
-          "instanceOf": "_TimePicker Elements"
+          "instanceOf": "_TimePicker Elements",
+          "children": [
+            {
+              "name": "Label+Content",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "children": [
+                {
+                  "name": "[Value]",
+                  "type": "TEXT"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": ":",
@@ -38,7 +51,20 @@
           "name": "_TimePicker Elements",
           "type": "INSTANCE",
           "layout": "HORIZONTAL",
-          "instanceOf": "_TimePicker Elements"
+          "instanceOf": "_TimePicker Elements",
+          "children": [
+            {
+              "name": "Label+Content",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "children": [
+                {
+                  "name": "[Value]",
+                  "type": "TEXT"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": ":",
@@ -48,14 +74,35 @@
           "name": "_TimePicker Elements",
           "type": "INSTANCE",
           "layout": "HORIZONTAL",
-          "instanceOf": "_TimePicker Elements"
+          "instanceOf": "_TimePicker Elements",
+          "children": [
+            {
+              "name": "Label+Content",
+              "type": "FRAME",
+              "layout": "HORIZONTAL",
+              "children": [
+                {
+                  "name": "[Value]",
+                  "type": "TEXT"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   },
   "variants": {
-    "totalVariants": 2,
+    "totalVariants": 4,
     "axes": {
+      "Format": {
+        "codePropName": "format",
+        "defaultValue": "24h",
+        "options": [
+          "24h",
+          "12h"
+        ]
+      },
       "State": {
         "codePropName": "state",
         "defaultValue": "Default",
@@ -67,6 +114,17 @@
     }
   },
   "properties": [
+    {
+      "propertyName": "Format",
+      "codePropName": "format",
+      "type": "VARIANT",
+      "tsType": "\"24h\" | \"12h\"",
+      "defaultValue": "24h",
+      "options": [
+        "24h",
+        "12h"
+      ]
+    },
     {
       "propertyName": "State",
       "codePropName": "state",
@@ -81,10 +139,15 @@
   ],
   "tokens": {
     "variables": [
+      "Feedback/Danger",
       "FontFamily/Primary",
+      "Primary/Foreground",
       "Surfaces/Background",
       "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
       "Surfaces/Input",
+      "Surfaces/Muted",
+      "radius/sm",
       "radius/xl",
       "spacing/1-5",
       "spacing/2",
@@ -92,34 +155,45 @@
     ],
     "directVariables": [
       "FontFamily/Primary",
+      "Primary/Foreground",
+      "Surfaces/Background",
       "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "radius/sm",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
       "spacing/4"
     ],
     "inheritedFromSubcomponents": [
-      "Surfaces/Background",
-      "Surfaces/Input",
-      "radius/xl",
-      "spacing/1-5",
-      "spacing/2"
+      "Feedback/Danger"
     ],
     "textStyles": [
       "Text/Body/base/bold",
-      "Text/Body/base/normal"
+      "Text/Body/base/normal",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
     ],
-    "effectStyles": []
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
   },
   "subcomponents": [
     {
       "figmaName": "_TimePicker Elements",
       "nodeType": "COMPONENT_SET",
-      "variantCount": 2,
+      "variantCount": 4,
       "variants": {
         "State": {
           "codePropName": "state",
           "defaultValue": "Default",
           "options": [
             "Default",
-            "Filled"
+            "Filled",
+            "Active",
+            "Error"
           ]
         }
       },
@@ -128,15 +202,18 @@
           "propertyName": "State",
           "codePropName": "state",
           "type": "VARIANT",
-          "tsType": "\"Default\" | \"Filled\"",
+          "tsType": "\"Default\" | \"Filled\" | \"Active\" | \"Error\"",
           "defaultValue": "Default",
           "options": [
             "Default",
-            "Filled"
+            "Filled",
+            "Active",
+            "Error"
           ]
         }
       ],
       "tokens": [
+        "Feedback/Danger",
         "FontFamily/Primary",
         "Surfaces/Background",
         "Surfaces/Foreground",
@@ -149,18 +226,21 @@
       "textStyles": [
         "Text/Body/base/normal"
       ],
-      "effectStyles": []
+      "effectStyles": [
+        "Shadow/Focus"
+      ]
     }
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use in scheduling or booking forms where users pick a specific time (hour/minute)."
+      "Use in scheduling or booking forms where users pick a structured 24-hour (`HH:MM:SS`) or 12-hour (`HH:MM AM/PM`) time via `_TimePicker Elements`."
     ],
     "whenNotToUse": [
       "Do not use for calendar date picking; use `DatePicker` or `Calendar`."
     ]
   },
   "behaviorRules": [
-    "Support keyboard selection of hours, minutes, and AM/PM or 24h formats with clear focus indicators."
+    "Support both `Format=24h` (`00:00:00`) and `Format=12h` (`09:30 AM/PM`) across `_TimePicker Elements` states (`Default`, `Filled`, `Active` with `Shadow/Focus`, `Error` with `Feedback/Danger`).",
+    "Support full keyboard numeric entry, arrow increment/decrement, and AM/PM period switching, pairing with `DateTimePicker` (`TimePicker12h` / `TimePicker24h`) when preset slots or duration chips are needed."
   ]
 }
