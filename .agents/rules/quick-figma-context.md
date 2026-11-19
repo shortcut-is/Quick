@@ -43,11 +43,12 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el Desig
   - `Kbd` (`2605:3459` en `2605:3437`, 6 variants `Subtle|Outline|Solid` × `SM|MD`), `Ex.` (`2605:3470`).
   - `Avatar Group` (`2606:3514` en `2606:3456`, 6 variants `SM|MD|LG` × `Stacked|Spaced`) y migración de `Avatar` (`79:1653`) a `Heebo SemiBold`, `Ex.` (`2606:3553`).
   - `Empty State` (`2607:3630` en `2607:3488`, 6 variants `Default|Search|Error` × `SM|MD`), `Ex.` (`2607:3637`).
-- **Lote C completado (`Sheet / Drawer`, `Sidebar Navigation`, `Topbar`, `Bottom Navigation`) + `Calendar` ampliado:**
+- **Lote C completado (`Sheet / Drawer`, `Sidebar Navigation`, `Topbar`, `Bottom Navigation`) + `Calendar` limpio:**
   - `Sheet` (`2616:3862` en `2616:3584`, `800×1646`, 6 variants `Right (Web)|Bottom (Mobile)` × `Default|Form|Filter`), `Ex.` (`2616:3863`, `800×1140`).
-  - `Calendar` (`2154:5660`, `800×2006`): `Calendar` `COMPONENT_SET` (`2617:3999`, 4 variants `Use=Default|Single|Range|Presets`, base `473:3594` movido dentro como `Use=Default`) y `_Calendar Days` (`472:9363`, 6 estados `Default|Anchor|Past Next Day|Disabled|Selected|Range`), `Ex.` (`2069:3782`, `800×998`).
+  - `Calendar` (`2154:5660`, `800×1089`): `Calendar` `COMPONENT_SET` (`2617:3999`, variante única `Use=Default` `473:3594`) y `_Calendar Days` (`472:9363`, 6 estados `Default|Anchor|Past Next Day|Disabled|Selected|Range`).
   - `Date Picker` (`2154:5664`): `Date Picker` (`471:9314`, 6 variants `Use=Single|Range|DateTime` × `State=Default|Filled`).
   - `Time Pickers` (`2154:5684`): `Time Picker` (`471:9247`, 4 variants `Format=24h|12h` × `State=Default|Filled`) y `_TimePicker Elements` (`471:9039`, 4 estados `Default|Filled|Active|Error`).
+  - **Tokens, `codeSyntax`, Iconos & Guías de Agentes:** Las 94 variables de Figma tienen `codeSyntax.WEB` (`var(--...)`) y scopes semánticos; el repo incluye `DESIGN.md`, `AGENTS.md`, `src/design-tokens/tokens.json`, `src/design-tokens/theme.css` (Light/Dark + Tailwind v4 `@theme`) y `src/design-tokens/icons.json` (107 iconos).
   - `Sidebar Navigation` (`2618:4293`) + `_Sidebar Item` (`2618:4130`, 6 variants `Mode=Expanded|Collapsed` × `State=Default|Hover|Active`) en `2618:4093` (`800×1159`), `Ex.` (`2618:4294`, `800×836`).
   - `Topbar` (`2619:4440`, 3 variants `DesktopBreadcrumb|DesktopTabs|MobileAppBar`) + `_Bottom Nav Item` (`2624:4500`, 3 variants `Default|Hover|Active`) + `Bottom Navigation` (`2619:4479`, 2 variants `4 Tabs|5 Tabs (CTA)` con instancias expuestas de `_Bottom Nav Item`) en `Navigation Bars` (`2619:4309`, `1440×764`), `Ex.` (`2619:4480`, `1440×552`).
 - **Badge (`203:979`)**: `Label` text nodes configurados con `WIDTH_AND_HEIGHT` + `HUG` para evitar recortes en instancias anidadas.

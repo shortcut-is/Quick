@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs & Date",
   "importPath": "@/components/ui/Calendar",
-  "description": "Monthly calendar component supporting compact inline grid (Use=Default), single-date selection card with Today/Confirm footer (Use=Single), date-range selection card with start/end summary pills and range span (Use=Range), and two-column quick-preset calendar (Use=Presets).\n\nComposed of _Calendar Days (Default, Selected, Anchor, Range, Past Next Day, Disabled), _Calendar Days Label, and _Calendar Month-Year.\n\nHierarchy rule: In card footers (Single, Range, Presets), always pair 1 secondary Outline XS button with 1 Primary XS confirmation button; never place two Primary buttons side by side.",
+  "description": "Monthly calendar grid composed of _Calendar Days (Default, Selected, Anchor, Range, Past Next Day, Disabled), _Calendar Days Label, _Calendar Month-Year headers, and Ghost XS navigation buttons.\n\nSupports single-date selection, today markers, disabled dates, outside-month dates, and continuous date-range bands via the _Calendar Days State property.",
   "anatomy": {
     "root": {
       "name": "Use=Default",
@@ -664,53 +664,26 @@
     }
   },
   "variants": {
-    "totalVariants": 4,
+    "totalVariants": 1,
     "axes": {
       "Use": {
         "codePropName": "variant",
         "defaultValue": "Default",
         "options": [
-          "Default",
-          "Single",
-          "Range",
-          "Presets"
+          "Default"
         ]
       }
     }
   },
   "properties": [
     {
-      "propertyName": "👁️ Header",
-      "codePropName": "hasHeader",
-      "type": "BOOLEAN",
-      "tsType": "boolean",
-      "defaultValue": true
-    },
-    {
-      "propertyName": "👁️ Footer",
-      "codePropName": "hasFooter",
-      "type": "BOOLEAN",
-      "tsType": "boolean",
-      "defaultValue": true
-    },
-    {
-      "propertyName": "✏️ Title",
-      "codePropName": "title",
-      "type": "TEXT",
-      "tsType": "string",
-      "defaultValue": "Select Date"
-    },
-    {
       "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
-      "tsType": "\"Default\" | \"Single\" | \"Range\" | \"Presets\"",
+      "tsType": "\"Default\"",
       "defaultValue": "Default",
       "options": [
-        "Default",
-        "Single",
-        "Range",
-        "Presets"
+        "Default"
       ]
     }
   ],
@@ -721,18 +694,14 @@
       "Primary/Foreground",
       "Primary/Top",
       "Surfaces/Background",
-      "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Muted",
       "Surfaces/Transparent",
       "radius/full",
-      "radius/lg",
-      "radius/md",
       "radius/sm",
       "radius/xl",
       "radius/xs",
-      "spacing/0-5",
       "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
@@ -746,33 +715,27 @@
       "Primary/Foreground",
       "Primary/Top",
       "Surfaces/Background",
-      "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
-      "Surfaces/Muted",
       "Surfaces/Transparent",
       "radius/full",
-      "radius/lg",
-      "radius/md",
       "radius/sm",
       "radius/xl",
-      "radius/xs",
-      "spacing/0-5",
       "spacing/1-5",
       "spacing/2",
       "spacing/2-5",
-      "spacing/3",
-      "spacing/4"
+      "spacing/3"
     ],
     "inheritedFromSubcomponents": [
+      "Surfaces/Muted",
+      "radius/xs",
+      "spacing/4",
       "spacing/6"
     ],
     "textStyles": [
       "Text/Body/sm/bold",
       "Text/Body/sm/medium",
-      "Text/Body/sm/normal",
-      "Text/Body/xs/medium",
-      "Text/Body/xs/normal"
+      "Text/Body/sm/normal"
     ],
     "effectStyles": [
       "Shadow/MD"
@@ -868,7 +831,7 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use across all 4 variants: compact inline monthly grid (`Use=Default`), single-date selection card with header and Today/Confirm actions (`Use=Single`), two-endpoint date-range card with range summary pills (`Use=Range`), and two-column quick-preset calendar (`Use=Presets`)."
+      "Use as a monthly calendar grid (`Use=Default`) inside `DatePicker` overlays or embedded directly in scheduling views."
     ],
     "whenNotToUse": [
       "Do not embed persistently expanded inside compact forms; use `DatePicker` as the compact trigger.",
@@ -877,7 +840,6 @@
   },
   "behaviorRules": [
     "Implement full WAI-ARIA date-grid keyboard navigation (`ArrowLeft`/`Right`/`Up`/`Down`, `PageUp`/`PageDown` for months, `Home`/`End`).",
-    "Support all 6 `_Calendar Days` states: `Default`, `Selected`, `Anchor` (solid primary selection/range endpoints), `Range` (soft continuous range span), `Past Next Day`, and `Disabled`.",
-    "Strict button hierarchy in card footers (`Single`, `Range`, `Presets`): always pair 1 secondary `Outline XS` button (`Today`, `Reset`, `Cancel`) with 1 `Primary XS` confirmation button (`Confirm`, `Apply Range`, `Apply`), never two `Primary` buttons together."
+    "Support all 6 `_Calendar Days` states: `Default`, `Selected`, `Anchor` (solid primary selection/range endpoints), `Range` (soft continuous range span), `Past Next Day`, and `Disabled`."
   ]
 }

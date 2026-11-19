@@ -97,7 +97,6 @@
       "Calendar Section": "2154:5660",
       "Calendar": "2617:3999",
       "Calendar Default Variant": "473:3594",
-      "Calendar Ex": "2069:3782",
       "_Calendar Days": "472:9363",
       "Date Picker": "471:9314",
       "Time Picker": "471:9247",
@@ -128,7 +127,8 @@
     "lote-c/sheet-popover-sidebar-topbar-bottom-nav",
     "component-contracts/60-json-contracts-extracted",
     "audit-cleanup/switzer-migration-text-styles-radii-spacing-slider-fileupload-shadow-styles",
-    "calendar/unified-4-variants-default-single-range-presets"
+    "calendar/cleanup-single-default-variant",
+    "agent-readiness/code-syntax-tokens-theme-icons-design-md-agents-md"
   ],
   "effectStyles": {
     "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",

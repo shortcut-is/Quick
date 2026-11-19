@@ -101,7 +101,7 @@
       "importPath": "@/components/ui/Calendar",
       "category": "Inputs & Date",
       "contractFile": "calendar.contract.json",
-      "totalVariants": 4
+      "totalVariants": 1
     },
     {
       "name": "Card",

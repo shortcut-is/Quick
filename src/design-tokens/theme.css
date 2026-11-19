@@ -1,0 +1,336 @@
+/* ⚡ Quick - v1.2 Design Tokens & Tailwind CSS v4 Theme */
+/* Generated from Figma Variables, Text Styles & Effect Styles */
+
+:root {
+  /* Font Families */
+  --font-primary: "Heebo", system-ui, -apple-system, sans-serif;
+  --font-heading: "Zalando Sans", system-ui, -apple-system, sans-serif;
+
+  /* Semantic Colors — Light Mode */
+  --surface-background: #FCFCFC;
+  --surface-muted: #E4E4E7;
+  --surface-foreground: #171717;
+  --surface-foreground-muted: #717179;
+  --surface-border: #E4E4E7;
+  --surface-input: #E4E4E7;
+  --primary-hover: #3F3F45;
+  --primary-foreground: #FFFFFF;
+  --surface-invert-background: #000000;
+  --surface-invert-foreground: #E4E4E7;
+  --surface-invert-foreground-muted: #717179;
+  --surface-transparent: rgba(255, 255, 255, 0.0);
+  --feedback-success-bold: #034A15;
+  --feedback-success: #06932A;
+  --feedback-success-subtle: #CEF1D7;
+  --feedback-warning-bold: #663000;
+  --feedback-warning: #CC5F00;
+  --feedback-warning-subtle: #FFE4CC;
+  --feedback-danger-bold: #660002;
+  --feedback-danger: #CC0003;
+  --feedback-danger-subtle: #FFCCCD;
+  --feedback-info-bold: #0A1966;
+  --feedback-info: #1432CC;
+  --feedback-info-subtle: #D1D9FF;
+  --feedback-foreground: #FFFFFF;
+  --primary-top: #2A2A2A;
+  --primary-bottom: #0A0A0A;
+  --surface-overlay: rgba(136, 136, 136, 0.7);
+}
+
+.dark {
+  /* Semantic Colors — Dark Mode */
+  --surface-background: #171717;
+  --surface-muted: #27272A;
+  --surface-foreground: #F4F4F5;
+  --surface-foreground-muted: #717179;
+  --surface-border: #3F3F45;
+  --surface-input: #3F3F45;
+  --primary-hover: #E4E4E7;
+  --primary-foreground: #000000;
+  --surface-invert-background: #FFFFFF;
+  --surface-invert-foreground: #27272A;
+  --surface-invert-foreground-muted: #717179;
+  --surface-transparent: rgba(255, 255, 255, 0.0);
+  --feedback-success-bold: #CEF1D7;
+  --feedback-success: #6BD486;
+  --feedback-success-subtle: #02250B;
+  --feedback-warning-bold: #FFE4CC;
+  --feedback-warning: #FFAD66;
+  --feedback-warning-subtle: #331800;
+  --feedback-danger-bold: #FFCCCD;
+  --feedback-danger: #FF6668;
+  --feedback-danger-subtle: #330001;
+  --feedback-info-bold: #D1D9FF;
+  --feedback-info: #758CFF;
+  --feedback-info-subtle: #050D33;
+  --feedback-foreground: #000000;
+  --primary-top: #FB8417;
+  --primary-bottom: #FF6900;
+  --surface-overlay: rgba(136, 136, 136, 0.7);
+}
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Spacing Scale (var(--spacing-*)) */
+  --spacing-px: 1px;
+  --spacing-0-5: 2px;
+  --spacing-1: 4px;
+  --spacing-1-5: 6px;
+  --spacing-2: 8px;
+  --spacing-2-5: 10px;
+  --spacing-3: 12px;
+  --spacing-3-5: 14px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-28: 112px;
+  --spacing-32: 128px;
+  --spacing-36: 144px;
+  --spacing-40: 160px;
+  --spacing-44: 176px;
+  --spacing-48: 192px;
+  --spacing-52: 208px;
+  --spacing-56: 224px;
+  --spacing-60: 240px;
+  --spacing-64: 256px;
+  --spacing-72: 288px;
+  --spacing-80: 320px;
+  --spacing-96: 384px;
+
+  /* Radius Scale (var(--radius-*)) */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-full: 9999px;
+
+  /* Elevation & Focus Shadows (var(--shadow-*)) */
+  --shadow-sm: 0px 2px 4px 0px rgba(39, 39, 42, 0.1), 0px 2px 4px -2px rgba(39, 39, 42, 0.1);
+  --shadow-md: 0px 4px 6px -2px rgba(39, 39, 42, 0.1), 0px 6px 8px -2px rgba(39, 39, 42, 0.15);
+  --shadow-lg: 0px 6px 10px 0px rgba(39, 39, 42, 0.1), 0px 14px 18px -6px rgba(39, 39, 42, 0.1);
+  --shadow-xl: 0px 6px 10px 0px rgba(39, 39, 42, 0.1), 0px 24px 48px -8px rgba(39, 39, 42, 0.1);
+  --shadow-focus: 0px 0px 8px 8px rgba(23, 23, 23, 0.44);
+}
+
+@theme inline {
+  --font-sans: var(--font-primary);
+  --font-display: var(--font-heading);
+
+  /* Semantic Color Utilities (bg-surface-*, text-primary-*, border-feedback-*) */
+  --color-surface-background: var(--surface-background);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-foreground-muted: var(--surface-foreground-muted);
+  --color-surface-border: var(--surface-border);
+  --color-surface-input: var(--surface-input);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-surface-invert-background: var(--surface-invert-background);
+  --color-surface-invert-foreground: var(--surface-invert-foreground);
+  --color-surface-invert-foreground-muted: var(--surface-invert-foreground-muted);
+  --color-surface-transparent: var(--surface-transparent);
+  --color-feedback-success-bold: var(--feedback-success-bold);
+  --color-feedback-success: var(--feedback-success);
+  --color-feedback-success-subtle: var(--feedback-success-subtle);
+  --color-feedback-warning-bold: var(--feedback-warning-bold);
+  --color-feedback-warning: var(--feedback-warning);
+  --color-feedback-warning-subtle: var(--feedback-warning-subtle);
+  --color-feedback-danger-bold: var(--feedback-danger-bold);
+  --color-feedback-danger: var(--feedback-danger);
+  --color-feedback-danger-subtle: var(--feedback-danger-subtle);
+  --color-feedback-info-bold: var(--feedback-info-bold);
+  --color-feedback-info: var(--feedback-info);
+  --color-feedback-info-subtle: var(--feedback-info-subtle);
+  --color-feedback-foreground: var(--feedback-foreground);
+  --color-primary-top: var(--primary-top);
+  --color-primary-bottom: var(--primary-bottom);
+  --color-surface-overlay: var(--surface-overlay);
+}
+
+/* Primary Brand Vertical Gradient (Primary/Top -> Primary/Bottom) */
+.bg-primary-gradient {
+  background-image: linear-gradient(180deg, var(--primary-top) 0%, var(--primary-bottom) 100%);
+  color: var(--primary-foreground);
+}
+
+.bg-primary-gradient:hover {
+  background-image: none;
+  background-color: var(--primary-hover);
+}
+
+/* Quick v1.2 Text Style Utilities */
+.text-body-xs-normal {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+.text-body-xs-medium {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.text-body-sm-normal {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+.text-body-sm-medium {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.text-body-sm-bold {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: 0.0px;
+}
+.text-body-base-normal {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+.text-body-base-medium {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.text-body-base-bold {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.0px;
+}
+.text-body-lg-normal {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+.text-body-lg-medium {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.text-body-lg-bold {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: 0.0px;
+}
+.text-heading-xl-normal {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+}
+.text-heading-xl-medium {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+.text-heading-xl-bold {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.text-heading-2xl-normal {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+}
+.text-heading-2xl-medium {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+.text-heading-2xl-bold {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+.text-heading-3xl-normal {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+}
+.text-heading-3xl-bold {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+.text-heading-4xl-normal {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+.text-heading-5xl-normal {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+.text-heading-6xl-normal {
+  font-family: var(--font-heading);
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 400;
+  letter-spacing: -1.0px;
+}
