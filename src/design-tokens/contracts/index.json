@@ -1,8 +1,8 @@
 {
   "designSystem": "⚡ Quick - v1.2",
-  "sectionsCount": 40,
-  "componentsCount": 72,
-  "contractFilesCount": 60,
+  "sectionsCount": 39,
+  "componentsCount": 71,
+  "contractFilesCount": 59,
   "contracts": [
     {
       "name": "Accordion",
@@ -101,7 +101,7 @@
       "importPath": "@/components/ui/Calendar",
       "category": "Inputs & Date",
       "contractFile": "calendar.contract.json",
-      "totalVariants": 1
+      "totalVariants": 4
     },
     {
       "name": "Card",
@@ -191,15 +191,6 @@
       "importPath": "@/components/ui/DatePicker",
       "category": "Inputs & Date",
       "contractFile": "date-picker.contract.json",
-      "totalVariants": 6
-    },
-    {
-      "name": "DateTimePicker",
-      "figmaName": "Date & Time Picker",
-      "section": "Date & Time Pickers",
-      "importPath": "@/components/ui/DateTimePicker",
-      "category": "Inputs & Date",
-      "contractFile": "date-time-picker.contract.json",
       "totalVariants": 6
     },
     {

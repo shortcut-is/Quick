@@ -43,14 +43,14 @@ Ningún componente nuevo depende de colores hexadecimales crudos ni espaciados s
 - **Text Styles & Effect Styles:** `Text/Body/*`, `Text/Heading/*`, `Shadow/SM`, `Shadow/MD`, `Shadow/LG`, `Shadow/XL` y `Shadow/Focus`.
 
 ### 4. Comportamiento Web y Mobile
-- **Superficies emergentes:** `Dialog` para confirmaciones, advertencias destructivas o formularios modales centrados (y para controles flotantes que requieran confirmación); `Sheet` (`Position=Right (Web)`) para paneles laterales de escritorio y `Sheet` (`Position=Bottom (Mobile)`) con *drag handle* superior y acciones a ancho completo en dispositivos táctiles; **`Date & Time Picker`** (`SingleCalendar`, `DateRange`, `PresetCalendar`, `DateAndTime`, `TimePicker12h`, `TimePicker24h`) para paneles anclados de calendario, rangos y selección horaria.
+- **Superficies emergentes:** `Dialog` para confirmaciones, advertencias destructivas o formularios modales centrados (y para controles flotantes que requieran confirmación); `Sheet` (`Position=Right (Web)`) para paneles laterales de escritorio y `Sheet` (`Position=Bottom (Mobile)`) con *drag handle* superior y acciones a ancho completo en dispositivos táctiles; **`Calendar`** (`Default`, `Single`, `Range`, `Presets`) para grids mensuales y tarjetas de selección de fechas o rangos con footer `Outline XS` + `Primary XS`.
 - **Navegación adaptativa:** `Sidebar Navigation` (`Expanded` `248px` / `Collapsed` `72px`) + `Topbar` (`DesktopBreadcrumb` / `DesktopTabs`) en escritorio, y `Topbar` (`MobileAppBar` `390px`) + `Bottom Navigation` (`390×68px`) en móviles.
 
 ---
 
 ## Contratos de Componentes (`src/design-tokens/contracts/`)
 
-El repositorio incluye **60 contratos individuales** (`[componente].contract.json`) junto con el manifiesto maestro [`src/design-tokens/contracts/index.json`](src/design-tokens/contracts/index.json), cubriendo los **72 nodos publicados** en las **40 secciones** de `⚡️ Components` (`0:1`).
+El repositorio incluye **59 contratos individuales** (`[componente].contract.json`) junto con el manifiesto maestro [`src/design-tokens/contracts/index.json`](src/design-tokens/contracts/index.json), cubriendo los **71 nodos publicados** en las **39 secciones** de `⚡️ Components` (`0:1`).
 
 Cada archivo `.contract.json` funciona como especificación fuente para generación de código, pruebas o validación:
 - **`name` / `figmaName` / `section` / `category`:** Identidad del componente en código y su sección dentro del sistema (los IDs de nodo de Figma se mantienen desacoplados en `design-system-state.json` y `.agents/rules/quick-figma-context.md`).
@@ -61,7 +61,7 @@ Cada archivo `.contract.json` funciona como especificación fuente para generaci
 - **`subcomponents`, `usageGuidelines` y `behaviorRules`:** Subcomponentes internos relacionados, criterios explícitos de cuándo usar y cuándo no usar cada componente (`whenToUse` / `whenNotToUse` con alternativas dentro del sistema) y reglas de accesibilidad (ARIA, gestión de foco, teclado), estados y comportamiento responsivo.
 
 Categorías disponibles en [`index.json`](src/design-tokens/contracts/index.json):
-- **Acciones y Formularios:** `button`, `input-text`, `input-select`, `input-area`, `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker` (6 variantes `Single`/`Range`/`DateTime` × `Default`/`Filled`), `time-picker` (4 variantes `24h`/`12h` × `Default`/`Filled` + `_TimePicker Elements`), `calendar` (`Calendar` + 6 estados de `_Calendar Days` incluyendo `Range`), `date-time-picker` (`SingleCalendar`, `DateRange`, `PresetCalendar`, `DateAndTime`, `TimePicker12h`, `TimePicker24h`), `file-upload`.
+- **Acciones y Formularios:** `button`, `input-text`, `input-select`, `input-area`, `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker` (6 variantes `Single`/`Range`/`DateTime` × `Default`/`Filled`), `time-picker` (4 variantes `24h`/`12h` × `Default`/`Filled` + `_TimePicker Elements`), `calendar` (4 variantes `Default`/`Single`/`Range`/`Presets` + 6 estados de `_Calendar Days` incluyendo `Range`), `file-upload`.
 - **Superficies y Overlays:** `card`, `slot-content`, `dialog`, `overlay`, `sheet`, `dropdown-menu`, `dropdown-menu-item`, `dropdown-menu-title`, `tooltip`.
 - **Feedback:** `alert`, `toast`, `notification`, `progress-bar`, `spinner`, `skeleton`, `empty-state`.
 - **Datos y Layout:** `accordion`, `avatar`, `avatar-group`, `badge`, `tag`, `tag-group`, `kbd`, `list-item`, `separator`, `data-table` (+ `data-table-header`, `data-table-row`, `data-table-footer`, `data-table-cell`).

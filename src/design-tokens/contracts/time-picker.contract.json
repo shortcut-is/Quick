@@ -241,6 +241,6 @@
   },
   "behaviorRules": [
     "Support both `Format=24h` (`00:00:00`) and `Format=12h` (`09:30 AM/PM`) across `_TimePicker Elements` states (`Default`, `Filled`, `Active` with `Shadow/Focus`, `Error` with `Feedback/Danger`).",
-    "Support full keyboard numeric entry, arrow increment/decrement, and AM/PM period switching, pairing with `DateTimePicker` (`TimePicker12h` / `TimePicker24h`) when preset slots or duration chips are needed."
+    "Support full keyboard numeric entry, arrow increment/decrement, and AM/PM period switching."
   ]
 }

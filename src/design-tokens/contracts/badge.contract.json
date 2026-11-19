@@ -163,7 +163,7 @@
   "usageGuidelines": {
     "whenToUse": [
       "Use for compact read-only metadata, semantic statuses (`Success`, `Warning`, `Danger`, `Info`), version tags (`v1.2`), or unread counts.",
-      "Use attached inside `Card`, table cells, `SidebarItem`, or `DateTimePicker` headers."
+      "Use attached inside `Card`, table cells, `SidebarItem`, or `Calendar` card headers (`Single`, `Range`, `Presets`)."
     ],
     "whenNotToUse": [
       "Do not use for clickable actions or route navigation; use `Button`.",

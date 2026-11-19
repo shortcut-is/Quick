@@ -43,10 +43,9 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el Desig
   - `Kbd` (`2605:3459` en `2605:3437`, 6 variants `Subtle|Outline|Solid` × `SM|MD`), `Ex.` (`2605:3470`).
   - `Avatar Group` (`2606:3514` en `2606:3456`, 6 variants `SM|MD|LG` × `Stacked|Spaced`) y migración de `Avatar` (`79:1653`) a `Heebo SemiBold`, `Ex.` (`2606:3553`).
   - `Empty State` (`2607:3630` en `2607:3488`, 6 variants `Default|Search|Error` × `SM|MD`), `Ex.` (`2607:3637`).
-- **Lote C completado (`Sheet / Drawer`, `Date & Time Pickers`, `Sidebar Navigation`, `Topbar`, `Bottom Navigation`):**
+- **Lote C completado (`Sheet / Drawer`, `Sidebar Navigation`, `Topbar`, `Bottom Navigation`) + `Calendar` ampliado:**
   - `Sheet` (`2616:3862` en `2616:3584`, `800×1646`, 6 variants `Right (Web)|Bottom (Mobile)` × `Default|Form|Filter`), `Ex.` (`2616:3863`, `800×1140`).
-  - `Date & Time Pickers` (`2617:3792`, `910×1422`): `Date & Time Picker` (`2617:3999`, 6 variants `Use=SingleCalendar|DateRange|PresetCalendar|DateAndTime|TimePicker12h|TimePicker24h`), `Ex.` (`2617:4000`, `800×982`).
-  - `Calendar` (`2154:5660`): `Calendar` (`473:3594`) y `_Calendar Days` (`472:9363`, 6 estados `Default|Anchor|Past Next Day|Disabled|Selected|Range`).
+  - `Calendar` (`2154:5660`, `800×2006`): `Calendar` `COMPONENT_SET` (`2617:3999`, 4 variants `Use=Default|Single|Range|Presets`, base `473:3594` movido dentro como `Use=Default`) y `_Calendar Days` (`472:9363`, 6 estados `Default|Anchor|Past Next Day|Disabled|Selected|Range`), `Ex.` (`2069:3782`, `800×998`).
   - `Date Picker` (`2154:5664`): `Date Picker` (`471:9314`, 6 variants `Use=Single|Range|DateTime` × `State=Default|Filled`).
   - `Time Pickers` (`2154:5684`): `Time Picker` (`471:9247`, 4 variants `Format=24h|12h` × `State=Default|Filled`) y `_TimePicker Elements` (`471:9039`, 4 estados `Default|Filled|Active|Error`).
   - `Sidebar Navigation` (`2618:4293`) + `_Sidebar Item` (`2618:4130`, 6 variants `Mode=Expanded|Collapsed` × `State=Default|Hover|Active`) en `2618:4093` (`800×1159`), `Ex.` (`2618:4294`, `800×836`).

@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Actions",
   "importPath": "@/components/ui/Button",
-  "description": "Primary interactive control used to trigger actions, submit forms, or open modals and sheets.\n\nVariants & Properties:\n- Content: Label | Icon.\n- Variant: Primary | Outline | Ghost | Destructive.\n- Size: LG | MD | SM | XS.\n- State: Default | Hover | Focus | Disabled.\n- Properties: ✏️ Text, 👁️ Icon Left, ↪️ Swap Icon Left, 👁️ Icon Right, ↪️ Swap Icon Right, Swap Icon.\n\nHierarchy & usage rules:\n- Never place two Primary buttons side by side inside a Dialog, Sheet, Card, or Date & Time Picker; always pair 1 main action button (Primary or Destructive) with 1 secondary button (Outline or Ghost for Cancel/Reset).\n- Do not use as a static status indicator (use Badge) or primary page navigation (use Sidebar Navigation, Topbar, or Tab).",
+  "description": "Primary interactive control used to trigger actions, submit forms, or open modals and sheets.\n\nVariants & Properties:\n- Content: Label | Icon.\n- Variant: Primary | Outline | Ghost | Destructive.\n- Size: LG | MD | SM | XS.\n- State: Default | Hover | Focus | Disabled.\n- Properties: ✏️ Text, 👁️ Icon Left, ↪️ Swap Icon Left, 👁️ Icon Right, ↪️ Swap Icon Right, Swap Icon.\n\nHierarchy & usage rules:\n- Never place two Primary buttons side by side inside a Dialog, Sheet, Card, or Calendar footer; always pair 1 main action button (Primary or Destructive) with 1 secondary button (Outline or Ghost for Cancel/Reset).\n- Do not use as a static status indicator (use Badge) or primary page navigation (use Sidebar Navigation, Topbar, or Tab).",
   "anatomy": {
     "root": {
       "name": "Content=Label, Variant=Primary, Size=LG, State=Default",
@@ -272,18 +272,18 @@
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Use to trigger actions or commands (`Save`, `Deploy`, `Cancel`, `Delete`), submit forms, or open overlays such as `Dialog`, `Sheet`, or `DateTimePicker`.",
+      "Use to trigger actions or commands (`Save`, `Deploy`, `Cancel`, `Delete`), submit forms, or open overlays such as `Dialog`, `Sheet`, or `Calendar`.",
       "Use `Primary` for the single main action in a view/block, `Outline` for secondary actions, `Ghost` for subtle tools/dismiss buttons, and `Destructive` for irreversible deletions."
     ],
     "whenNotToUse": [
-      "Never place two `Primary` buttons side by side or use multiple `Primary` buttons inside a `Dialog`, `Sheet`, `Card`, or `DateTimePicker`: always pair 1 main action (`Primary` or `Destructive`) with 1 secondary button (`Outline` or `Ghost` for `Cancel`/`Reset`).",
+      "Never place two `Primary` buttons side by side or use multiple `Primary` buttons inside a `Dialog`, `Sheet`, `Card`, or `Calendar` footer: always pair 1 main action (`Primary` or `Destructive`) with 1 secondary button (`Outline` or `Ghost` for `Cancel`/`Reset`).",
       "Do not use to display static status labels or counts; use `Badge`.",
       "Do not use for persistent binary settings; use `Switch` or `Checkbox`.",
       "Do not use for top-level app navigation; use `SidebarNavigation`, `Topbar`, `BottomNavigation`, or `Tabs`."
     ]
   },
   "behaviorRules": [
-    "Strict action-pair hierarchy: never place two `Primary` buttons side by side inside the same container or footer (`Dialog`, `Sheet`, `Card`, `DateTimePicker`); always combine 1 main action (`Primary` or `Destructive`) with 1 secondary button (`Outline` or `Ghost`).",
+    "Strict action-pair hierarchy: never place two `Primary` buttons side by side inside the same container or footer (`Dialog`, `Sheet`, `Card`, `Calendar`); always combine 1 main action (`Primary` or `Destructive`) with 1 secondary button (`Outline` or `Ghost`).",
     "Support all interactive states (`Default`, `Hover`, `Focus` with accessible focus ring, and native `Disabled` attribute) styled with Quick v1.2 Tailwind CSS theme tokens.",
     "When `Content=Icon`, an accessible `aria-label` is mandatory since no visible text label is rendered.",
     "Map `Variant=Primary` fills to `Primary/Top` → `Primary/Bottom` and foreground to `Primary/Foreground`."
