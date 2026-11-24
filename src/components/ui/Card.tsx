@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/cn";
 import { Badge, type BadgeTone } from "./Badge";
+import { Button } from "./Button";
 import { Icon, type QuickIconName } from "./Icon";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -79,6 +80,92 @@ export function StatCard({
         {delta && <Badge tone={deltaTone} label={delta} />}
       </div>
       {subtitle && <p className="text-body-xs-normal text-surface-foreground-muted">{subtitle}</p>}
+    </Card>
+  );
+}
+
+export type PromoCardSize = "SM" | "MD" | "LG";
+
+export interface PromoCardProps {
+  size?: PromoCardSize;
+  badgeLabel?: string;
+  badgeTone?: BadgeTone;
+  hasBadge?: boolean;
+  title: string;
+  description?: string;
+  meta?: string;
+  hasMeta?: boolean;
+  actionLabel?: string;
+  hasFooter?: boolean;
+  onAction?: () => void;
+  className?: string;
+}
+
+const PROMO_CONTAINER_CLASSES: Record<PromoCardSize, string> = {
+  SM: "p-4 gap-3 rounded-xl shadow-none",
+  MD: "p-6 gap-4 rounded-2xl shadow-sm",
+  LG: "p-8 gap-5 rounded-3xl shadow-md",
+};
+
+const PROMO_TITLE_CLASSES: Record<PromoCardSize, string> = {
+  SM: "text-body-lg-bold",
+  MD: "text-heading-xl-bold",
+  LG: "text-heading-2xl-bold",
+};
+
+const PROMO_DESC_CLASSES: Record<PromoCardSize, string> = {
+  SM: "text-body-sm-normal",
+  MD: "text-body-sm-normal",
+  LG: "text-body-base-normal",
+};
+
+const PROMO_META_CLASSES: Record<PromoCardSize, string> = {
+  SM: "text-body-xs-normal",
+  MD: "text-body-xs-normal",
+  LG: "text-body-sm-normal",
+};
+
+export function PromoCard({
+  size = "MD",
+  badgeLabel = "Promo",
+  badgeTone = "Bold",
+  hasBadge = true,
+  title,
+  description,
+  meta,
+  hasMeta = true,
+  actionLabel = "See how to use",
+  hasFooter = true,
+  onAction,
+  className,
+}: PromoCardProps) {
+  return (
+    <Card className={cn("flex flex-col", PROMO_CONTAINER_CLASSES[size], className)}>
+      <div className="flex flex-col items-start gap-2">
+        {hasBadge && badgeLabel && <Badge tone={badgeTone} label={badgeLabel} />}
+        <h3 className={cn("text-surface-foreground", PROMO_TITLE_CLASSES[size])}>{title}</h3>
+        {description && (
+          <p className={cn("text-surface-foreground-muted", PROMO_DESC_CLASSES[size])}>{description}</p>
+        )}
+      </div>
+      {hasFooter && (
+        <div className="flex items-center justify-between gap-3 pt-1">
+          {hasMeta && meta ? (
+            <span className={cn("text-surface-foreground-muted", PROMO_META_CLASSES[size])}>{meta}</span>
+          ) : (
+            <span />
+          )}
+          <Button
+            type="button"
+            variant="Outline"
+            size={size === "SM" ? "SM" : "MD"}
+            onClick={onAction}
+            className="shrink-0"
+          >
+            {actionLabel}
+          </Button>
+        </div>
+      )}
     </Card>
   );
 }

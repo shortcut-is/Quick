@@ -119,7 +119,7 @@
       "importPath": "@/components/ui/Card",
       "category": "Surfaces",
       "contractFile": "card.contract.json",
-      "totalVariants": 24
+      "totalVariants": 27
     },
     {
       "name": "CarouselDot",

@@ -39,7 +39,7 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el archi
 - **Effect Styles:** `Shadow/SM` (`S:fdd505a2d68c734a8b5e5396deb449b389fd7428,`), `Shadow/MD` (`S:e1e4828e20e96310252ed3261711d8c70f2e8aaf,`), `Shadow/LG` (`S:e6bf15a52642fa19b6a1518a5470193182ed63ec,`), `Shadow/XL` (`S:af0a41a54993863ce31c6965bc2b62b4057111ad,`), `Shadow/Focus` (`S:7d9e7e8fef712fad3630cacfb70a6e5c423b2414,`)
 
 ## Componentes clave y trabajo reciente
-- **Card Section (`2154:5661`, `1440×3852`)**: `Card` `COMPONENT_SET` (`2568:3189`, 24 variants `Use=Default|Media|Stat|Profile|Form|Settings|List|Pricing` × `Size=SM|MD|LG`), `Slot: Content` (`2366:6163`), `Ex.` (`2069:5141`, `1440×1054` con 7 instancias vivas `2579:3636`, `2579:3672`, `2579:3711`, `2579:3751`, `2579:3792`, `2579:3806`, `2579:3817`).
+- **Card Section (`2154:5661`, `1440×4146`)**: `Card` `COMPONENT_SET` (`2568:3189`, 27 variants `Use=Default|Media|Stat|Profile|Form|Settings|List|Pricing|Promo` × `Size=SM|MD|LG` + `✏️ Meta`, `👁️ Meta`), `Slot: Content` (`2366:6163`), `Ex.` (`2069:5141`, `1440×1294` con 10 instancias vivas `2579:3636`, `2579:3672`, `2579:3711`, `2579:3751`, `2579:3792`, `2579:3806`, `2579:3817`, `2739:4502`, `2739:4519`, `2739:4535`).
 - **Progress Bar Section (`2154:5674`, `800×1220`)**: `Progress Bar` `COMPONENT_SET` (`2583:3503`, 24 variants `Use=Default|Success|Warning|Danger` × `Progress=25%|75%|100%` × `Size=SM|LG`, base `551:5905` preservado), `Ex.` (`2069:6453`, `800×446` en `y=1903`).
 - **Lote A completado (`Alert`, `Toast`, `Dialog`, `Dropdown Menu`):**
   - `Alert` `COMPONENT_SET` (`2594:3473`, 4 variants `Neutral|Success|Warning|Danger`, base `550:5204`), `Ex.` (`2069:2818`).

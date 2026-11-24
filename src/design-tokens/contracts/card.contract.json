@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Surfaces",
   "importPath": "@/components/ui/Card",
-  "description": "Modular container for grouping related information across dashboards, forms, settings, lists, KPI stats, or pricing tiers.\n\nVariants & Properties:\n- Use: Default | Media | Stat | Profile | Form | Settings | List | Pricing.\n- Size: SM (320px, compact/Mobile) | MD (380px, standard) | LG (440px, featured).\n- Properties: ✏️ Title, ✏️ Description, KPI fields, profile fields, 👁️ Badge, 👁️ Footer, 👁️ Secondary Action.\n\nDesign rules:\n- In CardFooter, always keep a hierarchy of 1 Primary action paired with 1 secondary action (Outline or Ghost).\n- Avoid nesting a Card inside another Card or using cards instead of Data Table for dense multi-column comparisons.",
+  "description": "Modular container for grouping related information across dashboards, forms, settings, lists, KPI stats, pricing tiers, or promotional coupon perks.\n\nVariants & Properties:\n- Use: Default | Media | Stat | Profile | Form | Settings | List | Pricing | Promo.\n- Size: SM (320px, compact/Mobile) | MD (380px, standard) | LG (440px, featured).\n- Properties: ✏️ Title, ✏️ Description, ✏️ Meta, KPI fields, profile fields, 👁️ Badge, 👁️ Meta, 👁️ Footer, 👁️ Secondary Action.\n\nDesign rules:\n- In CardFooter, always keep a hierarchy of 1 Primary action paired with 1 secondary action (Outline or Ghost).\n- In Use=Promo, keep Badge (Bold/Success/Info), concise Title, muted Description, and Footer Meta paired with a single Outline Action.\n- Avoid nesting a Card inside another Card or using cards instead of Data Table for dense multi-column comparisons.",
   "anatomy": {
     "root": {
       "name": "Use=Default, Size=SM",
@@ -88,7 +88,7 @@
     }
   },
   "variants": {
-    "totalVariants": 24,
+    "totalVariants": 27,
     "axes": {
       "Use": {
         "codePropName": "variant",
@@ -101,7 +101,8 @@
           "Form",
           "Settings",
           "List",
-          "Pricing"
+          "Pricing",
+          "Promo"
         ]
       },
       "Size": {
@@ -176,11 +177,31 @@
       "defaultValue": "Designing scalable UI systems and multi-platform experiences."
     },
     {
+      "propertyName": "✏️ Meta",
+      "codePropName": "meta",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Expires Nov 30",
+      "boundLayers": [
+        "Meta"
+      ]
+    },
+    {
       "propertyName": "👁️ Badge",
       "codePropName": "hasBadge",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true
+    },
+    {
+      "propertyName": "👁️ Meta",
+      "codePropName": "hasMeta",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Meta"
+      ]
     },
     {
       "propertyName": "👁️ Footer",
@@ -206,7 +227,7 @@
       "propertyName": "Use",
       "codePropName": "variant",
       "type": "VARIANT",
-      "tsType": "\"Default\" | \"Media\" | \"Stat\" | \"Profile\" | \"Form\" | \"Settings\" | \"List\" | \"Pricing\"",
+      "tsType": "\"Default\" | \"Media\" | \"Stat\" | \"Profile\" | \"Form\" | \"Settings\" | \"List\" | \"Pricing\" | \"Promo\"",
       "defaultValue": "Default",
       "options": [
         "Default",
@@ -216,7 +237,8 @@
         "Form",
         "Settings",
         "List",
-        "Pricing"
+        "Pricing",
+        "Promo"
       ]
     },
     {
@@ -282,6 +304,7 @@
       "Text/Body/base/bold",
       "Text/Body/base/medium",
       "Text/Body/base/normal",
+      "Text/Body/lg/bold",
       "Text/Body/sm/medium",
       "Text/Body/sm/normal",
       "Text/Body/xs/medium",
@@ -321,7 +344,7 @@
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use to group cohesive information or self-contained modules in dashboard grids, compact forms (`Use=Form`), settings (`Use=Settings`), KPI metrics (`Use=Stat`), lists (`Use=List`), or pricing plans (`Use=Pricing`)."
+      "Use to group cohesive information or self-contained modules in dashboard grids, compact forms (`Use=Form`), settings (`Use=Settings`), KPI metrics (`Use=Stat`), lists (`Use=List`), pricing plans (`Use=Pricing`), or promotional coupons, cashback perks, and featured offers (`Use=Promo`)."
     ],
     "whenNotToUse": [
       "Do not use for blocking or overlay workflows; use `Dialog` or `Sheet`.",
@@ -332,6 +355,7 @@
   "behaviorRules": [
     "Follow composable structure (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`) styled with Quick v1.2 Tailwind CSS surface, radius, and shadow tokens.",
     "Preserve concentric border radii between outer container (`radius/xl|2xl|3xl`) and inner `Slot: Content` or media containers.",
-    "In `CardFooter`, maintain strict hierarchy of 1 `Primary` action paired with 1 secondary action (`Outline`/`Ghost`), never two `Primary` buttons together."
+    "In `CardFooter`, maintain strict hierarchy of 1 `Primary` action paired with 1 secondary action (`Outline`/`Ghost`), never two `Primary` buttons together.",
+    "In `Use=Promo` (`PromoCard`), keep a subtle semantic surface (`Surfaces/Background` + `Surfaces/Border`), top `Badge`, bold promotional headline, muted benefit copy, and footer `Meta` paired with a single `Outline` CTA."
   ]
 }
