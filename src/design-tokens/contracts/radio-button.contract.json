@@ -5,7 +5,7 @@
   "nodeType": "COMPONENT_SET",
   "category": "Inputs",
   "importPath": "@/components/ui/RadioButton",
-  "description": "Single-choice option row with label and optional description designed for use inside Radio Group.\n\nVariants: Selection × State × Description.\nWhen not to use: Use Checkbox for multi-select; use Input Select when more than 5 options are available.",
+  "description": "Single-choice option row combining an exposed Radio primitive, label, and optional helper description.\n\nVariants:\n- State: Enabled | Hover | Focus | Error | Disabled.\n- Selected: Off | On.\n- Description: Off | On.\n- Properties: ✏️ Label, ✏️ Description.\n\nUse inside Radio Group; use Checkbox for multi-select and Radio Card for rich option tiles.",
   "anatomy": {
     "root": {
       "name": "State=Enabled, Selected=Off, Description=Off",
@@ -44,7 +44,10 @@
           "children": [
             {
               "name": "Value",
-              "type": "TEXT"
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Label"
+              }
             }
           ]
         }
@@ -52,13 +55,16 @@
     }
   },
   "variants": {
-    "totalVariants": 8,
+    "totalVariants": 20,
     "axes": {
       "State": {
         "codePropName": "state",
         "defaultValue": "Enabled",
         "options": [
           "Enabled",
+          "Hover",
+          "Focus",
+          "Error",
           "Disabled"
         ]
       },
@@ -85,10 +91,13 @@
       "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
-      "tsType": "\"Enabled\" | \"Disabled\"",
+      "tsType": "\"Enabled\" | \"Hover\" | \"Focus\" | \"Error\" | \"Disabled\"",
       "defaultValue": "Enabled",
       "options": [
         "Enabled",
+        "Hover",
+        "Focus",
+        "Error",
         "Disabled"
       ]
     },
@@ -113,33 +122,63 @@
         "Off",
         "On"
       ]
+    },
+    {
+      "propertyName": "✏️ Label",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Label",
+      "boundLayers": [
+        "Value"
+      ]
+    },
+    {
+      "propertyName": "✏️ Description",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Description",
+      "boundLayers": [
+        "Description"
+      ]
     }
   ],
   "tokens": {
     "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
       "FontFamily/Primary",
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
+      "Surfaces/Background",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "Surfaces/Input",
+      "Surfaces/Muted",
+      "Surfaces/Ring",
       "Surfaces/Transparent",
       "radius/full",
       "spacing/1",
       "spacing/2"
     ],
     "directVariables": [
+      "Feedback/Danger",
       "FontFamily/Primary",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
       "spacing/2"
     ],
     "inheritedFromSubcomponents": [
+      "Feedback/Danger-Subtle",
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
+      "Surfaces/Background",
       "Surfaces/Input",
+      "Surfaces/Muted",
+      "Surfaces/Ring",
       "Surfaces/Transparent",
       "radius/full",
       "spacing/1"
@@ -147,78 +186,27 @@
     "textStyles": [
       "Text/Body/sm/normal"
     ],
-    "effectStyles": []
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
   },
   "subcomponents": [
     {
       "figmaName": "Radio",
       "nodeType": "COMPONENT_SET",
-      "variantCount": 4,
-      "variants": {
-        "State": {
-          "codePropName": "state",
-          "defaultValue": "Default",
-          "options": [
-            "Default",
-            "Disabled"
-          ]
-        },
-        "Selected": {
-          "codePropName": "selected",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        }
-      },
-      "properties": [
-        {
-          "propertyName": "State",
-          "codePropName": "state",
-          "type": "VARIANT",
-          "tsType": "\"Default\" | \"Disabled\"",
-          "defaultValue": "Default",
-          "options": [
-            "Default",
-            "Disabled"
-          ]
-        },
-        {
-          "propertyName": "Selected",
-          "codePropName": "selected",
-          "type": "VARIANT",
-          "tsType": "\"Off\" | \"On\"",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        }
-      ],
-      "tokens": [
-        "Primary/Bottom",
-        "Primary/Foreground",
-        "Primary/Top",
-        "Surfaces/Input",
-        "Surfaces/Transparent",
-        "radius/full",
-        "spacing/1",
-        "spacing/2"
-      ],
-      "textStyles": [],
-      "effectStyles": [],
+      "variantCount": 10,
       "contractFile": "radio.contract.json",
-      "importPath": "@/components/ui/Radio"
+      "importPath": "@/components/ui/RadioButton"
     }
   ],
   "usageGuidelines": {
     "whenToUse": [
-      "Always use inside `RadioGroup` when selecting exactly one option from 2 to 5 mutually exclusive choices with label and optional description."
+      "Use inside `RadioGroup` when selecting exactly one option from 2 to 5 mutually exclusive choices with label and optional description.",
+      "Use `RadioCard` for prominent pricing or plan tiles, or `ListItem` (`leading=\"Radio\"`) inside scrollable list containers."
     ],
     "whenNotToUse": [
       "Do not use when multiple items can be active simultaneously; use `Checkbox`.",
-      "Do not use for long option lists (more than 5 items); use `InputSelect`."
+      "Do not use for long option lists (more than 5 items); use `InputSelect` or `Combobox`."
     ]
   },
   "behaviorRules": [

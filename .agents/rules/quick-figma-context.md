@@ -8,7 +8,7 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el archi
   - `libraryName`: `⚡ Quick - v1.2`
   - `libraryKey`: `lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd`
   - **Librería PROHIBIDA:** `Quick ⚡ - v1.2` (`lk-c590e7be0b43e4c47aa285910835678469595e363682bac303924c50807844de9528ccb4a5b66d21fb75761433b1af7ed340c0fc63ecbd44495f30e596ba5c1f`, `source: "community"`, plantilla vieja sin Lote 1/2 ni correcciones de contraste).
-- **Manifiesto cross-file (`importComponentSetByKeyAsync` / `importVariableByKeyAsync`):** `figma-library-manifest.json` (`61` componentes públicos, `18` subcomponentes `_`, `94` ítems de iconos/foundations, `95` variables, `22` Text Styles, `5` Effect Styles).
+- **Manifiesto cross-file (`importComponentSetByKeyAsync` / `importVariableByKeyAsync`):** `figma-library-manifest.json` (`62` componentes públicos, `18` subcomponentes `_`, `94` ítems de iconos/foundations, `95` variables, `22` Text Styles, `5` Effect Styles).
 - **Skills obligatorios antes de usar `use_figma`:**
   - Para **crear pantallas en Figma**: `.agents/skills/quick-figma-screens/SKILL.md` + `figma-use` + `figma-generate-design`.
   - Para **editar/crear librería**: `figma-use` + `figma-generate-library`.
@@ -71,6 +71,9 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el archi
   - `Carousel` (`2693:4542`) + `_Carousel Dot` (`2693:4473`) en `2693:4467`, `Ex.` (`2693:4543`).
   - `Collapsible` (`2693:4620`) en `2693:4578`, `Ex.` (`2693:4621`).
   - `Search & Filter Bar` (`2694:4592`) en `2694:4476`, `Ex.` (`2694:4593`).
+- **Radio Button & List Item (`2154:5675`, `2154:5671`):**
+  - `Radio` (`69:92`, 10 variants `Default|Hover|Focus|Error|Disabled × Off|On`), `Radio Button` (`291:1327`, 20 variants + `✏️ Label` / `✏️ Description`), `Radio Group` (`292:1344` con `👁️ Label`, `✏️ Label`, `👁️ Item 3..5`), `Radio Card` (`2728:4470`, 8 variants `Default|Hover|Focus|Disabled × Off|On` + `👁️ Icon`, `👁️ Description`, `👁️ Meta`), `Ex.` (`2069:6525`).
+  - `List Item` (`2731:4584`, 16 variants `Leading=Avatar|Radio|Icon|None × State=Default|Hover|Selected|Disabled` + `👁️ Meta`, `👁️ Trailing Radio`, `👁️ Chevron`, `↪️ Icon`), `Ex.` (`2069:6306`).
 - **Otros sets clave:** `Button` (`67:19`), `Badge` (`203:979`), `Avatar` (`79:1653`), `Input Text` (`84:3866`), `Input Select` (`88:355`), `Input Area` (`194:1034`), `Notification` (`545:5052`), `Data Table` (`2154:5663`).
 - Consulta `README.md`, `figma-library-manifest.json` y `design-system-state.json` en la raíz del proyecto para ver el inventario completo y las llaves cross-file.
 

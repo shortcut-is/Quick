@@ -1,0 +1,189 @@
+{
+  "name": "RadioCard",
+  "figmaName": "Radio Card",
+  "section": "Radio Button",
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/RadioButton",
+  "description": "Selectable option card wrapping an exposed Radio primitive, optional Icon (👁️ Icon), title, optional description (👁️ Description), and optional trailing meta label (👁️ Meta).\n\nVariants:\n- State: Default | Hover | Focus | Disabled.\n- Selected: Off | On.\n\nUse for rich plan selectors, shipping tiers, or payment method cards; use Radio Button for compact choices.",
+  "anatomy": {
+    "root": {
+      "name": "State=Default, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Radio",
+        "component": "Radio",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Icon",
+        "component": "Icon/Line / Credit-card",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "State=Default, Selected=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        { "name": "Radio", "type": "INSTANCE", "instanceOf": "Radio" },
+        { "name": "IconWrapper", "type": "FRAME", "layout": "HORIZONTAL", "refs": { "visible": "👁️ Icon" } },
+        {
+          "name": "CardContent",
+          "type": "FRAME",
+          "layout": "VERTICAL",
+          "children": [
+            { "name": "Title", "type": "TEXT", "refs": { "characters": "✏️ Title" } },
+            { "name": "Description", "type": "TEXT", "refs": { "visible": "👁️ Description", "characters": "✏️ Description" } }
+          ]
+        },
+        { "name": "Meta", "type": "TEXT", "refs": { "visible": "👁️ Meta", "characters": "✏️ Meta" } }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 8,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": ["Default", "Hover", "Focus", "Disabled"]
+      },
+      "Selected": {
+        "codePropName": "selected",
+        "defaultValue": "Off",
+        "options": ["Off", "On"]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Hover\" | \"Focus\" | \"Disabled\"",
+      "defaultValue": "Default",
+      "options": ["Default", "Hover", "Focus", "Disabled"]
+    },
+    {
+      "propertyName": "Selected",
+      "codePropName": "selected",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\"",
+      "defaultValue": "Off",
+      "options": ["Off", "On"]
+    },
+    {
+      "propertyName": "👁️ Icon",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": ["IconWrapper"]
+    },
+    {
+      "propertyName": "👁️ Description",
+      "codePropName": "hasDescription",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": ["Description"]
+    },
+    {
+      "propertyName": "👁️ Meta",
+      "codePropName": "hasMeta",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": ["Meta"]
+    },
+    {
+      "propertyName": "✏️ Title",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Plan Pro",
+      "boundLayers": ["Title"]
+    },
+    {
+      "propertyName": "✏️ Description",
+      "codePropName": "description",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Facturación mensual flexible para tu equipo.",
+      "boundLayers": ["Description"]
+    },
+    {
+      "propertyName": "✏️ Meta",
+      "codePropName": "meta",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "$29/mes",
+      "boundLayers": ["Meta"]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/xl",
+      "spacing/1",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "radius/xl",
+      "spacing/1",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "radius/full"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaName": "Radio",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 10,
+      "contractFile": "radio.contract.json",
+      "importPath": "@/components/ui/RadioButton"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use inside a `role=\"radiogroup\"` container when users choose between prominent plans, shipping methods, or payment options."
+    ],
+    "whenNotToUse": [
+      "Use `RadioButton` for compact inline form choices and `ListItem` (`leading=\"Radio\"`) for full-width list rows."
+    ]
+  },
+  "behaviorRules": [
+    "Render as `<label>` wrapping native `<input type=\"radio\">` so clicking anywhere on the card selects the option with keyboard and focus-ring parity."
+  ]
+}

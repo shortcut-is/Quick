@@ -1,8 +1,8 @@
 {
   "designSystem": "⚡ Quick - v1.2",
   "sectionsCount": 47,
-  "componentsCount": 83,
-  "contractFilesCount": 71,
+  "componentsCount": 84,
+  "contractFilesCount": 72,
   "contracts": [
     {
       "name": "Accordion",
@@ -362,7 +362,7 @@
       "importPath": "@/components/ui/ListItem",
       "category": "Data Display",
       "contractFile": "list-item.contract.json",
-      "totalVariants": 1
+      "totalVariants": 16
     },
     {
       "name": "Notification",
@@ -416,13 +416,22 @@
       "importPath": "@/components/ui/RadioButton",
       "category": "Inputs",
       "contractFile": "radio-button.contract.json",
+      "totalVariants": 20
+    },
+    {
+      "name": "RadioCard",
+      "figmaName": "Radio Card",
+      "section": "Radio Button",
+      "importPath": "@/components/ui/RadioButton",
+      "category": "Inputs",
+      "contractFile": "radio-card.contract.json",
       "totalVariants": 8
     },
     {
       "name": "RadioGroup",
       "figmaName": "Radio Group",
       "section": "Radio Button",
-      "importPath": "@/components/ui/RadioGroup",
+      "importPath": "@/components/ui/RadioButton",
       "category": "Inputs",
       "contractFile": "radio-group.contract.json",
       "totalVariants": 1
@@ -431,10 +440,10 @@
       "name": "Radio",
       "figmaName": "Radio",
       "section": "Radio Button",
-      "importPath": "@/components/ui/Radio",
+      "importPath": "@/components/ui/RadioButton",
       "category": "Inputs (Primitive)",
       "contractFile": "radio.contract.json",
-      "totalVariants": 4
+      "totalVariants": 10
     },
     {
       "name": "SearchFilterBar",

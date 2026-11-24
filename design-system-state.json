@@ -7,7 +7,7 @@
   "manifestPath": "figma-library-manifest.json",
   "fileKey": "HwLUpu9i41HlBTF7erR5ad",
   "fileUrl": "https://www.figma.com/design/HwLUpu9i41HlBTF7erR5ad/%E2%9A%A1-Quick---v1.2?node-id=0-1",
-  "lastSessionId": "d72fe423-2c5a-420f-9bc5-4d8269e71d9e",
+  "lastSessionId": "82f4c711-bed9-442b-aa1a-6a79a3ca83f5",
   "entities": {
     "pages": {
       "Cover": "1:4168",
@@ -144,7 +144,14 @@
       "Collapsible Ex": "2693:4621",
       "Search & Filter Bar Section": "2694:4476",
       "Search & Filter Bar": "2694:4592",
-      "Search & Filter Bar Ex": "2694:4593"
+      "Search & Filter Bar Ex": "2694:4593",
+      "Radio": "69:92",
+      "Radio Button": "291:1327",
+      "Radio Group": "292:1344",
+      "Radio Card": "2728:4470",
+      "Radio Button Ex": "2069:6525",
+      "List Item": "2731:4584",
+      "List Item Ex": "2069:6306"
     }
   },
   "completedSteps": [
@@ -166,7 +173,8 @@
     "lote-1-advanced-inputs-auth",
     "lote-2-mobile-interaction-patterns",
     "color-tokens-audit-fixes",
-    "cross-file-figma-manifest-and-multi-agent-setup"
+    "cross-file-figma-manifest-and-multi-agent-setup",
+    "radio-buttons-and-list-item-variants"
   ],
   "effectStyles": {
     "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",

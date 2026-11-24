@@ -2,116 +2,207 @@
   "name": "ListItem",
   "figmaName": "List Item",
   "section": "List Item",
-  "nodeType": "COMPONENT",
+  "nodeType": "COMPONENT_SET",
   "category": "Data Display",
   "importPath": "@/components/ui/ListItem",
-  "description": "Flexible list row with title, subtitle, optional Avatar (👁️ Avatar), and trailing navigation chevron (👁️ Chevron). Ideal for mobile directories and responsive Data Table rows.",
+  "description": "Flexible interactive list row supporting leading Avatar, Radio, Icon (↪️ Icon), or None across Default, Hover, Selected, and Disabled states.\n\nVariants:\n- Leading: Avatar | Radio | Icon | None.\n- State: Default | Hover | Selected | Disabled.\n- Trailing options: 👁️ Meta (✏️ Meta), 👁️ Trailing Radio (mutually exclusive row pickers), 👁️ Chevron.\n\nUse for mobile directories, single-select radio lists, account pickers, and responsive Data Table rows.",
   "anatomy": {
     "root": {
-      "name": "List Item",
+      "name": "Leading=Avatar, State=Default",
       "type": "COMPONENT",
       "layout": "HORIZONTAL"
     },
     "slots": [
-      {
-        "slotName": "Avatar",
-        "component": "Avatar",
-        "kind": "primitive"
-      },
-      {
-        "slotName": "Chevron",
-        "component": "Icon/Line / Chevron-Right",
-        "kind": "icon"
-      }
+      { "slotName": "Avatar", "component": "Avatar", "kind": "primitive" },
+      { "slotName": "Radio", "component": "Radio", "kind": "primitive" },
+      { "slotName": "Icon", "component": "Icon/Line / User", "kind": "icon" },
+      { "slotName": "TrailingRadio", "component": "Radio", "kind": "primitive" },
+      { "slotName": "Chevron", "component": "Icon/Line / Chevron-Right", "kind": "icon" }
     ],
     "layers": {
-      "name": "List Item",
+      "name": "Leading=Avatar, State=Default",
       "type": "COMPONENT",
       "layout": "HORIZONTAL",
       "children": [
+        { "name": "Avatar", "type": "INSTANCE", "instanceOf": "Avatar" },
         {
-          "name": "Avatar",
-          "type": "INSTANCE",
-          "instanceOf": "Avatar",
-          "refs": {
-            "visible": "👁️ Avatar"
-          }
-        },
-        {
-          "name": "List Item Content",
+          "name": "ListItemContent",
           "type": "FRAME",
           "layout": "VERTICAL",
           "children": [
-            {
-              "name": "Long Option",
-              "type": "TEXT"
-            },
-            {
-              "name": "Long Option",
-              "type": "TEXT"
-            }
+            { "name": "Title", "type": "TEXT", "refs": { "characters": "✏️ Title" } },
+            { "name": "Description", "type": "TEXT", "refs": { "visible": "👁️ Description", "characters": "✏️ Description" } }
           ]
         },
         {
-          "name": "Chevron",
-          "type": "INSTANCE",
-          "instanceOf": "Icon/Line / Chevron-Right"
+          "name": "TrailingSlot",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            { "name": "Meta", "type": "TEXT", "refs": { "visible": "👁️ Meta", "characters": "✏️ Meta" } },
+            { "name": "TrailingRadio", "type": "INSTANCE", "instanceOf": "Radio", "refs": { "visible": "👁️ Trailing Radio" } },
+            { "name": "Chevron", "type": "INSTANCE", "instanceOf": "Icon/Line / Chevron-Right", "refs": { "visible": "👁️ Chevron" } }
+          ]
         }
       ]
     }
   },
   "variants": {
-    "totalVariants": 1,
-    "axes": {}
+    "totalVariants": 16,
+    "axes": {
+      "Leading": {
+        "codePropName": "leading",
+        "defaultValue": "Avatar",
+        "options": ["Avatar", "Radio", "Icon", "None"]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": ["Default", "Hover", "Selected", "Disabled"]
+      }
+    }
   },
   "properties": [
     {
-      "propertyName": "👁️ Avatar",
-      "codePropName": "hasAvatar",
+      "propertyName": "Leading",
+      "codePropName": "leading",
+      "type": "VARIANT",
+      "tsType": "\"Avatar\" | \"Radio\" | \"Icon\" | \"None\"",
+      "defaultValue": "Avatar",
+      "options": ["Avatar", "Radio", "Icon", "None"]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Hover\" | \"Selected\" | \"Disabled\"",
+      "defaultValue": "Default",
+      "options": ["Default", "Hover", "Selected", "Disabled"]
+    },
+    {
+      "propertyName": "👁️ Description",
+      "codePropName": "hasDescription",
       "type": "BOOLEAN",
       "tsType": "boolean",
       "defaultValue": true,
-      "boundLayers": [
-        "Avatar"
-      ]
+      "boundLayers": ["Description"]
+    },
+    {
+      "propertyName": "👁️ Meta",
+      "codePropName": "hasMeta",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": ["Meta"]
+    },
+    {
+      "propertyName": "👁️ Trailing Radio",
+      "codePropName": "hasTrailingRadio",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": ["TrailingRadio"]
     },
     {
       "propertyName": "👁️ Chevron",
       "codePropName": "hasChevron",
       "type": "BOOLEAN",
       "tsType": "boolean",
-      "defaultValue": true
+      "defaultValue": true,
+      "boundLayers": ["Chevron"]
+    },
+    {
+      "propertyName": "✏️ Title",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "List item title",
+      "boundLayers": ["Title"]
+    },
+    {
+      "propertyName": "✏️ Description",
+      "codePropName": "subtitle",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Secondary supporting text",
+      "boundLayers": ["Description"]
+    },
+    {
+      "propertyName": "✏️ Meta",
+      "codePropName": "meta",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Activo",
+      "boundLayers": ["Meta"]
+    },
+    {
+      "propertyName": "↪️ Icon",
+      "codePropName": "leadingIcon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "QuickIconName",
+      "defaultValue": "Icon/Line / User",
+      "boundLayers": ["Icon"]
     }
   ],
   "tokens": {
     "variables": [
-      "FontFamily/Primary",
+      "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
       "spacing/1",
       "spacing/2",
+      "spacing/3",
       "spacing/4"
     ],
     "directVariables": [
-      "FontFamily/Primary",
+      "Surfaces/Background",
       "Surfaces/Border",
       "Surfaces/Foreground",
       "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
       "spacing/1",
       "spacing/2",
+      "spacing/3",
       "spacing/4"
     ],
-    "inheritedFromSubcomponents": [],
+    "inheritedFromSubcomponents": [
+      "Primary/Bottom",
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Input",
+      "Surfaces/Transparent",
+      "radius/full"
+    ],
     "textStyles": [
-      "Text/Body/base/normal"
+      "Text/Body/base/medium",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal"
     ],
     "effectStyles": []
   },
-  "subcomponents": [],
+  "subcomponents": [
+    {
+      "figmaName": "Avatar",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "contractFile": "avatar.contract.json",
+      "importPath": "@/components/ui/Avatar"
+    },
+    {
+      "figmaName": "Radio",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 10,
+      "contractFile": "radio.contract.json",
+      "importPath": "@/components/ui/RadioButton"
+    }
+  ],
   "usageGuidelines": {
     "whenToUse": [
-      "Use for interactive directories, mobile record rows, or responsive card-row transformations of `DataTable`."
+      "Use for interactive directories (`leading=\"Avatar\"`), single-select radio lists (`leading=\"Radio\"`), account pickers (`leading=\"Avatar\"` + `hasTrailingRadio`), or settings rows (`leading=\"Icon\"`)."
     ],
     "whenNotToUse": [
       "Do not use instead of `DataTable` for dense multi-column desktop comparisons.",
@@ -119,6 +210,6 @@
     ]
   },
   "behaviorRules": [
-    "Render within semantic `<ul>`/`<li>` containers with boolean toggles for leading `Avatar` and trailing chevron when rows are interactive."
+    "Render within semantic `<ul>`/`<li>` or `role=\"radiogroup\"` containers; bind `role=\"radio\"` / `aria-checked` automatically when `leading=\"Radio\"` or `hasTrailingRadio` is enabled."
   ]
 }

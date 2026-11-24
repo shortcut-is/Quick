@@ -4,8 +4,8 @@
   "section": "Radio Button",
   "nodeType": "COMPONENT_SET",
   "category": "Inputs (Primitive)",
-  "importPath": "@/components/ui/Radio",
-  "description": "Atomic circular radio control reused inside Radio Button and compact single-selection rows.",
+  "importPath": "@/components/ui/RadioButton",
+  "description": "Atomic circular radio control (20x20px) for single-selection groups, Radio Button rows, Radio Card, and List Item rows.\n\nVariants:\n- State: Default | Hover | Focus | Error | Disabled.\n- Selected: Off | On.\n\nUse inside Radio Button, Radio Card, Radio Group, or List Item (Leading=Radio / Trailing Radio).",
   "anatomy": {
     "root": {
       "name": "State=Default, Selected=Off",
@@ -21,13 +21,16 @@
     }
   },
   "variants": {
-    "totalVariants": 4,
+    "totalVariants": 10,
     "axes": {
       "State": {
         "codePropName": "state",
         "defaultValue": "Default",
         "options": [
           "Default",
+          "Hover",
+          "Focus",
+          "Error",
           "Disabled"
         ]
       },
@@ -46,10 +49,13 @@
       "propertyName": "State",
       "codePropName": "state",
       "type": "VARIANT",
-      "tsType": "\"Default\" | \"Disabled\"",
+      "tsType": "\"Default\" | \"Hover\" | \"Focus\" | \"Error\" | \"Disabled\"",
       "defaultValue": "Default",
       "options": [
         "Default",
+        "Hover",
+        "Focus",
+        "Error",
         "Disabled"
       ]
     },
@@ -67,20 +73,32 @@
   ],
   "tokens": {
     "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
       "Surfaces/Input",
+      "Surfaces/Muted",
+      "Surfaces/Ring",
       "Surfaces/Transparent",
       "radius/full",
       "spacing/1",
       "spacing/2"
     ],
     "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
       "Primary/Bottom",
       "Primary/Foreground",
       "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
       "Surfaces/Input",
+      "Surfaces/Muted",
+      "Surfaces/Ring",
       "Surfaces/Transparent",
       "radius/full",
       "spacing/1",
@@ -88,18 +106,20 @@
     ],
     "inheritedFromSubcomponents": [],
     "textStyles": [],
-    "effectStyles": []
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
   },
   "subcomponents": [],
   "usageGuidelines": {
     "whenToUse": [
-      "Use as the atomic circular radio indicator inside `RadioButton` or compact single-choice containers."
+      "Use as the atomic circular radio indicator inside `RadioButton`, `RadioCard`, or `ListItem` (`leading=\"Radio\"` / `hasTrailingRadio`)."
     ],
     "whenNotToUse": [
-      "Do not render standalone without a visible or accessible label; wrap with `RadioButton` inside `RadioGroup`."
+      "Do not render standalone without a visible or accessible label; wrap with `RadioButton`, `RadioCard`, or `ListItem` inside a `role=\"radiogroup\"`."
     ]
   },
   "behaviorRules": [
-    "Use `<input type=\"radio\">` or `role=\"radio\"` with `aria-checked` and associated label text."
+    "Use `<input type=\"radio\">` or `role=\"radio\"` with `aria-checked`, visible `Shadow/Focus` ring, and associated label text."
   ]
 }

@@ -4,8 +4,8 @@
   "section": "Radio Button",
   "nodeType": "COMPONENT",
   "category": "Inputs",
-  "importPath": "@/components/ui/RadioGroup",
-  "description": "Vertical group wrapper with shared label for mutually exclusive Radio Button choices.",
+  "importPath": "@/components/ui/RadioButton",
+  "description": "Vertical group wrapper with shared section title (👁️ Label, ✏️ Label) organizing 2 to 5 mutually exclusive exposed Radio Button items.\n\nUse when comparing 2–5 options inline; use Input Select or Combobox for 6+ options.",
   "anatomy": {
     "root": {
       "name": "Radio Group",
@@ -46,38 +46,17 @@
       "children": [
         {
           "name": "Radio Group Label",
-          "type": "TEXT"
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Label",
+            "characters": "✏️ Label"
+          }
         },
-        {
-          "name": "Item 1",
-          "type": "INSTANCE",
-          "layout": "HORIZONTAL",
-          "instanceOf": "Radio Button"
-        },
-        {
-          "name": "Item 2",
-          "type": "INSTANCE",
-          "layout": "HORIZONTAL",
-          "instanceOf": "Radio Button"
-        },
-        {
-          "name": "Item 3",
-          "type": "INSTANCE",
-          "layout": "HORIZONTAL",
-          "instanceOf": "Radio Button"
-        },
-        {
-          "name": "Item 4",
-          "type": "INSTANCE",
-          "layout": "HORIZONTAL",
-          "instanceOf": "Radio Button"
-        },
-        {
-          "name": "Item 5",
-          "type": "INSTANCE",
-          "layout": "HORIZONTAL",
-          "instanceOf": "Radio Button"
-        }
+        { "name": "Item 1", "type": "INSTANCE", "instanceOf": "Radio Button" },
+        { "name": "Item 2", "type": "INSTANCE", "instanceOf": "Radio Button" },
+        { "name": "Item 3", "type": "INSTANCE", "instanceOf": "Radio Button", "refs": { "visible": "👁️ Item 3" } },
+        { "name": "Item 4", "type": "INSTANCE", "instanceOf": "Radio Button", "refs": { "visible": "👁️ Item 4" } },
+        { "name": "Item 5", "type": "INSTANCE", "instanceOf": "Radio Button", "refs": { "visible": "👁️ Item 5" } }
       ]
     }
   },
@@ -85,7 +64,48 @@
     "totalVariants": 1,
     "axes": {}
   },
-  "properties": [],
+  "properties": [
+    {
+      "propertyName": "👁️ Label",
+      "codePropName": "hasLabel",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": ["Radio Group Label"]
+    },
+    {
+      "propertyName": "✏️ Label",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "[Label]",
+      "boundLayers": ["Radio Group Label"]
+    },
+    {
+      "propertyName": "👁️ Item 3",
+      "codePropName": "hasItem3",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": ["Item 3"]
+    },
+    {
+      "propertyName": "👁️ Item 4",
+      "codePropName": "hasItem4",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": ["Item 4"]
+    },
+    {
+      "propertyName": "👁️ Item 5",
+      "codePropName": "hasItem5",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": ["Item 5"]
+    }
+  ],
   "tokens": {
     "variables": [
       "FontFamily/Primary",
@@ -111,78 +131,7 @@
     {
       "figmaName": "Radio Button",
       "nodeType": "COMPONENT_SET",
-      "variantCount": 8,
-      "variants": {
-        "State": {
-          "codePropName": "state",
-          "defaultValue": "Enabled",
-          "options": [
-            "Enabled",
-            "Disabled"
-          ]
-        },
-        "Selected": {
-          "codePropName": "selected",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        },
-        "Description": {
-          "codePropName": "hasDescription",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        }
-      },
-      "properties": [
-        {
-          "propertyName": "State",
-          "codePropName": "state",
-          "type": "VARIANT",
-          "tsType": "\"Enabled\" | \"Disabled\"",
-          "defaultValue": "Enabled",
-          "options": [
-            "Enabled",
-            "Disabled"
-          ]
-        },
-        {
-          "propertyName": "Selected",
-          "codePropName": "selected",
-          "type": "VARIANT",
-          "tsType": "\"Off\" | \"On\"",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        },
-        {
-          "propertyName": "Description",
-          "codePropName": "hasDescription",
-          "type": "VARIANT",
-          "tsType": "\"Off\" | \"On\"",
-          "defaultValue": "Off",
-          "options": [
-            "Off",
-            "On"
-          ]
-        }
-      ],
-      "tokens": [
-        "FontFamily/Primary",
-        "Surfaces/Foreground",
-        "Surfaces/Foreground-Muted",
-        "spacing/2"
-      ],
-      "textStyles": [
-        "Text/Body/sm/normal"
-      ],
-      "effectStyles": [],
+      "variantCount": 20,
       "contractFile": "radio-button.contract.json",
       "importPath": "@/components/ui/RadioButton"
     }
