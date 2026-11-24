@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "./design-tokens/theme.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    font-family: var(--font-primary);
+    color: var(--surface-foreground);
+    background-color: var(--surface-background);
+  }
+
+  * {
+    border-color: var(--surface-border);
+  }
+
+  dialog:modal {
+    overscroll-behavior: contain;
+  }
+
+  dialog::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  .quick-dialog {
+    margin: auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    max-width: none;
+    max-height: none;
+  }
+
+  .quick-dialog::backdrop {
+    background: var(--surface-overlay);
+    backdrop-filter: blur(2px);
+  }
+
+  .quick-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+  }
+
+  .quick-select::-ms-expand {
+    display: none;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

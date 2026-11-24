@@ -1,0 +1,175 @@
+{
+  "name": "Toggle",
+  "figmaName": "Toggle",
+  "section": "Button Group & Toggle",
+  "nodeType": "COMPONENT_SET",
+  "category": "Actions & Controls",
+  "importPath": "@/components/ui/Toggle",
+  "description": "Two-state pressed button for toolbars and view switchers.\n\nVariants & Properties:\n- Variant: Outline | Ghost.\n- State: Off | On | Disabled.\n- Properties: ✏️ Label, 👁️ Label, 👁️ Icon, ↪️ Swap Icon.",
+  "anatomy": {
+    "root": {
+      "name": "Variant=Outline, State=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Icon",
+        "component": "Icon/Line / Grid",
+        "kind": "icon"
+      }
+    ],
+    "layers": {
+      "name": "Variant=Outline, State=Off",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Icon",
+          "type": "INSTANCE",
+          "refs": {
+            "visible": "👁️ Icon",
+            "mainComponent": "↪️ Swap Icon"
+          }
+        },
+        {
+          "name": "Label",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Label",
+            "characters": "✏️ Label"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 6,
+    "axes": {
+      "Variant": {
+        "codePropName": "variant",
+        "defaultValue": "Outline",
+        "options": [
+          "Outline",
+          "Ghost"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Off",
+        "options": [
+          "Off",
+          "On",
+          "Disabled"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Label",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Vista",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "👁️ Label",
+      "codePropName": "hasLabel",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "👁️ Icon",
+      "codePropName": "hasIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Icon"
+      ]
+    },
+    {
+      "propertyName": "↪️ Swap Icon",
+      "codePropName": "icon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "Icon/Line / Grid",
+      "boundLayers": [
+        "Icon"
+      ]
+    },
+    {
+      "propertyName": "Variant",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Outline\" | \"Ghost\"",
+      "defaultValue": "Outline",
+      "options": [
+        "Outline",
+        "Ghost"
+      ]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Off\" | \"On\" | \"Disabled\"",
+      "defaultValue": "Off",
+      "options": [
+        "Off",
+        "On",
+        "Disabled"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for stateful toolbar actions (bold/grid/pin/bookmark) or inside `ToggleGroup`."
+    ],
+    "whenNotToUse": [
+      "Do not use for one-off command submission; use `Button`.",
+      "Do not use for immediate boolean settings with an on/off track; use `Switch`."
+    ]
+  },
+  "behaviorRules": [
+    "Always expose `aria-pressed` on the `<button>` element."
+  ]
+}

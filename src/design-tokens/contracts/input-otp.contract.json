@@ -1,0 +1,203 @@
+{
+  "name": "InputOTP",
+  "figmaName": "Input OTP",
+  "section": "Input OTP",
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/InputOTP",
+  "description": "Accessible one-time password verification field (4 or 6 digits) composed of _OTP Slot cells across Default, Focus, Filled, and Error states.\n\nVariants & Properties:\n- Digits: 4 | 6 (grouped 3-3 divider on 6-digit codes).\n- State: Default | Focus | Filled | Error.\n- Properties: ✏️ Label, 👁️ Label, ✏️ Hint, 👁️ Hint.",
+  "anatomy": {
+    "root": {
+      "name": "Digits=4, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Slot 1..N",
+        "component": "_OTP Slot",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Digits=4, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Label",
+            "characters": "✏️ Label"
+          }
+        },
+        {
+          "name": "SlotsRow",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Slot 1",
+              "type": "INSTANCE",
+              "instanceOf": "_OTP Slot"
+            }
+          ]
+        },
+        {
+          "name": "Hint",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Hint",
+            "characters": "✏️ Hint"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 8,
+    "axes": {
+      "Digits": {
+        "codePropName": "digits",
+        "defaultValue": "4",
+        "options": [
+          "4",
+          "6"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Focus",
+          "Filled",
+          "Error"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Label",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Código de verificación",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "👁️ Label",
+      "codePropName": "hasLabel",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "✏️ Hint",
+      "codePropName": "hint",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Ingresa el código enviado a tu correo o SMS.",
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "propertyName": "👁️ Hint",
+      "codePropName": "hasHint",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "propertyName": "Digits",
+      "codePropName": "digits",
+      "type": "VARIANT",
+      "tsType": "\"4\" | \"6\"",
+      "defaultValue": "4",
+      "options": [
+        "4",
+        "6"
+      ]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Focus\" | \"Filled\" | \"Error\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Focus",
+        "Filled",
+        "Error"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/12",
+      "spacing/14",
+      "spacing/2"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "spacing/2"
+    ],
+    "inheritedFromSubcomponents": [
+      "Feedback/Danger-Subtle",
+      "Surfaces/Background",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/12",
+      "spacing/14"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium",
+      "Text/Body/xs/normal",
+      "Text/Heading/xl/bold **"
+    ],
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaName": "_OTP Slot",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 4,
+      "contractFile": "otp-slot.contract.json",
+      "importPath": "@/components/ui/InputOTP"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for 2FA codes, SMS login tokens, PIN challenges, or transaction authorization across Web and Mobile."
+    ],
+    "whenNotToUse": [
+      "Do not use for standard passwords, free-text IDs, or credit card fields; use `InputGroup` or `InputText`."
+    ]
+  },
+  "behaviorRules": [
+    "Support single numeric `inputMode=\"numeric\"`, `autoComplete=\"one-time-code\"`, clipboard paste distribution across slots, and arrow/backspace focus traversal."
+  ]
+}

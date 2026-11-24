@@ -1,0 +1,143 @@
+{
+  "name": "Carousel",
+  "figmaName": "Carousel",
+  "section": "Carousel",
+  "nodeType": "COMPONENT_SET",
+  "category": "Data Display & Navigation",
+  "importPath": "@/components/ui/Carousel",
+  "description": "Swipeable horizontal slider and banner component supporting MobilePeek (390px clipped peek track), WebCards (3-up grid + arrow buttons), and HeroBanner.\n\nSubcomponent: _Carousel Dot (Inactive | Active).",
+  "anatomy": {
+    "root": {
+      "name": "Layout=MobilePeek",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Dots",
+        "component": "_Carousel Dot",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "NavButton",
+        "component": "Button",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Layout=MobilePeek",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "PeekTrack",
+          "type": "FRAME",
+          "layout": "HORIZONTAL"
+        },
+        {
+          "name": "Dots",
+          "type": "FRAME",
+          "layout": "HORIZONTAL"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Layout": {
+        "codePropName": "layout",
+        "defaultValue": "MobilePeek",
+        "options": [
+          "MobilePeek",
+          "WebCards",
+          "HeroBanner"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "Layout",
+      "codePropName": "layout",
+      "type": "VARIANT",
+      "tsType": "\"MobilePeek\" | \"WebCards\" | \"HeroBanner\"",
+      "defaultValue": "MobilePeek",
+      "options": [
+        "MobilePeek",
+        "WebCards",
+        "HeroBanner"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Invert-Foreground",
+      "radius/2xl",
+      "radius/full",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/6"
+    ],
+    "directVariables": [
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Invert-Foreground",
+      "radius/2xl",
+      "radius/xl",
+      "spacing/1-5",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/6"
+    ],
+    "inheritedFromSubcomponents": [
+      "_Carousel Dot",
+      "Button",
+      "Badge"
+    ],
+    "textStyles": [
+      "Text/Body/base/bold",
+      "Text/Body/sm/normal",
+      "Text/Body/xs/normal",
+      "Text/Heading/xl/bold **"
+    ],
+    "effectStyles": [
+      "Shadow/MD",
+      "Shadow/SM"
+    ]
+  },
+  "subcomponents": [
+    {
+      "figmaName": "_Carousel Dot",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 2,
+      "contractFile": "carousel-dot.contract.json",
+      "importPath": "@/components/ui/Carousel"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for mobile horizontal card rails (`MobilePeek`), onboarding slides, featured hero promotions (`HeroBanner`), or multi-card desktop galleries (`WebCards`)."
+    ],
+    "whenNotToUse": [
+      "Do not auto-advance critical reading copy without pause controls; avoid hiding primary product actions solely inside later carousel slides."
+    ]
+  },
+  "behaviorRules": [
+    "Use native CSS scroll-snap (`scroll-snap-type: x mandatory`) with `overflow-x: auto` on touch devices (`MobilePeek`), `aria-roledescription=\"carousel\"`, and accessible Prev/Next buttons on desktop."
+  ]
+}

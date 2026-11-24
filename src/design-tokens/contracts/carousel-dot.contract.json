@@ -1,0 +1,76 @@
+{
+  "name": "CarouselDot",
+  "figmaName": "_Carousel Dot",
+  "section": "Carousel",
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation (Subcomponent)",
+  "importPath": "@/components/ui/Carousel",
+  "description": "Pagination indicator dot primitive for Carousel. Variants: State = Inactive (6x6) | Active (20x6).",
+  "anatomy": {
+    "root": {
+      "name": "State=Inactive",
+      "type": "COMPONENT",
+      "layout": "NONE"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Inactive",
+      "type": "COMPONENT",
+      "layout": "NONE",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Inactive",
+        "options": [
+          "Inactive",
+          "Active"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Inactive\" | \"Active\"",
+      "defaultValue": "Inactive",
+      "options": [
+        "Inactive",
+        "Active"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "radius/full"
+    ],
+    "directVariables": [
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "radius/full"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use as pagination dots inside `Carousel`."
+    ],
+    "whenNotToUse": [
+      "Do not use as step indicators for forms; use `Stepper`."
+    ]
+  },
+  "behaviorRules": [
+    "Render dots as accessible buttons (`aria-label=\"Go to slide N\"`, `aria-current=\"true\"` on active dot) inside a generous touch wrapper on mobile."
+  ]
+}

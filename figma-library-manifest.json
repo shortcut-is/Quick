@@ -1,0 +1,1766 @@
+{
+  "designSystem": "⚡ Quick - v1.2",
+  "libraryName": "⚡ Quick - v1.2",
+  "libraryKey": "lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd",
+  "source": "team",
+  "sourceFileKey": "HwLUpu9i41HlBTF7erR5ad",
+  "generatedAt": "2026-11-24T15:55:00.000Z",
+  "forbiddenLibraries": [
+    {
+      "libraryName": "Quick ⚡ - v1.2",
+      "libraryKey": "lk-c590e7be0b43e4c47aa285910835678469595e363682bac303924c50807844de9528ccb4a5b66d21fb75761433b1af7ed340c0fc63ecbd44495f30e596ba5c1f",
+      "source": "community",
+      "reason": "Outdated community template missing Lote 1 & Lote 2 components and Light/Dark contrast fixes. Always use the official team library above."
+    }
+  ],
+  "importGuide": {
+    "crossFileComponentSet": "const set = await figma.importComponentSetByKeyAsync(key); const variant = set.findOne(n => n.type === \"COMPONENT\" && n.name === variantName) ?? set.defaultVariant; const instance = variant.createInstance();",
+    "crossFileComponent": "const comp = await figma.importComponentByKeyAsync(key); const instance = comp.createInstance();",
+    "crossFileVariable": "const variable = await figma.variables.importVariableByKeyAsync(key); const paint = figma.variables.setBoundVariableForPaint({ type: \"SOLID\", color: { r: 1, g: 1, b: 1 } }, \"color\", variable);",
+    "crossFileStyle": "const style = await figma.importStyleByKeyAsync(key); node.textStyleId = style.id; // or await node.setEffectStyleIdAsync(style.id)",
+    "searchDesignSystemFilter": "Always pass includeLibraryKeys: [\"lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd\"] when calling search_design_system."
+  },
+  "variableCollections": [
+    {
+      "name": "Base",
+      "key": "4f381c5feb556a1eef8e6db6e63ddd267aa245c4",
+      "modes": [
+        {
+          "modeId": "173:0",
+          "name": "Mode"
+        }
+      ]
+    },
+    {
+      "name": "Mode",
+      "key": "71053f273fa4a58bd3a8436c9ce413b3ce91ed97",
+      "modes": [
+        {
+          "modeId": "2154:3",
+          "name": "Light"
+        },
+        {
+          "modeId": "2154:4",
+          "name": "Dark"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "semantic": [
+      {
+        "name": "Feedback/Danger",
+        "key": "1fc53e046855e555813c707e166ff25b660c2ac1",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Danger-Bold",
+        "key": "d25b8159b3225f780d0eb4c6e94d0312980a9501",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Danger-Subtle",
+        "key": "0059b666e635890be4172a1a2b10e4b410f150d9",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Foreground",
+        "key": "8e7695f9ed2196b8d782d8074132078ee4c02fdc",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Info",
+        "key": "213c2df9e4f1456166e76422e4533294cf5a108f",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Info-Bold",
+        "key": "2e49dc8888c62cba5a95ca484c9afdf785115718",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Info-Subtle",
+        "key": "ea9ab3d1dc149443ef14c76ac9429be568ffdbbc",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Success",
+        "key": "8a73609049ffece797842f46ea5de761b8e10c0f",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Success-Bold",
+        "key": "795a18e38c08337970742b07d64367333f335da1",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Success-Subtle",
+        "key": "6059172f411a994aa4eb0907fdc3967261c3ed2b",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Warning",
+        "key": "ef322e3632fa380653bb9c3af90e638cb81b0b91",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Warning-Bold",
+        "key": "e36fb37969e4e6547e31489a203bd71521243b42",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Feedback/Warning-Subtle",
+        "key": "414a6ff7d79641f35164673f12a757f06d38dbba",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "FontFamily/Heading",
+        "key": "66c9989f1bab6c88f74d788d45b324ed0a0ee31b",
+        "collection": "Base",
+        "type": "STRING"
+      },
+      {
+        "name": "FontFamily/Primary",
+        "key": "b495d902aa1f6757e636b61d36356ec73faab77f",
+        "collection": "Base",
+        "type": "STRING"
+      },
+      {
+        "name": "Primary/Bottom",
+        "key": "262111db6a98e6b95f52ed37322f38d77641c563",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Primary/Foreground",
+        "key": "3eeaabeb9c543eb148c78d0f40202655f24eb6ce",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Primary/Hover",
+        "key": "93b760392f3336385460c4b61a383f5292cb2469",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Primary/Top",
+        "key": "71cce144d895ae2798c6be05c5d7b64d14f5c023",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Specs",
+        "key": "8acb70173074fa58884b1d4badc6e56206dfd74e",
+        "collection": "Base",
+        "type": "COLOR"
+      },
+      {
+        "name": "Specs-Bold",
+        "key": "ae41654eea5d436df76c70f71fcf4b2ba2883c93",
+        "collection": "Base",
+        "type": "COLOR"
+      },
+      {
+        "name": "Specs-Subtle",
+        "key": "292458b61880f5829b12d06be16731942fd10dd1",
+        "collection": "Base",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Background",
+        "key": "ac8f4596669d2dc136f9ce936d89a31d4d598573",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Border",
+        "key": "45f813b40a1c383675ed539b0add9a8eb73e687f",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Foreground",
+        "key": "c030a5f753bae2dea8c61eb58f1ddd04e40dc7d4",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Foreground-Muted",
+        "key": "4df0acc810c3d3c69a935043d0edd41487b2226e",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Input",
+        "key": "fc4f6460e838312add757b799aedc3aede7cd01f",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Invert-Background",
+        "key": "1c7fb39649c5692cfcc7784f6929f5b976c4af21",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Invert-Foreground",
+        "key": "7f9e6f2167d12cb7fa8414850616786c09a133ec",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Invert-Foreground-Muted",
+        "key": "72b51485e7f28adc793ec2ae975845654ac6f811",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Muted",
+        "key": "2e6aec063ce811d5178c034d94f8f6431afae469",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Overlay",
+        "key": "89bbcffde15e0569aef550538ada65ba787fa8ad",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Ring",
+        "key": "9dd82ba00f7ae66088d5da68a5f933de0f675704",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Surfaces/Transparent",
+        "key": "4edb7ba1d3b9e644bd92f74f671711c1bb609c34",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "breakpoint/2xl",
+        "key": "ce32df95f40ea51c3604081de9016a10a8d17870",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "breakpoint/lg",
+        "key": "19bc81345a717a7e3263afdfc38b344fcc99486d",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "breakpoint/md",
+        "key": "87d4b5ef7536e9bec14d64b335845fd4bf8d9b5f",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "breakpoint/sm",
+        "key": "905d790d02d460af33770e28082c30d0782a9684",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "breakpoint/xl",
+        "key": "e78a07056e5b074d84c2aee69e222ba60c6c4d5a",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/2xl",
+        "key": "fbee207830845638b89444e1aa9a64c8b96d5bc0",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/3xl",
+        "key": "a59e1b249e6b9d13762405a9420a2955988f4973",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/4xl",
+        "key": "41146fbff4ed743fa17cbc709f6b8b16e3f006cb",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/full",
+        "key": "f01c0f1ba5017bd2c046bb995e14c122603814ab",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/lg",
+        "key": "dac98aa8d235c828ac1dfca3aed3546aa561e991",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/md",
+        "key": "e37260cb3acd6efd3f2eaa6cae66c939fc24ca9e",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/none",
+        "key": "249325ac849703e699860d43569263b79e577ee4",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/sm",
+        "key": "1088592125f407e294091bf5736e1e4f161c0eb2",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/xl",
+        "key": "0319f0357c7ba05405f458b32a083b9e83f313a9",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "radius/xs",
+        "key": "bfcf2af736ae1387b665e8fe6b24892096761a4c",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/0-5",
+        "key": "683ab0834f5c9e9ee66bce39b4ed91e46d94aa01",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/1",
+        "key": "e15875f7c5e5b3bfc9709522991905429563d9c7",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/1-5",
+        "key": "e040b02e7e4d0acda90df4e6e91f1eed027271a7",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/10",
+        "key": "86fe3dc172155e7a2a27c265eb715604d61e4549",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/11",
+        "key": "342e9e13117cb5a31a19bf7f3bf8f7ceeb762935",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/12",
+        "key": "4585646d434912ac01d93fd1838f8db4ecd7cadc",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/14",
+        "key": "f9caa8c41257fb8225c437a67bbccf8de77f723b",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/16",
+        "key": "d403b51c260188ebd4ac810c90de668f9bce2001",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/2",
+        "key": "da9f763b3942c0e4130e049b0c5eafcfac294d16",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/2-5",
+        "key": "14345743a7012f46ca4a02d96d46c9055be0538d",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/20",
+        "key": "71ce69f7354b56a14f98ca5b6f8aed99858eba6e",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/24",
+        "key": "ba2181bedf1c75333f27114d36a295b36f66d321",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/28",
+        "key": "f1cb13c80232ad0d896c89854aaa67c3b5ad0b58",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/3",
+        "key": "11d698c3cc233f0733d6fa6cea7d523806a38aad",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/3-5",
+        "key": "caaf14ce4bf45b24ee2b1c973917cd0938fa2120",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/32",
+        "key": "1713ec2760f2a0a9e1e84aaab18c28db55e41503",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/36",
+        "key": "212e5bc28f35abb9bd3d13b7ff2be0e42bfb61bf",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/4",
+        "key": "9ecb4804dc745011b819e34ea324dc0ac5e596b2",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/40",
+        "key": "fd61b1fe7f45e6a0dab12e702864ee28409a7fc0",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/44",
+        "key": "785d33924f6b249bb83122cdeca67fc7195f6cda",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/48",
+        "key": "4a621d79fd183ac5fe4aa6bc168ce2c1e2b9dd7d",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/5",
+        "key": "7b6cdfa90d51a2517a61e3761e9c1536ee461fe6",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/52",
+        "key": "97c64b42f2b4eeee513ababe94ecc7c979ad615d",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/56",
+        "key": "de416eb56675c039a75c554640d63e15c81f68ed",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/6",
+        "key": "6b9cbb4b64b867a820fd164e643fc5164274f24d",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/60",
+        "key": "6d8acc5a5dbabfa97577249c4609de590dc48837",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/64",
+        "key": "a438c18c1f9d8b6e570109e8268b413eb6235789",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/7",
+        "key": "1b9fdaa54e4760b7b8ddfe845a38c0f7695760f4",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/72",
+        "key": "2d10e02b23c6eadacee0d7636d2b2151af4eef5f",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/8",
+        "key": "33a187ce0aaeb60cf67edad4c64d601248a61e6a",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/80",
+        "key": "33871e5d4870d9c6946bfde68caf227a9c9785e2",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/9",
+        "key": "4f466c7db93f81ecfd7163343e5b7b10024343c4",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/96",
+        "key": "6da988fa6a4f8bc7d23290b02fdb0f07d456ba2c",
+        "collection": "Base",
+        "type": "FLOAT"
+      },
+      {
+        "name": "spacing/px",
+        "key": "db7499ce7e07dc172383773cd47baa05cdcb26c4",
+        "collection": "Base",
+        "type": "FLOAT"
+      }
+    ],
+    "primitivesDoNotUseDirectly": [
+      {
+        "name": "Black",
+        "key": "b80f50dd27377c822cde2d5e4890837975e64808",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/100",
+        "key": "e7c20446b0a9988e4ec713f6807d282091a6cb6f",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/200",
+        "key": "8a8bb5421691995b62bb1d8196effa0ced2e77ce",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/300",
+        "key": "d4c1a79c3de989eb36cdcf2d8e8aad6e94e9a9f1",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/400",
+        "key": "648d5b3f20691f8320681c8d647e39bbbe001a54",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/50",
+        "key": "7fb72a9b8feda097309ad32db2091a0b0dabfbd3",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/500",
+        "key": "f18b1bad0083ef6d491dfefc4f21d9e4552195ee",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/600",
+        "key": "f4b310186d9f0423e198b40aac9a7433018c3fa3",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/700",
+        "key": "5c428b44955dce03556108a91b40df88f7a58453",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/800",
+        "key": "cde8980209431f57a5e9233cc0e3fb2903d27c92",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "Neutral/900",
+        "key": "ea0d3557b1e6d436ad72f48bd2a867017dda2a6c",
+        "collection": "Mode",
+        "type": "COLOR"
+      },
+      {
+        "name": "White",
+        "key": "bdf4dee11733c66dfd6a120988ee46e7835b91e6",
+        "collection": "Mode",
+        "type": "COLOR"
+      }
+    ]
+  },
+  "textStyles": [
+    {
+      "name": "Text/Body/base/bold",
+      "key": "5ee2b97e2a7b297e5cbe1baf91db14c5285e3257"
+    },
+    {
+      "name": "Text/Body/base/medium",
+      "key": "d4972723469dabe47bffdf2c2571d1290bf1d6de"
+    },
+    {
+      "name": "Text/Body/base/normal",
+      "key": "0b3aa6533e87e18fe5c70cf1f293cbc26f9c133b"
+    },
+    {
+      "name": "Text/Body/lg/bold",
+      "key": "23f2db0725faef6891d0f9296ddc48d26adccb9d"
+    },
+    {
+      "name": "Text/Body/lg/medium",
+      "key": "6d95a841b75363b126d5a415df06c0666e66320b"
+    },
+    {
+      "name": "Text/Body/lg/normal",
+      "key": "3d7f592c1579fff56f04ff9c7e5d000917e763d1"
+    },
+    {
+      "name": "Text/Body/sm/bold",
+      "key": "d63ba39798069fdabe7118a6c226d06c512d2206"
+    },
+    {
+      "name": "Text/Body/sm/medium",
+      "key": "c645e04b3778b848ae909a1896279fc3f11bd450"
+    },
+    {
+      "name": "Text/Body/sm/normal",
+      "key": "1f0e2b4a64f08323aa9e820f03364e47765231be"
+    },
+    {
+      "name": "Text/Body/xs/medium",
+      "key": "a6b7f664a01593ac6653edf2a837e2d4fac515ba"
+    },
+    {
+      "name": "Text/Body/xs/normal",
+      "key": "66213189d007099c144d27054341ad949c39f3e4"
+    },
+    {
+      "name": "Text/Heading/2xl/bold **",
+      "key": "58226f27059a5424dac7806fb0688ab0845fbbdb"
+    },
+    {
+      "name": "Text/Heading/2xl/medium **",
+      "key": "49ebac0b2c076fb357c07993fcf88bdccbf3e339"
+    },
+    {
+      "name": "Text/Heading/2xl/normal **",
+      "key": "a95fa478e699018fd641cd0a5cec856baf8879cf"
+    },
+    {
+      "name": "Text/Heading/3xl/bold",
+      "key": "0d652e7f4e1e149b0b25030bdbbd2c9fbf2ac3af"
+    },
+    {
+      "name": "Text/Heading/3xl/normal",
+      "key": "969a0175eece5223a7b0829569676c2568110c21"
+    },
+    {
+      "name": "Text/Heading/4xl/normal",
+      "key": "e97590c0de0cc022246dfd6507b4697073745058"
+    },
+    {
+      "name": "Text/Heading/5xl/normal",
+      "key": "97e69714b33def1db04ed0ace7e0e20ca52d6f71"
+    },
+    {
+      "name": "Text/Heading/6xl/normal",
+      "key": "3084091fbefd1a245bb4d6e7d54c3f7c21198a0f"
+    },
+    {
+      "name": "Text/Heading/xl/bold **",
+      "key": "007006b9a1956f8092f0a5cac54a67ef8ff363a1"
+    },
+    {
+      "name": "Text/Heading/xl/medium **",
+      "key": "520c187ae27865891cae3c38e0db647e23298dad"
+    },
+    {
+      "name": "Text/Heading/xl/normal **",
+      "key": "a97eab760990d7164bd10b1441cbde0299d81561"
+    }
+  ],
+  "effectStyles": [
+    {
+      "name": "Shadow/Focus",
+      "key": "7d9e7e8fef712fad3630cacfb70a6e5c423b2414"
+    },
+    {
+      "name": "Shadow/SM",
+      "key": "fdd505a2d68c734a8b5e5396deb449b389fd7428"
+    },
+    {
+      "name": "Shadow/MD",
+      "key": "e1e4828e20e96310252ed3261711d8c70f2e8aaf"
+    },
+    {
+      "name": "Shadow/LG",
+      "key": "e6bf15a52642fa19b6a1518a5470193182ed63ec"
+    },
+    {
+      "name": "Shadow/XL",
+      "key": "af0a41a54993863ce31c6965bc2b62b4057111ad"
+    }
+  ],
+  "components": [
+    {
+      "name": "Accordion",
+      "assetType": "component_set",
+      "key": "4c20d69afae5421aa4d6f22ff4efe960af210f78",
+      "section": "Accordion",
+      "contractFile": "src/design-tokens/contracts/accordion.contract.json"
+    },
+    {
+      "name": "Alert",
+      "assetType": "component_set",
+      "key": "0628acf8076da38f654e62d7f38460f7cf29ce5e",
+      "section": "Alerts",
+      "contractFile": "src/design-tokens/contracts/alert.contract.json"
+    },
+    {
+      "name": "Avatar",
+      "assetType": "component_set",
+      "key": "876dd65447c5f6169204b6cef7d14401ae81892f",
+      "section": "Avatar",
+      "contractFile": "src/design-tokens/contracts/avatar.contract.json"
+    },
+    {
+      "name": "Avatar Group",
+      "assetType": "component_set",
+      "key": "5457404e39a59c3a28f6c68330ec8bcc14d16eed",
+      "section": "Avatar Group",
+      "contractFile": "src/design-tokens/contracts/avatar-group.contract.json"
+    },
+    {
+      "name": "Badge",
+      "assetType": "component_set",
+      "key": "722bbc0a71ee83c7c9c54a28d379d26b52b9b1fa",
+      "section": "Badges",
+      "contractFile": "src/design-tokens/contracts/badge.contract.json"
+    },
+    {
+      "name": "Bottom Navigation",
+      "assetType": "component_set",
+      "key": "13c2659bf760048c5badcb82163511550fb0fb70",
+      "section": "Navigation Bars",
+      "contractFile": "src/design-tokens/contracts/bottom-navigation.contract.json"
+    },
+    {
+      "name": "Breadcrumb",
+      "assetType": "component",
+      "key": "0500f20d85bd6f4290018da368204e12c18df9aa",
+      "section": "Breadcrumb",
+      "contractFile": "src/design-tokens/contracts/breadcrumb.contract.json"
+    },
+    {
+      "name": "Breadcrumb Items",
+      "assetType": "component_set",
+      "key": "08076728a48fcfc71f880b1b74138a439d1b69e6",
+      "section": "Breadcrumb",
+      "contractFile": "src/design-tokens/contracts/breadcrumb-item.contract.json"
+    },
+    {
+      "name": "Button",
+      "assetType": "component_set",
+      "key": "60214e0ce603242024a84231243dda971b017ac7",
+      "section": "Button",
+      "contractFile": "src/design-tokens/contracts/button.contract.json"
+    },
+    {
+      "name": "Button Group",
+      "assetType": "component_set",
+      "key": "02c26a8c85da071bc9364efaa1ce1e8fae24099d",
+      "section": "Button Group & Toggle",
+      "contractFile": "src/design-tokens/contracts/button-group.contract.json"
+    },
+    {
+      "name": "Calendar",
+      "assetType": "component_set",
+      "key": "5a2f6705826722f4a8de7d083a7e807ef01dc4b6",
+      "section": "Calendar",
+      "contractFile": "src/design-tokens/contracts/calendar.contract.json"
+    },
+    {
+      "name": "Card",
+      "assetType": "component_set",
+      "key": "dde74d7a0309e9eb87168a5d87c411588410a78c",
+      "section": "Card",
+      "contractFile": "src/design-tokens/contracts/card.contract.json"
+    },
+    {
+      "name": "Checkbox",
+      "assetType": "component_set",
+      "key": "47a52cbef50b94a41219f9167990df5111deee3f",
+      "section": "Checkbox",
+      "contractFile": "src/design-tokens/contracts/checkbox.contract.json"
+    },
+    {
+      "name": "Checkbox Group",
+      "assetType": "component",
+      "key": "46a1d382af5a8ee334a29519e80a1082aeabe043",
+      "section": "Checkbox",
+      "contractFile": "src/design-tokens/contracts/checkbox-group.contract.json"
+    },
+    {
+      "name": "Checkbox Standalone",
+      "assetType": "component_set",
+      "key": "7c4b37f9e8edbc01aa24ae2dd42bb786355d1d4d",
+      "section": "Checkbox",
+      "contractFile": "src/design-tokens/contracts/checkbox-standalone.contract.json"
+    },
+    {
+      "name": "Collapsible",
+      "assetType": "component_set",
+      "key": "ee57fc4bccd0eb66911fa1c8adbc3375096038f1",
+      "section": "Collapsible",
+      "contractFile": "src/design-tokens/contracts/collapsible.contract.json"
+    },
+    {
+      "name": "Combobox",
+      "assetType": "component_set",
+      "key": "21fb9ba3a9f17eba18dc6381bacea81ec9e55643",
+      "section": "Combobox",
+      "contractFile": "src/design-tokens/contracts/combobox.contract.json"
+    },
+    {
+      "name": "Data table  - Footer",
+      "assetType": "component",
+      "key": "04dd957fed2c808b65e34905095dc225f48512fd",
+      "section": "Data Table",
+      "contractFile": "src/design-tokens/contracts/data-table-footer.contract.json"
+    },
+    {
+      "name": "Data table  - Header",
+      "assetType": "component_set",
+      "key": "b6473d7e88ae23f63180dda7f56f2c4439f39fb0",
+      "section": "Data Table",
+      "contractFile": "src/design-tokens/contracts/data-table-header.contract.json"
+    },
+    {
+      "name": "Data table  - Row",
+      "assetType": "component_set",
+      "key": "738a5125bc79b3c945ad5ccba13e3240cc39b497",
+      "section": "Data Table",
+      "contractFile": "src/design-tokens/contracts/data-table-row.contract.json"
+    },
+    {
+      "name": "Date Picker",
+      "assetType": "component_set",
+      "key": "b80b48b2b05d2823886dc88e99e5f7afe0c7e456",
+      "section": "Date Picker",
+      "contractFile": "src/design-tokens/contracts/date-picker.contract.json"
+    },
+    {
+      "name": "Dialog",
+      "assetType": "component_set",
+      "key": "eac5a8517ac4366b99ff9e8e524c4c0edfaa915e",
+      "section": "Dialog",
+      "contractFile": "src/design-tokens/contracts/dialog.contract.json"
+    },
+    {
+      "name": "Dropdown Menu",
+      "assetType": "component_set",
+      "key": "0b255f5e0d7302a5c8c9a12b32dceca6bb61c0ba",
+      "section": "Dropdown Menu",
+      "contractFile": "src/design-tokens/contracts/dropdown-menu.contract.json"
+    },
+    {
+      "name": "Empty State",
+      "assetType": "component_set",
+      "key": "cc524cc62cfcf9d93e1d137216f8c4973b856b12",
+      "section": "Empty State",
+      "contractFile": "src/design-tokens/contracts/empty-state.contract.json"
+    },
+    {
+      "name": "File Upload",
+      "assetType": "component_set",
+      "key": "600dbb8fab741ddffe607d0862064d81f5e413c8",
+      "section": "File Upload",
+      "contractFile": "src/design-tokens/contracts/file-upload.contract.json"
+    },
+    {
+      "name": "Input Area",
+      "assetType": "component_set",
+      "key": "27c1b4afe154b88fb01732e1355c4c675b46eac8",
+      "section": "Input Area",
+      "contractFile": "src/design-tokens/contracts/input-area.contract.json"
+    },
+    {
+      "name": "Input OTP",
+      "assetType": "component_set",
+      "key": "e67f44c70d2a375f1fffcfd84db918d63b55c5dd",
+      "section": "Input OTP",
+      "contractFile": "src/design-tokens/contracts/input-otp.contract.json"
+    },
+    {
+      "name": "Input Select",
+      "assetType": "component_set",
+      "key": "4036aaa6dcb9a769a8e4543d77fe9ae908162f28",
+      "section": "Input Select",
+      "contractFile": "src/design-tokens/contracts/input-select.contract.json"
+    },
+    {
+      "name": "Input Text",
+      "assetType": "component_set",
+      "key": "d535cdd93ddc02515bb3afb4a78992c4b139b215",
+      "section": "Input Text",
+      "contractFile": "src/design-tokens/contracts/input-text.contract.json"
+    },
+    {
+      "name": "Kbd",
+      "assetType": "component_set",
+      "key": "5d7799348b12799e18942027dcc3c1580d5ca35b",
+      "section": "Kbd",
+      "contractFile": "src/design-tokens/contracts/kbd.contract.json"
+    },
+    {
+      "name": "List Item",
+      "assetType": "component",
+      "key": "7b781bf51b34d4b26e805e20813c668b59541bc8",
+      "section": "List Item",
+      "contractFile": "src/design-tokens/contracts/list-item.contract.json"
+    },
+    {
+      "name": "Notification",
+      "assetType": "component_set",
+      "key": "5c983fbb59511a6850bfbba7ffbcc64fdf116764",
+      "section": "Notification",
+      "contractFile": "src/design-tokens/contracts/notification.contract.json"
+    },
+    {
+      "name": "OVERLAY",
+      "assetType": "component",
+      "key": "a7119d1de910fbea787eff2ac163a7aad07a745b",
+      "section": "Dialog",
+      "contractFile": "src/design-tokens/contracts/overlay.contract.json"
+    },
+    {
+      "name": "Pagination",
+      "assetType": "component",
+      "key": "2f61b741ef8b82069db12f2a2011a294ad764f32",
+      "section": "Pagination",
+      "contractFile": "src/design-tokens/contracts/pagination.contract.json"
+    },
+    {
+      "name": "Progress Bar",
+      "assetType": "component_set",
+      "key": "e4ee3b6daae7373c9b64ed91d53c622e737edf9e",
+      "section": "Progress Bar",
+      "contractFile": "src/design-tokens/contracts/progress-bar.contract.json"
+    },
+    {
+      "name": "Radio",
+      "assetType": "component_set",
+      "key": "9a4d1efb78bd7cd237561336f0cc362c1f59cbb0",
+      "section": "Radio Button",
+      "contractFile": "src/design-tokens/contracts/radio.contract.json"
+    },
+    {
+      "name": "Radio Button",
+      "assetType": "component_set",
+      "key": "3f13ac276e44b0da0c097d4f1efb5fdd1db22990",
+      "section": "Radio Button",
+      "contractFile": "src/design-tokens/contracts/radio-button.contract.json"
+    },
+    {
+      "name": "Radio Group",
+      "assetType": "component",
+      "key": "01c852b353eb71b4a33a6f9653dc110e90ea3feb",
+      "section": "Radio Button",
+      "contractFile": "src/design-tokens/contracts/radio-group.contract.json"
+    },
+    {
+      "name": "SEPARATOR",
+      "assetType": "component_set",
+      "key": "28165c2ca94b2b4c26794f209d3780cd589dfb48",
+      "section": "Separator",
+      "contractFile": "src/design-tokens/contracts/separator.contract.json"
+    },
+    {
+      "name": "Search & Filter Bar",
+      "assetType": "component_set",
+      "key": "635ba8991bcda7a13d146d3483ab5993a07a32d2",
+      "section": "Search & Filter Bar",
+      "contractFile": "src/design-tokens/contracts/search-filter-bar.contract.json"
+    },
+    {
+      "name": "Segment",
+      "assetType": "component",
+      "key": "338cc2a580a594e1db57c0686e3c763f77b70441",
+      "section": "Segment Control",
+      "contractFile": "src/design-tokens/contracts/segment-control.contract.json"
+    },
+    {
+      "name": "Sheet",
+      "assetType": "component_set",
+      "key": "f868b2f2225fa013e5be6f8587763e9d535af24d",
+      "section": "Sheet",
+      "contractFile": "src/design-tokens/contracts/sheet.contract.json"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "assetType": "component_set",
+      "key": "4951e6a2824064fd8c6f60c8ad8e068b91b0a417",
+      "section": "Sidebar Navigation",
+      "contractFile": "src/design-tokens/contracts/sidebar-navigation.contract.json"
+    },
+    {
+      "name": "Skeleton",
+      "assetType": "component_set",
+      "key": "48815e6fb0cdb4d9eaf59c33fec6616b68276eef",
+      "section": "Skeleton & Spinner",
+      "contractFile": "src/design-tokens/contracts/skeleton.contract.json"
+    },
+    {
+      "name": "Slider",
+      "assetType": "component_set",
+      "key": "41e97368ddddc640a82b2b4217ef8983e0e8e58f",
+      "section": "Slider",
+      "contractFile": "src/design-tokens/contracts/slider.contract.json"
+    },
+    {
+      "name": "Slot: Content",
+      "assetType": "component",
+      "key": "b13f420c51320afe25ea4388fca2d9c070dfb4bb",
+      "section": "Card",
+      "contractFile": "src/design-tokens/contracts/slot-content.contract.json"
+    },
+    {
+      "name": "Spinner",
+      "assetType": "component_set",
+      "key": "5164bc91737acd0e0dec9d0037bf554b8afa2ff7",
+      "section": "Skeleton & Spinner",
+      "contractFile": "src/design-tokens/contracts/spinner.contract.json"
+    },
+    {
+      "name": "Stepper",
+      "assetType": "component_set",
+      "key": "ee80e2eb75a33eb8d7df94712d12fd29e6811ce1",
+      "section": "Stepper",
+      "contractFile": "src/design-tokens/contracts/stepper.contract.json"
+    },
+    {
+      "name": "Switch",
+      "assetType": "component_set",
+      "key": "68c644b092e0bbb4b709c18de34b51fc37944ca1",
+      "section": "Switch",
+      "contractFile": "src/design-tokens/contracts/switch.contract.json"
+    },
+    {
+      "name": "Switch Standalone",
+      "assetType": "component_set",
+      "key": "2d9142ae0cb44c45d95dc6a75b02fbb6d6aae371",
+      "section": "Switch",
+      "contractFile": "src/design-tokens/contracts/switch-standalone.contract.json"
+    },
+    {
+      "name": "Tab",
+      "assetType": "component",
+      "key": "46559c473509f813af3b1c25cb78e7a5c5264873",
+      "section": "Tab",
+      "contractFile": "src/design-tokens/contracts/tab.contract.json"
+    },
+    {
+      "name": "Tag",
+      "assetType": "component_set",
+      "key": "06745646e14ed5722504d313a3da05687dd3590f",
+      "section": "Tag",
+      "contractFile": "src/design-tokens/contracts/tag.contract.json"
+    },
+    {
+      "name": "Tag Group",
+      "assetType": "component",
+      "key": "e5c9c1c344279fac922ca27c27682368182863c2",
+      "section": "Tag",
+      "contractFile": "src/design-tokens/contracts/tag-group.contract.json"
+    },
+    {
+      "name": "Time Picker",
+      "assetType": "component_set",
+      "key": "7d3c49c7cc4ca77f4dd5605568eee062f5324bba",
+      "section": "Time Pickers",
+      "contractFile": "src/design-tokens/contracts/time-picker.contract.json"
+    },
+    {
+      "name": "Toast",
+      "assetType": "component_set",
+      "key": "4ebd76fe63551d38da0eae95e3fff1aa7522ffd5",
+      "section": "Toast",
+      "contractFile": "src/design-tokens/contracts/toast.contract.json"
+    },
+    {
+      "name": "Toggle",
+      "assetType": "component_set",
+      "key": "a3ff59acc51c3a22c3d216986f781d34631006de",
+      "section": "Button Group & Toggle",
+      "contractFile": "src/design-tokens/contracts/toggle.contract.json"
+    },
+    {
+      "name": "Toggle Group",
+      "assetType": "component_set",
+      "key": "f98ecf60570f9f1c5a8e23a42a73795753f03464",
+      "section": "Button Group & Toggle",
+      "contractFile": "src/design-tokens/contracts/toggle-group.contract.json"
+    },
+    {
+      "name": "Tooltip title",
+      "assetType": "component_set",
+      "key": "9a88eacb41592c074c896b7acd9eb1f7561c324b",
+      "section": "Tooltip",
+      "contractFile": "src/design-tokens/contracts/tooltip.contract.json"
+    },
+    {
+      "name": "Topbar",
+      "assetType": "component_set",
+      "key": "7ebd0e71031f5955543c65afbc4052952ceadb6a",
+      "section": "Navigation Bars",
+      "contractFile": "src/design-tokens/contracts/topbar.contract.json"
+    },
+    {
+      "name": "menu item",
+      "assetType": "component_set",
+      "key": "53b5351bd3d5e042af74a922c86cf4420561d60c",
+      "section": "Dropdown Menu",
+      "contractFile": "src/design-tokens/contracts/dropdown-menu-item.contract.json"
+    },
+    {
+      "name": "menu title",
+      "assetType": "component_set",
+      "key": "6c0f6e39b87db861465ea6fc8253aee6e21513cd",
+      "section": "Dropdown Menu",
+      "contractFile": "src/design-tokens/contracts/dropdown-menu-title.contract.json"
+    }
+  ],
+  "internalHelpers": [
+    {
+      "name": "_Bottom Nav Item",
+      "assetType": "component_set",
+      "key": "bb2b28c78ad9debe0087c17056c032eec4073536",
+      "section": "Navigation Bars",
+      "contractFile": "src/design-tokens/contracts/bottom-nav-item.contract.json"
+    },
+    {
+      "name": "_Calendar Days",
+      "assetType": "component_set",
+      "key": "b9018efb4669a0090c7de4e6bc6118c8cf2d7296",
+      "section": "Calendar",
+      "contractFile": null
+    },
+    {
+      "name": "_Calendar Days Label",
+      "assetType": "component",
+      "key": "af5588137e09bee53dfd414c43f59a8130252e27",
+      "section": "Calendar",
+      "contractFile": null
+    },
+    {
+      "name": "_Calendar Month-Year",
+      "assetType": "component",
+      "key": "62414c3ee264844af9537fb583439906929df5b3",
+      "section": "Calendar",
+      "contractFile": null
+    },
+    {
+      "name": "_Data table Actions",
+      "assetType": "component",
+      "key": "710ec346c96c088f0c0b38793bc7c62eb1e4ca50",
+      "section": "Data Table",
+      "contractFile": null
+    },
+    {
+      "name": "_Data table Cell",
+      "assetType": "component_set",
+      "key": "1c9382d5a875ec16462e8680a9cf38fb5a9f6019",
+      "section": "Data Table",
+      "contractFile": "src/design-tokens/contracts/data-table-cell.contract.json"
+    },
+    {
+      "name": "_Data table Header Cell",
+      "assetType": "component_set",
+      "key": "c29d6f5bd2e2c3cc1b2f1d14b8b3838828a3094b",
+      "section": "Data Table",
+      "contractFile": null
+    },
+    {
+      "name": "_Data table Select",
+      "assetType": "component",
+      "key": "0a087839c45c1f49aa0c96df14e7a34c7ed5c31d",
+      "section": "Data Table",
+      "contractFile": null
+    },
+    {
+      "name": "_OTP Slot",
+      "assetType": "component_set",
+      "key": "43898f024eaa340fea1bf29337cad2709185356e",
+      "section": "Input OTP",
+      "contractFile": "src/design-tokens/contracts/otp-slot.contract.json"
+    },
+    {
+      "name": "_Pagination - Items",
+      "assetType": "component_set",
+      "key": "1aa2963b5f085350b35f7524713197b945837329",
+      "section": "Pagination",
+      "contractFile": null
+    },
+    {
+      "name": "_Pagination - Nav ",
+      "assetType": "component_set",
+      "key": "14de618ac6d7b62c4c565a3538c1bee4d78c458d",
+      "section": "Pagination",
+      "contractFile": null
+    },
+    {
+      "name": "_Segment Item",
+      "assetType": "component_set",
+      "key": "439f9245fccdf8c7125d51c70a2735b2fc206c71",
+      "section": "Segment Control",
+      "contractFile": null
+    },
+    {
+      "name": "_Sidebar Item",
+      "assetType": "component_set",
+      "key": "cc5d2e5fe14bd07c02eb48e35ce1362a15cb326b",
+      "section": "Sidebar Navigation",
+      "contractFile": "src/design-tokens/contracts/sidebar-item.contract.json"
+    },
+    {
+      "name": "_Slider - Knob",
+      "assetType": "component",
+      "key": "4664fc3cda8cd830754a28704bf8546a7ccc99f9",
+      "section": "Slider",
+      "contractFile": null
+    },
+    {
+      "name": "_Steper Icon",
+      "assetType": "component_set",
+      "key": "3b9d058aa5a84ffcf2f688368222b6ea3b63f2a8",
+      "section": "Stepper",
+      "contractFile": null
+    },
+    {
+      "name": "_Tab Item",
+      "assetType": "component_set",
+      "key": "34a48a5a1e954da69d4a92e9430eb551208f7605",
+      "section": "Tab",
+      "contractFile": "src/design-tokens/contracts/tab-item.contract.json"
+    },
+    {
+      "name": "_TimePicker Elements",
+      "assetType": "component_set",
+      "key": "5ae8f314a5e57608c83a9e67442016b2989777e0",
+      "section": "Time Pickers",
+      "contractFile": null
+    },
+    {
+      "name": "_Tooltip - Tail",
+      "assetType": "component",
+      "key": "ab333c211060e4ff80d1b24d37b703fb3f317d9c",
+      "section": "Tooltip",
+      "contractFile": null
+    }
+  ],
+  "icons": [
+    {
+      "name": "Currency / Bitcoin",
+      "assetType": "component",
+      "key": "cb818b86d4cd4d8ce28bdf0e3e633c9fc05dccfb"
+    },
+    {
+      "name": "Currency / Dollar (USD)",
+      "assetType": "component",
+      "key": "fc8997bbb69b2a362118d2d5297b4c6a77f396fb"
+    },
+    {
+      "name": "Currency / Euro (EUR)",
+      "assetType": "component",
+      "key": "841c916489ead0b9e4ab25474cc2fbf78c1b1a3b"
+    },
+    {
+      "name": "Currency / Franc (CHF)",
+      "assetType": "component",
+      "key": "63ea17580ea558336d14c351cdae09a6ecec488f"
+    },
+    {
+      "name": "Currency / Philippine Peso (PHP)",
+      "assetType": "component",
+      "key": "e6ae2e8ef28671e29b1ff025fe6bab9753d3f289"
+    },
+    {
+      "name": "Currency / Pound (GBP)",
+      "assetType": "component",
+      "key": "d854bc0e68913bd1f0efdb803902b79e5bab8156"
+    },
+    {
+      "name": "Currency / Rupee (INR)",
+      "assetType": "component",
+      "key": "5b2890534c90eedfb16ba3145371583065ee2014"
+    },
+    {
+      "name": "Currency / Yen (JPY)",
+      "assetType": "component",
+      "key": "f224b9dca26ecf8c151b8a04d6af5e05ae74cb86"
+    },
+    {
+      "name": "Flag / Canada",
+      "assetType": "component",
+      "key": "e3e639844747426cadafbb877654f5ab5ca2ad42"
+    },
+    {
+      "name": "Flag / Colombia",
+      "assetType": "component",
+      "key": "ea26396950688bfe7e4af8184f35017f9a18b5cf"
+    },
+    {
+      "name": "Flag / Germany",
+      "assetType": "component",
+      "key": "fb5f8aa0dbf5eeb1b75cee2f5de544cd090c254f"
+    },
+    {
+      "name": "Flag / Japan",
+      "assetType": "component",
+      "key": "2b22f2db769807991f320368eee48c01a0845e70"
+    },
+    {
+      "name": "Flag / Mexico",
+      "assetType": "component",
+      "key": "868cb38898b69c3ec4df1fc0de1ffe5a9fc63a81"
+    },
+    {
+      "name": "Icon/Line / AI",
+      "assetType": "component",
+      "key": "6915e61a13aee9cc72112c8de3fd8333301da9c5"
+    },
+    {
+      "name": "Icon/Line / Airplay",
+      "assetType": "component",
+      "key": "4fa13693eae405f212222e9c1ce87888d9474f8f"
+    },
+    {
+      "name": "Icon/Line / Alert-Triangle",
+      "assetType": "component",
+      "key": "cc3f5e0d1bb24bae66a7af4fc08671c109a80ef3"
+    },
+    {
+      "name": "Icon/Line / Alert-circle",
+      "assetType": "component",
+      "key": "fc54fcac3895aaf5312943cfa39d6d2cfdad26d0"
+    },
+    {
+      "name": "Icon/Line / Archive",
+      "assetType": "component",
+      "key": "790730248fbe520d838d5a65e71c11fb60181592"
+    },
+    {
+      "name": "Icon/Line / Arrow-Left",
+      "assetType": "component",
+      "key": "7f9f86905b82cc7be4a4d659583cad36435a7748"
+    },
+    {
+      "name": "Icon/Line / Arrow-Right",
+      "assetType": "component",
+      "key": "84adeed50fac48911e623ac5a944e28162050d3d"
+    },
+    {
+      "name": "Icon/Line / Arrow-down",
+      "assetType": "component",
+      "key": "b884737a0eabacb9c105125889fe855de5362188"
+    },
+    {
+      "name": "Icon/Line / Arrow-down-left",
+      "assetType": "component",
+      "key": "fc16c39787fbdaf756b3c687a2ed16311e0a00dc"
+    },
+    {
+      "name": "Icon/Line / Arrow-down-right",
+      "assetType": "component",
+      "key": "40c187beb4f29800236136c0ffc1ec5d4d579af1"
+    },
+    {
+      "name": "Icon/Line / Arrow-down-up",
+      "assetType": "component",
+      "key": "a8b848597122d946d87b62510e9ae0385d05894c"
+    },
+    {
+      "name": "Icon/Line / Arrow-up",
+      "assetType": "component",
+      "key": "043496dbb5cb5ef1cdd99cf26a716555a3f119bb"
+    },
+    {
+      "name": "Icon/Line / Arrow-up-left",
+      "assetType": "component",
+      "key": "e55ed40fd4e0a75dd3b778846309a685810d78ec"
+    },
+    {
+      "name": "Icon/Line / Arrow-up-right",
+      "assetType": "component",
+      "key": "08e22b8e825d2ba2c483098e30967e977a77c038"
+    },
+    {
+      "name": "Icon/Line / Bell",
+      "assetType": "component",
+      "key": "f73406c7b2d5ceb855813a63d788946efa39d4b6"
+    },
+    {
+      "name": "Icon/Line / Bookmark",
+      "assetType": "component",
+      "key": "120b902486d7d8ab30ed856921ea73e33caa138a"
+    },
+    {
+      "name": "Icon/Line / Calendar",
+      "assetType": "component",
+      "key": "e4cc955effc2ee84ffef044934c6bff6263dab01"
+    },
+    {
+      "name": "Icon/Line / Chart",
+      "assetType": "component",
+      "key": "82a0f39b4af5b8258df114de2d2ffbf2ad3600f1"
+    },
+    {
+      "name": "Icon/Line / Check-Circle",
+      "assetType": "component",
+      "key": "ed833f6b8667e40e9d78b3f3569e4f38b182bd23"
+    },
+    {
+      "name": "Icon/Line / Chevron-Down",
+      "assetType": "component",
+      "key": "ad27507f5cf8b985fee7babf63e84d6d84b41072"
+    },
+    {
+      "name": "Icon/Line / Chevron-Down-Small",
+      "assetType": "component",
+      "key": "2822f29387adaa8fd0b87c466a004151e5673247"
+    },
+    {
+      "name": "Icon/Line / Chevron-Left",
+      "assetType": "component",
+      "key": "8739b44e21baee8887bf8df47c5e3a988c9e345f"
+    },
+    {
+      "name": "Icon/Line / Chevron-Left-Small",
+      "assetType": "component",
+      "key": "06b59b5784f570ae1715a23db17195c58c79706e"
+    },
+    {
+      "name": "Icon/Line / Chevron-Right",
+      "assetType": "component",
+      "key": "b0fb8602153ee3b21bbc539db458b4da88d7e9ac"
+    },
+    {
+      "name": "Icon/Line / Chevron-Right-Small",
+      "assetType": "component",
+      "key": "98f7883a01a525bdd34d1e23ecf94ba9d3c1c9e7"
+    },
+    {
+      "name": "Icon/Line / Chevron-Up",
+      "assetType": "component",
+      "key": "f61b9f1ba6a3f3b0ad5909197ff3ef1d83c0112d"
+    },
+    {
+      "name": "Icon/Line / Chevron-Up-Small",
+      "assetType": "component",
+      "key": "9b37a95f915cbbc157a6988554877b57bd3fde5c"
+    },
+    {
+      "name": "Icon/Line / Clipboard",
+      "assetType": "component",
+      "key": "2eae0cc00d32a96083971d7f34792b65fdc1f1c6"
+    },
+    {
+      "name": "Icon/Line / Columns",
+      "assetType": "component",
+      "key": "017c7f12756d609a13739b8f3ddc0f95002a2827"
+    },
+    {
+      "name": "Icon/Line / Command",
+      "assetType": "component",
+      "key": "8964f781fca9d29a9d42fc5a831453af6f910e9f"
+    },
+    {
+      "name": "Icon/Line / Configuration",
+      "assetType": "component",
+      "key": "0e6d7fe663a14a46f24efe36a3acb133920503e4"
+    },
+    {
+      "name": "Icon/Line / Copy",
+      "assetType": "component",
+      "key": "b6cf10d90ffb085c9b05f0e4f806eda78babc462"
+    },
+    {
+      "name": "Icon/Line / Corner-Up-Left",
+      "assetType": "component",
+      "key": "18990d385ff985b63a3f54bbadefc3ee5211c78f"
+    },
+    {
+      "name": "Icon/Line / Corner-Up-Right",
+      "assetType": "component",
+      "key": "67039be312c333471c7e9392a557ba3f80b17283"
+    },
+    {
+      "name": "Icon/Line / Credit-card",
+      "assetType": "component",
+      "key": "79d1203780e8f3c6a292b3ac134c1a84e2335335"
+    },
+    {
+      "name": "Icon/Line / Dashboard",
+      "assetType": "component",
+      "key": "5f067bbb6ae1224ee09058b9503028f342a79b17"
+    },
+    {
+      "name": "Icon/Line / Database",
+      "assetType": "component",
+      "key": "557eadf03a6627983e43fe2081e2be3eccfe1948"
+    },
+    {
+      "name": "Icon/Line / Dollar-Sign",
+      "assetType": "component",
+      "key": "c2bcac2170d8065e28af1ffe682a29907e559254"
+    },
+    {
+      "name": "Icon/Line / Download",
+      "assetType": "component",
+      "key": "bcdba0d469c89b6ab569220f2532d5e83446eefa"
+    },
+    {
+      "name": "Icon/Line / Droplet",
+      "assetType": "component",
+      "key": "d21b6d595d500340041db63408dfd3c7f5101455"
+    },
+    {
+      "name": "Icon/Line / Edit",
+      "assetType": "component",
+      "key": "67a148cdad422c7dbe37b2507e0c370bb99599d7"
+    },
+    {
+      "name": "Icon/Line / External-Link",
+      "assetType": "component",
+      "key": "d35c09f7b6b0c3a674302303a59087b92868da4f"
+    },
+    {
+      "name": "Icon/Line / File-text",
+      "assetType": "component",
+      "key": "2a6add0362605f75dd543263a6754f4145321bc5"
+    },
+    {
+      "name": "Icon/Line / Filter",
+      "assetType": "component",
+      "key": "c015bc947e9a30821936bbe9f4873396648cfd24"
+    },
+    {
+      "name": "Icon/Line / Globe",
+      "assetType": "component",
+      "key": "4a7aec42f137d27af7bb4e3bba473a0508592071"
+    },
+    {
+      "name": "Icon/Line / Grid",
+      "assetType": "component",
+      "key": "4cf60646068815ebdcc629d0d22b1b34ea0c3c8f"
+    },
+    {
+      "name": "Icon/Line / Heart",
+      "assetType": "component",
+      "key": "c866a5dd7014a70b439a62210bf6e7667bfafc1f"
+    },
+    {
+      "name": "Icon/Line / Info",
+      "assetType": "component",
+      "key": "793b60954648f091735b7a2b9542a2c3b9a2dcbb"
+    },
+    {
+      "name": "Icon/Line / Layout",
+      "assetType": "component",
+      "key": "cb7d29594f5e1e7440f8ef453384077a4920a40e"
+    },
+    {
+      "name": "Icon/Line / Link",
+      "assetType": "component",
+      "key": "310780349dc99294f4f950d8bc918b480ad2623c"
+    },
+    {
+      "name": "Icon/Line / List",
+      "assetType": "component",
+      "key": "a23775779716fb07d7b84de2a26e128e05db0f21"
+    },
+    {
+      "name": "Icon/Line / Loader",
+      "assetType": "component",
+      "key": "5e13c65c4ef9c2b306ea9a758a38f6b47df5bc95"
+    },
+    {
+      "name": "Icon/Line / Log-out",
+      "assetType": "component",
+      "key": "8c012fbb366e4659b8fa4dfc2bc4f81111f6e299"
+    },
+    {
+      "name": "Icon/Line / Mail",
+      "assetType": "component",
+      "key": "f442eed5c8bba7e705d51f111f52ab665cbef8db"
+    },
+    {
+      "name": "Icon/Line / Map-pin",
+      "assetType": "component",
+      "key": "ee391a7ad668a2f11ef1bd9feca7cfe289e7af41"
+    },
+    {
+      "name": "Icon/Line / Maximize",
+      "assetType": "component",
+      "key": "aacd7e82d3ddc6f47b29dbb36ffb242cac1c29c9"
+    },
+    {
+      "name": "Icon/Line / Message-square",
+      "assetType": "component",
+      "key": "218442c041d5f3b9bb73ee1baeb509ec63cb36cb"
+    },
+    {
+      "name": "Icon/Line / Moon",
+      "assetType": "component",
+      "key": "cd7b80be656ff219ea42feacf76b5eb54b7a90f1"
+    },
+    {
+      "name": "Icon/Line / More-Horizontal",
+      "assetType": "component",
+      "key": "5f36acc6cbd8a2e8570a2d41e03c682093757085"
+    },
+    {
+      "name": "Icon/Line / More-Vertical",
+      "assetType": "component",
+      "key": "82c4e5d23503853e0f5d7323be8c562130619991"
+    },
+    {
+      "name": "Icon/Line / Music",
+      "assetType": "component",
+      "key": "4a2f9b54677861734c14836b4c6ca39fac6f080c"
+    },
+    {
+      "name": "Icon/Line / Play",
+      "assetType": "component",
+      "key": "c0fb8ae3d0a1fd381f89caa61c93c903058e9542"
+    },
+    {
+      "name": "Icon/Line / Plus",
+      "assetType": "component",
+      "key": "6302e8a9bf37f3cf42a57cdef5c3854fc7eb5c30"
+    },
+    {
+      "name": "Icon/Line / Refresh-cw",
+      "assetType": "component",
+      "key": "b0fac63a62d9a34e1a4ed440bd5fdb7095da725e"
+    },
+    {
+      "name": "Icon/Line / Rows",
+      "assetType": "component",
+      "key": "329724388e542aa36269451542a7e01616ef9d1a"
+    },
+    {
+      "name": "Icon/Line / Search",
+      "assetType": "component",
+      "key": "3be151d178a82fd2a74c1d1542bd1cbedcf00830"
+    },
+    {
+      "name": "Icon/Line / Settings",
+      "assetType": "component",
+      "key": "0fd064797e34fb8c043643e09c52a4f5e6e8bfa9"
+    },
+    {
+      "name": "Icon/Line / Share",
+      "assetType": "component",
+      "key": "151532bb1c8e7366ef28497bc13ad0d92d6bd8a4"
+    },
+    {
+      "name": "Icon/Line / Shield",
+      "assetType": "component",
+      "key": "c19565afab0ca9cfde6c3ce5744a973bbc6cc1ac"
+    },
+    {
+      "name": "Icon/Line / Skip-forward",
+      "assetType": "component",
+      "key": "bbb698a77c5b57905d12825914331f9f9c746440"
+    },
+    {
+      "name": "Icon/Line / Sun",
+      "assetType": "component",
+      "key": "0963f16fe9b47f4084e04b54075a94eef9218c1a"
+    },
+    {
+      "name": "Icon/Line / Tag",
+      "assetType": "component",
+      "key": "8372b0830162e34faaf13f33029669d110632109"
+    },
+    {
+      "name": "Icon/Line / Thumbs-Up",
+      "assetType": "component",
+      "key": "4aa9db185bca6cf88bb4717b0456bd03ba2071e2"
+    },
+    {
+      "name": "Icon/Line / Trash",
+      "assetType": "component",
+      "key": "9429c2f9b638b475b5286962d1d319f459252f8e"
+    },
+    {
+      "name": "Icon/Line / Type",
+      "assetType": "component",
+      "key": "36efe10395c93b7fb197bba9f99c6edf5d4a3880"
+    },
+    {
+      "name": "Icon/Line / Upload-Cloud",
+      "assetType": "component",
+      "key": "8c8d86c88c9db72a59ac75ef11057259a0ab3f01"
+    },
+    {
+      "name": "Icon/Line / User",
+      "assetType": "component",
+      "key": "77cd90f34860d55d2b2b054a8994fb7f604dd354"
+    },
+    {
+      "name": "Icon/Line / Users",
+      "assetType": "component",
+      "key": "8a7749a139c36262fe17e1a14c094a8afc6f9e72"
+    },
+    {
+      "name": "Icon/Line / X",
+      "assetType": "component",
+      "key": "642eb1fa4882c93e82178327bcd02931e62033f8"
+    },
+    {
+      "name": "Icon/Line / Zap",
+      "assetType": "component",
+      "key": "ca1dd418dbe80def2171d03426868db51b37ec65"
+    },
+    {
+      "name": "Socials",
+      "assetType": "component_set",
+      "key": "1ab1f75d020e690fbd5577336b2e36ff520cd54c"
+    }
+  ]
+}

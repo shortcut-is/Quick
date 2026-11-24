@@ -1,8 +1,8 @@
 {
   "designSystem": "⚡ Quick - v1.2",
-  "sectionsCount": 39,
-  "componentsCount": 71,
-  "contractFilesCount": 59,
+  "sectionsCount": 47,
+  "componentsCount": 83,
+  "contractFilesCount": 71,
   "contracts": [
     {
       "name": "Accordion",
@@ -86,6 +86,15 @@
       "totalVariants": 1
     },
     {
+      "name": "ButtonGroup",
+      "figmaName": "Button Group",
+      "section": "Button Group & Toggle",
+      "importPath": "@/components/ui/ButtonGroup",
+      "category": "Actions",
+      "contractFile": "button-group.contract.json",
+      "totalVariants": 3
+    },
+    {
       "name": "Button",
       "figmaName": "Button",
       "section": "Button",
@@ -113,6 +122,24 @@
       "totalVariants": 24
     },
     {
+      "name": "CarouselDot",
+      "figmaName": "_Carousel Dot",
+      "section": "Carousel",
+      "importPath": "@/components/ui/Carousel",
+      "category": "Navigation (Subcomponent)",
+      "contractFile": "carousel-dot.contract.json",
+      "totalVariants": 2
+    },
+    {
+      "name": "Carousel",
+      "figmaName": "Carousel",
+      "section": "Carousel",
+      "importPath": "@/components/ui/Carousel",
+      "category": "Data Display & Navigation",
+      "contractFile": "carousel.contract.json",
+      "totalVariants": 3
+    },
+    {
       "name": "CheckboxGroup",
       "figmaName": "Checkbox Group",
       "section": "Checkbox",
@@ -138,6 +165,33 @@
       "category": "Inputs",
       "contractFile": "checkbox.contract.json",
       "totalVariants": 12
+    },
+    {
+      "name": "Collapsible",
+      "figmaName": "Collapsible",
+      "section": "Collapsible",
+      "importPath": "@/components/ui/Collapsible",
+      "category": "Disclosure",
+      "contractFile": "collapsible.contract.json",
+      "totalVariants": 4
+    },
+    {
+      "name": "Combobox",
+      "figmaName": "Combobox",
+      "section": "Combobox",
+      "importPath": "@/components/ui/Combobox",
+      "category": "Inputs",
+      "contractFile": "combobox.contract.json",
+      "totalVariants": 6
+    },
+    {
+      "name": "CommandPalette",
+      "figmaName": "Command Palette",
+      "section": "Command Palette",
+      "importPath": "@/components/ui/CommandPalette",
+      "category": "Navigation & Search",
+      "contractFile": "command-palette.contract.json",
+      "totalVariants": 3
     },
     {
       "name": "DataTableCell",
@@ -257,6 +311,24 @@
       "totalVariants": 4
     },
     {
+      "name": "InputGroup",
+      "figmaName": "Input Group",
+      "section": "Input Group",
+      "importPath": "@/components/ui/InputGroup",
+      "category": "Inputs",
+      "contractFile": "input-group.contract.json",
+      "totalVariants": 12
+    },
+    {
+      "name": "InputOTP",
+      "figmaName": "Input OTP",
+      "section": "Input OTP",
+      "importPath": "@/components/ui/InputOTP",
+      "category": "Inputs",
+      "contractFile": "input-otp.contract.json",
+      "totalVariants": 8
+    },
+    {
       "name": "InputSelect",
       "figmaName": "Input Select",
       "section": "Input Select",
@@ -299,6 +371,15 @@
       "importPath": "@/components/ui/Notification",
       "category": "Feedback",
       "contractFile": "notification.contract.json",
+      "totalVariants": 4
+    },
+    {
+      "name": "OtpSlot",
+      "figmaName": "_OTP Slot",
+      "section": "Input OTP",
+      "importPath": "@/components/ui/InputOTP",
+      "category": "Inputs (Subcomponent)",
+      "contractFile": "otp-slot.contract.json",
       "totalVariants": 4
     },
     {
@@ -353,6 +434,15 @@
       "importPath": "@/components/ui/Radio",
       "category": "Inputs (Primitive)",
       "contractFile": "radio.contract.json",
+      "totalVariants": 4
+    },
+    {
+      "name": "SearchFilterBar",
+      "figmaName": "Search & Filter Bar",
+      "section": "Search & Filter Bar",
+      "importPath": "@/components/ui/SearchFilterBar",
+      "category": "Navigation & Search",
+      "contractFile": "search-filter-bar.contract.json",
       "totalVariants": 4
     },
     {
@@ -516,6 +606,24 @@
       "category": "Feedback",
       "contractFile": "toast.contract.json",
       "totalVariants": 4
+    },
+    {
+      "name": "ToggleGroup",
+      "figmaName": "Toggle Group",
+      "section": "Button Group & Toggle",
+      "importPath": "@/components/ui/ToggleGroup",
+      "category": "Actions & Controls",
+      "contractFile": "toggle-group.contract.json",
+      "totalVariants": 2
+    },
+    {
+      "name": "Toggle",
+      "figmaName": "Toggle",
+      "section": "Button Group & Toggle",
+      "importPath": "@/components/ui/Toggle",
+      "category": "Actions & Controls",
+      "contractFile": "toggle.contract.json",
+      "totalVariants": 6
     },
     {
       "name": "Tooltip",

@@ -1,0 +1,253 @@
+{
+  "name": "InputGroup",
+  "figmaName": "Input Group",
+  "section": "Input Group",
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs",
+  "importPath": "@/components/ui/InputGroup",
+  "description": "Composite 16px-safe input container combining text inputs with Prefix, Suffix, Password toggle, or inline Action addons across Default, Focus, and Error states.\n\nVariants & Properties:\n- Use: Prefix | Suffix | Password | Action.\n- State: Default | Focus | Error.\n- Properties: ✏️ Label, 👁️ Label, ✏️ Value, ✏️ Addon, 👁️ Addon Icon, ↪️ Swap Addon Icon, ✏️ Hint, 👁️ Hint.",
+  "anatomy": {
+    "root": {
+      "name": "Use=Prefix, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "AddonIcon",
+        "component": "Icon/Line / Globe",
+        "kind": "icon"
+      },
+      {
+        "slotName": "Divider",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Prefix, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Label",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Label",
+            "characters": "✏️ Label"
+          }
+        },
+        {
+          "name": "InputBox",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "AddonPrefix",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            },
+            {
+              "name": "FieldSlot",
+              "type": "FRAME",
+              "layout": "HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "Hint",
+          "type": "TEXT",
+          "refs": {
+            "visible": "👁️ Hint",
+            "characters": "✏️ Hint"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 12,
+    "axes": {
+      "Use": {
+        "codePropName": "use",
+        "defaultValue": "Prefix",
+        "options": [
+          "Prefix",
+          "Suffix",
+          "Password",
+          "Action"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Focus",
+          "Error"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Label",
+      "codePropName": "label",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Label",
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "👁️ Label",
+      "codePropName": "hasLabel",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Label"
+      ]
+    },
+    {
+      "propertyName": "✏️ Value",
+      "codePropName": "value",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Valor",
+      "boundLayers": [
+        "Value"
+      ]
+    },
+    {
+      "propertyName": "✏️ Addon",
+      "codePropName": "addonText",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "https://",
+      "boundLayers": [
+        "AddonText"
+      ]
+    },
+    {
+      "propertyName": "👁️ Addon Icon",
+      "codePropName": "hasAddonIcon",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": false,
+      "boundLayers": [
+        "AddonIcon"
+      ]
+    },
+    {
+      "propertyName": "↪️ Swap Addon Icon",
+      "codePropName": "addonIcon",
+      "type": "INSTANCE_SWAP",
+      "tsType": "React.ReactNode",
+      "defaultValue": "Icon/Line / Globe",
+      "boundLayers": [
+        "AddonIcon"
+      ]
+    },
+    {
+      "propertyName": "✏️ Hint",
+      "codePropName": "hint",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Texto de ayuda",
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "propertyName": "👁️ Hint",
+      "codePropName": "hasHint",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Hint"
+      ]
+    },
+    {
+      "propertyName": "Use",
+      "codePropName": "use",
+      "type": "VARIANT",
+      "tsType": "\"Prefix\" | \"Suffix\" | \"Password\" | \"Action\"",
+      "defaultValue": "Prefix",
+      "options": [
+        "Prefix",
+        "Suffix",
+        "Password",
+        "Action"
+      ]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Focus\" | \"Error\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Focus",
+        "Error"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/11",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/11",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Border"
+    ],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/medium",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for structured inputs requiring static unit/protocol addons (`https://`, `.quick.ds`, currency `$ USD`, phone country code `Flag / Mexico`), password visibility toggles, or attached Copy/Apply actions."
+    ],
+    "whenNotToUse": [
+      "Do not use when only a plain single-line field or single leading icon is needed; use `InputText`."
+    ]
+  },
+  "behaviorRules": [
+    "Render the internal `<input>` at 16px (`Text/Body/base/normal`) and `44px` container height (`spacing/11`) to meet mobile touch comfort and avoid iOS zoom.",
+    "Expose `aria-pressed` on the password visibility toggle button and clear accessible labels on joined action controls."
+  ]
+}

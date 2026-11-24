@@ -1,0 +1,165 @@
+{
+  "name": "Collapsible",
+  "figmaName": "Collapsible",
+  "section": "Collapsible",
+  "nodeType": "COMPONENT_SET",
+  "category": "Disclosure",
+  "importPath": "@/components/ui/Collapsible",
+  "description": "Single progressive-disclosure container for sidebar filters or secondary settings.\n\nVariants & Properties:\n- Variant: Card | Ghost.\n- State: Collapsed | Expanded.\n- Properties: ✏️ Title, 👁️ Badge.",
+  "anatomy": {
+    "root": {
+      "name": "Variant=Card, State=Collapsed",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "CountBadge",
+        "component": "Badge",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Slot: Content",
+        "component": "Slot: Content",
+        "kind": "slot"
+      }
+    ],
+    "layers": {
+      "name": "Variant=Card, State=Collapsed",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "Trigger",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "refs": {
+                "characters": "✏️ Title"
+              }
+            },
+            {
+              "name": "CountBadge",
+              "type": "INSTANCE",
+              "instanceOf": "Badge",
+              "refs": {
+                "visible": "👁️ Badge"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Variant": {
+        "codePropName": "variant",
+        "defaultValue": "Card",
+        "options": [
+          "Card",
+          "Ghost"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Collapsed",
+        "options": [
+          "Collapsed",
+          "Expanded"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Title",
+      "codePropName": "title",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Configuración avanzada",
+      "boundLayers": [
+        "Title"
+      ]
+    },
+    {
+      "propertyName": "👁️ Badge",
+      "codePropName": "hasBadge",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "CountBadge"
+      ]
+    },
+    {
+      "propertyName": "Variant",
+      "codePropName": "variant",
+      "type": "VARIANT",
+      "tsType": "\"Card\" | \"Ghost\"",
+      "defaultValue": "Card",
+      "options": [
+        "Card",
+        "Ghost"
+      ]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Collapsed\" | \"Expanded\"",
+      "defaultValue": "Collapsed",
+      "options": [
+        "Collapsed",
+        "Expanded"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "radius/xl",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "radius/xl",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4"
+    ],
+    "inheritedFromSubcomponents": [
+      "Badge",
+      "Slot: Content",
+      "SEPARATOR"
+    ],
+    "textStyles": [
+      "Text/Body/sm/bold"
+    ],
+    "effectStyles": [
+      "Shadow/SM"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for a single standalone expandable block (sidebar filter group with `Variant=Ghost`, or advanced settings section with `Variant=Card`)."
+    ],
+    "whenNotToUse": [
+      "Do not stack multiple independent collapsibles where an organized FAQ or multi-item disclosure belongs; use `Accordion`."
+    ]
+  },
+  "behaviorRules": [
+    "Bind `<button aria-expanded={isOpen} aria-controls={panelId}>` cleanly on the Trigger header."
+  ]
+}

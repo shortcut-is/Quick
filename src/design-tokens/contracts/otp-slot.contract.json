@@ -1,0 +1,101 @@
+{
+  "name": "OtpSlot",
+  "figmaName": "_OTP Slot",
+  "section": "Input OTP",
+  "nodeType": "COMPONENT_SET",
+  "category": "Inputs (Subcomponent)",
+  "importPath": "@/components/ui/InputOTP",
+  "description": "Single character cell primitive used inside Input OTP. Supports Empty, Focus (active caret + Shadow/Focus), Filled, and Error states with 48x56px mobile touch targets.",
+  "anatomy": {
+    "root": {
+      "name": "State=Empty",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [],
+    "layers": {
+      "name": "State=Empty",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "Digit",
+          "type": "TEXT"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Empty",
+        "options": [
+          "Empty",
+          "Focus",
+          "Filled",
+          "Error"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Empty\" | \"Focus\" | \"Filled\" | \"Error\"",
+      "defaultValue": "Empty",
+      "options": [
+        "Empty",
+        "Focus",
+        "Filled",
+        "Error"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/12",
+      "spacing/14"
+    ],
+    "directVariables": [
+      "Feedback/Danger",
+      "Feedback/Danger-Subtle",
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/12",
+      "spacing/14"
+    ],
+    "inheritedFromSubcomponents": [],
+    "textStyles": [
+      "Text/Heading/xl/bold **"
+    ],
+    "effectStyles": [
+      "Shadow/Focus"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use strictly as a child cell composed inside `InputOTP`."
+    ],
+    "whenNotToUse": [
+      "Do not render standalone outside an `InputOTP` verification group."
+    ]
+  },
+  "behaviorRules": [
+    "Maintain 48x56px minimum dimensions for mobile tap precision and high contrast focus/error borders."
+  ]
+}

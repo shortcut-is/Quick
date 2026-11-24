@@ -1,0 +1,105 @@
+{
+  "name": "ButtonGroup",
+  "figmaName": "Button Group",
+  "section": "Button Group & Toggle",
+  "nodeType": "COMPONENT_SET",
+  "category": "Actions",
+  "importPath": "@/components/ui/ButtonGroup",
+  "description": "Seamless joined control cluster for Split Primary actions, Segmented Toolbar actions, or Stepper zoom/quantity controls.\n\nVariants:\n- Use: SplitAction | SegmentedActions | StepperCounter.",
+  "anatomy": {
+    "root": {
+      "name": "Use=SplitAction",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "Divider",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=SplitAction",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": []
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Use": {
+        "codePropName": "use",
+        "defaultValue": "SplitAction",
+        "options": [
+          "SplitAction",
+          "SegmentedActions",
+          "StepperCounter"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "Use",
+      "codePropName": "use",
+      "type": "VARIANT",
+      "tsType": "\"SplitAction\" | \"SegmentedActions\" | \"StepperCounter\"",
+      "defaultValue": "SplitAction",
+      "options": [
+        "SplitAction",
+        "SegmentedActions",
+        "StepperCounter"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Primary/Foreground",
+      "Primary/Top",
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "SEPARATOR"
+    ],
+    "textStyles": [
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": [
+      "Shadow/SM"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for tightly coupled action clusters (`SplitAction` for Primary CTA + overflow menu, `SegmentedActions` for toolbar Copy/Share/Export, or `StepperCounter` for +/- zoom or quantity)."
+    ],
+    "whenNotToUse": [
+      "Do not join unrelated Submit and Cancel buttons together; keep standard spacing with 1 Primary + 1 Outline/Ghost."
+    ]
+  },
+  "behaviorRules": [
+    "Wrap inside `role=\"group\"` and collapse inner borders cleanly so only outer edges carry `radius/lg`."
+  ]
+}

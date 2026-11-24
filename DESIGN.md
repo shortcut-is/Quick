@@ -5,7 +5,7 @@ Quick v1.2 is an independent, Tailwind CSS-standardized UI design system (no `@r
 - [src/design-tokens/theme.css](src/design-tokens/theme.css) — CSS custom properties (`:root` / `.dark`) + Tailwind CSS v4 `@theme` bindings
 - [src/design-tokens/tokens.json](src/design-tokens/tokens.json) — resolved Light/Dark colors, spacing, radii, breakpoints, typography, and shadows
 - [src/design-tokens/icons.json](src/design-tokens/icons.json) — complete catalog of all 107 verified `24x24` icon names
-- [src/design-tokens/contracts/index.json](src/design-tokens/contracts/index.json) — 59 component contracts covering 71 Figma nodes across 39 sections
+- [src/design-tokens/contracts/index.json](src/design-tokens/contracts/index.json) — 71 component contracts covering 83 Figma nodes across 47 sections
 
 ---
 
@@ -53,11 +53,13 @@ UI components **MUST** use semantic tokens from `tokens.json` / `theme.css`. Nev
 
 ## 2. Component Decision Trees
 
-### Overlays, Drawers & Feedback
+### Overlays, Drawers & Search
 ```text
-Need to interrupt or inform the user?
+Need to interrupt, search globally, or inform the user?
  ├── Blocking confirmation, destructive prompt, or short focused form (380px / 460px)
  │    └── Dialog (paired with Overlay; SM = confirmation, MD = form)
+ ├── Global keyboard-first command & route launcher (⌘K)
+ │    └── CommandPalette (Default | Grouped | Empty, triggered by Topbar ⌘K)
  ├── Wide side inspector on Desktop (360px right) or touch bottom drawer on Mobile
  │    └── Sheet (Position="Right (Web)" on Desktop, Position="Bottom (Mobile)" on touch)
  ├── Transient auto-dismissing action result ("Saved", "Copied")
@@ -65,35 +67,46 @@ Need to interrupt or inform the user?
  ├── Persistent in-page status/warning banner inside a form or page flow
  │    └── Alert (use Notification for inbox-style dismissible cards)
  ├── Trigger-anchored command/action list
- │    └── DropdownMenu (never for form field values -> use InputSelect)
+ │    └── DropdownMenu (never for form field values -> use InputSelect or Combobox)
  └── Brief hover/focus text hint only (zero interactive elements)
       └── Tooltip
 ```
 
-### Form Selection & Temporal Controls
+### Form Selection, Groups & Temporal Controls
 ```text
-Choosing a value in a form?
+Choosing or entering a value in a form?
  ├── Immediate binary setting without pressing Save
  │    └── Switch (or SwitchStandalone when parent row already holds the label)
  ├── Binary agreement or multi-select checklist (0..N items)
  │    └── Checkbox (wrap >= 2 items in CheckboxGroup; CheckboxStandalone in DataTable)
  ├── Mutually exclusive single choice from 2–5 options
  │    ├── Form field with helper descriptions -> RadioButton inside RadioGroup
- │    └── Compact view/scale switcher inside toolbar/card -> SegmentControl
- ├── Single choice from >= 4 options
- │    └── InputSelect (never DropdownMenu)
+ │    └── Compact view/scale switcher inside toolbar/card -> SegmentControl (or ToggleGroup)
+ ├── Single choice option list
+ │    ├── Closed list (<= 6 options) -> InputSelect (never DropdownMenu)
+ │    └── Searchable long list or multi-tag selection -> Combobox (`Single` | `Multi`)
+ ├── Text / Password / Addon / OTP verification
+ │    ├── Standard single-line field -> InputText (`>= 16px` on Mobile)
+ │    ├── Prefix, Suffix, Password toggle, or joined Copy/Apply action -> InputGroup
+ │    └── 4-digit or 6-digit verification code -> InputOTP (using 48×56 `_OTP Slot`)
+ ├── Toolbar actions, split CTAs, and inline filter headers
+ │    ├── Joined SplitAction, SegmentedActions, or StepperCounter -> ButtonGroup
+ │    ├── Pressed toolbar toggle or multi-select switchers -> Toggle / ToggleGroup
+ │    ├── Single expandable filter/settings drawer -> Collapsible (use Accordion for >= 2 items)
+ │    └── Table or mobile list search + filter button + removable Tag chips -> SearchFilterBar
  └── Date or Time selection
       ├── Compact input trigger (`Single`, `Range`, `DateTime`) -> DatePicker
       ├── Full monthly calendar grid (`Default`) -> Calendar (with `_Calendar Days` 6 states)
       └── Structured numeric time (`24h` HH:MM:SS or `12h` HH:MM AM/PM) -> TimePicker
 ```
 
-### Navigation & Labels
+### Navigation, Media & Labels
 ```text
-Navigating views or displaying compact status?
+Navigating views, galleries, or displaying compact status?
  ├── Application navigation
  │    ├── Desktop (>= 768px) -> SidebarNavigation (248px Expanded / 72px Collapsed) + Topbar (`DesktopBreadcrumb` | `DesktopTabs`)
  │    ├── Mobile (< 768px) -> Topbar (`MobileAppBar` 390x56) + BottomNavigation (`4 Tabs` | `5 Tabs (CTA)`, 390x68) + Sheet for overflow nav
+ │    ├── Horizontal swipeable cards, peeking mobile tracks, or banners -> Carousel (`MobilePeek` | `WebCards` | `HeroBanner`)
  │    ├── In-page sibling views -> Tab (`role="tablist"`)
  │    ├── Hierarchical parent path (>= 3 levels) -> Breadcrumb
  │    └── Sequential multi-step flow -> Stepper (`Horizontal` Desktop / `Vertical` Mobile)

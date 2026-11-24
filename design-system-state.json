@@ -1,8 +1,13 @@
 {
   "runId": "quick-v1-2",
+  "libraryName": "⚡ Quick - v1.2",
+  "libraryKey": "lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd",
+  "librarySource": "team",
+  "forbiddenCommunityLibraryKey": "lk-c590e7be0b43e4c47aa285910835678469595e363682bac303924c50807844de9528ccb4a5b66d21fb75761433b1af7ed340c0fc63ecbd44495f30e596ba5c1f",
+  "manifestPath": "figma-library-manifest.json",
   "fileKey": "HwLUpu9i41HlBTF7erR5ad",
   "fileUrl": "https://www.figma.com/design/HwLUpu9i41HlBTF7erR5ad/%E2%9A%A1-Quick---v1.2?node-id=0-1",
-  "lastSessionId": "83f7f213-d7fc-48d2-8f7a-296afe03f78c",
+  "lastSessionId": "d72fe423-2c5a-420f-9bc5-4d8269e71d9e",
   "entities": {
     "pages": {
       "Cover": "1:4168",
@@ -27,6 +32,7 @@
       "Surfaces/Border": "VariableID:2154:4972",
       "Surfaces/Input": "VariableID:2154:4973",
       "Surfaces/Overlay": "VariableID:2154:5687",
+      "Surfaces/Ring": "VariableID:2705:2",
       "spacing/0-5": "VariableID:2355:23",
       "spacing/1": "VariableID:576:5502",
       "spacing/2": "VariableID:576:5503",
@@ -110,7 +116,35 @@
       "_Bottom Nav Item": "2624:4500",
       "Bottom Navigation": "2619:4479",
       "Navigation Bars Ex": "2619:4480",
-      "Local Tag": "478:5709"
+      "Local Tag": "478:5709",
+      "Input OTP Section": "2687:4011",
+      "_OTP Slot": "2687:4023",
+      "Input OTP": "2687:4140",
+      "Input OTP Ex": "2687:4141",
+      "Input Group Section": "2689:4244",
+      "Input Group": "2689:4380",
+      "Input Group Ex": "2689:4381",
+      "Combobox Section": "2690:4170",
+      "Combobox": "2690:4268",
+      "Combobox Ex": "2690:4269",
+      "Command Palette Section": "2691:4242",
+      "Command Palette": "2691:4361",
+      "Command Palette Ex": "2691:4362",
+      "Button Group & Toggle Section": "2693:4334",
+      "Toggle": "2693:4362",
+      "Toggle Group": "2693:4395",
+      "Button Group": "2693:4432",
+      "Button Group & Toggle Ex": "2693:4433",
+      "Carousel Section": "2693:4467",
+      "_Carousel Dot": "2693:4473",
+      "Carousel": "2693:4542",
+      "Carousel Ex": "2693:4543",
+      "Collapsible Section": "2693:4578",
+      "Collapsible": "2693:4620",
+      "Collapsible Ex": "2693:4621",
+      "Search & Filter Bar Section": "2694:4476",
+      "Search & Filter Bar": "2694:4592",
+      "Search & Filter Bar Ex": "2694:4593"
     }
   },
   "completedSteps": [
@@ -128,7 +162,11 @@
     "component-contracts/60-json-contracts-extracted",
     "audit-cleanup/switzer-migration-text-styles-radii-spacing-slider-fileupload-shadow-styles",
     "calendar/cleanup-single-default-variant",
-    "agent-readiness/code-syntax-tokens-theme-icons-design-md-agents-md"
+    "agent-readiness/code-syntax-tokens-theme-icons-design-md-agents-md",
+    "lote-1-advanced-inputs-auth",
+    "lote-2-mobile-interaction-patterns",
+    "color-tokens-audit-fixes",
+    "cross-file-figma-manifest-and-multi-agent-setup"
   ],
   "effectStyles": {
     "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",
@@ -138,10 +176,10 @@
     "Shadow/Focus": "S:7d9e7e8fef712fad3630cacfb70a6e5c423b2414,"
   },
   "pendingRecommendations": [
-    "lote-d-advanced-inputs (Search/Filter Bar, Combobox, Number Input, Command Palette)",
-    "device-variable-collection (Desktop/Mobile)",
-    "button-secondary-and-loading",
-    "input-sizes-sm-md-lg"
+    "charts-data-visualization",
+    "button-loading-state",
+    "input-sizes-sm-md-lg",
+    "device-variable-collection"
   ]
 }
 

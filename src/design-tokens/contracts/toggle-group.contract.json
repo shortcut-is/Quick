@@ -1,0 +1,113 @@
+{
+  "name": "ToggleGroup",
+  "figmaName": "Toggle Group",
+  "section": "Button Group & Toggle",
+  "nodeType": "COMPONENT_SET",
+  "category": "Actions & Controls",
+  "importPath": "@/components/ui/ToggleGroup",
+  "description": "Joined group of Toggle items supporting mutually exclusive Single view switching or Multiple active toolbar formatting.\n\nVariants:\n- Selection: Single | Multiple.",
+  "anatomy": {
+    "root": {
+      "name": "Selection=Single",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL"
+    },
+    "slots": [
+      {
+        "slotName": "ToggleItem",
+        "component": "Toggle",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Selection=Single",
+      "type": "COMPONENT",
+      "layout": "HORIZONTAL",
+      "children": [
+        {
+          "name": "ToggleItem",
+          "type": "INSTANCE",
+          "instanceOf": "Toggle"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 2,
+    "axes": {
+      "Selection": {
+        "codePropName": "selection",
+        "defaultValue": "Single",
+        "options": [
+          "Single",
+          "Multiple"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "Selection",
+      "codePropName": "selection",
+      "type": "VARIANT",
+      "tsType": "\"Single\" | \"Multiple\"",
+      "defaultValue": "Single",
+      "options": [
+        "Single",
+        "Multiple"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/lg",
+      "spacing/1",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "radius/lg",
+      "spacing/1"
+    ],
+    "inheritedFromSubcomponents": [
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "spacing/1-5",
+      "spacing/10",
+      "spacing/3"
+    ],
+    "textStyles": [
+      "Text/Body/sm/medium"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [
+    {
+      "figmaName": "Toggle",
+      "nodeType": "COMPONENT_SET",
+      "variantCount": 6,
+      "contractFile": "toggle.contract.json",
+      "importPath": "@/components/ui/Toggle"
+    }
+  ],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use for grouped toolbar controls where users toggle view modes (`Selection=Single`) or overlapping formatting flags (`Selection=Multiple`)."
+    ],
+    "whenNotToUse": [
+      "Do not use for top-level page tabs; use `Tab` or `SegmentControl`."
+    ]
+  },
+  "behaviorRules": [
+    "Render inside `role=\"group\"` with roving focus on `Selection=Single` and independent `aria-pressed` states on `Selection=Multiple`."
+  ]
+}

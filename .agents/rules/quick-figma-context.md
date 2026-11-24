@@ -1,10 +1,18 @@
 # Quick v1.2 — Figma Design System Context
 
-Cuando el usuario pida revisar, editar o crear componentes/variables en el Design System **⚡ Quick - v1.2**, usa estas referencias verificadas del archivo en Figma:
+Cuando el usuario pida revisar, editar o crear componentes/variables en el archivo maestro **⚡ Quick - v1.2**, o crear pantallas de producto en un **archivo nuevo/externo de Figma**, usa estas referencias verificadas:
 
-- **File Key:** `HwLUpu9i41HlBTF7erR5ad`
+- **Archivo maestro (`File Key`):** `HwLUpu9i41HlBTF7erR5ad`
 - **URL:** `https://www.figma.com/design/HwLUpu9i41HlBTF7erR5ad/%E2%9A%A1-Quick---v1.2?node-id=0-1`
-- **Skills obligatorios antes de usar `use_figma`:** `figma-use` (y `figma-generate-library` para componentes/variables, o `figma-generate-design` para pantallas compuestas). Llama a `create_session` al iniciar una nueva conversación antes de leer o editar.
+- **Librería publicada oficial (`source: "team"`):**
+  - `libraryName`: `⚡ Quick - v1.2`
+  - `libraryKey`: `lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd`
+  - **Librería PROHIBIDA:** `Quick ⚡ - v1.2` (`lk-c590e7be0b43e4c47aa285910835678469595e363682bac303924c50807844de9528ccb4a5b66d21fb75761433b1af7ed340c0fc63ecbd44495f30e596ba5c1f`, `source: "community"`, plantilla vieja sin Lote 1/2 ni correcciones de contraste).
+- **Manifiesto cross-file (`importComponentSetByKeyAsync` / `importVariableByKeyAsync`):** `figma-library-manifest.json` (`61` componentes públicos, `18` subcomponentes `_`, `94` ítems de iconos/foundations, `95` variables, `22` Text Styles, `5` Effect Styles).
+- **Skills obligatorios antes de usar `use_figma`:**
+  - Para **crear pantallas en Figma**: `.agents/skills/quick-figma-screens/SKILL.md` + `figma-use` + `figma-generate-design`.
+  - Para **editar/crear librería**: `figma-use` + `figma-generate-library`.
+  - Llama a `create_session` al iniciar una nueva conversación antes de leer o editar.
 
 ## Páginas principales
 - `◈ Cover`: `1:4168`
@@ -16,15 +24,15 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el Desig
 - `🚫 Admin`: `605:18897`
 
 ## Colecciones de Variables
-- **`Base`** (`VariableCollectionId:173:1192`, modo `Mode` `173:0`):
+- **`Base`** (`VariableCollectionId:173:1192`, `key`: `4f381c5feb556a1eef8e6db6e63ddd267aa245c4`, modo `Mode` `173:0`):
   - `FontFamily/Primary` (`VariableID:173:1193` = `"Heebo"`)
   - `FontFamily/Heading` (`VariableID:173:1199` = `"Zalando Sans"`)
   - `spacing/0-5` (`2px`), `spacing/1` (`4px`), `spacing/2` (`8px`), `spacing/3` (`12px`), `spacing/4` (`16px`), `spacing/5` (`20px`), `spacing/6` (`24px`), `spacing/8` (`32px`), etc.
   - `radius/none`..`radius/full` (`radius/lg` = `VariableID:2463:4`, `radius/xl` = `VariableID:2463:5`, `radius/2xl` = `VariableID:2463:6`, `radius/3xl` = `VariableID:2353:4`)
   - `breakpoint/sm`..`breakpoint/2xl`
-- **`Mode`** (`VariableCollectionId:2154:4967`, modos `Light` `2154:3` / `Dark` `2154:4`):
-  - `Surfaces/Background` (`VariableID:2154:4968`), `Surfaces/Muted` (`VariableID:2154:4969`), `Surfaces/Foreground` (`VariableID:2154:4970`), `Surfaces/Foreground-Muted` (`VariableID:2154:4971`), `Surfaces/Border` (`VariableID:2154:4972`), `Surfaces/Input` (`VariableID:2154:4973`), `Surfaces/Overlay` (`VariableID:2154:5687`)
-  - `Primary/*`, `Feedback/*`, `Neutral/50..900`, `White`, `Black`
+- **`Mode`** (`VariableCollectionId:2154:4967`, `key`: `71053f273fa4a58bd3a8436c9ce413b3ce91ed97`, modos `Light` `2154:3` / `Dark` `2154:4`):
+  - `Surfaces/Background` (`VariableID:2154:4968`), `Surfaces/Muted` (`VariableID:2154:4969`), `Surfaces/Foreground` (`VariableID:2154:4970`), `Surfaces/Foreground-Muted` (`VariableID:2154:4971`), `Surfaces/Border` (`VariableID:2154:4972`), `Surfaces/Input` (`VariableID:2154:4973`), `Surfaces/Overlay` (`VariableID:2154:5687`), `Surfaces/Ring` (`VariableID:2705:2`)
+  - `Primary/*`, `Feedback/*`, `Neutral/50..900` (solo primitivos), `White`, `Black`
 
 ## Text Styles y Effect Styles
 - **Text Styles (`Heebo` y `Zalando Sans`):** `Text/Body/{xs,sm,base,lg}/{normal,medium,bold}` y `Text/Heading/{xl,2xl,3xl,4xl,5xl,6xl}/{normal,medium,bold}`
@@ -53,6 +61,16 @@ Cuando el usuario pida revisar, editar o crear componentes/variables en el Desig
   - `Topbar` (`2619:4440`, 3 variants `DesktopBreadcrumb|DesktopTabs|MobileAppBar`) + `_Bottom Nav Item` (`2624:4500`, 3 variants `Default|Hover|Active`) + `Bottom Navigation` (`2619:4479`, 2 variants `4 Tabs|5 Tabs (CTA)` con instancias expuestas de `_Bottom Nav Item`) en `Navigation Bars` (`2619:4309`, `1440×764`), `Ex.` (`2619:4480`, `1440×552`).
 - **Badge (`203:979`)**: `Label` text nodes configurados con `WIDTH_AND_HEIGHT` + `HUG` para evitar recortes en instancias anidadas.
 - **Helper Tag en `⚡️ Components`:** `.local / tag` (`478:5709`, instancia de ejemplo `2456:4500`, propiedad `"CompContent#2456:0"`).
+- **Lote 1 — Inputs Avanzados & Auth (`2687:*` – `2691:*`):**
+  - `Input OTP` (`2687:4140`) + `_OTP Slot` (`2687:4023`) en `2687:4011`, `Ex.` (`2687:4141`).
+  - `Input Group` (`2689:4380`) en `2689:4244`, `Ex.` (`2689:4381`).
+  - `Combobox` (`2690:4268`) en `2690:4170`, `Ex.` (`2690:4269`).
+  - `Command Palette` (`2691:4361`) en `2691:4242`, `Ex.` (`2691:4362`).
+- **Lote 2 — Patrones Web & Mobile (`2693:*` – `2694:*`):**
+  - `Toggle` (`2693:4362`), `Toggle Group` (`2693:4395`), `Button Group` (`2693:4432`) en `2693:4334`, `Ex.` (`2693:4433`).
+  - `Carousel` (`2693:4542`) + `_Carousel Dot` (`2693:4473`) en `2693:4467`, `Ex.` (`2693:4543`).
+  - `Collapsible` (`2693:4620`) en `2693:4578`, `Ex.` (`2693:4621`).
+  - `Search & Filter Bar` (`2694:4592`) en `2694:4476`, `Ex.` (`2694:4593`).
 - **Otros sets clave:** `Button` (`67:19`), `Badge` (`203:979`), `Avatar` (`79:1653`), `Input Text` (`84:3866`), `Input Select` (`88:355`), `Input Area` (`194:1034`), `Notification` (`545:5052`), `Data Table` (`2154:5663`).
-- Consulta `README.md` y `design-system-state.json` en la raíz del proyecto para ver el inventario completo y el plan de adaptación Web/Mobile.
+- Consulta `README.md`, `figma-library-manifest.json` y `design-system-state.json` en la raíz del proyecto para ver el inventario completo y las llaves cross-file.
 

@@ -1,0 +1,143 @@
+{
+  "name": "SearchFilterBar",
+  "figmaName": "Search & Filter Bar",
+  "section": "Search & Filter Bar",
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation & Search",
+  "importPath": "@/components/ui/SearchFilterBar",
+  "description": "Composite search and multi-filter control bar for Desktop tables and 390px Mobile lists.\n\nVariants & Properties:\n- Viewport: Desktop | Mobile.\n- State: Default | ActiveFilters.\n- Properties: ✏️ Query.",
+  "anatomy": {
+    "root": {
+      "name": "Viewport=Desktop, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "FilterButton",
+        "component": "Button",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "FilterTags",
+        "component": "Tag",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Viewport=Desktop, State=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "TopControls",
+          "type": "FRAME",
+          "layout": "HORIZONTAL"
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 4,
+    "axes": {
+      "Viewport": {
+        "codePropName": "viewport",
+        "defaultValue": "Desktop",
+        "options": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "State": {
+        "codePropName": "state",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "ActiveFilters"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Query",
+      "codePropName": "query",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Buscar por nombre o estado...",
+      "boundLayers": [
+        "Query"
+      ]
+    },
+    {
+      "propertyName": "Viewport",
+      "codePropName": "viewport",
+      "type": "VARIANT",
+      "tsType": "\"Desktop\" | \"Mobile\"",
+      "defaultValue": "Desktop",
+      "options": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    {
+      "propertyName": "State",
+      "codePropName": "state",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"ActiveFilters\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "ActiveFilters"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/1",
+      "spacing/10",
+      "spacing/11",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Input",
+      "radius/lg",
+      "spacing/1",
+      "spacing/10",
+      "spacing/11",
+      "spacing/2",
+      "spacing/3"
+    ],
+    "inheritedFromSubcomponents": [
+      "Button",
+      "Tag"
+    ],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/normal"
+    ],
+    "effectStyles": []
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use as the top filter toolbar above `DataTable`, directory grids, or Mobile product/catalog screens (`Viewport=Mobile` opens `Sheet` `Use=Filter`)."
+    ],
+    "whenNotToUse": [
+      "Do not use as a global site launcher across routes; use `Topbar` + `CommandPalette`."
+    ]
+  },
+  "behaviorRules": [
+    "Keep search input text at least 16px (`Text/Body/base/normal`) and height 44px (`spacing/11`) on Mobile viewports.",
+    "Allow single-click clearing of the search term and dismissal of each active filter `Tag`."
+  ]
+}

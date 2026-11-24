@@ -1,0 +1,164 @@
+{
+  "name": "CommandPalette",
+  "figmaName": "Command Palette",
+  "section": "Command Palette",
+  "nodeType": "COMPONENT_SET",
+  "category": "Navigation & Search",
+  "importPath": "@/components/ui/CommandPalette",
+  "description": "Global quick-search and keyboard command menu triggered by Topbar ⌘K.\n\nVariants & Properties:\n- Use: Default | Grouped | Empty.\n- Properties: ✏️ Query, 👁️ Footer.",
+  "anatomy": {
+    "root": {
+      "name": "Use=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL"
+    },
+    "slots": [
+      {
+        "slotName": "Shortcut",
+        "component": "Kbd",
+        "kind": "primitive"
+      },
+      {
+        "slotName": "Divider",
+        "component": "SEPARATOR",
+        "kind": "primitive"
+      }
+    ],
+    "layers": {
+      "name": "Use=Default",
+      "type": "COMPONENT",
+      "layout": "VERTICAL",
+      "children": [
+        {
+          "name": "SearchHeader",
+          "type": "FRAME",
+          "layout": "HORIZONTAL"
+        },
+        {
+          "name": "CommandList",
+          "type": "FRAME",
+          "layout": "VERTICAL"
+        },
+        {
+          "name": "Footer",
+          "type": "FRAME",
+          "layout": "HORIZONTAL",
+          "refs": {
+            "visible": "👁️ Footer"
+          }
+        }
+      ]
+    }
+  },
+  "variants": {
+    "totalVariants": 3,
+    "axes": {
+      "Use": {
+        "codePropName": "use",
+        "defaultValue": "Default",
+        "options": [
+          "Default",
+          "Grouped",
+          "Empty"
+        ]
+      }
+    }
+  },
+  "properties": [
+    {
+      "propertyName": "✏️ Query",
+      "codePropName": "query",
+      "type": "TEXT",
+      "tsType": "string",
+      "defaultValue": "Buscar comandos, archivos o vistas...",
+      "boundLayers": [
+        "Query"
+      ]
+    },
+    {
+      "propertyName": "👁️ Footer",
+      "codePropName": "hasFooter",
+      "type": "BOOLEAN",
+      "tsType": "boolean",
+      "defaultValue": true,
+      "boundLayers": [
+        "Footer"
+      ]
+    },
+    {
+      "propertyName": "Use",
+      "codePropName": "use",
+      "type": "VARIANT",
+      "tsType": "\"Default\" | \"Grouped\" | \"Empty\"",
+      "defaultValue": "Default",
+      "options": [
+        "Default",
+        "Grouped",
+        "Empty"
+      ]
+    }
+  ],
+  "tokens": {
+    "variables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "Surfaces/Overlay",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "spacing/1",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/6",
+      "spacing/8"
+    ],
+    "directVariables": [
+      "Surfaces/Background",
+      "Surfaces/Border",
+      "Surfaces/Foreground",
+      "Surfaces/Foreground-Muted",
+      "Surfaces/Muted",
+      "radius/2xl",
+      "radius/full",
+      "radius/lg",
+      "spacing/1",
+      "spacing/2",
+      "spacing/3",
+      "spacing/4",
+      "spacing/6",
+      "spacing/8"
+    ],
+    "inheritedFromSubcomponents": [
+      "Kbd",
+      "SEPARATOR"
+    ],
+    "textStyles": [
+      "Text/Body/base/normal",
+      "Text/Body/sm/bold",
+      "Text/Body/sm/medium",
+      "Text/Body/sm/normal",
+      "Text/Body/xs/medium",
+      "Text/Body/xs/normal"
+    ],
+    "effectStyles": [
+      "Shadow/XL"
+    ]
+  },
+  "subcomponents": [],
+  "usageGuidelines": {
+    "whenToUse": [
+      "Use as the global `⌘K` / `Ctrl+K` quick launcher triggered from `Topbar` to jump to routes, create items, or run commands."
+    ],
+    "whenNotToUse": [
+      "Do not use as an inline table search box; use `SearchFilterBar`.",
+      "Do not use for form field selection; use `Combobox` or `InputSelect`."
+    ]
+  },
+  "behaviorRules": [
+    "Render inside an accessible `role=\"dialog\"` with focus trap, `Cmd+K` / `Ctrl+K` global shortcut toggle, and full keyboard arrow/Enter/Escape navigation."
+  ]
+}
