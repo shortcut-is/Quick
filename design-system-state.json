@@ -178,7 +178,8 @@
     "color-tokens-audit-fixes",
     "cross-file-figma-manifest-and-multi-agent-setup",
     "radio-buttons-and-list-item-variants",
-    "component-card/promo-variant-and-examples"
+    "component-card/promo-variant-and-examples",
+    "responsive-hardening/truncation-wrapping-mobile-badges"
   ],
   "effectStyles": {
     "Shadow/SM": "S:fdd505a2d68c734a8b5e5396deb449b389fd7428,",

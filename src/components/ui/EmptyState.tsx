@@ -46,7 +46,7 @@ export function EmptyState({
     <div
       className={cn(
         "flex flex-col items-center justify-center text-center rounded-2xl border border-dashed border-surface-border bg-surface-overlay/40",
-        isMD ? "p-10 gap-5" : "p-6 gap-4",
+        isMD ? "p-6 sm:p-10 gap-5" : "p-6 gap-4",
         className
       )}
     >
@@ -62,11 +62,11 @@ export function EmptyState({
         </div>
       )}
 
-      <div className="flex flex-col gap-1 max-w-sm">
-        <h3 className={cn(isMD ? "text-heading-xl-bold" : "text-body-base-bold", "text-surface-foreground")}>
+      <div className="flex flex-col gap-1 w-full min-w-0 max-w-sm">
+        <h3 className={cn(isMD ? "text-heading-xl-bold" : "text-body-base-bold", "text-surface-foreground line-clamp-2")}>
           {title}
         </h3>
-        <p className="text-body-sm-normal text-surface-foreground-muted">{description}</p>
+        <p className="text-body-sm-normal text-surface-foreground-muted line-clamp-3">{description}</p>
       </div>
 
       {hasActions && (

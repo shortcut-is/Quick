@@ -47,9 +47,9 @@ export function Notification({
       </span>
 
       <div className="flex flex-col gap-2 flex-1 min-w-0">
-        <div className="flex flex-col gap-0.5">
-          <p className="text-body-sm-bold text-surface-foreground">{title}</p>
-          {description && <p className="text-body-xs-normal text-surface-foreground-muted">{description}</p>}
+        <div className="flex flex-col gap-0.5 min-w-0">
+          <p className="text-body-sm-bold text-surface-foreground truncate">{title}</p>
+          {description && <p className="text-body-xs-normal text-surface-foreground-muted line-clamp-2">{description}</p>}
         </div>
         {hasAction && (
           <div>
@@ -68,6 +68,7 @@ export function Notification({
           icon="Icon/Line / X"
           aria-label="Cerrar notificación"
           onClick={onDismiss}
+          className="shrink-0"
         />
       )}
     </div>

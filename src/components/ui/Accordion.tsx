@@ -46,7 +46,7 @@ export function AccordionItem({
         onClick={toggle}
         className="flex items-center justify-between w-full px-4 py-3.5 text-left gap-3 hover:bg-surface-muted/40 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-surface-ring"
       >
-        <span className="text-body-sm-medium text-surface-foreground">{title}</span>
+        <span className="text-body-sm-medium text-surface-foreground min-w-0 flex-1 line-clamp-2">{title}</span>
         <Icon
           name="Icon/Line / Chevron-Down"
           size={18}

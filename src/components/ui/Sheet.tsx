@@ -102,11 +102,11 @@ export function Sheet({
 
         <div className="flex items-start justify-between gap-3 px-5 py-4 shrink-0">
           <div className="flex flex-col gap-1 min-w-0">
-            <h2 id={titleId} className="text-body-lg-bold text-surface-foreground">
+            <h2 id={titleId} className="text-body-lg-bold text-surface-foreground truncate">
               {title}
             </h2>
             {hasDescription && description && (
-              <p id={descId} className="text-body-xs-normal text-surface-foreground-muted">
+              <p id={descId} className="text-body-xs-normal text-surface-foreground-muted line-clamp-2">
                 {description}
               </p>
             )}
@@ -131,7 +131,7 @@ export function Sheet({
         {hasFooter && (
           <>
             <Separator />
-            <div className={cn("flex items-center gap-2 px-5 py-4 shrink-0", isBottom ? "flex-col sm:flex-row" : "justify-end")}>
+            <div className={cn("flex items-center gap-2 px-5 py-4 shrink-0", isBottom ? "flex-col sm:flex-row" : "flex-wrap justify-end")}>
               <Button
                 variant="Outline"
                 size={isBottom ? "MD" : "SM"}

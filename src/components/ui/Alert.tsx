@@ -68,13 +68,13 @@ export function Alert({
           </span>
         )}
         <div className="flex flex-col gap-1 min-w-0">
-          {title && <h4 className="text-body-sm-bold text-surface-foreground">{title}</h4>}
-          {description && <p className="text-body-sm-normal text-surface-foreground-muted">{description}</p>}
+          {title && <h4 className="text-body-sm-bold text-surface-foreground line-clamp-2">{title}</h4>}
+          {description && <p className="text-body-sm-normal text-surface-foreground-muted line-clamp-3">{description}</p>}
         </div>
       </div>
 
       {hasActions && (
-        <div className="flex items-center justify-end gap-2 pt-1">
+        <div className="flex flex-wrap items-center justify-end gap-2 pt-1">
           {hasSecondaryAction && (
             <Button variant="Outline" size="XS" onClick={onSecondaryAction}>
               {secondaryActionLabel}

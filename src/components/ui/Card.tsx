@@ -12,7 +12,7 @@ export function Card({ variant = "Default", className, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-2xl border border-surface-border bg-surface-background text-surface-foreground",
+        "rounded-2xl border border-surface-border bg-surface-background text-surface-foreground min-w-0 overflow-hidden",
         variant === "Elevated" && "shadow-md",
         variant === "Interactive" &&
           "shadow-sm transition-[border-color,box-shadow,transform] duration-150 hover:border-surface-foreground/30 hover:shadow-md",
@@ -23,26 +23,53 @@ export function Card({ variant = "Default", className, ...props }: CardProps) {
   );
 }
 
-export function CardHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("flex flex-col gap-1 p-5 pb-3", className)} {...props} />;
+export interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+  badge?: React.ReactNode;
+}
+
+export function CardHeader({ badge, className, children, ...props }: CardHeaderProps) {
+  if (!badge) {
+    return (
+      <div className={cn("flex flex-col gap-1 p-4 sm:p-5 pb-3 min-w-0", className)} {...props}>
+        {children}
+      </div>
+    );
+  }
+  return (
+    <div
+      className={cn(
+        "flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-2 p-4 sm:p-5 pb-3 min-w-0",
+        className
+      )}
+      {...props}
+    >
+      <div className="flex flex-col gap-1 min-w-0 flex-1">{children}</div>
+      <div className="shrink-0 self-start">{badge}</div>
+    </div>
+  );
 }
 
 export function CardTitle({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
-  return <h3 className={cn("text-body-lg-bold text-surface-foreground", className)} {...props} />;
+  return <h3 className={cn("text-body-lg-bold text-surface-foreground min-w-0 line-clamp-2 sm:truncate", className)} {...props} />;
 }
 
 export function CardDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-body-sm-normal text-surface-foreground-muted", className)} {...props} />;
+  return (
+    <p
+      className={cn("text-body-sm-normal text-surface-foreground-muted min-w-0 line-clamp-2 sm:line-clamp-3", className)}
+      {...props}
+    />
+  );
 }
 
 export function CardContent({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("p-5 pt-0", className)} {...props} />;
+  return <div className={cn("p-4 sm:p-5 pt-0 min-w-0", className)} {...props} />;
 }
 
 export function CardFooter({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("flex items-center justify-end gap-2 p-5 pt-3 border-t border-surface-border/60", className)}
+      className={cn("flex flex-wrap items-center justify-end gap-2 p-4 sm:p-5 pt-3 border-t border-surface-border/60", className)}
       {...props}
     />
   );
@@ -68,10 +95,10 @@ export function StatCard({
   className,
 }: StatCardProps) {
   return (
-    <Card className={cn("p-5 flex flex-col gap-3", className)}>
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-body-xs-medium text-surface-foreground-muted">{title}</span>
-        <span className="size-8 rounded-lg bg-surface-muted flex items-center justify-center text-surface-foreground">
+    <Card className={cn("p-4 sm:p-5 flex flex-col gap-3 min-w-0 overflow-hidden", className)}>
+      <div className="flex items-center justify-between gap-2 min-w-0">
+        <span className="text-body-xs-medium text-surface-foreground-muted truncate min-w-0">{title}</span>
+        <span className="size-8 rounded-lg bg-surface-muted flex items-center justify-center text-surface-foreground shrink-0">
           <Icon name={icon} size={16} />
         </span>
       </div>
@@ -79,7 +106,7 @@ export function StatCard({
         <span className="text-heading-2xl-bold text-surface-foreground tabular-nums">{value}</span>
         {delta && <Badge tone={deltaTone} label={delta} />}
       </div>
-      {subtitle && <p className="text-body-xs-normal text-surface-foreground-muted">{subtitle}</p>}
+      {subtitle && <p className="text-body-xs-normal text-surface-foreground-muted line-clamp-2 min-w-0">{subtitle}</p>}
     </Card>
   );
 }
@@ -140,18 +167,22 @@ export function PromoCard({
   className,
 }: PromoCardProps) {
   return (
-    <Card className={cn("flex flex-col", PROMO_CONTAINER_CLASSES[size], className)}>
-      <div className="flex flex-col items-start gap-2">
+    <Card className={cn("flex flex-col min-w-0 overflow-hidden", PROMO_CONTAINER_CLASSES[size], className)}>
+      <div className="flex flex-col items-start gap-2 min-w-0 w-full">
         {hasBadge && badgeLabel && <Badge tone={badgeTone} label={badgeLabel} />}
-        <h3 className={cn("text-surface-foreground", PROMO_TITLE_CLASSES[size])}>{title}</h3>
+        <h3 className={cn("text-surface-foreground min-w-0 w-full line-clamp-2", PROMO_TITLE_CLASSES[size])}>{title}</h3>
         {description && (
-          <p className={cn("text-surface-foreground-muted", PROMO_DESC_CLASSES[size])}>{description}</p>
+          <p className={cn("text-surface-foreground-muted min-w-0 w-full line-clamp-2", PROMO_DESC_CLASSES[size])}>
+            {description}
+          </p>
         )}
       </div>
       {hasFooter && (
-        <div className="flex items-center justify-between gap-3 pt-1">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-1 min-w-0">
           {hasMeta && meta ? (
-            <span className={cn("text-surface-foreground-muted", PROMO_META_CLASSES[size])}>{meta}</span>
+            <span className={cn("text-surface-foreground-muted truncate min-w-0 flex-1", PROMO_META_CLASSES[size])}>
+              {meta}
+            </span>
           ) : (
             <span />
           )}

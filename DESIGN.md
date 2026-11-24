@@ -49,6 +49,13 @@ UI components **MUST** use semantic tokens from `tokens.json` / `theme.css`. Nev
 - **Concentric radii:** Keep inner container radii smaller than their parent (`radius/lg` `8px`, `radius/xl` `12px`, `radius/2xl` `16px`, `radius/3xl` `24px`): `innerRadius <= outerRadius - padding`.
 - **Icons:** Only use exact icon names from `src/design-tokens/icons.json` (`107` total; never invent unverified icon names).
 
+### Rule 4 — Responsive Adaptation, Truncation & Badge Stacking
+All components across Figma and React **must** adapt cleanly from compact mobile viewports (`272px–320px`) to desktop grids:
+
+- **Mobile Badge Stacking (`Card` `Size=SM` & `< 640px`):** In narrow cards (`Size=SM`, `Profile`, `Default`, `Form`, `Settings`, `List`, `Pricing`, `Promo`), stack the status `Badge` **above** the title (`CardHeader badge={...}` or vertical `TitleRow`), reserving top-right inline alignment for `MD`/`LG` (`sm:`).
+- **Text Truncation & Clamping:** Never let variable copy overflow containers or squeeze sibling controls. Bind text containers to `min-w-0` + `truncate` / `line-clamp-{1,2,3}` in CSS and `FILL` + `HEIGHT` + `textTruncation = "ENDING"` (`maxLines`) in Figma. Keep numeric KPI values and prices unwrapped (`tabular-nums`) while wrapping adjacent badge/label rows cleanly.
+- **Wrapping Controls & Footers:** Enable `flex-wrap` (`layoutWrap = "WRAP"` in Figma) on button groups, filter chip rails, breadcrumbs, and multi-action footers so buttons stack cleanly on narrow viewports without truncating CTA labels.
+
 ---
 
 ## 2. Component Decision Trees

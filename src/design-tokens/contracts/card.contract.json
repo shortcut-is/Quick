@@ -354,6 +354,8 @@
   },
   "behaviorRules": [
     "Follow composable structure (`Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`) styled with Quick v1.2 Tailwind CSS surface, radius, and shadow tokens.",
+    "On `Size=SM` (mobile/compact viewports `< 640px`), stack the top `Badge` above the card title/header row (`CardHeader badge={...}` or vertical `TitleRow`), reserving inline top-right badge placement for `MD`/`LG` (`sm:`).",
+    "Enforce responsive ellipsis truncation (`line-clamp-1`/`line-clamp-2`/`line-clamp-3` + `min-w-0` in CSS, `FILL` + `textTruncation=ENDING` + `maxLines` in Figma) on titles, descriptions, list rows, and footers while wrapping button/KPI rows (`flex-wrap` / `layoutWrap=WRAP`).",
     "Preserve concentric border radii between outer container (`radius/xl|2xl|3xl`) and inner `Slot: Content` or media containers.",
     "In `CardFooter`, maintain strict hierarchy of 1 `Primary` action paired with 1 secondary action (`Outline`/`Ghost`), never two `Primary` buttons together.",
     "In `Use=Promo` (`PromoCard`), keep a subtle semantic surface (`Surfaces/Background` + `Surfaces/Border`), top `Badge`, bold promotional headline, muted benefit copy, and footer `Meta` paired with a single `Outline` CTA."

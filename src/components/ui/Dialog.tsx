@@ -93,14 +93,14 @@ export function Dialog({
       )}
       {...({ closedby: "any" } as Record<string, unknown>)}
     >
-      <div className="flex flex-col gap-4 p-6 rounded-2xl border border-surface-border bg-surface-background text-surface-foreground shadow-xl">
+      <div className="flex flex-col gap-4 p-4 sm:p-6 rounded-2xl border border-surface-border bg-surface-background text-surface-foreground shadow-xl">
         <div className="flex items-start justify-between gap-3">
           <div className="flex flex-col gap-1 min-w-0">
-            <h2 id={titleId} className="text-body-lg-bold text-surface-foreground">
+            <h2 id={titleId} className="text-body-lg-bold text-surface-foreground line-clamp-2">
               {title}
             </h2>
             {hasDescription && description && (
-              <p id={descId} className="text-body-sm-normal text-surface-foreground-muted">
+              <p id={descId} className="text-body-sm-normal text-surface-foreground-muted line-clamp-3">
                 {description}
               </p>
             )}
@@ -121,7 +121,7 @@ export function Dialog({
         {children && <div className="flex flex-col gap-3">{children}</div>}
 
         {hasFooter && (
-          <div className="flex items-center justify-end gap-2 pt-2">
+          <div className="flex flex-wrap-reverse sm:flex-row items-center justify-end gap-2 pt-2">
             {hasSecondaryAction && (
               <Button
                 ref={cancelRef}

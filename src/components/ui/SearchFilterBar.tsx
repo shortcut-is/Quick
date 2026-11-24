@@ -38,10 +38,10 @@ export function SearchFilterBar({
 
   return (
     <div className={cn("flex flex-col gap-2.5 w-full", className)}>
-      <div className={cn("flex items-center gap-2", isMobile ? "w-full" : "justify-between")}>
+      <div className={cn("flex flex-wrap items-center gap-2", isMobile ? "w-full" : "justify-between")}>
         <div
           className={cn(
-            "flex items-center h-11 px-3 gap-2 rounded-lg border border-surface-input bg-surface-background flex-1",
+            "flex items-center h-11 px-3 gap-2 rounded-lg border border-surface-input bg-surface-background flex-1 min-w-[180px]",
             "focus-within:border-2 focus-within:border-surface-foreground focus-within:shadow-focus transition-shadow duration-150"
           )}
         >
