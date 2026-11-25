@@ -14,11 +14,12 @@
     }
   ],
   "importGuide": {
-    "crossFileComponentSet": "const set = await figma.importComponentSetByKeyAsync(key); const variant = set.findOne(n => n.type === \"COMPONENT\" && n.name === variantName) ?? set.defaultVariant; const instance = variant.createInstance();",
+    "crossFileComponentSet": "const set = await figma.importComponentSetByKeyAsync(key); const wanted = Object.entries(props); const variant = set.children.find(n => n.type === \"COMPONENT\" && wanted.every(([k, v]) => n.name.split(\", \").includes(`${k}=${v}`))); if (!variant) throw new Error(`Missing variant ${JSON.stringify(props)} in ${set.name}`); const instance = variant.createInstance();",
     "crossFileComponent": "const comp = await figma.importComponentByKeyAsync(key); const instance = comp.createInstance();",
     "crossFileVariable": "const variable = await figma.variables.importVariableByKeyAsync(key); const paint = figma.variables.setBoundVariableForPaint({ type: \"SOLID\", color: { r: 1, g: 1, b: 1 } }, \"color\", variable);",
     "crossFileStyle": "const style = await figma.importStyleByKeyAsync(key); node.textStyleId = style.id; // or await node.setEffectStyleIdAsync(style.id)",
-    "searchDesignSystemFilter": "Always pass includeLibraryKeys: [\"lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd\"] when calling search_design_system."
+    "searchDesignSystemFilter": "Always pass includeLibraryKeys: [\"lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd\"] when calling search_design_system.",
+    "strictComponentPolicy": "STRICT QUICK-ONLY: Only import real Quick instances from this manifest. Allowed manual nodes: transparent Auto Layout containers and text headings bound to Quick Text Styles + Surfaces/Foreground*. FORBIDDEN: createRectangle/createEllipse/createVector, styled custom frames imitating UI widgets, detachInstance(), or silent fallbacks when an import fails or a component is missing (STOP and report the gap to the user)."
   },
   "variableCollections": [
     {

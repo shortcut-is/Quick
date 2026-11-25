@@ -15,6 +15,26 @@ Build editable, production-quality product screens in **any** target Figma file 
 
 ---
 
+## 0. Strict Quick-Only Policy (NON-NEGOTIABLE — ZERO FALLBACK)
+
+When building Figma screens with Quick, you **MUST** assemble every UI widget exclusively from imported **`⚡ Quick - v1.2`** library instances:
+
+- **Allowed manual nodes ONLY:**
+  1. Structural Auto Layout containers (`Screen`, `MainColumn`, `Section`, `Grid`, `Row`, `Stack`) with `fills = []` (or `Surfaces/Background` only on the root viewport `Screen` frame).
+  2. Section heading / copy `TEXT` nodes bound strictly to imported Quick `Text Styles` + `Surfaces/Foreground` / `Surfaces/Foreground-Muted`.
+  3. Live `INSTANCE` nodes imported by `key` from `figma-library-manifest.json` (components, subcomponents, icons).
+- **Strictly forbidden (`HARD FAIL`):**
+  - Calling `figma.createRectangle()`, `figma.createEllipse()`, `figma.createPolygon()`, `figma.createLine()`, or `figma.createVector()`.
+  - Creating custom styled `figma.createFrame()` blocks (with borders, `cornerRadius`, shadows, or muted/surface fills) to imitate a card, button, badge, pill, tag, input, list row, toggle, nav bar, banner, or modal.
+  - Calling `detachInstance()` on any Quick component.
+  - Reading React source files (`src/components/ui/*.tsx`) and visually reconstructing them from scratch in Figma instead of importing the published Figma `key`.
+  - Using silent fallbacks (`?? set.defaultVariant`) when a variant name does not match.
+- **Hard Stop on Missing Component or Failed Import:**
+  - Figma blocks `appendChild()` inside an `INSTANCE` node. If a requested screen needs a card layout or UI pattern that does not exist in `Card` (`Use=Default|Media|Stat|Profile|Form|Settings|List|Pricing|Promo`) or elsewhere in `figma-library-manifest.json` (for example a bank card, chart widget, or custom multi-slot block), OR if `importComponentSetByKeyAsync` / `importComponentByKeyAsync` fails:
+  - **STOP immediately** and ask the user whether to: (a) publish/grant access to `⚡ Quick - v1.2`, (b) add the missing variant/component to Quick first, or (c) explicitly authorize a `Slot: Content` placeholder. **Never draw fake UI shapes silently.**
+
+---
+
 ## 1. Mandatory Library Lock (Avoid Collision!)
 
 Multiple libraries may appear in the user's Figma org. You **MUST** scope every lookup to the official Team Library only:
@@ -34,13 +54,32 @@ If the user's Figma account cannot see `⚡ Quick - v1.2` (`get_libraries` does 
 
 Always read exact component keys, variable keys, style keys, and `assetType` (`component_set` vs `component`) from [figma-library-manifest.json](../../../figma-library-manifest.json).
 
-### Import a `COMPONENT_SET` and instantiate an exact variant
+### Import a `COMPONENT_SET` and instantiate an exact variant (order-independent)
+Never hardcode full variant strings blindly or fall back silently to `set.defaultVariant` — variant axis order matters in `n.name === ...` comparisons and hides missing-axis bugs. Match `key=value` tokens cleanly instead:
 ```js
+function pickVariant(set, wantedProps) {
+  const pairs = Object.entries(wantedProps).map(([k, v]) => `${k}=${v}`);
+  const match = set.children.find(
+    (n) => n.type === "COMPONENT" && pairs.every((p) => n.name.split(", ").includes(p))
+  );
+  if (!match) {
+    throw new Error(
+      `Missing variant ${JSON.stringify(wantedProps)} in "${set.name}". Available sample: ${set.children
+        .slice(0, 5)
+        .map((c) => c.name)
+        .join(" | ")}`
+    );
+  }
+  return match;
+}
+
 const btnSet = await figma.importComponentSetByKeyAsync("<componentSetKey>");
-const variant =
-  btnSet.findOne(
-    (n) => n.type === "COMPONENT" && n.name === "Variant=Primary, Size=MD, Content=Label"
-  ) ?? btnSet.defaultVariant;
+const variant = pickVariant(btnSet, {
+  Content: "Label",
+  Variant: "Primary",
+  Size: "MD",
+  State: "Default"
+});
 const btn = variant.createInstance();
 parentFrame.appendChild(btn);
 ```
@@ -112,7 +151,7 @@ Pick the shell **before** assembling sections:
 
 ## 4. Design & Construction Rules (From `DESIGN.md`)
 
-1. **Zero invented components:** Do **not** draw rectangles pretending to be buttons, badges, inputs, toggles, or nav bars when a Quick component exists. Only create Auto Layout containers to hold text headings, sections, grids, or `Slot: Content` replacements.
+1. **Zero invented components & Zero Detach:** Do **not** draw rectangles, ellipses, or styled frames pretending to be buttons, badges, pills, inputs, list rows, cards, or nav bars, and **never** call `detachInstance()` on a Quick component. Only create transparent Auto Layout layout containers (`Screen`, `Section`, `Grid`, `Stack`) and Quick-styled section headings/copy. Never rebuild React code (`src/components/ui/*.tsx`) manually inside Figma. Because Figma prevents `appendChild()` inside `INSTANCE` nodes, use Quick's published `Card` (`Use=*`) / `List Item` / `Radio Card` variants — or **stop and ask** if a needed pattern is absent from `figma-library-manifest.json`.
 2. **Strict Button Hierarchy:** Max `1` `Primary` (or `Destructive`) button per footer/action pair, accompanied by `1` `Outline` or `Ghost` button. Never invent a `Secondary` variant.
 3. **Typography:** Use `Heebo` (`Text/Body/*`, `Text/Heading/xl..2xl`) and `Zalando Sans` (`Text/Heading/3xl..6xl`) only. Never leave `Inter` or `Switzer`.
 4. **Property Parity:** Only assign exact `VARIANT`, `BOOLEAN` (`👁️ ...`), `TEXT` (`✏️ ...`), and `INSTANCE_SWAP` property values documented in the component's `src/design-tokens/contracts/[component].contract.json`.
@@ -120,13 +159,44 @@ Pick the shell **before** assembling sections:
 
 ---
 
-## 5. Mandatory Visual Verification Gate
+## 5. Mandatory Visual Verification & Quick-Only Self-Audit Gate
 
-After assembling each screen (and after any layout fix):
-1. Return all created/updated frame IDs from `use_figma`.
-2. Capture a visual check (`await screenFrame.screenshot()` or `get_screenshot`).
-3. Verify:
+Before presenting any screen as finished:
+1. **Run this Quick-Only Self-Audit** on every created/updated `screenFrame` (excluding descendants inside `INSTANCE` nodes):
+```js
+const forbiddenTypes = new Set(["RECTANGLE", "ELLIPSE", "POLYGON", "LINE", "VECTOR", "STAR"]);
+let quickInstanceCount = 0;
+let forbiddenShapesCount = 0;
+const suspiciousStyledFrames = [];
+
+function walk(node, insideInstance) {
+  if (insideInstance) return;
+  if (node.type === "INSTANCE") {
+    quickInstanceCount++;
+    return;
+  }
+  if (forbiddenTypes.has(node.type)) {
+    forbiddenShapesCount++;
+  } else if (node.type === "FRAME" && node.id !== screenFrame.id) {
+    const hasBorder = "strokes" in node && Array.isArray(node.strokes) && node.strokes.length > 0;
+    const hasRadius = "cornerRadius" in node && typeof node.cornerRadius === "number" && node.cornerRadius > 0;
+    const hasFill = "fills" in node && Array.isArray(node.fills) && node.fills.some((f) => f.visible !== false);
+    if (hasBorder || hasRadius || hasFill) {
+      suspiciousStyledFrames.push({ id: node.id, name: node.name, hasBorder, hasRadius, hasFill });
+    }
+  }
+  if ("children" in node) {
+    for (const child of node.children) walk(child, false);
+  }
+}
+walk(screenFrame, false);
+return { quickInstanceCount, forbiddenShapesCount, suspiciousStyledFrames };
+```
+   - `forbiddenShapesCount` **MUST be `0`**, `suspiciousStyledFrames.length` **MUST be `0`**, and `quickInstanceCount` must reflect real imported instances. Fix any violation before finishing, and report `{ quickInstanceCount, forbiddenShapesCount, suspiciousStyledFrames }` in your response.
+2. Return all created/updated frame IDs from `use_figma`.
+3. Capture a visual check (`await screenFrame.screenshot()` or `get_screenshot`).
+4. Verify:
    - Zero clipped text, zero zero-width text blocks, and zero overlapping headers/footers.
    - Light/Dark polarity looks clean (test switching `Mode` if building themed pairs).
    - Footer CTAs preserve 1 Primary + 1 Outline/Ghost hierarchy.
-4. Remove any temporary discovery instances or placeholder shimmers (`placeholder = false`) before finishing.
+5. Remove any temporary discovery instances or placeholder shimmers (`placeholder = false`) before finishing.

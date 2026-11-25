@@ -24,10 +24,12 @@ Para diseñar pantallas dentro de Figma usando los componentes reales de **⚡ Q
    ```bash
    git clone https://github.com/shortcut-is/Quick.git
    ```
+   El repo **ya aplica automáticamente la política estricta Quick-Only (Zero Fallback)** sin tener que repetirla en cada prompt:
    - **Claude Code / Projects** lee [`CLAUDE.md`](CLAUDE.md) automáticamente.
-   - **Antigravity / Codex / Cursor / Copilot** leen [`AGENTS.md`](AGENTS.md), [`.agents/skills/quick-figma-screens/SKILL.md`](.agents/skills/quick-figma-screens/SKILL.md) y [`.agents/rules/quick-figma-context.md`](.agents/rules/quick-figma-context.md).
+   - **Antigravity / Codex** leen [`AGENTS.md`](AGENTS.md), [`.agents/skills/quick-figma-screens/SKILL.md`](.agents/skills/quick-figma-screens/SKILL.md) y [`.agents/rules/quick-figma-context.md`](.agents/rules/quick-figma-context.md).
+   - **Cursor / GitHub Copilot** leen [`.cursorrules`](.cursorrules) y [`.github/copilot-instructions.md`](.github/copilot-instructions.md).
 2. Comparte con el agente el enlace o `fileKey` de tu archivo destino de Figma (o pídele crear uno nuevo).
-3. Envíale un prompt indicando plataforma (**Web 1440px** o **Mobile 390px**), tema (**Light** o **Dark**) y el flujo requerido.
+3. Envíale un prompt indicando plataforma (**Web 1440px** o **Mobile 390px**), tema (**Light** o **Dark**) y el flujo requerido. *(Si un patrón no existe en Quick o falla el import de la librería, el agente se detendrá a preguntarte en vez de dibujar componentes a mano).*
 
 ### Prompts de ejemplo listos para copiar
 
@@ -71,9 +73,9 @@ Todos los componentes publicados en `⚡️ Components` (`0:1`) mantienen parida
 
 ## Contratos de Componentes (`src/design-tokens/contracts/`)
 
-El repositorio incluye **71 contratos individuales** (`[componente].contract.json`) junto con [`src/design-tokens/contracts/index.json`](src/design-tokens/contracts/index.json), cubriendo **83 nodos** en **47 secciones** (con los `nodeId`s e identificadores de Figma desacoplados en [`design-system-state.json`](design-system-state.json) y [`figma-library-manifest.json`](figma-library-manifest.json)):
+El repositorio incluye **72 contratos individuales** (`[componente].contract.json`) junto con [`src/design-tokens/contracts/index.json`](src/design-tokens/contracts/index.json), cubriendo **84 nodos** en **47 secciones** (con los `nodeId`s e identificadores de Figma desacoplados en [`design-system-state.json`](design-system-state.json) y [`figma-library-manifest.json`](figma-library-manifest.json)):
 
-- **Acciones y Formularios:** `button`, `button-group`, `toggle`, `toggle-group`, `input-text`, `input-group` (`Prefix`, `Suffix`, `Password`, `Action`), `input-otp` (`4` / `6` dígitos + `otp-slot`), `input-select`, `input-area`, `combobox` (`Single` / `Multi`), `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker`, `time-picker`, `calendar`, `file-upload`.
+- **Acciones y Formularios:** `button`, `button-group`, `toggle`, `toggle-group`, `input-text`, `input-group` (`Prefix`, `Suffix`, `Password`, `Action`), `input-otp` (`4` / `6` dígitos + `otp-slot`), `input-select`, `input-area`, `combobox` (`Single` / `Multi`), `checkbox`, `checkbox-standalone`, `checkbox-group`, `radio-button`, `radio-card`, `radio`, `radio-group`, `switch`, `switch-standalone`, `slider`, `date-picker`, `time-picker`, `calendar`, `file-upload`.
 - **Superficies y Overlays:** `card`, `slot-content`, `dialog`, `overlay`, `sheet`, `dropdown-menu` (+ `dropdown-menu-item`, `dropdown-menu-title`), `tooltip`, `command-palette` (`Default`, `Grouped`, `Empty`).
 - **Feedback y Contención:** `alert`, `toast`, `notification`, `progress-bar`, `spinner`, `skeleton`, `empty-state`, `accordion`, `collapsible`.
 - **Datos y Visualización:** `avatar`, `avatar-group`, `badge`, `tag`, `tag-group`, `kbd`, `list-item`, `separator`, `carousel` (`MobilePeek`, `WebCards`, `HeroBanner` + `carousel-dot`), `data-table` (+ `data-table-header`, `data-table-row`, `data-table-footer`, `data-table-cell`).
@@ -97,8 +99,10 @@ npm run build    # Verificación TypeScript + bundle Vite en dist/
 
 | Archivo / Ruta | Propósito |
 | :--- | :--- |
-| [`CLAUDE.md`](CLAUDE.md) | Punto de entrada automático para Claude Code / Claude Projects. |
+| [`CLAUDE.md`](CLAUDE.md) | Punto de entrada automático para Claude Code / Claude Projects (`Strict Quick-Only`). |
 | [`AGENTS.md`](AGENTS.md) | Instrucciones universales (Antigravity, Codex, Cursor, Copilot) para Figma y código. |
+| [`.cursorrules`](.cursorrules) | Reglas automáticas para Cursor (`Strict Quick-Only` + tokens React). |
+| [`.github/copilot-instructions.md`](.github/copilot-instructions.md) | Reglas automáticas para GitHub Copilot (`Strict Quick-Only` + tokens React). |
 | [`DESIGN.md`](DESIGN.md) | Reglas no negociables, jerarquía de botones y árboles de decisión de componentes. |
 | [`figma-library-manifest.json`](figma-library-manifest.json) | Keys cross-file publicadas de componentes, subcomponentes, iconos, colecciones, variables y estilos. |
 | [`.agents/skills/quick-figma-screens/SKILL.md`](.agents/skills/quick-figma-screens/SKILL.md) | Playbook paso a paso para diseñar pantallas Web y Mobile directamente en Figma con Quick. |

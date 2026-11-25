@@ -1,0 +1,17 @@
+# ⚡ Quick - v1.2 — Cursor Rules (Figma & React)
+
+Always follow `AGENTS.md`, `DESIGN.md`, and `.agents/skills/quick-figma-screens/SKILL.md`.
+
+## Mode 1: Designing Product Screens in Figma (MCP)
+- **Mandatory Library Lock:** Use ONLY official Team Library `⚡ Quick - v1.2` (`libraryKey`: `lk-42ecd4388755c0390b485290190fb3fc1d492de52ee02c61e9bc5cb7acb5750104301599e94dd5e75b946f3adcbf31d9f98b9d050ea63b1463a469099278edfd`). NEVER import from Community `Quick ⚡ - v1.2` (`lk-c590e7be...`) or leak `HwLUpu9i41HlBTF7erR5ad` node IDs into external files.
+- **Strict Quick-Only & Zero Fallback (`NON-NEGOTIABLE`):**
+  - Import all UI widgets exclusively by `key` from `figma-library-manifest.json` (`importComponentSetByKeyAsync`, `importComponentByKeyAsync`, `importVariableByKeyAsync`, `importStyleByKeyAsync`).
+  - Allowed manual nodes ONLY: transparent Auto Layout layout containers (`fills = []`, or `Surfaces/Background` on the root `Screen`) and section heading/copy `TEXT` nodes bound to Quick `Text Styles` + `Surfaces/Foreground*`.
+  - **FORBIDDEN:** `createRectangle()`, `createEllipse()`, `createPolygon()`, `createLine()`, `createVector()`, custom styled frames (`strokes`/`cornerRadius`/`fills`) imitating UI widgets, `detachInstance()`, or reconstructing React code (`src/components/ui/*.tsx`) visually in Figma.
+  - Match variants order-independently via `pickVariant(set, wantedProps)` (`split(", ").includes("${k}=${v}")`) and throw on mismatch instead of falling back to `set.defaultVariant`.
+  - If an import fails or a requested widget/card pattern is missing from `figma-library-manifest.json` (Figma blocks `appendChild()` into `INSTANCE` nodes), **STOP and ask the user** — never invent fake components.
+- **Mandatory Verification:** Run the **Quick-Only Self-Audit** (`SKILL.md` Section 5: `forbiddenShapesCount === 0`, `suspiciousStyledFrames.length === 0`) + screenshot check and report the counts.
+
+## Mode 2: React / Tailwind CSS v4 (`src/components/ui/`)
+- Consume semantic variables from `src/design-tokens/theme.css` & `tokens.json` only (never raw `#hex` or `Neutral/*`), verified icons from `src/design-tokens/icons.json` (`107`), and exact props/variants from `src/design-tokens/contracts/*.contract.json` (`72` contracts).
+- Enforce max `1` `Primary` (or `Destructive`) button paired with `1` `Outline` or `Ghost` button, `Heebo` / `Zalando Sans` typography, and `DESIGN.md` Rule 4 responsive truncation & mobile badge stacking.
